@@ -1,7 +1,6 @@
-e_fwd
+@e_fwd
 ======
 
-## Desctiption
 Simple mail forwarder.
 
 Examples

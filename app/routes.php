@@ -14,7 +14,7 @@
 // -------------------
 // :: Before log-in ::
 // -------------------
-Route::group(array('before' => 'auth'), function() 
+Route::group(array('before' => 'guest'), function() 
 {
 	Route::get('/', 		'AuthCtrl@login');
 	Route::get('/login',		'AuthCtrl@login');

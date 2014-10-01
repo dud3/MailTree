@@ -8,4 +8,4 @@ Examples
 --------
 
 #### Login
-![ScreenShot](https://www.dropbox.com/s/1cshsl64xjgmznu/e_fwd-signin.png?dl=0)
+![ScreenShot](https://raw.githubusercontent.com/dud3/e_fwd/master/public/app_samples/e_fwd-signin.png)

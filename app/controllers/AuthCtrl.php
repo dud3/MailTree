@@ -4,19 +4,30 @@ class AuthCtrl extends BaseController {
 
 	/*
 	|--------------------------------------------------------------------------
-	| Default Home Controller
+	| AuthCtrl
 	|--------------------------------------------------------------------------
 	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
+	| Authentication controller before any users get logged in.
 	|
-	|	Route::get('/', 'HomeController@showWelcome');
 	|
 	*/
 
-	public function login()
+	/**
+	 * Render the view of the log in.
+	 * @return [type] [description]
+	 */
+	public function view_login()
 	{
 		return View::make('login');
 	}
+
+	/**
+	 * Login method.
+	 * @return [type] [description]
+	 */
+	public function login() 
+	{
+		// Sentry goes here...
+	}
+
 }

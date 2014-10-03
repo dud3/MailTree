@@ -16,8 +16,9 @@
 // -------------------
 Route::group(array('before' => 'guest'), function() 
 {
-	Route::get('/', 		'AuthCtrl@login');
-	Route::get('/login',		'AuthCtrl@login');
+	Route::get('/', 			'AuthCtrl@view_login');
+	Route::get('/login',		'AuthCtrl@view_login');
+	Route::post('/login',		'AuthCtrl@login');
 });
 
 // ------------------
@@ -25,6 +26,6 @@ Route::group(array('before' => 'guest'), function()
 // ------------------
 Route::group(array('before' => 'auth'), function()
 {
-	Route::get('/app',		'AppCtrl@index');
+	Route::get('/app',			'AppCtrl@index');
 
 });

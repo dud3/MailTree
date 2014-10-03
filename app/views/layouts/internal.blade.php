@@ -17,7 +17,7 @@
     <link href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
     <!-- Log-in style -->
-    <link href="/styles/login.css">
+    <link href="/styles/login.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -29,37 +29,27 @@
   <body>
 
     <div class="container">
-
-      <form class="form-signin" role="form">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="email" class="form-control" placeholder="Email address" required autofocus>
-        <input type="password" class="form-control" placeholder="Password" required>
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      </form>
-
+      @yield('main')
     </div> <!-- /container -->
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script>
-      // ------------------------
-      // Windows 8 viewport hack
-      // ------------------------
-      (function () {
-      'use strict';
+    // ------------------------
+    // Windows 8 viewport hack
+    // ------------------------
+    (function () {
+    'use strict';
       if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-      var msViewportStyle = document.createElement('style')
-      msViewportStyle.appendChild(
-      document.createTextNode(
-        '@-ms-viewport{width:auto!important}'
-      )
-      )
-      document.querySelector('head').appendChild(msViewportStyle)
+        var msViewportStyle = document.createElement('style')
+        msViewportStyle.appendChild(
+          document.createTextNode(
+            '@-ms-viewport{width:auto!important}'
+          )
+        ) 
+        document.querySelector('head').appendChild(msViewportStyle)
       }
-      })();
+    })();
     </script>
   </body>
 </html>

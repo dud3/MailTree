@@ -19,5 +19,4 @@ class AuthCtrl extends BaseController {
 	{
 		return View::make('login');
 	}
-
 }

@@ -7,6 +7,10 @@ angular.module('app.auth')
               function ($scope, $http, $q, $compile, $location, $sce, $tooltip, $cookies, $cookieStore, 
                         $analytics, $aside, AuthSvc, pwdToken, cfpLoadingBar, _userSessions) {
 
+
+  // ==============
+  // NOTIFICATIONS
+  // ==============
   $scope.notify = {
     fire: {
         mainNav: function(msg, className, autoHide) {
@@ -43,41 +47,27 @@ angular.module('app.auth')
   };
 
 
+
   // ====================
   // Auth Cookies Holder
   // ====================
-  // Auth JS cookies
   var authCookies = {
     getRemembner : $cookieStore.get('rememberMe'),
     getRedirect : $cookieStore.get('redirect'),
     getUserSession : $cookieStore.get('sessions')
-  }
+  };
+
+
 
   // ==============
-  // LogIn Section
+  // LOGIN SECTION
   // ==============
-  /**
-   * Login Function
-   * @return {[Atuh]} [Simple Log in the user, redirect to the "Dashboard".]
-   */
   $scope.email = null;
   $scope.loginCredentials = { 
     email: $("#email").val(), 
     password: $("#password").val(),
     remember: authCookies.getRemembner
   };
-
-  // Error Aside
-  var Aside_UserNotFound_or_Technician = $aside({
-    title: 'User Not Found or Not a Free Account', 
-    content: '<p>You are seeing this message because: <br>Either the account does not <font color="red">"exist"</font>'
-             +', or you are not a <b>"free"</b> user.</p>'
-             +'<br>'
-             +'<p>If you are sure that your user account exists, then please click <b><a href="http://app.mymxlog.com"> here </a></b> to continue.'
-             +'<p>If not, please click: <b><a href="/signup">Register me</a>.</b>'
-             +'<p><i>Thank you!</i></p>',
-    show: false
-  });
 
   var gCounter = 0;
   $scope.login = function() {
@@ -147,7 +137,7 @@ angular.module('app.auth')
                   // Show us error messages
                   function showError() {
                     $("#form-signin").notify(
-                        (clean_msg == 'code.0') ? Aside_UserNotFound_or_Technician.show() : clean_msg,
+                        clean_msg,
                       { position:"top left",
                         className: 'error',
                         style: 'bootstrap'
@@ -172,13 +162,12 @@ angular.module('app.auth')
         });
   };
 
+
+
+
   // ===============
-  // LogOut section
+  // LOGOUT SECTION
   // ===============
-  /**
-   * Logs current user out
-   * @return {[Auth]} [Simple log out the user, destroy sessions, redirect to the "Login".]
-   */
   $scope.logout = function() {
     AuthSvc.logout()
       .success(function() {
@@ -203,14 +192,10 @@ angular.module('app.auth')
   };
 
 
-// =================
-// Register Section
-// =================
-/**
- * Signs a user up for a new account.
- * @return {[type]} [description]
- */
-  // Register Credentials
+
+  // =================
+  // REGISTER SECTION
+  // =================
   $scope.credentials = { 
       email: $("#email").val(), 
       password: $("#password").val(),
@@ -218,16 +203,11 @@ angular.module('app.auth')
       last_name: $("#last_name").val(),
       terms: false
   };
+
   $scope.register = function() {
 
   var l = Ladda.create(document.querySelector('.lading-btn'));
   l.start();
-
-  if($scope.credentials.terms === false) {
-    $scope.notify.fire.specificElem("#terms", "Please accept our terms to proceed", "error", "left left", true, true);
-    l.stop();
-    return;
-  }
 
   AuthSvc.register($scope.credentials)
     .success(function() {
@@ -280,6 +260,11 @@ angular.module('app.auth')
     });
   };
 
+
+
+  // ====================
+  // RESET PASSWORD SEND
+  // ====================
   var gFlag = false;
   $scope.resetPasswordSendToken = function() {
     // Check the model value
@@ -355,11 +340,13 @@ angular.module('app.auth')
           });
         }
   };
+
+
+
  
   // =======================
   // Reset Password Section
   // =======================
-  // Credentials for "Rset Password" page
   $scope.credentials_pwd = {
     // email: $("#email").val(),
     token: pwdToken,
@@ -433,23 +420,26 @@ angular.module('app.auth')
       });
   };
 
-  angular.module('app.auth').directive("ngLoginSubmit", function(){
-  return {
-      restrict: "A",
-      scope: {
-          onSubmit: "=ngLoginSubmit"
-      },
-      link: function(scope, element, attrs) {
-          $(element)[0].onsubmit = function() {
-              $("#login-login").val($("#email", element).val());
-              $("#login-password").val($("#password", element).val());
 
-              scope.onSubmit(function() {
-                  $("#login-form")[0].submit();
-              });
-              return false;
-          };
-      }
-};
 
+
+}])
+.directive("ngLoginSubmit", function() {
+    return {
+        restrict: "A",
+        scope: {
+            onSubmit: "=ngLoginSubmit"
+        },
+        link: function(scope, element, attrs) {
+            $(element)[0].onsubmit = function() {
+                $("#login-login").val($("#email", element).val());
+                $("#login-password").val($("#password", element).val());
+
+                scope.onSubmit(function() {
+                    $("#login-form")[0].submit();
+                });
+                return false;
+            };
+        }
+    }
 });

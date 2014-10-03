@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'app.auth'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -27,3 +28,6 @@ angular
         redirectTo: '/'
       });
   });
+
+
+angular.module('app.auth', ['ngSanitize']);

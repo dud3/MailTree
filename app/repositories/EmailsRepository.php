@@ -42,7 +42,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
         $std_email = new StdClass;
         $arr_emails = [];
 
-        var_dump("We have " . count($emails) . " Emaisl");
+        var_dump("We have " . count($emails) . " Emails");
 
         foreach ($emails as $message) {
 

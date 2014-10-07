@@ -1,12 +1,12 @@
 <?php
 
-class emails_list extends Eloquent {
+class email_address_list extends Eloquent {
 
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'emails_list';
+	protected $table = 'email_address_list';
 
 }

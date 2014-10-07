@@ -10,4 +10,5 @@
 | the console gets access to each of the command object instances.
 |
 */
-
+$email = new EmailsRepository;
+Artisan::add(new readmail($email));

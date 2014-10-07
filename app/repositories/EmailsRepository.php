@@ -4,14 +4,13 @@ use Carbon\Carbon;
 
 class EmailsRepository implements EmailsRepositoryInterface {
 
-    protected $server;
-    protected $server_name = 'imap.gmail.com';
-    protected $username = 'notifications@acsbill.com';
-    protected $password = '8655morro';
+    public $server;
+    public $server_name = 'imap.gmail.com';
+    public $username = 'notifications@acsbill.com';
+    public $password = '8655morro';
 
     public $inbox;
-
-    protected $emails;
+    public $emails;
 
     public $user;
 
@@ -34,31 +33,64 @@ class EmailsRepository implements EmailsRepositoryInterface {
      * Read all the emails.
      * @return [type] [description]
      */
-    public function readMails();
+    public function readMails() {
+
+        $emails = $this->emails;
+
+        $std_email = new StdClass;
+
+        foreach ($emails as $message) {
+
+            $std_email->header = $message->getHeaders();
+            $std_email->overview = $message->getOverview();
+            $std_email->address = $message->getAddresses('from');
+            $std_email->subject = $message->getSubject();
+            $std_email->body = $message->getMessageBody();
+            $std_email->date = $message->getDate();
+
+        }
+
+        var_dump($std_email);
+
+        $this->storeMail($std_email);
+
+    }
 
     /**
      * Remove emails.
      * @return [type] [description]
      */
-    public function removeMails($all = false, $id = null);
+    public function removeMails($all = false, $id = null) {
+          return imap_delete();
+    }
 
     /**
      * Get the subject of the email.
      * @return [type] [description]
      */
-    public function getEmailSubject();
+    public function getEmailSubject() {
+
+    }
 
     /**
      * Get the body of the email.
      * @return [type] [description]
      */
-    public function getEmailBody();
+    public function getEmailBody() {
+
+    }
 
 
     /**
      * Get the keywords fro mthe email.
      * @return [type] [description]
      */
-    public function getEmailKeywords();
+    public function getEmailKeywords() {
+
+    }
+
+    public function storeMail($data) {
+        
+    }
 
 }

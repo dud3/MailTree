@@ -24,7 +24,7 @@ class readmail extends Command {
 	 * [$emails description]
 	 * @var [type]
 	 */
-	protected $emails;
+	public $emails;
 
 	/**
 	 * Create a new command instance.
@@ -33,8 +33,11 @@ class readmail extends Command {
 	 */
 	public function __construct(EmailsRepositoryInterface $emails)
 	{
+
 		$this->emails = $emails;
+
 		parent::__construct();
+		
 	}
 
 	/**
@@ -44,7 +47,7 @@ class readmail extends Command {
 	 */
 	public function fire()
 	{
-		$this->emails->read_all_emails();
+		$this->emails->readMails();
 	}
 
 	// ---------------------

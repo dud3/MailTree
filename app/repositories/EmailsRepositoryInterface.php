@@ -31,6 +31,6 @@ interface EmailsRepositoryInterface {
      * Get the keywords fro mthe email.
      * @return [type] [description]
      */
-    public function getEmailKeywords();
+    public function getEmailKeywords($data);
 
 }

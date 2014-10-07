@@ -14,6 +14,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
     public $user;
 
+
     /**
      * [__construct description]
      */
@@ -29,6 +30,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
     }
 
+
  	/**
      * Read all the emails.
      * @return [type] [description]
@@ -38,6 +40,9 @@ class EmailsRepository implements EmailsRepositoryInterface {
         $emails = $this->emails;
 
         $std_email = new StdClass;
+        $arr_emails = [];
+
+        var_dump("We have " . count($emails) . " Emaisl");
 
         foreach ($emails as $message) {
 
@@ -48,13 +53,18 @@ class EmailsRepository implements EmailsRepositoryInterface {
             $std_email->body = $message->getMessageBody();
             $std_email->date = $message->getDate();
 
+            $arr_emails[] = $std_email;
+
+            $this->storeMail($std_email);
+            $this->getEmailKeywords($std_email->subject);
+            $this->getEmailBody($std_email->body);
+
         }
 
-        var_dump($std_email);
-
-        $this->storeMail($std_email);
+        // var_dump($arr_emails);
 
     }
+
 
     /**
      * Remove emails.
@@ -63,6 +73,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
     public function removeMails($all = false, $id = null) {
           return imap_delete();
     }
+
 
     /**
      * Get the subject of the email.
@@ -85,12 +96,29 @@ class EmailsRepository implements EmailsRepositoryInterface {
      * Get the keywords fro mthe email.
      * @return [type] [description]
      */
-    public function getEmailKeywords() {
+    public function getEmailKeywords($data) {
+        $keywords =  explode(" ", $data);
+        var_dump($keywords);
+    }
+
+
+    /**
+     * Sotore emails in the database.
+     * @param  [type] $data [description]
+     * @return [type]       [description]
+     */
+    public function storeMail($data) {
 
     }
 
-    public function storeMail($data) {
-        
+
+    /**
+     * Store Keywords
+     * @param  [type] $data [description]
+     * @return [type]       [description]
+     */
+    public function storeKeywords($data) {
+        var_dump($data);
     }
 
 }

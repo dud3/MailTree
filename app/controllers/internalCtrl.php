@@ -1,6 +1,6 @@
 <?php
 
-class internlCtrl extends BaseController {
+class internalCtrl extends BaseController {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -18,6 +18,6 @@ class internlCtrl extends BaseController {
 
 	}
 
-	view::share();
+	// view::share();
 
 }

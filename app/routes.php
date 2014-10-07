@@ -21,11 +21,15 @@ Route::group(array('before' => 'guest'), function()
 	Route::post('/login',		'AuthCtrl@login');
 });
 
+
+Route::get('/phpinfo',		'HelpCtrl@phpinfo');
+Route::get('/app',			'EmailListCtrl@view_emails');
+
 // ------------------
 // :: After log-in ::
 // ------------------
 Route::group(array('before' => 'auth'), function()
 {
-	Route::get('/app',			'AppCtrl@index');
+	// Route::get('/app',			'EmailListCtrl@view_emails');
 
 });

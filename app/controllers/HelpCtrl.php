@@ -1,13 +1,14 @@
 <?php
 
-class emailListCtrl extends internlCtrl {
+class HelpCtrl extends internalCtrl {
 
 	/*
 	|--------------------------------------------------------------------------
-	| emailListCtrl Controller
+	| Internal Controller
 	|--------------------------------------------------------------------------
 	|
-	| This is where the enmails go.
+	| Everything else extend this controller, unless the AuthCtrl 
+	| -> and repositories.
 	|
 	*/
 
@@ -17,9 +18,8 @@ class emailListCtrl extends internlCtrl {
 
 	}
 
-	public function view_emails() {
-		$vew = View::make('email.index');
-		return $view;
+	public function phpinfo() {
+		return View::make('help.phpinfo');
 	}
 
 }

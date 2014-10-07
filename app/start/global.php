@@ -2,6 +2,17 @@
 
 /*
 |--------------------------------------------------------------------------
+| Injection for the IoC container
+|--------------------------------------------------------------------------
+ */
+
+$app['Cartalyst\Sentry\Sentry'] = $app['sentry'];
+
+App::bind('UserRepositoryInterface', 'SentryUserRepository');
+App::bind('EmailsRepositoryInterface', 'EmailsRepository');
+
+/*
+|--------------------------------------------------------------------------
 | Register The Laravel Class Loader
 |--------------------------------------------------------------------------
 |

@@ -1,0 +1,36 @@
+<?php
+
+
+array(15) {
+  [0]=>
+  string(4) "Fwd:"
+  [1]=>
+  string(8) "Assembly"
+  [2]=>
+  string(1) "&"
+  [3]=>
+  string(7) "Mailing"
+  [4]=>
+  string(3) "for"
+  [5]=>
+  string(3) "job"
+  [6]=>
+  string(10) "California"
+  [7]=>
+  string(4) "City"
+  [8]=>
+  string(7) "Utility"
+  [9]=>
+  string(7) "Billing"
+  [10]=>
+  string(1) "-"
+  [11]=>
+  string(9) "September"
+  [12]=>
+  string(4) "2014"
+  [13]=>
+  string(12) "Segment:MAIN"
+  [14]=>
+  string(10) "completed."
+}
+

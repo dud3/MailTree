@@ -97,7 +97,56 @@ class EmailsRepository implements EmailsRepositoryInterface {
      * @return [type] [description]
      */
     public function getEmailKeywords($data) {
+
         $keywords =  explode(" ", $data);
+
+        $k_db = keywords_list::all()->toArray();
+
+        var_dump($k_db[0]["keywords"]);
+
+        $jf = (string)$k_db[0]["keywords"];
+
+        var_dump($jf);
+
+        // $json_a = json_encode($jf, true);
+        trim($jf);
+
+        $json_a = json_decode($jf, true);
+
+         switch (json_last_error()) {
+        case JSON_ERROR_NONE:
+            echo ' - No errors';
+        break;
+        case JSON_ERROR_DEPTH:
+            echo ' - Maximum stack depth exceeded';
+        break;
+        case JSON_ERROR_STATE_MISMATCH:
+            echo ' - Underflow or the modes mismatch';
+        break;
+        case JSON_ERROR_CTRL_CHAR:
+            echo ' - Unexpected control character found';
+        break;
+        case JSON_ERROR_SYNTAX:
+            echo ' - Syntax error, malformed JSON';
+        break;
+        case JSON_ERROR_UTF8:
+            echo ' - Malformed UTF-8 characters, possibly incorrectly encoded';
+        break;default:
+            echo ' - Unknown error';
+        break;    }
+
+        echo PHP_EOL;
+
+        var_dump($json_a);
+
+        $string='{"name":"John Adams"}';
+
+        var_dump($string);
+
+        $json_b=json_decode($string,true);
+
+        var_dump($json_b);
+
         var_dump($keywords);
     }
 

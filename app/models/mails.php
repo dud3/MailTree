@@ -9,4 +9,7 @@ class mails extends Eloquent {
 	 */
 	protected $table = 'mails';
 
+	protected $guarded = array();
+    // protected $fillable = ['id', 'token']
+
 }

@@ -8,5 +8,8 @@ class keywords_list extends Eloquent {
 	 * @var string
 	 */
 	protected $table = 'keywords_list';
+
+	protected $guarded = array();
+    // protected $fillable = ['id', 'token']
 	
 }

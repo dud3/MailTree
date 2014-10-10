@@ -42,7 +42,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
         $std_email = new StdClass;
         $arr_emails = [];
 
-        var_dump("We have " . count($emails) . " Emails");
+        echo("We have " . count($emails) . " Emails");
 
         foreach ($emails as $message) {
 
@@ -55,14 +55,21 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             $arr_emails[] = $std_email;
 
-            $this->storeMail($std_email);
-            $this->getEmailKeywords($std_email->subject);
-            $this->getEmailBody($std_email->body);
-
         }
 
-        // var_dump($arr_emails);
+         $this->getEmailKeywords($arr_emails);
 
+    }
+
+
+    /**
+     * Send stored mails from the database.
+     * @return [type] [description]
+     */
+    public function sendMails() {
+        foreach (mails::all()->toArray() as $mail) {
+            
+        }
     }
 
 
@@ -98,56 +105,81 @@ class EmailsRepository implements EmailsRepositoryInterface {
      */
     public function getEmailKeywords($data) {
 
-        $keywords =  explode(" ", $data);
+        foreach ($data as $email) {
+     
+            // Get the keywords from the DB
+            $get_keywords =  explode(" ", $email->subject);
+            $k_db = keywords_list::all()->toArray();
+            $k_intersect = [];
+      
+            foreach ($k_db as $db_keywords) {
+       
+                $k_db = (string)$db_keywords["keywords"];
+                $k_id = $db_keywords["id"];
 
-        $k_db = keywords_list::all()->toArray();
+                $k_db = trim($k_db);
+                $k_db = json_decode($k_db, true);
 
-        var_dump($k_db[0]["keywords"]);
+                //
+                //
+                // Get the common between the database keywords that belong 
+                // -> to each user and the keywords from the emails subject.
+                // 
+                // Sample: 
+                //          * Email Keyword: 'dog', 'fish', 'rocket', 'etc'
+                //          * DB Keywords: 'dog', 'rocket'
+                // 
+                // Union and the output will be 'dog' and 'fish'   
+                //
+                // 
+                $k_intersect = array_intersect($k_db, $get_keywords);
 
-        $jf = (string)$k_db[0]["keywords"];
 
-        var_dump($jf);
+                //
+                //
+                // After we union the smmilarities check if there's a difference
+                // -> between the DB array and the filtered array from the "email subject"
+                // -> this way we can figure it out if they are identical.
+                // 
+                //  Since the `array_intersect()` get's the common between both of arrays
+                //  -> we might have a situation like the following:
+                //  
+                //  * Email Keywords: 'dog', 'fish', 'rocket', '-', 'something'
+                //  * DB Keywords: 'dog', 'fish', 'dolphin'
+                //  
+                //  array_intersect($e_kwd, $db_kwd) => 'dog', 'fish'
+                //  
+                //  -> so e_kwd != $db_kwd => because the 'dolphin' should match also.
+                //  
+                //
+                $k_arr_diff = array_diff($k_db, $get_keywords);
+                
+                if(count($k_arr_diff) == 0) {
 
-        // $json_a = json_encode($jf, true);
-        trim($jf);
+                   $e_add_list = email_address_list::where("keyword_id", "=", $k_id)->get()->toArray();
 
-        $json_a = json_decode($jf, true);
+                    if($e_add_list !== null) {
+                        foreach ($e_add_list as $e_list) {
 
-         switch (json_last_error()) {
-        case JSON_ERROR_NONE:
-            echo ' - No errors';
-        break;
-        case JSON_ERROR_DEPTH:
-            echo ' - Maximum stack depth exceeded';
-        break;
-        case JSON_ERROR_STATE_MISMATCH:
-            echo ' - Underflow or the modes mismatch';
-        break;
-        case JSON_ERROR_CTRL_CHAR:
-            echo ' - Unexpected control character found';
-        break;
-        case JSON_ERROR_SYNTAX:
-            echo ' - Syntax error, malformed JSON';
-        break;
-        case JSON_ERROR_UTF8:
-            echo ' - Malformed UTF-8 characters, possibly incorrectly encoded';
-        break;default:
-            echo ' - Unknown error';
-        break;    }
+                           // var_dump($e_list);
+                            $std_store_email = new StdClass;
+                            $std_store_email->email_address_id = (int)$e_list["id"];
+                            $std_store_email->subject = $email->subject;
+                            $std_store_email->body = $email->body;
 
-        echo PHP_EOL;
+                            $this->storeMail($std_store_email);
+                            
+                        }
+                    }
 
-        var_dump($json_a);
+                }
 
-        $string='{"name":"John Adams"}';
+            }
+        }
 
-        var_dump($string);
+        // var_dump($k_intersect);
+        // var_dump($k_intersect);
 
-        $json_b=json_decode($string,true);
-
-        var_dump($json_b);
-
-        var_dump($keywords);
     }
 
 
@@ -157,7 +189,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
      * @return [type]       [description]
      */
     public function storeMail($data) {
-
+        var_dump($data->email_address_id);
+        mails::create(["email_address_id" => $data->email_address_id, "subject" => $data->subject, "body" => $data->body]);
     }
 
 
@@ -168,6 +201,38 @@ class EmailsRepository implements EmailsRepositoryInterface {
      */
     public function storeKeywords($data) {
         var_dump($data);
+    }
+
+
+    public function validateJson() {
+
+        switch (json_last_error()) {
+
+            case JSON_ERROR_NONE:
+                echo ' - No errors';
+            break;
+            case JSON_ERROR_DEPTH:
+                echo ' - Maximum stack depth exceeded';
+            break;
+            case JSON_ERROR_STATE_MISMATCH:
+                echo ' - Underflow or the modes mismatch';
+            break;
+            case JSON_ERROR_CTRL_CHAR:
+                echo ' - Unexpected control character found';
+            break;
+            case JSON_ERROR_SYNTAX:
+                echo ' - Syntax error, malformed JSON';
+            break;
+            case JSON_ERROR_UTF8:
+                echo ' - Malformed UTF-8 characters, possibly incorrectly encoded';
+            break;
+            default:
+                echo ' - Unknown error';
+            break;
+
+        }
+
+        echo PHP_EOL;
     }
 
 }

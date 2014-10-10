@@ -9,6 +9,9 @@ class groups extends Eloquent {
 	 */
 	protected $table = 'groups';
 
+	protected $guarded = array();
+    // protected $fillable = ['id', 'token']
+
 	public static $rules = array(
 		'name',
 		'password',

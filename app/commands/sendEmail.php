@@ -41,6 +41,7 @@ class sendEmail extends Command {
 	 */
 	public function fire()
 	{
+		$this->comment("Sending emails...");
 		$this->emails->sendMails();
 	}
 

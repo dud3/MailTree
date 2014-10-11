@@ -47,7 +47,16 @@ class readEmail extends Command {
 	 */
 	public function fire()
 	{
+
+		 /*
+		$this->info("This is a comment.");
+		$this->question("This is a question.");
+		$this->error("This is an error.");
+		*/
+	
+		$this->comment("Reading emails...");
 		$this->emails->readMails();
+
 	}
 
 

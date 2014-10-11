@@ -1,6 +1,9 @@
 <?php
 
 use Carbon\Carbon;
+use Illuminate\Console\Command as cmd;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Input\InputArgument;
 
 class EmailsRepository implements EmailsRepositoryInterface {
 
@@ -14,6 +17,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
     public $user;
 
+    protected static $enable_html_email = false;
+
     protected static $dump_folder;
     protected static $dump_file_fullpath;
 
@@ -24,7 +29,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
                           'email_overview_dump.txt',
                           'email_subject_dump.txt',
                           'internal_stored_emails.txt',
-                          'internal_sent_emails.txt'];
+                          'internal_sent_emails.txt',
+                          'internal_track_keywords.txt'];
 
 
     /**
@@ -118,6 +124,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
         foreach ($sql_mails as $mail) {
 
+            self::openDump();
+
             $email = $mail->email;
             $full_name = $mail->full_name;
             $message_body = $mail->body;
@@ -146,6 +154,9 @@ class EmailsRepository implements EmailsRepositoryInterface {
             
             });
 
+            self::dump_output('send_emails', $data);
+            self::closeDump();
+            
         }
     }
 
@@ -389,6 +400,11 @@ class EmailsRepository implements EmailsRepositoryInterface {
             case 'send_emails':
                 self::$dump_file_fullpath .= self::$dump_files[7];
                 break;
+
+            case 'track_keywords':
+                self::$dump_file_fullpath .= self::$dump_files[8];
+                break;
+
         }
 
         if(is_array($var_dump) || is_object($var_dump)) {

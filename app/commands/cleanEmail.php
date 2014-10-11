@@ -42,6 +42,8 @@ class cleanEmail extends Command {
 		if($emails_truncate) {
 			DB::raw("ALTER TABLE mails AUTO_INCREMENT = 1");
 		}
+
+		$this->info("Emails cleaned.");
 	}
 	
 

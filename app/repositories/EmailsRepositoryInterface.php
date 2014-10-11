@@ -6,7 +6,7 @@ interface EmailsRepositoryInterface {
      * Read all the emails.
      * @return [type] [description]
      */
-    public function readMails();
+    public function readMails($html_enable);
 
     /**
      * Remove emails.

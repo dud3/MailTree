@@ -14,3 +14,5 @@ $email = new EmailsRepository;
 Artisan::add(new readEmail($email));
 Artisan::add(new sendEmail($email));
 Artisan::add(new cleanEmail());
+
+Artisan::resolve('readEmail');

@@ -47,36 +47,28 @@ class readEmail extends Command {
 	 */
 	public function fire()
 	{
-
-		 /*
-		$this->info("This is a comment.");
-		$this->question("This is a question.");
-		$this->error("This is an error.");
-		*/
 	
+		$bool = $this->argument('html_bool');
+
+		($bool == "true") ? $bool = true : $bool = false;
+
 		$this->comment("Reading emails...");
-		$this->emails->readMails();
+		$this->emails->readMails($html_enable = $bool);
+		$this->info("Emails has been readen.");
 
 	}
-
-
-	// ========================
-	// :: No arguments for now
-	// ========================
 
 	/**
 	 * Get the console command arguments.
 	 *
 	 * @return array
 	 */
-	/*
 	protected function getArguments()
 	{
 		return array(
-			array('example', InputArgument::REQUIRED, 'An example argument.'),
+			array('html_bool', InputArgument::REQUIRED, ' argument is required eother true or false.'),
 		);
 	}
-	*/
 
 	/**
 	 * Get the console command options.
@@ -87,9 +79,19 @@ class readEmail extends Command {
 	protected function getOptions()
 	{
 		return array(
-			array('example', null, InputOption::VALUE_OPTIONAL, 'An example option.', null),
+			array('html_enable', null, InputOption::VALUE_OPTIONAL, 'Argument as option.', null),
 		);
 	}
 	*/
+
+	//
+	// Further command-line color options...
+	/*
+	$this->info("This is a comment.");
+	$this->question("This is a question.");
+	$this->error("This is an error.");
+	*/
+
+
 
 }

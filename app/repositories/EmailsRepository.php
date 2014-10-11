@@ -17,6 +17,9 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
     public $user;
 
+    protected static $options;
+    protected static $arguments;
+
     protected static $enable_html_email = false;
 
     protected static $dump_folder;
@@ -53,7 +56,11 @@ class EmailsRepository implements EmailsRepositoryInterface {
      * Read all the emails.
      * @return [type] [description]
      */
-    public function readMails() {
+    public function readMails($html_enable) {
+
+        self::$enable_html_email = $html_enable;
+
+        (self::$enable_html_email) ? $html_enable = 2 : $html_enable = 0;
 
         $emails = $this->emails;
         $arr_emails = [];
@@ -75,7 +82,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
             $std_email->overview = $message->getOverview();
             $std_email->address = $message->getAddresses('from');
             $std_email->subject = $message->getSubject();
-            $std_email->body = $message->getMessageBody();
+            $std_email->body = $message->getMessageBody($html_enable);
             $std_email->date = $message->getDate();
 
             $std_email->subject = explode(" ", $std_email->subject);
@@ -156,7 +163,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             self::dump_output('send_emails', $data);
             self::closeDump();
-            
+
         }
     }
 
@@ -446,6 +453,16 @@ class EmailsRepository implements EmailsRepositoryInterface {
              file_put_contents(self::$dump_file_fullpath . $dump_file, "----------------------------------------------------------------------------------------------------\n", FILE_APPEND | LOCK_EX);
         }
 
+    }
+
+
+    /**
+     * Get arguments from the cmd.
+     * @param  [type] $arguments [description]
+     * @return [type]            [description]
+     */
+    public static function arguments($arguments = null) {
+        return self::$arguments;
     }
 
 }

@@ -14,15 +14,15 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
     public $user;
 
-    public $dump_folder;
-    public $dump_file_fullpath;
+    protected static $dump_folder;
+    protected static $dump_file_fullpath;
 
-    public $dump_files = ['email_dump.txt', 
-                          'email_header_dump.txt'
+    protected static $dump_files = ['email_dump.txt', 
+                          'email_header_dump.txt',
                           'email_get_address_dump.txt',
                           'email_body_dump.txt', 
                           'email_overview_dump.txt',
-                          'email_subject_dump.txt']
+                          'email_subject_dump.txt'];
 
 
     /**
@@ -37,13 +37,6 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
         // Read the inbox
         $this->emails = $this->inbox;
-
-        $this->dump_folder = base_path() . "/sys_dump/";
-        $this->dump_file_fullpath = $this->dump_folder;
-
-        if(!file_exists($this->dump_file_fullpath)) {
-            fopen($_dump_file, "w");
-        }
 
     }
 
@@ -63,6 +56,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
         echo("Count Emails: " . count($emails) . "\n");
         echo("-------------------\n");
 
+        self::dump_output('all', $emails);
+
         foreach ($emails as $message) {
 
             $std_email = new StdClass;
@@ -76,9 +71,13 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             $arr_emails[] = $std_email;
 
-        }
+            self::dump_output('headers', $std_email->header);
+            self::dump_output('address', $std_email->address);
+            self::dump_output('body',   $std_email->body);
+            self::dump_output('overview', $std_email->overview);
+            self::dump_output('subject', $std_email->subject);
 
-        var_dump($arr_emails);
+        }
 
         $this->getEmailKeywords($arr_emails);
 
@@ -280,49 +279,54 @@ class EmailsRepository implements EmailsRepositoryInterface {
      * @param  [type] $message_style_type [description]
      * @return [type]                     [description]
      */
-    public function dump_screen($type) {
-        
-        ['email_dump.txt', 
-        'email_header_dump.txt'
-        'email_get_address_dump.txt',
-                          'email_body_dump.txt', 
-                          'email_overview_dump.txt',
-                          
-                          'email_subject_dump.txt']
+    public static function dump_output($type, $var_dump) {
 
+        self::$dump_folder = base_path() . "/sys_dump/";
+        self::$dump_file_fullpath = self::$dump_folder;
+
+        if(!file_exists(self::$dump_folder)) {
+            File::makeDirectory(self::$dump_folder, $mode = 0777, true, true);
+        }
+
+        if(!file_exists(self::$dump_file_fullpath)) {
+            foreach (self::$dump_files as $dump_file) {
+                fopen(self::$dump_file_fullpath . $dump_file, "w");
+            }
+        }
+        
         // Dump output
         switch ($type) {
 
             case 'all':
-                $this->dump_file_fullpath .= $this->dump_files[0];
+                self::$dump_file_fullpath .= self::$dump_files[0];
                 break;
 
             case 'headers':
-                $this->dump_file_fullpath .= $this->dump_files[1];
+                self::$dump_file_fullpath .= self::$dump_files[1];
                 break;
 
             case 'address':
-                $this->dump_file_fullpath .= $this->dump_files[2];
+                self::$dump_file_fullpath .= self::$dump_files[2];
                 break;
 
             case 'body':
-                $this->dump_file_fullpath .= $this->dump_files[3];
+                self::$dump_file_fullpath .= self::$dump_files[3];
                 break;
 
             case 'overview':
-                $this->dump_file_fullpath .= $this->dump_files[4];
+                self::$dump_file_fullpath .= self::$dump_files[4];
                 break;
             
             case 'subject':
-                $this->dump_file_fullpath .= $this->dump_files[5];
+                self::$dump_file_fullpath .= self::$dump_files[5];
                 break;
         }
 
-        $var_dump =  ("Write: " . $type . "\n");
+        // $var_dump =  ("Write: " . $type . "\n");
 
-        file_put_contents($this->dump_file_fullpath, $var_dump, FILE_APPEND | LOCK_EX);
+        file_put_contents(self::$dump_file_fullpath, $var_dump, FILE_APPEND | LOCK_EX);
 
-        echo $var_dump;
+        echo "Check the /sys_dump/ folder";
 
     }
 

@@ -107,17 +107,45 @@ class EmailsRepository implements EmailsRepositoryInterface {
      */
     public function sendMails() {
 
-        $sql = DB::select(
+        $sql_mails = DB::select(
 
             "SELECT * FROM mails m
 
              LEFT JOIN email_address_list e_a_l
-                ON m.email_address_id = e_a_l.id";
+                ON m.email_address_id = e_a_l.id"
 
         );
 
         foreach ($sql_mails as $mail) {
+
+            $email = $mail->email;
+            $full_name = $mail->full_name;
+            $message_body = $mail->body;
+            $message_subject = $mail->subject;
+
+            $data = ["email" => $email,
+                     "full_name" => $full_name,
+                     "message_body" => $message_body,
+                     "message_subject" => $message_subject];
+
+            $message = [];
             
+            Mail::send('emails.sentMail', $data, function($message) use ($email, $full_name, $message_body, $message_subject)
+            {
+                $message->from('test_dude@example.com', 'dude');
+
+                $message->subject($message_subject);
+
+                $message->to($email);
+
+                // 
+                // Save for later on if needed
+                // 
+                // $message->attach($pathToFile);
+                // 
+            
+            });
+
         }
     }
 
@@ -224,10 +252,9 @@ class EmailsRepository implements EmailsRepositoryInterface {
                             // Let's insert the name of the user that 
                             // -> will get the eamil.
                             // 
-                            $std_store_email->body = explode("\n", $std_store_email->body);
-
-                            array_unshift($std_store_email->body, "Dear " . $e_list["full_name"] . ",\n");
-                            $std_store_email->body = implode("\n", $std_store_email->body);
+                            // $std_store_email->body = explode("\n", $std_store_email->body);
+                            // array_unshift($std_store_email->body, "Dear " . $e_list["full_name"] . ",\n");
+                            // $std_store_email->body = implode("\n", $std_store_email->body);
 
                             $this->storeMail($std_store_email);
                             

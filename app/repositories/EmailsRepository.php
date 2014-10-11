@@ -42,7 +42,11 @@ class EmailsRepository implements EmailsRepositoryInterface {
         $std_email = new StdClass;
         $arr_emails = [];
 
-        echo("We have " . count($emails) . " Emails");
+        echo("= = = = = =\n");
+        echo("Read Emails\n");
+        echo("= = = = = =\n");
+        echo("Count Emails: " . count($emails) . "\n");
+        echo("-------------------\n");
 
         foreach ($emails as $message) {
 
@@ -50,7 +54,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
             $std_email->overview = $message->getOverview();
             $std_email->address = $message->getAddresses('from');
             $std_email->subject = $message->getSubject();
-            $std_email->body = $message->getMessageBody();
+            $std_email->body = $message->getMessageBody(false, 2);
             $std_email->date = $message->getDate();
 
             $arr_emails[] = $std_email;
@@ -135,6 +139,9 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 $k_intersect = array_intersect($k_db, $get_keywords);
 
 
+                var_dump($k_intersect);
+
+
                 //
                 //
                 // After we union the smmilarities check if there's a difference
@@ -153,7 +160,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 //  
                 //
                 $k_arr_diff = array_diff($k_db, $get_keywords);
-                
+
                 if(count($k_arr_diff) == 0) {
 
                    $e_add_list = email_address_list::where("keyword_id", "=", $k_id)->get()->toArray();

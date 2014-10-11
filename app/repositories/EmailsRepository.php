@@ -14,6 +14,16 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
     public $user;
 
+    public $dump_folder;
+    public $dump_file_fullpath;
+
+    public $dump_files = ['email_dump.txt', 
+                          'email_header_dump.txt'
+                          'email_get_address_dump.txt',
+                          'email_body_dump.txt', 
+                          'email_overview_dump.txt',
+                          'email_subject_dump.txt']
+
 
     /**
      * [__construct description]
@@ -28,6 +38,13 @@ class EmailsRepository implements EmailsRepositoryInterface {
         // Read the inbox
         $this->emails = $this->inbox;
 
+        $this->dump_folder = base_path() . "/sys_dump/";
+        $this->dump_file_fullpath = $this->dump_folder;
+
+        if(!file_exists($this->dump_file_fullpath)) {
+            fopen($_dump_file, "w");
+        }
+
     }
 
 
@@ -38,8 +55,6 @@ class EmailsRepository implements EmailsRepositoryInterface {
     public function readMails() {
 
         $emails = $this->emails;
-
-        $std_email = new StdClass;
         $arr_emails = [];
 
         echo("= = = = = =\n");
@@ -49,6 +64,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
         echo("-------------------\n");
 
         foreach ($emails as $message) {
+
+            $std_email = new StdClass;
 
             $std_email->header = $message->getHeaders();
             $std_email->overview = $message->getOverview();
@@ -61,7 +78,9 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
         }
 
-         $this->getEmailKeywords($arr_emails);
+        var_dump($arr_emails);
+
+        $this->getEmailKeywords($arr_emails);
 
     }
 
@@ -115,6 +134,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
             $get_keywords =  explode(" ", $email->subject);
             $k_db = keywords_list::all()->toArray();
             $k_intersect = [];
+
+            // var_dump($email);
       
             foreach ($k_db as $db_keywords) {
        
@@ -139,7 +160,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 $k_intersect = array_intersect($k_db, $get_keywords);
 
 
-                var_dump($k_intersect);
+                // var_dump($k_intersect);
 
 
                 //
@@ -240,6 +261,69 @@ class EmailsRepository implements EmailsRepositoryInterface {
         }
 
         echo PHP_EOL;
+    }
+
+    // ------------------------------- 
+    // Helper Functions
+    // -------------------------------
+    // 
+    // Helper functions reside here.
+    // 
+    // --------------------------------
+
+    /**
+     * Dump sent messages.
+     * @param  [type] $item_type          [description]
+     * @param  [type] $item_id            [description]
+     * @param  [type] $user_email         [description]
+     * @param  [type] $user_full_name     [description]
+     * @param  [type] $message_style_type [description]
+     * @return [type]                     [description]
+     */
+    public function dump_screen($type) {
+        
+        ['email_dump.txt', 
+        'email_header_dump.txt'
+        'email_get_address_dump.txt',
+                          'email_body_dump.txt', 
+                          'email_overview_dump.txt',
+                          
+                          'email_subject_dump.txt']
+
+        // Dump output
+        switch ($type) {
+
+            case 'all':
+                $this->dump_file_fullpath .= $this->dump_files[0];
+                break;
+
+            case 'headers':
+                $this->dump_file_fullpath .= $this->dump_files[1];
+                break;
+
+            case 'address':
+                $this->dump_file_fullpath .= $this->dump_files[2];
+                break;
+
+            case 'body':
+                $this->dump_file_fullpath .= $this->dump_files[3];
+                break;
+
+            case 'overview':
+                $this->dump_file_fullpath .= $this->dump_files[4];
+                break;
+            
+            case 'subject':
+                $this->dump_file_fullpath .= $this->dump_files[5];
+                break;
+        }
+
+        $var_dump =  ("Write: " . $type . "\n");
+
+        file_put_contents($this->dump_file_fullpath, $var_dump, FILE_APPEND | LOCK_EX);
+
+        echo $var_dump;
+
     }
 
 }

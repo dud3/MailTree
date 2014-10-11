@@ -4,27 +4,21 @@ use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
-class readmail extends Command {
+class sendEmail extends Command {
 
 	/**
 	 * The console command name.
 	 *
 	 * @var string
 	 */
-	protected $name = 'email:read';
+	protected $name = 'email:send';
 
 	/**
 	 * The console command description.
 	 *
 	 * @var string
 	 */
-	protected $description = 'Read emails from the account.';
-
-	/**
-	 * [$emails description]
-	 * @var [type]
-	 */
-	public $emails;
+	protected $description = 'Sends emails store into the DB(database).';
 
 	/**
 	 * Create a new command instance.
@@ -37,7 +31,7 @@ class readmail extends Command {
 		$this->emails = $emails;
 
 		parent::__construct();
-		
+
 	}
 
 	/**
@@ -47,12 +41,13 @@ class readmail extends Command {
 	 */
 	public function fire()
 	{
-		$this->emails->readMails();
+		$this->emails->sendMails();
 	}
 
-	// ---------------------
-	// No arguments for now
-	// ---------------------
+
+	// ========================
+	// :: No arguments for now
+	// ========================
 
 	/**
 	 * Get the console command arguments.

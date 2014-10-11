@@ -106,7 +106,17 @@ class EmailsRepository implements EmailsRepositoryInterface {
      * @return [type] [description]
      */
     public function sendMails() {
-        foreach (mails::all()->toArray() as $mail) {
+
+        $sql = DB::select(
+
+            "SELECT * FROM mails m
+
+             LEFT JOIN email_address_list e_a_l
+                ON m.email_address_id = e_a_l.id";
+
+        );
+
+        foreach ($sql_mails as $mail) {
             
         }
     }

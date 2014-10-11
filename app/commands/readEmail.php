@@ -4,30 +4,40 @@ use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
-class cleanEmail extends Command {
+class readEmail extends Command {
 
 	/**
 	 * The console command name.
 	 *
 	 * @var string
 	 */
-	protected $name = 'email:clean';
+	protected $name = 'email:read';
 
 	/**
 	 * The console command description.
 	 *
 	 * @var string
 	 */
-	protected $description = 'Clean all the emails from the DB(database).';
+	protected $description = 'Read emails from the account.';
+
+	/**
+	 * [$emails description]
+	 * @var [type]
+	 */
+	public $emails;
 
 	/**
 	 * Create a new command instance.
 	 *
 	 * @return void
 	 */
-	public function __construct()
+	public function __construct(EmailsRepositoryInterface $emails)
 	{
+
+		$this->emails = $emails;
+
 		parent::__construct();
+		
 	}
 
 	/**
@@ -37,13 +47,9 @@ class cleanEmail extends Command {
 	 */
 	public function fire()
 	{
-		$emails_truncate = DB::table('mails')->truncate();
-
-		if($emails_truncate) {
-			DB::raw("ALTER TABLE mails AUTO_INCREMENT = 1");
-		}
+		$this->emails->readMails();
 	}
-	
+
 
 	// ========================
 	// :: No arguments for now

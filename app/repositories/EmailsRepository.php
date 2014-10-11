@@ -22,7 +22,9 @@ class EmailsRepository implements EmailsRepositoryInterface {
                           'email_get_address_dump.txt',
                           'email_body_dump.txt', 
                           'email_overview_dump.txt',
-                          'email_subject_dump.txt'];
+                          'email_subject_dump.txt',
+                          'internal_stored_emails.txt',
+                          'internal_sent_emails.txt'];
 
 
     /**
@@ -203,6 +205,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
                            // var_dump($e_list);
                             $std_store_email = new StdClass;
                             $std_store_email->email_address_id = (int)$e_list["id"];
+                            $std_store_email->email = $e_list["email"];
+                            $std_store_email->full_name = $e_list["full_name"];
                             $std_store_email->subject = $email->subject;
                             $std_store_email->body = $email->body;
 
@@ -234,8 +238,10 @@ class EmailsRepository implements EmailsRepositoryInterface {
      * @return [type]       [description]
      */
     public function storeMail($data) {
-        var_dump($data->email_address_id);
         mails::create(["email_address_id" => $data->email_address_id, "subject" => $data->subject, "body" => $data->body]);
+        $dump_sent_emails = ("Email stored for: " . "ID: " . $data->email_address_id . " | Email: " . $data->email . " | Name: " . $data->full_name);
+        self::dump_output('store_emails', $dump_sent_emails);
+        var_dump($dump_sent_emails);
     }
 
 
@@ -338,11 +344,21 @@ class EmailsRepository implements EmailsRepositoryInterface {
             case 'subject':
                 self::$dump_file_fullpath .= self::$dump_files[5];
                 break;
+
+            case 'store_emails':
+                self::$dump_file_fullpath .= self::$dump_files[6];
+                break;
+
+            case 'send_emails':
+                self::$dump_file_fullpath .= self::$dump_files[7];
+                break;
         }
 
-        // $var_dump =  ("Write: " . $type . "\n");
+        if(is_array($var_dump) || is_object($var_dump)) {
+            $var_dump = json_encode($var_dump);
+        }
 
-        file_put_contents(self::$dump_file_fullpath, json_encode($var_dump) . "\n", FILE_APPEND | LOCK_EX);
+        file_put_contents(self::$dump_file_fullpath, $var_dump . "\n", FILE_APPEND | LOCK_EX);
 
     }
 
@@ -374,7 +390,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
         self::$dump_file_fullpath = self::$dump_folder;
 
         foreach (self::$dump_files  as $dump_file) {
-             file_put_contents(self::$dump_file_fullpath . $dump_file, "--------------------------------------------------", FILE_APPEND | LOCK_EX);
+             file_put_contents(self::$dump_file_fullpath . $dump_file, "----------------------------------------------------------------------------------------------------\n", FILE_APPEND | LOCK_EX);
         }
 
     }

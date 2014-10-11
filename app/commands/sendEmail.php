@@ -43,6 +43,7 @@ class sendEmail extends Command {
 	{
 		$this->comment("Sending emails...");
 		$this->emails->sendMails();
+		$this->info("Emails sent.");
 	}
 
 

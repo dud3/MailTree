@@ -67,8 +67,9 @@ background-color: #f6f6f6;
 					<tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 10px;">
 
 						<td class="alert alert-error" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 16px; vertical-align: bottom; color: #fff; font-weight: bold; text-align: left; border-radius: 3px 3px 0 0; background: #3a87ad; margin: 0; padding: 15px;" align="left" valign="bottom">
-							<img src="<?php echo $message->embed($logoIcon); ?>" style="width:40px; height:40px; float:left; margin-right:10px;" />
-							<div style="padding-top:5px !important;"> Notification </div>
+							<img src="<?php echo $message->embed($logoIcon); ?>" style="width:40px; height:40px; float:left; margin-right:10px;   
+								overflow: hidden; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 20px;" />
+							<div style="padding-top:5px !important;"> {{ $message_subject }} </div>
 						</td>
 
 					</tr>

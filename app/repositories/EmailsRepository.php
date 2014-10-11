@@ -85,17 +85,22 @@ class EmailsRepository implements EmailsRepositoryInterface {
             $std_email->body = $message->getMessageBody($html_enable);
             $std_email->date = $message->getDate();
 
-            $std_email->subject = explode(" ", $std_email->subject);
-            
-            if(in_array('Fwd:', $std_email->subject)) {
-                unset($std_email->subject[0]);
+            if(!self::$enable_html_email) {
+
+                $std_email->subject = explode(" ", $std_email->subject);
+                
+                if(in_array('Fwd:', $std_email->subject)) {
+                    unset($std_email->subject[0]);
+                }
+
+                $std_email->subject = implode(" ", $std_email->subject);
+
+
+                $std_email->body = explode("\n", $std_email->body);
+                $std_email->body = array_slice($std_email->body, 9);
+                $std_email->body = implode("\n", $std_email->body);
+
             }
-
-            $std_email->subject = implode(" ", $std_email->subject);
-
-            $std_email->body = explode("\n", $std_email->body);
-            $std_email->body = array_slice($std_email->body, 9);
-            $std_email->body = implode("\n", $std_email->body);
 
             $arr_emails[] = $std_email;
 
@@ -161,6 +166,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
             
             });
 
+            var_dump("To: " . $data["email"] . " | full_name: " . $data["full_name"]);
             self::dump_output('send_emails', $data);
             self::closeDump();
 

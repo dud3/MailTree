@@ -71,7 +71,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
             $std_email->date = $message->getDate();
 
             $std_email->body = explode("\n", $std_email->body);
-            $std_email->body = array_slice($std_email->body, 6);
+            $std_email->body = array_slice($std_email->body, 9);
             $std_email->body = implode("\n", $std_email->body);
 
             $arr_emails[] = $std_email;
@@ -81,8 +81,6 @@ class EmailsRepository implements EmailsRepositoryInterface {
             self::dump_output('body',   $std_email->body);
             self::dump_output('overview', $std_email->overview);
             self::dump_output('subject', $std_email->subject);
-
-            var_dump($std_email->body);
 
         }
 
@@ -199,6 +197,15 @@ class EmailsRepository implements EmailsRepositoryInterface {
                             $std_store_email->email_address_id = (int)$e_list["id"];
                             $std_store_email->subject = $email->subject;
                             $std_store_email->body = $email->body;
+
+                            //
+                            // Let's insert the name of the user that 
+                            // -> will get the eamil.
+                            // 
+                            $std_store_email->body = explode("\n", $std_store_email->body);
+
+                            array_unshift($std_store_email->body, "Dear " . $e_list["full_name"] . ",\n");
+                            $std_store_email->body = implode("\n", $std_store_email->body);
 
                             $this->storeMail($std_store_email);
                             

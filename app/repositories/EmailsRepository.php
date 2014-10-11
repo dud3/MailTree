@@ -56,6 +56,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
         echo("Count Emails: " . count($emails) . "\n");
         echo("-------------------\n");
 
+        self::openDump();
         self::dump_output('all', $emails);
 
         foreach ($emails as $message) {
@@ -80,6 +81,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
         }
 
         $this->getEmailKeywords($arr_emails);
+
+        self::closeDump();
 
     }
 
@@ -204,9 +207,6 @@ class EmailsRepository implements EmailsRepositoryInterface {
             }
         }
 
-        // var_dump($k_intersect);
-        // var_dump($k_intersect);
-
     }
 
 
@@ -324,9 +324,40 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
         // $var_dump =  ("Write: " . $type . "\n");
 
-        file_put_contents(self::$dump_file_fullpath, $var_dump, FILE_APPEND | LOCK_EX);
+        file_put_contents(self::$dump_file_fullpath, json_encode($var_dump) . "\n", FILE_APPEND | LOCK_EX);
 
-        echo "Check the /sys_dump/ folder";
+    }
+
+
+    /**
+     * Start dump file.
+     * @return [type] [description]
+     */
+    public static function openDump() {
+
+        self::$dump_folder = base_path() . "/sys_dump/";
+        self::$dump_file_fullpath = self::$dump_folder;
+
+        foreach (self::$dump_files  as $dump_file) {
+             file_put_contents(self::$dump_file_fullpath . $dump_file,  "\n" . date("F j, Y, g:i a"), FILE_APPEND | LOCK_EX);
+             file_put_contents(self::$dump_file_fullpath . $dump_file,  "\n----------------------------------------------------------------------------------------------------\n", FILE_APPEND | LOCK_EX);
+        }
+
+    }
+
+
+    /**
+     * Close the dump files.
+     * @return [type] [description]
+     */
+    public static function closeDump() {
+
+        self::$dump_folder = base_path() . "/sys_dump/";
+        self::$dump_file_fullpath = self::$dump_folder;
+
+        foreach (self::$dump_files  as $dump_file) {
+             file_put_contents(self::$dump_file_fullpath . $dump_file, "--------------------------------------------------", FILE_APPEND | LOCK_EX);
+        }
 
     }
 

@@ -85,16 +85,15 @@ class EmailsRepository implements EmailsRepositoryInterface {
             $std_email->body = $message->getMessageBody($html_enable);
             $std_email->date = $message->getDate();
 
+            $std_email->subject = explode(" ", $std_email->subject);
+            
+            if(in_array('Fwd:', $std_email->subject)) {
+                unset($std_email->subject[0]);
+            }
+
             if(!self::$enable_html_email) {
 
-                $std_email->subject = explode(" ", $std_email->subject);
-                
-                if(in_array('Fwd:', $std_email->subject)) {
-                    unset($std_email->subject[0]);
-                }
-
                 $std_email->subject = implode(" ", $std_email->subject);
-
 
                 $std_email->body = explode("\n", $std_email->body);
                 $std_email->body = array_slice($std_email->body, 9);
@@ -161,6 +160,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
             //
             $data["message_body"] = explode("\n", $data["message_body"]);
 
+            array_walk($data["message_body"], array($this, 'trim_value'));
+
             for($i = 0; $i < count($data["message_body"]); $i++) {
 
                 if($data["message_body"][$i] == "Click here") {
@@ -168,6 +169,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 }
 
             }
+
+            var_dump($data["message_body"]);
 
             $data["message_body"] = implode("\n", $data["message_body"]);
 
@@ -492,6 +495,33 @@ class EmailsRepository implements EmailsRepositoryInterface {
      */
     public static function arguments($arguments = null) {
         return self::$arguments;
+    }
+
+
+    // ------------------------------
+    // Helper functions
+    // ------------------------------
+    // 
+    // Helper functions.
+    // 
+    // 
+
+    /**
+     * Trim values.
+     * @param  [type] $value [description]
+     * @return [type]        [description]
+     */
+    public function trim_value(&$value) { 
+        $value = trim($value); 
+    }
+
+    /**
+     * Replace value
+     * @param  [type] $value [description]
+     * @return [type]        [description]
+     */
+    public function replace_value(&$value, $needle = null) {
+        $value = preg_replace('/(\r\n|\r|\n)/s',"\n",$contents);
     }
 
 }

@@ -1,0 +1,32 @@
+[33mSending emails...[39m
+array(6) {
+  [0]=>
+  string(0) ""
+  [1]=>
+  string(75) "Assembly & Mailing for job California City Utility Billing - September 2014"
+  [2]=>
+  string(60) "and segment MAIN and application California City Application"
+  [3]=>
+  string(39) "was completed at 6:46 PM on 09/19/2014."
+  [4]=>
+  string(0) ""
+  [5]=>
+  string(73) "Items 1-3618 having a quantity of 3618 were mailed at 09/20/2014 9:00 AM."
+}
+string(39) "To: dk18184@gmail.com | full_name: Dren"
+array(6) {
+  [0]=>
+  string(0) ""
+  [1]=>
+  string(75) "Assembly & Mailing for job California City Utility Billing - September 2014"
+  [2]=>
+  string(60) "and segment MAIN and application California City Application"
+  [3]=>
+  string(39) "was completed at 6:46 PM on 09/19/2014."
+  [4]=>
+  string(0) ""
+  [5]=>
+  string(73) "Items 1-3618 having a quantity of 3618 were mailed at 09/20/2014 9:00 AM."
+}
+string(46) "To: sigrunerla94@gmail.com | full_name: Sigrun"
+[32mEmails sent.[39m

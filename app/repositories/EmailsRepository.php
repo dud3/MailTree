@@ -17,6 +17,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
     public $user;
 
+    protected static $forward_email_from;
+
     protected static $options;
     protected static $arguments;
 
@@ -40,6 +42,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
      * [__construct description]
      */
     public function __construct() {
+
+        self::$forward_email_from = Config::get("constant.g_fwd_email_address");[0]
 
         $this->server = new \Fetch\Server($this->server_name, 993);
         $this->server->setAuthentication($this->username, $this->password);

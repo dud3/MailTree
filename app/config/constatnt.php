@@ -187,4 +187,16 @@ return array(
 	
 	'g_enable_notification_emails' => false,
 
+	/*
+	|--------------------------------------------------------------------------
+	| Froward email address
+	|--------------------------------------------------------------------------
+	|
+	| The forward emails address.
+	|
+	|
+	*/
+
+	'g_fwd_email_address' => ['ta@alexander-co.com', 'tlac@acsbill.com'],
+
 );

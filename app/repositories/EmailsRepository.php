@@ -148,6 +148,29 @@ class EmailsRepository implements EmailsRepositoryInterface {
                      "message_body" => $message_body,
                      "message_subject" => $message_subject];
 
+
+            //
+            // Basically what we're doing here is that
+            // -> whenever we see a text that says 'Click here'
+            // -> automatically splice "Click here" text and
+            // -> everything else that comes after it.
+            // 
+            // Let's just have this one here right now.
+            // And maybe later on we can actually prevent this data
+            // -> get into the DB at the frst place.
+            //
+            $data["message_body"] = explode("\n", $data["message_body"]);
+
+            for($i = 0; $i < count($data["message_body"]); $i++) {
+
+                if($data["message_body"][$i] == "Click here") {
+                    array_splice($data["message_body"], $i, count($data["message_body"]) - 1);
+                }
+
+            }
+
+            $data["message_body"] = implode("\n", $data["message_body"]);
+
             $message = [];
             
             Mail::send('emails.sentMail', $data, function($message) use ($email, $full_name, $message_body, $message_subject)

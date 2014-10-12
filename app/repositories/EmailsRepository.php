@@ -18,6 +18,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
     public $user;
 
     protected static $forward_email_from;
+    protected static $forward_email_full_name;
 
     protected static $options;
     protected static $arguments;
@@ -43,7 +44,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
      */
     public function __construct() {
 
-        self::$forward_email_from = Config::get("constant.g_fwd_email_address");[0]
+        self::$forward_email_from = Config::get("constant.g_fwd_email_address");
+        self::$forward_email_full_name = Config::get("constant.g_fwd_email_address_full_name");
 
         $this->server = new \Fetch\Server($this->server_name, 993);
         $this->server->setAuthentication($this->username, $this->password);
@@ -180,21 +182,25 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             $message = [];
             
-            Mail::send('emails.sentMail', $data, function($message) use ($email, $full_name, $message_body, $message_subject)
-            {
-                $message->from('test_dude@example.com', 'dude');
+            foreach (self::$forward_email_from as $fwd_from) {
 
-                $message->subject($message_subject);
+                Mail::send('emails.sentMail', $data, function($message) use ($email, $full_name, $message_body, $message_subject, $fwd_from)
+                {
+                    $message->from($fwd_from, self::$forward_email_full_name);
 
-                $message->to($email);
+                    $message->subject($message_subject);
 
-                // 
-                // Save for later on if needed
-                // 
-                // $message->attach($pathToFile);
-                // 
-            
-            });
+                    $message->to($email);
+
+                    // 
+                    // Save for later on if needed
+                    // 
+                    // $message->attach($pathToFile);
+                    // 
+                
+                });
+
+            }
 
             var_dump("To: " . $data["email"] . " | full_name: " . $data["full_name"]);
             self::dump_output('send_emails', $data);

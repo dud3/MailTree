@@ -97,12 +97,18 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 unset($std_email->subject[0]);
             }
 
+            $std_email->subject = implode(" ", $std_email->subject);
+
             if(!self::$enable_html_email) {
 
-                $std_email->subject = implode(" ", $std_email->subject);
-
                 $std_email->body = explode("\n", $std_email->body);
-                $std_email->body = array_slice($std_email->body, 9);
+
+                array_walk($std_email->body, array($this, 'trim_value'));
+
+                if(in_array('---------- Forwarded message ----------', $std_email->body)) {
+                    $std_email->body = array_slice($std_email->body, 9);
+                }
+
                 $std_email->body = implode("\n", $std_email->body);
 
             }

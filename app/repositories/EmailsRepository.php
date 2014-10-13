@@ -170,7 +170,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             for($i = 0; $i < count($data["message_body"]); $i++) {
 
-                if($data["message_body"][$i] == "Click here") {
+                if($data["message_body"][$i] == "Click here" || $data["message_body"][$i] == "--") {
                     array_splice($data["message_body"], $i, count($data["message_body"]) - 1);
                 }
 

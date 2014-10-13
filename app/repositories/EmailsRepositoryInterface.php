@@ -33,4 +33,12 @@ interface EmailsRepositoryInterface {
      */
     public function getEmailKeywords($data);
 
+
+    /**
+     * Send emails(forward).
+     * @param  [type] $fwd_from [description]
+     * @return [type]           [description]
+     */
+    public function sendMails($fwd_from = null);
+
 }

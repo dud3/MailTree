@@ -41,15 +41,14 @@ class sendEmail extends Command {
 	 */
 	public function fire()
 	{
+
 		$this->comment("Sending emails...");
-		$this->emails->sendMails();
+
+		$this->emails->sendMails($fwd_from = null);
+		
 		$this->info("Emails sent.");
+
 	}
-
-
-	// ========================
-	// :: No arguments for now
-	// ========================
 
 	/**
 	 * Get the console command arguments.
@@ -60,7 +59,7 @@ class sendEmail extends Command {
 	protected function getArguments()
 	{
 		return array(
-			array('example', InputArgument::REQUIRED, 'An example argument.'),
+			array('fwd_from', InputArgument::REQUIRED, 'An example argument.'),
 		);
 	}
 	*/

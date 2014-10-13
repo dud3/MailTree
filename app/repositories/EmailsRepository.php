@@ -128,7 +128,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
      * Send stored mails from the database.
      * @return [type] [description]
      */
-    public function sendMails() {
+    public function sendMails($fwd_from = null) {
 
         $sql_mails = DB::select(
 

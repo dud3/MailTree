@@ -539,3 +539,18 @@ October 12, 2014, 2:08 pm
 ----------------------------------------------------------------------------------------------------
 {"email":"ta@alexent.com ","full_name":"Alex","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
 ----------------------------------------------------------------------------------------------------
+
+October 12, 2014, 6:40 pm
+----------------------------------------------------------------------------------------------------
+{"email":"dk18184@gmail.com","full_name":"Dren","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------
+
+October 12, 2014, 6:40 pm
+----------------------------------------------------------------------------------------------------
+{"email":"sigrunerla94@gmail.com","full_name":"Dren","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------
+
+October 12, 2014, 6:40 pm
+----------------------------------------------------------------------------------------------------
+{"email":"ta@alexent.com ","full_name":"Alex","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------

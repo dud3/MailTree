@@ -199,7 +199,7 @@ return array(
 	|
 	*/
 
-	'g_fwd_email_address' => ['ta@alexander-co.com', 'tlac@acsbill.com'],
+	'g_fwd_email_address' => ['notifications@alexent.com'],
 
 
 

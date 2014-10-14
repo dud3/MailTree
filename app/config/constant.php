@@ -213,6 +213,6 @@ return array(
 	|
 	*/
 
-	'g_fwd_email_address_full_name' => "Alex",
+	'g_fwd_email_address_full_name' => "AlexEnt",
 
 );

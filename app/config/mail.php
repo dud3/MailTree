@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'noreplay@alexander-co.com', 'name' => 'ta@alexander-co.com'),
+	'from' => array('address' => 'noreplay@alexander-co.com', 'name' => 'notifications@alexent.com'),
 
 	/*
 	|--------------------------------------------------------------------------

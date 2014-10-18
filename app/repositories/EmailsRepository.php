@@ -173,7 +173,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
              LEFT JOIN email_address_list e_a_l
                 ON m.email_address_id = e_a_l.id
 
-             WHERE m.sent = 0"
+             WHERE m.sent = 0
+             ORDER BY e_a_l.id"
 
         );
 
@@ -245,7 +246,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             }
 
-            var_dump("To: " . $data["email"] . " \t|\t full_name: " . $data["full_name"]);
+            var_dump("To: " . $data["email"] . " | full_name: " . $data["full_name"]);
             self::dump_output('send_emails', $data);
             self::closeDump();
 
@@ -353,13 +354,13 @@ class EmailsRepository implements EmailsRepositoryInterface {
                             // -> will get the eamil.
                             // 
                             // Explode into pieces
-                            $std_store_email->body = explode("\n", $std_store_email->body);
+                            // $std_store_email->body = explode("\n", $std_store_email->body);
 
                             // Reorder the array and push this one on top of the queue
-                            array_unshift($std_store_email->body, "Dear " . $e_list["full_name"] . ",\n");
+                            // array_unshift($std_store_email->body, "Dear " . $e_list["full_name"] . ",\n");
                             
                             // Put everything togather
-                            $std_store_email->body = implode("\n", $std_store_email->body);
+                            // $std_store_email->body = implode("\n", $std_store_email->body);
 
                             $this->storeMail($std_store_email);
                             
@@ -512,7 +513,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
         }
 
         if(is_array($var_dump) || is_object($var_dump)) {
-            $var_dump = json_encode($var_dump);
+            $var_dump = self::indent(json_encode($var_dump));
         }
 
         file_put_contents(self::$dump_file_fullpath, $var_dump . "\n", FILE_APPEND | LOCK_EX);
@@ -587,6 +588,62 @@ class EmailsRepository implements EmailsRepositoryInterface {
      */
     public function replace_value(&$value, $needle = null) {
         $value = preg_replace('/(\r\n|\r|\n)/s',"\n",$contents);
+    }
+
+
+    /**
+    * Indents a flat JSON string to make it more human-readable.
+    *
+    * @param string $json The original JSON string to process.
+    * @return string Indented version of the original JSON string.
+    */
+    public static function indent($json) {
+
+        $result = '';
+        $pos = 0;
+        $strLen = strlen($json);
+        $indentStr = "\t";
+        $newLine = "\n";
+
+        for ($i = 0; $i < $strLen; $i++) {
+            // Grab the next character in the string.
+            $char = $json[$i];
+
+            // Are we inside a quoted string?
+            if ($char == '"') {
+                // search for the end of the string (keeping in mind of the escape sequences)
+                if (!preg_match('`"(\\\\\\\\|\\\\"|.)*?"`s', $json, $m, null, $i)) return $json;
+
+                    // add extracted string to the result and move ahead
+                    $result .= $m[0];
+                    $i += strLen($m[0]) - 1;
+                    continue;
+            }
+
+            else if ($char == '}' || $char == ']') {
+                $result .= $newLine;
+                $pos --;
+                $result .= str_repeat($indentStr, $pos);
+            }
+
+            // Add the character to the result string.
+            $result .= $char;
+
+            // If the last character was the beginning of an element,
+            // output a new line and indent the next line.
+            if ($char == ',' || $char == '{' || $char == '[') {
+
+                $result .= $newLine;
+                if ($char == '{' || $char == '[') {
+                    $pos ++;
+                }
+
+                $result .= str_repeat($indentStr, $pos);
+
+            }
+        }
+
+        return $result;
     }
 
 }

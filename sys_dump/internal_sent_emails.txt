@@ -900,3 +900,379 @@ October 13, 2014, 11:52 pm
 October 13, 2014, 11:54 pm
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:36 pm
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:37 pm
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:38 pm
+----------------------------------------------------------------------------------------------------
+{"email":"dk18184@gmail.com","full_name":"Dren","message_body":"The file CaCiy210409.zip of filesize 425154 was uploaded to application\nCALCTY : California City Application\nby username: talexander at 09\/16\/2014 17:08\n------------------------------\n\n\n","message_subject":"File Uploaded to CALCTY: California City Application"}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:38 pm
+----------------------------------------------------------------------------------------------------
+{"email":"ta2@alexander-co.com","full_name":"Tim","message_body":"The file CaCiy210409.zip of filesize 425154 was uploaded to application\nCALCTY : California City Application\nby username: talexander at 09\/16\/2014 17:08\n------------------------------\n\n\n","message_subject":"File Uploaded to CALCTY: California City Application"}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:38 pm
+----------------------------------------------------------------------------------------------------
+{"email":"tla2cxxx@acsbill.com","full_name":"Tim","message_body":"The file CaCiy210409.zip of filesize 425154 was uploaded to application\nCALCTY : California City Application\nby username: talexander at 09\/16\/2014 17:08\n------------------------------\n\n\n","message_subject":"File Uploaded to CALCTY: California City Application"}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:38 pm
+----------------------------------------------------------------------------------------------------
+{"email":"taxxx@alexent.com","full_name":"Tim","message_body":"The file CaCiy210409.zip of filesize 425154 was uploaded to application\nCALCTY : California City Application\nby username: talexander at 09\/16\/2014 17:08\n------------------------------\n\n\n","message_subject":"File Uploaded to CALCTY: California City Application"}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:38 pm
+----------------------------------------------------------------------------------------------------
+{"email":"dk18184@gmail.com","full_name":"Dren","message_body":"The application CALCTY: California City Application has been processed.\nHere are the process results.","message_subject":"Application CALCTY: California City Application processed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:38 pm
+----------------------------------------------------------------------------------------------------
+{"email":"ta2@alexander-co.com","full_name":"Tim","message_body":"The application CALCTY: California City Application has been processed.\nHere are the process results.","message_subject":"Application CALCTY: California City Application processed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:38 pm
+----------------------------------------------------------------------------------------------------
+{"email":"tla2cxxx@acsbill.com","full_name":"Tim","message_body":"The application CALCTY: California City Application has been processed.\nHere are the process results.","message_subject":"Application CALCTY: California City Application processed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:38 pm
+----------------------------------------------------------------------------------------------------
+{"email":"taxxx@alexent.com","full_name":"Tim","message_body":"The application CALCTY: California City Application has been processed.\nHere are the process results.","message_subject":"Application CALCTY: California City Application processed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:38 pm
+----------------------------------------------------------------------------------------------------
+{"email":"dk18184@gmail.com","full_name":"Dren","message_body":"Run 201409181053 for the application CALCTY : California City Application\nhas been approved by username: talexander at 09\/18\/2014 14:26\nHere are the process results.","message_subject":"Application Results CALCTY: California City Application approved."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:38 pm
+----------------------------------------------------------------------------------------------------
+{"email":"ta2@alexander-co.com","full_name":"Tim","message_body":"Run 201409181053 for the application CALCTY : California City Application\nhas been approved by username: talexander at 09\/18\/2014 14:26\nHere are the process results.","message_subject":"Application Results CALCTY: California City Application approved."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:38 pm
+----------------------------------------------------------------------------------------------------
+{"email":"tla2cxxx@acsbill.com","full_name":"Tim","message_body":"Run 201409181053 for the application CALCTY : California City Application\nhas been approved by username: talexander at 09\/18\/2014 14:26\nHere are the process results.","message_subject":"Application Results CALCTY: California City Application approved."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:38 pm
+----------------------------------------------------------------------------------------------------
+{"email":"taxxx@alexent.com","full_name":"Tim","message_body":"Run 201409181053 for the application CALCTY : California City Application\nhas been approved by username: talexander at 09\/18\/2014 14:26\nHere are the process results.","message_subject":"Application Results CALCTY: California City Application approved."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:38 pm
+----------------------------------------------------------------------------------------------------
+{"email":"dk18184@gmail.com","full_name":"Dren","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:38 pm
+----------------------------------------------------------------------------------------------------
+{"email":"ta2@alexander-co.com","full_name":"Tim","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:38 pm
+----------------------------------------------------------------------------------------------------
+{"email":"tla2cxxx@acsbill.com","full_name":"Tim","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:38 pm
+----------------------------------------------------------------------------------------------------
+{"email":"taxxx@alexent.com","full_name":"Tim","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:39 pm
+----------------------------------------------------------------------------------------------------
+{"email":"dk18184@gmail.com","full_name":"Dren","message_body":"The file CaCiy210409.zip of filesize 425154 was uploaded to application\nCALCTY : California City Application\nby username: talexander at 09\/16\/2014 17:08\n------------------------------\n\n\n","message_subject":"File Uploaded to CALCTY: California City Application"}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:39 pm
+----------------------------------------------------------------------------------------------------
+{"email":"ta2@alexander-co.com","full_name":"Tim","message_body":"The file CaCiy210409.zip of filesize 425154 was uploaded to application\nCALCTY : California City Application\nby username: talexander at 09\/16\/2014 17:08\n------------------------------\n\n\n","message_subject":"File Uploaded to CALCTY: California City Application"}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:39 pm
+----------------------------------------------------------------------------------------------------
+{"email":"tla2cxxx@acsbill.com","full_name":"Tim","message_body":"The file CaCiy210409.zip of filesize 425154 was uploaded to application\nCALCTY : California City Application\nby username: talexander at 09\/16\/2014 17:08\n------------------------------\n\n\n","message_subject":"File Uploaded to CALCTY: California City Application"}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:39 pm
+----------------------------------------------------------------------------------------------------
+{"email":"taxxx@alexent.com","full_name":"Tim","message_body":"The file CaCiy210409.zip of filesize 425154 was uploaded to application\nCALCTY : California City Application\nby username: talexander at 09\/16\/2014 17:08\n------------------------------\n\n\n","message_subject":"File Uploaded to CALCTY: California City Application"}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:39 pm
+----------------------------------------------------------------------------------------------------
+{"email":"dk18184@gmail.com","full_name":"Dren","message_body":"The application CALCTY: California City Application has been processed.\nHere are the process results.","message_subject":"Application CALCTY: California City Application processed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:39 pm
+----------------------------------------------------------------------------------------------------
+{"email":"ta2@alexander-co.com","full_name":"Tim","message_body":"The application CALCTY: California City Application has been processed.\nHere are the process results.","message_subject":"Application CALCTY: California City Application processed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:39 pm
+----------------------------------------------------------------------------------------------------
+{"email":"tla2cxxx@acsbill.com","full_name":"Tim","message_body":"The application CALCTY: California City Application has been processed.\nHere are the process results.","message_subject":"Application CALCTY: California City Application processed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:39 pm
+----------------------------------------------------------------------------------------------------
+{"email":"taxxx@alexent.com","full_name":"Tim","message_body":"The application CALCTY: California City Application has been processed.\nHere are the process results.","message_subject":"Application CALCTY: California City Application processed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:39 pm
+----------------------------------------------------------------------------------------------------
+{"email":"dk18184@gmail.com","full_name":"Dren","message_body":"Run 201409181053 for the application CALCTY : California City Application\nhas been approved by username: talexander at 09\/18\/2014 14:26\nHere are the process results.","message_subject":"Application Results CALCTY: California City Application approved."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:39 pm
+----------------------------------------------------------------------------------------------------
+{"email":"ta2@alexander-co.com","full_name":"Tim","message_body":"Run 201409181053 for the application CALCTY : California City Application\nhas been approved by username: talexander at 09\/18\/2014 14:26\nHere are the process results.","message_subject":"Application Results CALCTY: California City Application approved."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:39 pm
+----------------------------------------------------------------------------------------------------
+{"email":"tla2cxxx@acsbill.com","full_name":"Tim","message_body":"Run 201409181053 for the application CALCTY : California City Application\nhas been approved by username: talexander at 09\/18\/2014 14:26\nHere are the process results.","message_subject":"Application Results CALCTY: California City Application approved."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:39 pm
+----------------------------------------------------------------------------------------------------
+{"email":"taxxx@alexent.com","full_name":"Tim","message_body":"Run 201409181053 for the application CALCTY : California City Application\nhas been approved by username: talexander at 09\/18\/2014 14:26\nHere are the process results.","message_subject":"Application Results CALCTY: California City Application approved."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:39 pm
+----------------------------------------------------------------------------------------------------
+{"email":"dk18184@gmail.com","full_name":"Dren","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:39 pm
+----------------------------------------------------------------------------------------------------
+{"email":"ta2@alexander-co.com","full_name":"Tim","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:39 pm
+----------------------------------------------------------------------------------------------------
+{"email":"tla2cxxx@acsbill.com","full_name":"Tim","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:39 pm
+----------------------------------------------------------------------------------------------------
+{"email":"taxxx@alexent.com","full_name":"Tim","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:40 pm
+----------------------------------------------------------------------------------------------------
+{"email":"ta2@alexander-co.com","full_name":"Tim","message_body":"The file CaCiy210409.zip of filesize 425154 was uploaded to application\nCALCTY : California City Application\nby username: talexander at 09\/16\/2014 17:08\n------------------------------\n\n\n","message_subject":"File Uploaded to CALCTY: California City Application"}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:40 pm
+----------------------------------------------------------------------------------------------------
+{"email":"tla2cxxx@acsbill.com","full_name":"Tim","message_body":"The file CaCiy210409.zip of filesize 425154 was uploaded to application\nCALCTY : California City Application\nby username: talexander at 09\/16\/2014 17:08\n------------------------------\n\n\n","message_subject":"File Uploaded to CALCTY: California City Application"}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:40 pm
+----------------------------------------------------------------------------------------------------
+{"email":"taxxx@alexent.com","full_name":"Tim","message_body":"The file CaCiy210409.zip of filesize 425154 was uploaded to application\nCALCTY : California City Application\nby username: talexander at 09\/16\/2014 17:08\n------------------------------\n\n\n","message_subject":"File Uploaded to CALCTY: California City Application"}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:40 pm
+----------------------------------------------------------------------------------------------------
+{"email":"dk18184@gmail.com","full_name":"Dren","message_body":"The application CALCTY: California City Application has been processed.\nHere are the process results.","message_subject":"Application CALCTY: California City Application processed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:40 pm
+----------------------------------------------------------------------------------------------------
+{"email":"ta2@alexander-co.com","full_name":"Tim","message_body":"The application CALCTY: California City Application has been processed.\nHere are the process results.","message_subject":"Application CALCTY: California City Application processed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:40 pm
+----------------------------------------------------------------------------------------------------
+{"email":"tla2cxxx@acsbill.com","full_name":"Tim","message_body":"The application CALCTY: California City Application has been processed.\nHere are the process results.","message_subject":"Application CALCTY: California City Application processed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:40 pm
+----------------------------------------------------------------------------------------------------
+{"email":"taxxx@alexent.com","full_name":"Tim","message_body":"The application CALCTY: California City Application has been processed.\nHere are the process results.","message_subject":"Application CALCTY: California City Application processed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:40 pm
+----------------------------------------------------------------------------------------------------
+{"email":"dk18184@gmail.com","full_name":"Dren","message_body":"Run 201409181053 for the application CALCTY : California City Application\nhas been approved by username: talexander at 09\/18\/2014 14:26\nHere are the process results.","message_subject":"Application Results CALCTY: California City Application approved."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:40 pm
+----------------------------------------------------------------------------------------------------
+{"email":"ta2@alexander-co.com","full_name":"Tim","message_body":"Run 201409181053 for the application CALCTY : California City Application\nhas been approved by username: talexander at 09\/18\/2014 14:26\nHere are the process results.","message_subject":"Application Results CALCTY: California City Application approved."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:40 pm
+----------------------------------------------------------------------------------------------------
+{"email":"tla2cxxx@acsbill.com","full_name":"Tim","message_body":"Run 201409181053 for the application CALCTY : California City Application\nhas been approved by username: talexander at 09\/18\/2014 14:26\nHere are the process results.","message_subject":"Application Results CALCTY: California City Application approved."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:40 pm
+----------------------------------------------------------------------------------------------------
+{"email":"taxxx@alexent.com","full_name":"Tim","message_body":"Run 201409181053 for the application CALCTY : California City Application\nhas been approved by username: talexander at 09\/18\/2014 14:26\nHere are the process results.","message_subject":"Application Results CALCTY: California City Application approved."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:40 pm
+----------------------------------------------------------------------------------------------------
+{"email":"dk18184@gmail.com","full_name":"Dren","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:40 pm
+----------------------------------------------------------------------------------------------------
+{"email":"ta2@alexander-co.com","full_name":"Tim","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:40 pm
+----------------------------------------------------------------------------------------------------
+{"email":"tla2cxxx@acsbill.com","full_name":"Tim","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:40 pm
+----------------------------------------------------------------------------------------------------
+{"email":"taxxx@alexent.com","full_name":"Tim","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:42 pm
+----------------------------------------------------------------------------------------------------
+{"email":"ta2@alexander-co.com","full_name":"Tim","message_body":"The file CaCiy210409.zip of filesize 425154 was uploaded to application\nCALCTY : California City Application\nby username: talexander at 09\/16\/2014 17:08\n------------------------------\n\n\n","message_subject":"File Uploaded to CALCTY: California City Application"}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:42 pm
+----------------------------------------------------------------------------------------------------
+{"email":"tla2cxxx@acsbill.com","full_name":"Tim","message_body":"The file CaCiy210409.zip of filesize 425154 was uploaded to application\nCALCTY : California City Application\nby username: talexander at 09\/16\/2014 17:08\n------------------------------\n\n\n","message_subject":"File Uploaded to CALCTY: California City Application"}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:42 pm
+----------------------------------------------------------------------------------------------------
+{"email":"taxxx@alexent.com","full_name":"Tim","message_body":"The file CaCiy210409.zip of filesize 425154 was uploaded to application\nCALCTY : California City Application\nby username: talexander at 09\/16\/2014 17:08\n------------------------------\n\n\n","message_subject":"File Uploaded to CALCTY: California City Application"}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:42 pm
+----------------------------------------------------------------------------------------------------
+{"email":"dk18184@gmail.com","full_name":"Dren","message_body":"The application CALCTY: California City Application has been processed.\nHere are the process results.","message_subject":"Application CALCTY: California City Application processed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:42 pm
+----------------------------------------------------------------------------------------------------
+{"email":"ta2@alexander-co.com","full_name":"Tim","message_body":"The application CALCTY: California City Application has been processed.\nHere are the process results.","message_subject":"Application CALCTY: California City Application processed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:42 pm
+----------------------------------------------------------------------------------------------------
+{"email":"tla2cxxx@acsbill.com","full_name":"Tim","message_body":"The application CALCTY: California City Application has been processed.\nHere are the process results.","message_subject":"Application CALCTY: California City Application processed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:42 pm
+----------------------------------------------------------------------------------------------------
+{"email":"taxxx@alexent.com","full_name":"Tim","message_body":"The application CALCTY: California City Application has been processed.\nHere are the process results.","message_subject":"Application CALCTY: California City Application processed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:42 pm
+----------------------------------------------------------------------------------------------------
+{"email":"dk18184@gmail.com","full_name":"Dren","message_body":"Run 201409181053 for the application CALCTY : California City Application\nhas been approved by username: talexander at 09\/18\/2014 14:26\nHere are the process results.","message_subject":"Application Results CALCTY: California City Application approved."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:42 pm
+----------------------------------------------------------------------------------------------------
+{"email":"ta2@alexander-co.com","full_name":"Tim","message_body":"Run 201409181053 for the application CALCTY : California City Application\nhas been approved by username: talexander at 09\/18\/2014 14:26\nHere are the process results.","message_subject":"Application Results CALCTY: California City Application approved."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:42 pm
+----------------------------------------------------------------------------------------------------
+{"email":"tla2cxxx@acsbill.com","full_name":"Tim","message_body":"Run 201409181053 for the application CALCTY : California City Application\nhas been approved by username: talexander at 09\/18\/2014 14:26\nHere are the process results.","message_subject":"Application Results CALCTY: California City Application approved."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:42 pm
+----------------------------------------------------------------------------------------------------
+{"email":"taxxx@alexent.com","full_name":"Tim","message_body":"Run 201409181053 for the application CALCTY : California City Application\nhas been approved by username: talexander at 09\/18\/2014 14:26\nHere are the process results.","message_subject":"Application Results CALCTY: California City Application approved."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:42 pm
+----------------------------------------------------------------------------------------------------
+{"email":"dk18184@gmail.com","full_name":"Dren","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:42 pm
+----------------------------------------------------------------------------------------------------
+{"email":"ta2@alexander-co.com","full_name":"Tim","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:42 pm
+----------------------------------------------------------------------------------------------------
+{"email":"tla2cxxx@acsbill.com","full_name":"Tim","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------
+
+October 14, 2014, 11:42 pm
+----------------------------------------------------------------------------------------------------
+{"email":"taxxx@alexent.com","full_name":"Tim","message_body":"\nAssembly & Mailing for job California City Utility Billing - September 2014\nand segment MAIN and application California City Application\nwas completed at 6:46 PM on 09\/19\/2014.\n\nItems 1-3618 having a quantity of 3618 were mailed at 09\/20\/2014 9:00 AM.","message_subject":"Assembly & Mailing for job California City Utility Billing - September 2014 Segment:MAIN completed."}
+----------------------------------------------------------------------------------------------------
+
+October 18, 2014, 1:32 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 18, 2014, 1:39 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 18, 2014, 4:14 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 18, 2014, 4:19 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 18, 2014, 4:28 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 18, 2014, 4:32 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 18, 2014, 4:35 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 18, 2014, 4:36 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 18, 2014, 4:37 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 18, 2014, 4:37 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 18, 2014, 4:38 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 18, 2014, 4:38 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 18, 2014, 4:39 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 18, 2014, 4:39 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 18, 2014, 4:39 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------

@@ -8,8 +8,10 @@ use Symfony\Component\Console\Input\InputArgument;
 class EmailsRepository implements EmailsRepositoryInterface {
 
     public $server;
-    public $server_name = 'imap.gmail.com';
-    public $username = 'notifications@acsbill.com';
+    public $server_name = ['imap.gmail.com', 'mail.alexent.com'];
+    public $port = [143, 993];
+
+    public $username = ['notifications@acsbill.com', 'notification@alexent.com'];
     public $password = '8655morro';
 
     public $inbox;
@@ -24,6 +26,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
     protected static $arguments;
 
     protected static $enable_html_email = false;
+    protected static $fresh_email = false;
 
     protected static $dump_folder;
     protected static $dump_file_fullpath;
@@ -47,8 +50,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
         self::$forward_email_from = Config::get("constant.g_fwd_email_address");
         self::$forward_email_full_name = Config::get("constant.g_fwd_email_address_full_name");
 
-        $this->server = new \Fetch\Server($this->server_name, 993);
-        $this->server->setAuthentication($this->username, $this->password);
+        $this->server = new \Fetch\Server($this->server_name[1], $this->port[0]);
+        $this->server->setAuthentication($this->username[1], $this->password);
 
         $this->inbox = $this->server->getMessages();
 
@@ -75,7 +78,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
         echo("Read Emails\n");
         echo("= = = = = =\n");
         echo("Count Emails: " . count($emails) . "\n");
-        echo("-------------------\n");
+        echo("-------------------------------------------------------------------------------------\n");
 
         self::openDump();
         self::dump_output('all', $emails);
@@ -101,14 +104,41 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             if(!self::$enable_html_email) {
 
+                // Explode the email into pieces
                 $std_email->body = explode("\n", $std_email->body);
+
+                //
+                // Trim the value otherwise at the end of the each mail
+                // -> we will strat seeing the value of ^M after exploding
+                // -> the string, and this makes imposibble to compare the 
+                // -> keywords from the database even if we include the 
+                // -> ^M symbol at the end of each array element.
+                //  
 
                 array_walk($std_email->body, array($this, 'trim_value'));
 
+                //
+                // Two of this following conditions are fore:
+                // * if the mail is forwarded by a person/automatic email forwarder
+                // * if the mail contains the keyword of "Dear"
+                // 
+                // The reason for the first one is that, we don't want to store mails into the 
+                // -> DB with the forwarded information.
+                // 
+                // The second one is that we won't eventually want to erase the mail that has been
+                // -> forwarded to an X person since we will forward the same email to multiple
+                // -> users that match the keyword(s), and replace their name on the emal.
+                // 
+        
                 if(in_array('---------- Forwarded message ----------', $std_email->body)) {
                     $std_email->body = array_slice($std_email->body, 9);
                 }
 
+                if(in_array('Dear', $std_email->body) || 'Dear Alexander') {
+                    $std_email->body = array_slice($std_email->body, 1);
+                }
+
+                // Put everything all togather
                 $std_email->body = implode("\n", $std_email->body);
 
             }
@@ -141,7 +171,9 @@ class EmailsRepository implements EmailsRepositoryInterface {
             "SELECT * FROM mails m
 
              LEFT JOIN email_address_list e_a_l
-                ON m.email_address_id = e_a_l.id"
+                ON m.email_address_id = e_a_l.id
+
+             WHERE m.sent = 0"
 
         );
 
@@ -182,6 +214,11 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             }
 
+            // Set sent to 1
+            $find_mail = $this->findMailByID($mail->id)->first();
+            $find_mail->fill(["sent" => 1]);
+            $find_mail->save();
+
             var_dump($data["message_body"]);
 
             $data["message_body"] = implode("\n", $data["message_body"]);
@@ -208,7 +245,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             }
 
-            var_dump("To: " . $data["email"] . " | full_name: " . $data["full_name"]);
+            var_dump("To: " . $data["email"] . " \t|\t full_name: " . $data["full_name"]);
             self::dump_output('send_emails', $data);
             self::closeDump();
 
@@ -254,8 +291,6 @@ class EmailsRepository implements EmailsRepositoryInterface {
             $get_keywords =  explode(" ", $email->subject);
             $k_db = keywords_list::all()->toArray();
             $k_intersect = [];
-
-            // var_dump($email);
       
             foreach ($k_db as $db_keywords) {
        
@@ -306,7 +341,6 @@ class EmailsRepository implements EmailsRepositoryInterface {
                     if($e_add_list !== null) {
                         foreach ($e_add_list as $e_list) {
 
-                           // var_dump($e_list);
                             $std_store_email = new StdClass;
                             $std_store_email->email_address_id = (int)$e_list["id"];
                             $std_store_email->email = $e_list["email"];
@@ -318,9 +352,14 @@ class EmailsRepository implements EmailsRepositoryInterface {
                             // Let's insert the name of the user that 
                             // -> will get the eamil.
                             // 
-                            // $std_store_email->body = explode("\n", $std_store_email->body);
-                            // array_unshift($std_store_email->body, "Dear " . $e_list["full_name"] . ",\n");
-                            // $std_store_email->body = implode("\n", $std_store_email->body);
+                            // Explode into pieces
+                            $std_store_email->body = explode("\n", $std_store_email->body);
+
+                            // Reorder the array and push this one on top of the queue
+                            array_unshift($std_store_email->body, "Dear " . $e_list["full_name"] . ",\n");
+                            
+                            // Put everything togather
+                            $std_store_email->body = implode("\n", $std_store_email->body);
 
                             $this->storeMail($std_store_email);
                             
@@ -342,9 +381,9 @@ class EmailsRepository implements EmailsRepositoryInterface {
      */
     public function storeMail($data) {
         mails::create(["email_address_id" => $data->email_address_id, "subject" => $data->subject, "body" => $data->body]);
-        $dump_sent_emails = ("Email stored for: " . "ID: " . $data->email_address_id . " | Email: " . $data->email . " | Name: " . $data->full_name);
+        $dump_sent_emails = ("Email stored for: " . " \t| ID: " . $data->email_address_id . " \t| Email: " . $data->email . " \t| Name: " . $data->full_name . "\n");
         self::dump_output('store_emails', $dump_sent_emails);
-        var_dump($dump_sent_emails);
+        echo($dump_sent_emails);
     }
 
 
@@ -355,6 +394,16 @@ class EmailsRepository implements EmailsRepositoryInterface {
      */
     public function storeKeywords($data) {
         var_dump($data);
+    }
+
+
+    /**
+     * Find mail by id.
+     * @param  [type] $id [description]
+     * @return [type]     [description]
+     */
+    public function findMailByID($id) {
+        return mails::find($id);
     }
 
 

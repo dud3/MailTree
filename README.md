@@ -1,7 +1,9 @@
-@e_fwd
-======
+@MailTree
+=========
 
 Simple mail forwarder.
+
+Basec on the specified keywords in the email it will forward the mails to the list of predefined users.
 
 Examples
 --------

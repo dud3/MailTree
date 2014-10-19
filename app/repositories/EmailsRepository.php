@@ -118,7 +118,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 array_walk($std_email->body, array($this, 'trim_value'));
 
                 //
-                // Two of this following conditions are fore:
+                // Two of this following conditions are for:
                 // * if the mail is forwarded by a person/automatic email forwarder
                 // * if the mail contains the keyword of "Dear"
                 // 

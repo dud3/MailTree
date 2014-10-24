@@ -22,8 +22,9 @@ Route::group(array('before' => 'guest'), function()
 });
 
 
-Route::get('/phpinfo',		'HelpCtrl@phpinfo');
-Route::get('/app',			'EmailListCtrl@view_emails');
+Route::get('/phpinfo',			'HelpCtrl@phpinfo');
+Route::get('/app',				'ListController@view_k_list');
+Route::get('/keywords_list',		'');
 
 // ------------------
 // :: After log-in ::

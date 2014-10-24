@@ -7,8 +7,14 @@ Basec on the specified keywords in the email it will forward the mails to the li
 
 Install
 --------
-``apt-get install php5-imap`` - Install imap dependency.<br>
-``extension=imap.so`` - add to the end of ``php.ini`` file.
+
+***Imap***
+<hr>
+Install imap dependency. <br>
+``apt-get install php5-imap``
+
+Add to the end of "php.ini" file.<br>
+``extension=imap.so``
 
 
 Examples

@@ -18,6 +18,8 @@
 
     <!-- Log-in style -->
     <link href="/styles/login.css" rel="stylesheet">
+    <link href="/styles/main.css" rel="stylesheet">
+    <link href="/bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
     <script src="/bower_components/jquery/jquery.min.js"></script>
 
@@ -30,18 +32,52 @@
     <script src="/bower_components/angular-scenario/angular-scenario.js"></script>
     <script src="/bower_components/angular-touch/angular-touch.min.js"></script>
     <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="/bower_components/bootstrap/js/affix.js"></script>
+    <script src="/bower_components/bootstrap/js/alert.js"></script>
+    <script src="/bower_components/bootstrap/js/button.js"></script>
+    <script src="/bower_components/bootstrap/js/carousel.js"></script>
+    <script src="/bower_components/bootstrap/js/collapse.js"></script>
+    <script src="/bower_components/bootstrap/js/dropdown.js"></script>
+    <script src="/bower_components/bootstrap/js/modal.js"></script>
+    <script src="/bower_components/bootstrap/js/popover.js"></script>
+    <script src="/bower_components/bootstrap/js/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap/js/tab.js"></script>
+    <script src="/bower_components/bootstrap/js/tooltip.js"></script>
+    <script src="/bower_components/bootstrap/js/transition.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+
+        alert("wtf");
+        
+        $("#clickCol").click(function() {
+
+            alert("wtf");
+
+            $('#collapseOne').collapse();
+        
+        });
+
+    });
+
+    </script>
   </head>
 
   <body>
 
-    <div class="container">
-      @yield('main')
+
+
+    <div class="container-fluid">
+        <div class="container-fluid background">
+            @yield('main')
+        </div>
     </div> <!-- /container -->
 
     <script src="/scripts/app.js"></script>

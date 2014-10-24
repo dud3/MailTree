@@ -9,6 +9,7 @@ Install
 --------
 
 **Imap**
+
 Install imap dependency. <br>
 ``apt-get install php5-imap``
 

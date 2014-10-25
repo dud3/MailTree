@@ -49,7 +49,7 @@
 
 			<div class="panel-heading">
 			  <h4 class="panel-title">
-			    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="pull-right" onclick="alert('Sorry not working yet!')"><b>+</b></a>
+			    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="pull-right"><b>+</b></a>
 			      Keywords: <span class="label label-primary">dabvis</span> <span class="label label-primary">CLA</span><a style="float:right;"><b>x</b></a>
 			  </h4>
 			</div>

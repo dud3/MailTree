@@ -38,7 +38,9 @@
             <label class="checkbox"><input type="checkbox" name="remember" value="" ng-model="loginCredentials.remember">Remember me</label>
             </div>
         </div>
-        <button name="submit" id="submit" type="submit" value="" class="btn btn-large btn-primary btn-block ladda-button lading-btn login" data-style="zoom-in" data-spinner-size="30"><span class="ladda-label">Sign in</span></button>
+        <button name="submit" id="submit" type="submit" onclick="window.location.href  = '/app'" 
+                value="" class="btn btn-large btn-primary btn-block ladda-button lading-btn login" 
+                data-style="zoom-in" data-spinner-size="30"><span class="ladda-label">Sign in</span></button>
 
     </form>
 </div>

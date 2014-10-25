@@ -95,3 +95,815 @@ October 18, 2014, 8:25 pm
 	"message_subject":"Application CALCTY: California City Application processed."
 }
 ----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:09 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:10 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"Dear Alexander Notifications,\n\n\nThe file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:10 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"Dear Alexander Notifications,\n\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:10 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"Dear Alexander Notifications,\n\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:10 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"Dear Alexander Notifications,\n\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:10 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com ",
+	"full_name":"Tim",
+	"message_body":"Dear Alexander Notifications,\n\n\nThe file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:10 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com ",
+	"full_name":"Tim",
+	"message_body":"Dear Alexander Notifications,\n\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:10 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com ",
+	"full_name":"Tim",
+	"message_body":"Dear Alexander Notifications,\n\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:10 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com ",
+	"full_name":"Tim",
+	"message_body":"Dear Alexander Notifications,\n\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:10 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com",
+	"full_name":"Tim",
+	"message_body":"Dear Alexander Notifications,\n\n\nThe file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:10 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com",
+	"full_name":"Tim",
+	"message_body":"Dear Alexander Notifications,\n\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:10 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com",
+	"full_name":"Tim",
+	"message_body":"Dear Alexander Notifications,\n\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:10 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com",
+	"full_name":"Tim",
+	"message_body":"Dear Alexander Notifications,\n\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:10 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com",
+	"full_name":"Tim",
+	"message_body":"Dear Alexander Notifications,\n\n\nThe file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:10 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com",
+	"full_name":"Tim",
+	"message_body":"Dear Alexander Notifications,\n\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:10 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com",
+	"full_name":"Tim",
+	"message_body":"Dear Alexander Notifications,\n\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:10 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com",
+	"full_name":"Tim",
+	"message_body":"Dear Alexander Notifications,\n\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:14 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:14 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:15 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:16 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:17 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:18 pm
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:18 pm
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:18 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:19 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:20 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"\n\nThe file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:20 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:20 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:20 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:20 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com2 ",
+	"full_name":"Tim",
+	"message_body":"\n\nThe file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:20 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com2 ",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:20 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com2 ",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:20 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com2 ",
+	"full_name":"Tim",
+	"message_body":"\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:20 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nThe file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:20 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:20 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:20 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:20 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nThe file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:20 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:20 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:20 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com2 ",
+	"full_name":"Tim",
+	"message_body":"\n\nThe file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com2 ",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com2 ",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com2 ",
+	"full_name":"Tim",
+	"message_body":"\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nThe file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nThe file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com2 ",
+	"full_name":"Tim",
+	"message_body":"\n\nThe file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com2 ",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com2 ",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com2 ",
+	"full_name":"Tim",
+	"message_body":"\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nThe file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nThe file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:23 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com2",
+	"full_name":"Tim",
+	"message_body":"\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:26 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:26 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:26 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:26 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com ",
+	"full_name":"Tim",
+	"message_body":"\n\nThe file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:26 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com ",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:26 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com ",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:26 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com ",
+	"full_name":"Tim",
+	"message_body":"\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:26 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com",
+	"full_name":"Tim",
+	"message_body":"\n\nThe file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:26 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:26 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:26 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com",
+	"full_name":"Tim",
+	"message_body":"\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:26 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com",
+	"full_name":"Tim",
+	"message_body":"\n\nThe file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:26 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date\/time : Fri-Oct-17-2014&nbsp;10:54:00\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:26 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com",
+	"full_name":"Tim",
+	"message_body":"\n\nThe application CALCTY: California City Application                                       has been processed.\n\nHere are the process results.\n\n\nClick here to examine and approve the process.\n\n\n\nSebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date\/time : Mon-Oct-20-2014&nbsp;10:32:01\nProcess Message\n\n\n\n\n\n\n\n\n\nSheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;\n1) Please approve the above process results.\n2) Check the appropriate box.\n3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.\n\n[ ] Process results are correct,  Proceed with job.\n\n[ ] Process results are NOT correct, DO NOT proceed with job.\n\n\nApproval:__________________________________________ Date:_______________\n\n\n\n\nYou may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006\n",
+	"message_subject":"Application CALCTY: California City Application processed."
+}
+----------------------------------------------------------------------------------------------------
+
+October 20, 2014, 6:26 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com",
+	"full_name":"Tim",
+	"message_body":"\n\nRun 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+October 25, 2014, 3:36 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------

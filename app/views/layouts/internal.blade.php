@@ -21,7 +21,7 @@
     <link href="/styles/main.css" rel="stylesheet">
     <link href="/bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
-    <script src="/bower_components/jquery/jquery.min.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 
     <script src="/bower_components/angular/angular.min.js"></script>
     <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
@@ -39,10 +39,10 @@
     <script src="/bower_components/bootstrap/js/collapse.js"></script>
     <script src="/bower_components/bootstrap/js/dropdown.js"></script>
     <script src="/bower_components/bootstrap/js/modal.js"></script>
+    <script src="/bower_components/bootstrap/js/tooltip.js"></script>
     <script src="/bower_components/bootstrap/js/popover.js"></script>
     <script src="/bower_components/bootstrap/js/scrollspy.js"></script>
     <script src="/bower_components/bootstrap/js/tab.js"></script>
-    <script src="/bower_components/bootstrap/js/tooltip.js"></script>
     <script src="/bower_components/bootstrap/js/transition.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -53,21 +53,14 @@
 
     <script type="text/javascript">
 
-    $(document).ready(function() {
-
-        alert("wtf");
-        
-        $("#clickCol").click(function() {
-
-            alert("wtf");
-
-            $('#collapseOne').collapse();
-        
+        $(document).ready(function() {
+            $("#clickCol").click(function() {
+                $('#collapseOne').collapse();
+            });
         });
 
-    });
-
     </script>
+
   </head>
 
   <body>
@@ -75,9 +68,19 @@
 
 
     <div class="container-fluid">
-        <div class="container-fluid background">
+
+        <?php if(Config::get('constant.g_currentPage') == '/' || Config::get('constant.g_currentPage') == '/login') { ?>
+        <div class="container-fluid">
+
+        <?php } else { ?>
+
+            <div class="container-fluid background">
+
+        <?php } ?>
+
             @yield('main')
         </div>
+    
     </div> <!-- /container -->
 
     <script src="/scripts/app.js"></script>

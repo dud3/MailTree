@@ -50,13 +50,32 @@
 			<div class="panel-heading">
 			  <h4 class="panel-title">
 			    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="pull-right" onclick="alert('Sorry not working yet!')"><b>+</b></a>
-			      Keywords: <span class="label label-primary">dabvis</span> <span class="label label-primary">CLA</span><a style="float:right;"><b>x</b></a>
+			      Keywords: <span class="label label-primary">dabvis</span> <span class="label label-primary">CLA</span><a class="fa fa-pencil-square-o" style="float: right;"></a><a style="float:right;"><b>x</b></a>
 			  </h4>
 			</div>
 
 			<div id="collapseOne" class="panel-collapse collapse in">
 			  <div class="panel-body">
-			  	Recipients:
+			  	<h5>Recipients:</h5>
+			  	<table class="table table-bordered">
+			  		<tr>
+			  			<th>Salutation</th>
+			  			<th>Email</th>
+			  		</tr>
+			  		<tr>
+			  			<td>Tom</td>
+			  			<td>t@gmail.com</td>
+			  		</tr>
+			  		<tr>
+			  			<td>Mary</td>
+			  			<td>m@gmail.com</td>
+			  		</tr>
+			  		<tr>
+			  			<td>Cheryl</td>
+			  			<td>ch@gmail.com</td>
+			  		</tr>
+
+			  	</table>
 
 			  </div>
 			</div>

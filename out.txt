@@ -1,0 +1,913 @@
+[33mSending emails...[39m
+array(39) {
+  [0]=>
+  string(0) ""
+  [1]=>
+  string(0) ""
+  [2]=>
+  string(109) "The application CALCTY: California City Application                                       has been processed."
+  [3]=>
+  string(0) ""
+  [4]=>
+  string(29) "Here are the process results."
+  [5]=>
+  string(0) ""
+  [6]=>
+  string(0) ""
+  [7]=>
+  string(46) "Click here to examine and approve the process."
+  [8]=>
+  string(0) ""
+  [9]=>
+  string(0) ""
+  [10]=>
+  string(0) ""
+  [11]=>
+  string(120) "Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date/time : Fri-Oct-17-2014&nbsp;10:54:00"
+  [12]=>
+  string(15) "Process Message"
+  [13]=>
+  string(0) ""
+  [14]=>
+  string(0) ""
+  [15]=>
+  string(0) ""
+  [16]=>
+  string(0) ""
+  [17]=>
+  string(0) ""
+  [18]=>
+  string(0) ""
+  [19]=>
+  string(0) ""
+  [20]=>
+  string(0) ""
+  [21]=>
+  string(0) ""
+  [22]=>
+  string(191) "Sheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;"
+  [23]=>
+  string(44) "1) Please approve the above process results."
+  [24]=>
+  string(29) "2) Check the appropriate box."
+  [25]=>
+  string(68) "3) Fax this form back to the Sebis Direct Data Center: 708-546-2006."
+  [26]=>
+  string(0) ""
+  [27]=>
+  string(51) "[ ] Process results are correct,  Proceed with job."
+  [28]=>
+  string(0) ""
+  [29]=>
+  string(61) "[ ] Process results are NOT correct, DO NOT proceed with job."
+  [30]=>
+  string(0) ""
+  [31]=>
+  string(0) ""
+  [32]=>
+  string(72) "Approval:__________________________________________ Date:_______________"
+  [33]=>
+  string(0) ""
+  [34]=>
+  string(0) ""
+  [35]=>
+  string(0) ""
+  [36]=>
+  string(0) ""
+  [37]=>
+  string(140) "You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006"
+  [38]=>
+  string(0) ""
+}
+string(39) "To: dk18184@gmail.com | full_name: Dren"
+array(39) {
+  [0]=>
+  string(0) ""
+  [1]=>
+  string(0) ""
+  [2]=>
+  string(109) "The application CALCTY: California City Application                                       has been processed."
+  [3]=>
+  string(0) ""
+  [4]=>
+  string(29) "Here are the process results."
+  [5]=>
+  string(0) ""
+  [6]=>
+  string(0) ""
+  [7]=>
+  string(46) "Click here to examine and approve the process."
+  [8]=>
+  string(0) ""
+  [9]=>
+  string(0) ""
+  [10]=>
+  string(0) ""
+  [11]=>
+  string(120) "Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date/time : Mon-Oct-20-2014&nbsp;10:32:01"
+  [12]=>
+  string(15) "Process Message"
+  [13]=>
+  string(0) ""
+  [14]=>
+  string(0) ""
+  [15]=>
+  string(0) ""
+  [16]=>
+  string(0) ""
+  [17]=>
+  string(0) ""
+  [18]=>
+  string(0) ""
+  [19]=>
+  string(0) ""
+  [20]=>
+  string(0) ""
+  [21]=>
+  string(0) ""
+  [22]=>
+  string(191) "Sheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;"
+  [23]=>
+  string(44) "1) Please approve the above process results."
+  [24]=>
+  string(29) "2) Check the appropriate box."
+  [25]=>
+  string(68) "3) Fax this form back to the Sebis Direct Data Center: 708-546-2006."
+  [26]=>
+  string(0) ""
+  [27]=>
+  string(51) "[ ] Process results are correct,  Proceed with job."
+  [28]=>
+  string(0) ""
+  [29]=>
+  string(61) "[ ] Process results are NOT correct, DO NOT proceed with job."
+  [30]=>
+  string(0) ""
+  [31]=>
+  string(0) ""
+  [32]=>
+  string(72) "Approval:__________________________________________ Date:_______________"
+  [33]=>
+  string(0) ""
+  [34]=>
+  string(0) ""
+  [35]=>
+  string(0) ""
+  [36]=>
+  string(0) ""
+  [37]=>
+  string(140) "You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006"
+  [38]=>
+  string(0) ""
+}
+string(39) "To: dk18184@gmail.com | full_name: Dren"
+array(25) {
+  [0]=>
+  string(0) ""
+  [1]=>
+  string(0) ""
+  [2]=>
+  string(179) "Run 201410200936                                                                                         for the application CALCTY                   : California City Application"
+  [3]=>
+  string(55) "has been REJECTED by username: tlac at 10/20/2014 11:52"
+  [4]=>
+  string(0) ""
+  [5]=>
+  string(0) ""
+  [6]=>
+  string(0) ""
+  [7]=>
+  string(41) "Remarks regarding the denial of approval:"
+  [8]=>
+  string(0) ""
+  [9]=>
+  string(39) "Correction in message content per Cindy"
+  [10]=>
+  string(0) ""
+  [11]=>
+  string(0) ""
+  [12]=>
+  string(29) "Here are the process results."
+  [13]=>
+  string(0) ""
+  [14]=>
+  string(0) ""
+  [15]=>
+  string(0) ""
+  [16]=>
+  string(0) ""
+  [17]=>
+  string(34) "Click here to examine the process."
+  [18]=>
+  string(0) ""
+  [19]=>
+  string(0) ""
+  [20]=>
+  string(0) ""
+  [21]=>
+  string(0) ""
+  [22]=>
+  string(0) ""
+  [23]=>
+  string(0) ""
+  [24]=>
+  string(0) ""
+}
+string(39) "To: dk18184@gmail.com | full_name: Dren"
+array(7) {
+  [0]=>
+  string(0) ""
+  [1]=>
+  string(0) ""
+  [2]=>
+  string(131) "The file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application"
+  [3]=>
+  string(37) "by username: tlac at 10/17/2014 22:05"
+  [4]=>
+  string(0) ""
+  [5]=>
+  string(0) ""
+  [6]=>
+  string(0) ""
+}
+string(42) "To: ta@alexander-co.com2  | full_name: Tim"
+array(39) {
+  [0]=>
+  string(0) ""
+  [1]=>
+  string(0) ""
+  [2]=>
+  string(109) "The application CALCTY: California City Application                                       has been processed."
+  [3]=>
+  string(0) ""
+  [4]=>
+  string(29) "Here are the process results."
+  [5]=>
+  string(0) ""
+  [6]=>
+  string(0) ""
+  [7]=>
+  string(46) "Click here to examine and approve the process."
+  [8]=>
+  string(0) ""
+  [9]=>
+  string(0) ""
+  [10]=>
+  string(0) ""
+  [11]=>
+  string(120) "Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date/time : Fri-Oct-17-2014&nbsp;10:54:00"
+  [12]=>
+  string(15) "Process Message"
+  [13]=>
+  string(0) ""
+  [14]=>
+  string(0) ""
+  [15]=>
+  string(0) ""
+  [16]=>
+  string(0) ""
+  [17]=>
+  string(0) ""
+  [18]=>
+  string(0) ""
+  [19]=>
+  string(0) ""
+  [20]=>
+  string(0) ""
+  [21]=>
+  string(0) ""
+  [22]=>
+  string(191) "Sheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;"
+  [23]=>
+  string(44) "1) Please approve the above process results."
+  [24]=>
+  string(29) "2) Check the appropriate box."
+  [25]=>
+  string(68) "3) Fax this form back to the Sebis Direct Data Center: 708-546-2006."
+  [26]=>
+  string(0) ""
+  [27]=>
+  string(51) "[ ] Process results are correct,  Proceed with job."
+  [28]=>
+  string(0) ""
+  [29]=>
+  string(61) "[ ] Process results are NOT correct, DO NOT proceed with job."
+  [30]=>
+  string(0) ""
+  [31]=>
+  string(0) ""
+  [32]=>
+  string(72) "Approval:__________________________________________ Date:_______________"
+  [33]=>
+  string(0) ""
+  [34]=>
+  string(0) ""
+  [35]=>
+  string(0) ""
+  [36]=>
+  string(0) ""
+  [37]=>
+  string(140) "You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006"
+  [38]=>
+  string(0) ""
+}
+string(42) "To: ta@alexander-co.com2  | full_name: Tim"
+array(39) {
+  [0]=>
+  string(0) ""
+  [1]=>
+  string(0) ""
+  [2]=>
+  string(109) "The application CALCTY: California City Application                                       has been processed."
+  [3]=>
+  string(0) ""
+  [4]=>
+  string(29) "Here are the process results."
+  [5]=>
+  string(0) ""
+  [6]=>
+  string(0) ""
+  [7]=>
+  string(46) "Click here to examine and approve the process."
+  [8]=>
+  string(0) ""
+  [9]=>
+  string(0) ""
+  [10]=>
+  string(0) ""
+  [11]=>
+  string(120) "Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date/time : Mon-Oct-20-2014&nbsp;10:32:01"
+  [12]=>
+  string(15) "Process Message"
+  [13]=>
+  string(0) ""
+  [14]=>
+  string(0) ""
+  [15]=>
+  string(0) ""
+  [16]=>
+  string(0) ""
+  [17]=>
+  string(0) ""
+  [18]=>
+  string(0) ""
+  [19]=>
+  string(0) ""
+  [20]=>
+  string(0) ""
+  [21]=>
+  string(0) ""
+  [22]=>
+  string(191) "Sheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;"
+  [23]=>
+  string(44) "1) Please approve the above process results."
+  [24]=>
+  string(29) "2) Check the appropriate box."
+  [25]=>
+  string(68) "3) Fax this form back to the Sebis Direct Data Center: 708-546-2006."
+  [26]=>
+  string(0) ""
+  [27]=>
+  string(51) "[ ] Process results are correct,  Proceed with job."
+  [28]=>
+  string(0) ""
+  [29]=>
+  string(61) "[ ] Process results are NOT correct, DO NOT proceed with job."
+  [30]=>
+  string(0) ""
+  [31]=>
+  string(0) ""
+  [32]=>
+  string(72) "Approval:__________________________________________ Date:_______________"
+  [33]=>
+  string(0) ""
+  [34]=>
+  string(0) ""
+  [35]=>
+  string(0) ""
+  [36]=>
+  string(0) ""
+  [37]=>
+  string(140) "You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006"
+  [38]=>
+  string(0) ""
+}
+string(42) "To: ta@alexander-co.com2  | full_name: Tim"
+array(25) {
+  [0]=>
+  string(0) ""
+  [1]=>
+  string(0) ""
+  [2]=>
+  string(179) "Run 201410200936                                                                                         for the application CALCTY                   : California City Application"
+  [3]=>
+  string(55) "has been REJECTED by username: tlac at 10/20/2014 11:52"
+  [4]=>
+  string(0) ""
+  [5]=>
+  string(0) ""
+  [6]=>
+  string(0) ""
+  [7]=>
+  string(41) "Remarks regarding the denial of approval:"
+  [8]=>
+  string(0) ""
+  [9]=>
+  string(39) "Correction in message content per Cindy"
+  [10]=>
+  string(0) ""
+  [11]=>
+  string(0) ""
+  [12]=>
+  string(29) "Here are the process results."
+  [13]=>
+  string(0) ""
+  [14]=>
+  string(0) ""
+  [15]=>
+  string(0) ""
+  [16]=>
+  string(0) ""
+  [17]=>
+  string(34) "Click here to examine the process."
+  [18]=>
+  string(0) ""
+  [19]=>
+  string(0) ""
+  [20]=>
+  string(0) ""
+  [21]=>
+  string(0) ""
+  [22]=>
+  string(0) ""
+  [23]=>
+  string(0) ""
+  [24]=>
+  string(0) ""
+}
+string(42) "To: ta@alexander-co.com2  | full_name: Tim"
+array(7) {
+  [0]=>
+  string(0) ""
+  [1]=>
+  string(0) ""
+  [2]=>
+  string(131) "The file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application"
+  [3]=>
+  string(37) "by username: tlac at 10/17/2014 22:05"
+  [4]=>
+  string(0) ""
+  [5]=>
+  string(0) ""
+  [6]=>
+  string(0) ""
+}
+string(38) "To: tlac@acsbill.com2 | full_name: Tim"
+array(39) {
+  [0]=>
+  string(0) ""
+  [1]=>
+  string(0) ""
+  [2]=>
+  string(109) "The application CALCTY: California City Application                                       has been processed."
+  [3]=>
+  string(0) ""
+  [4]=>
+  string(29) "Here are the process results."
+  [5]=>
+  string(0) ""
+  [6]=>
+  string(0) ""
+  [7]=>
+  string(46) "Click here to examine and approve the process."
+  [8]=>
+  string(0) ""
+  [9]=>
+  string(0) ""
+  [10]=>
+  string(0) ""
+  [11]=>
+  string(120) "Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date/time : Fri-Oct-17-2014&nbsp;10:54:00"
+  [12]=>
+  string(15) "Process Message"
+  [13]=>
+  string(0) ""
+  [14]=>
+  string(0) ""
+  [15]=>
+  string(0) ""
+  [16]=>
+  string(0) ""
+  [17]=>
+  string(0) ""
+  [18]=>
+  string(0) ""
+  [19]=>
+  string(0) ""
+  [20]=>
+  string(0) ""
+  [21]=>
+  string(0) ""
+  [22]=>
+  string(191) "Sheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;"
+  [23]=>
+  string(44) "1) Please approve the above process results."
+  [24]=>
+  string(29) "2) Check the appropriate box."
+  [25]=>
+  string(68) "3) Fax this form back to the Sebis Direct Data Center: 708-546-2006."
+  [26]=>
+  string(0) ""
+  [27]=>
+  string(51) "[ ] Process results are correct,  Proceed with job."
+  [28]=>
+  string(0) ""
+  [29]=>
+  string(61) "[ ] Process results are NOT correct, DO NOT proceed with job."
+  [30]=>
+  string(0) ""
+  [31]=>
+  string(0) ""
+  [32]=>
+  string(72) "Approval:__________________________________________ Date:_______________"
+  [33]=>
+  string(0) ""
+  [34]=>
+  string(0) ""
+  [35]=>
+  string(0) ""
+  [36]=>
+  string(0) ""
+  [37]=>
+  string(140) "You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006"
+  [38]=>
+  string(0) ""
+}
+string(38) "To: tlac@acsbill.com2 | full_name: Tim"
+array(39) {
+  [0]=>
+  string(0) ""
+  [1]=>
+  string(0) ""
+  [2]=>
+  string(109) "The application CALCTY: California City Application                                       has been processed."
+  [3]=>
+  string(0) ""
+  [4]=>
+  string(29) "Here are the process results."
+  [5]=>
+  string(0) ""
+  [6]=>
+  string(0) ""
+  [7]=>
+  string(46) "Click here to examine and approve the process."
+  [8]=>
+  string(0) ""
+  [9]=>
+  string(0) ""
+  [10]=>
+  string(0) ""
+  [11]=>
+  string(120) "Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date/time : Mon-Oct-20-2014&nbsp;10:32:01"
+  [12]=>
+  string(15) "Process Message"
+  [13]=>
+  string(0) ""
+  [14]=>
+  string(0) ""
+  [15]=>
+  string(0) ""
+  [16]=>
+  string(0) ""
+  [17]=>
+  string(0) ""
+  [18]=>
+  string(0) ""
+  [19]=>
+  string(0) ""
+  [20]=>
+  string(0) ""
+  [21]=>
+  string(0) ""
+  [22]=>
+  string(191) "Sheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;"
+  [23]=>
+  string(44) "1) Please approve the above process results."
+  [24]=>
+  string(29) "2) Check the appropriate box."
+  [25]=>
+  string(68) "3) Fax this form back to the Sebis Direct Data Center: 708-546-2006."
+  [26]=>
+  string(0) ""
+  [27]=>
+  string(51) "[ ] Process results are correct,  Proceed with job."
+  [28]=>
+  string(0) ""
+  [29]=>
+  string(61) "[ ] Process results are NOT correct, DO NOT proceed with job."
+  [30]=>
+  string(0) ""
+  [31]=>
+  string(0) ""
+  [32]=>
+  string(72) "Approval:__________________________________________ Date:_______________"
+  [33]=>
+  string(0) ""
+  [34]=>
+  string(0) ""
+  [35]=>
+  string(0) ""
+  [36]=>
+  string(0) ""
+  [37]=>
+  string(140) "You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006"
+  [38]=>
+  string(0) ""
+}
+string(38) "To: tlac@acsbill.com2 | full_name: Tim"
+array(25) {
+  [0]=>
+  string(0) ""
+  [1]=>
+  string(0) ""
+  [2]=>
+  string(179) "Run 201410200936                                                                                         for the application CALCTY                   : California City Application"
+  [3]=>
+  string(55) "has been REJECTED by username: tlac at 10/20/2014 11:52"
+  [4]=>
+  string(0) ""
+  [5]=>
+  string(0) ""
+  [6]=>
+  string(0) ""
+  [7]=>
+  string(41) "Remarks regarding the denial of approval:"
+  [8]=>
+  string(0) ""
+  [9]=>
+  string(39) "Correction in message content per Cindy"
+  [10]=>
+  string(0) ""
+  [11]=>
+  string(0) ""
+  [12]=>
+  string(29) "Here are the process results."
+  [13]=>
+  string(0) ""
+  [14]=>
+  string(0) ""
+  [15]=>
+  string(0) ""
+  [16]=>
+  string(0) ""
+  [17]=>
+  string(34) "Click here to examine the process."
+  [18]=>
+  string(0) ""
+  [19]=>
+  string(0) ""
+  [20]=>
+  string(0) ""
+  [21]=>
+  string(0) ""
+  [22]=>
+  string(0) ""
+  [23]=>
+  string(0) ""
+  [24]=>
+  string(0) ""
+}
+string(38) "To: tlac@acsbill.com2 | full_name: Tim"
+array(7) {
+  [0]=>
+  string(0) ""
+  [1]=>
+  string(0) ""
+  [2]=>
+  string(131) "The file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application"
+  [3]=>
+  string(37) "by username: tlac at 10/17/2014 22:05"
+  [4]=>
+  string(0) ""
+  [5]=>
+  string(0) ""
+  [6]=>
+  string(0) ""
+}
+string(36) "To: ta@alexent.com2 | full_name: Tim"
+array(39) {
+  [0]=>
+  string(0) ""
+  [1]=>
+  string(0) ""
+  [2]=>
+  string(109) "The application CALCTY: California City Application                                       has been processed."
+  [3]=>
+  string(0) ""
+  [4]=>
+  string(29) "Here are the process results."
+  [5]=>
+  string(0) ""
+  [6]=>
+  string(0) ""
+  [7]=>
+  string(46) "Click here to examine and approve the process."
+  [8]=>
+  string(0) ""
+  [9]=>
+  string(0) ""
+  [10]=>
+  string(0) ""
+  [11]=>
+  string(120) "Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date/time : Fri-Oct-17-2014&nbsp;10:54:00"
+  [12]=>
+  string(15) "Process Message"
+  [13]=>
+  string(0) ""
+  [14]=>
+  string(0) ""
+  [15]=>
+  string(0) ""
+  [16]=>
+  string(0) ""
+  [17]=>
+  string(0) ""
+  [18]=>
+  string(0) ""
+  [19]=>
+  string(0) ""
+  [20]=>
+  string(0) ""
+  [21]=>
+  string(0) ""
+  [22]=>
+  string(191) "Sheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;"
+  [23]=>
+  string(44) "1) Please approve the above process results."
+  [24]=>
+  string(29) "2) Check the appropriate box."
+  [25]=>
+  string(68) "3) Fax this form back to the Sebis Direct Data Center: 708-546-2006."
+  [26]=>
+  string(0) ""
+  [27]=>
+  string(51) "[ ] Process results are correct,  Proceed with job."
+  [28]=>
+  string(0) ""
+  [29]=>
+  string(61) "[ ] Process results are NOT correct, DO NOT proceed with job."
+  [30]=>
+  string(0) ""
+  [31]=>
+  string(0) ""
+  [32]=>
+  string(72) "Approval:__________________________________________ Date:_______________"
+  [33]=>
+  string(0) ""
+  [34]=>
+  string(0) ""
+  [35]=>
+  string(0) ""
+  [36]=>
+  string(0) ""
+  [37]=>
+  string(140) "You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006"
+  [38]=>
+  string(0) ""
+}
+string(36) "To: ta@alexent.com2 | full_name: Tim"
+array(39) {
+  [0]=>
+  string(0) ""
+  [1]=>
+  string(0) ""
+  [2]=>
+  string(109) "The application CALCTY: California City Application                                       has been processed."
+  [3]=>
+  string(0) ""
+  [4]=>
+  string(29) "Here are the process results."
+  [5]=>
+  string(0) ""
+  [6]=>
+  string(0) ""
+  [7]=>
+  string(46) "Click here to examine and approve the process."
+  [8]=>
+  string(0) ""
+  [9]=>
+  string(0) ""
+  [10]=>
+  string(0) ""
+  [11]=>
+  string(120) "Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date/time : Mon-Oct-20-2014&nbsp;10:32:01"
+  [12]=>
+  string(15) "Process Message"
+  [13]=>
+  string(0) ""
+  [14]=>
+  string(0) ""
+  [15]=>
+  string(0) ""
+  [16]=>
+  string(0) ""
+  [17]=>
+  string(0) ""
+  [18]=>
+  string(0) ""
+  [19]=>
+  string(0) ""
+  [20]=>
+  string(0) ""
+  [21]=>
+  string(0) ""
+  [22]=>
+  string(191) "Sheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;"
+  [23]=>
+  string(44) "1) Please approve the above process results."
+  [24]=>
+  string(29) "2) Check the appropriate box."
+  [25]=>
+  string(68) "3) Fax this form back to the Sebis Direct Data Center: 708-546-2006."
+  [26]=>
+  string(0) ""
+  [27]=>
+  string(51) "[ ] Process results are correct,  Proceed with job."
+  [28]=>
+  string(0) ""
+  [29]=>
+  string(61) "[ ] Process results are NOT correct, DO NOT proceed with job."
+  [30]=>
+  string(0) ""
+  [31]=>
+  string(0) ""
+  [32]=>
+  string(72) "Approval:__________________________________________ Date:_______________"
+  [33]=>
+  string(0) ""
+  [34]=>
+  string(0) ""
+  [35]=>
+  string(0) ""
+  [36]=>
+  string(0) ""
+  [37]=>
+  string(140) "You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006"
+  [38]=>
+  string(0) ""
+}
+string(36) "To: ta@alexent.com2 | full_name: Tim"
+array(25) {
+  [0]=>
+  string(0) ""
+  [1]=>
+  string(0) ""
+  [2]=>
+  string(179) "Run 201410200936                                                                                         for the application CALCTY                   : California City Application"
+  [3]=>
+  string(55) "has been REJECTED by username: tlac at 10/20/2014 11:52"
+  [4]=>
+  string(0) ""
+  [5]=>
+  string(0) ""
+  [6]=>
+  string(0) ""
+  [7]=>
+  string(41) "Remarks regarding the denial of approval:"
+  [8]=>
+  string(0) ""
+  [9]=>
+  string(39) "Correction in message content per Cindy"
+  [10]=>
+  string(0) ""
+  [11]=>
+  string(0) ""
+  [12]=>
+  string(29) "Here are the process results."
+  [13]=>
+  string(0) ""
+  [14]=>
+  string(0) ""
+  [15]=>
+  string(0) ""
+  [16]=>
+  string(0) ""
+  [17]=>
+  string(34) "Click here to examine the process."
+  [18]=>
+  string(0) ""
+  [19]=>
+  string(0) ""
+  [20]=>
+  string(0) ""
+  [21]=>
+  string(0) ""
+  [22]=>
+  string(0) ""
+  [23]=>
+  string(0) ""
+  [24]=>
+  string(0) ""
+}
+string(36) "To: ta@alexent.com2 | full_name: Tim"
+[32mEmails sent.[39m

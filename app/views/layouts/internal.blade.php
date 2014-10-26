@@ -20,8 +20,9 @@
     <link href="/styles/login.css" rel="stylesheet">
     <link href="/styles/main.css" rel="stylesheet">
     <link href="/bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/bower_components/bootstrap3-editable-1.5.1/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
 
-    <script src="/bower_components/jquery/jquery.min.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 
     <script src="/bower_components/angular/angular.min.js"></script>
     <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
@@ -39,11 +40,12 @@
     <script src="/bower_components/bootstrap/js/collapse.js"></script>
     <script src="/bower_components/bootstrap/js/dropdown.js"></script>
     <script src="/bower_components/bootstrap/js/modal.js"></script>
+    <script src="/bower_components/bootstrap/js/tooltip.js"></script>
     <script src="/bower_components/bootstrap/js/popover.js"></script>
     <script src="/bower_components/bootstrap/js/scrollspy.js"></script>
     <script src="/bower_components/bootstrap/js/tab.js"></script>
-    <script src="/bower_components/bootstrap/js/tooltip.js"></script>
     <script src="/bower_components/bootstrap/js/transition.js"></script>
+    <script src="/bower_components/bootstrap3-editable-1.5.1/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -53,21 +55,40 @@
 
     <script type="text/javascript">
 
-    $(document).ready(function() {
+        $(document).ready(function() {
+            
+            $("#clickCol").click(function() {
+                $('#collapseOne').collapse();
+            });
 
-        alert("wtf");
-        
-        $("#clickCol").click(function() {
+            //toggle `popup` / `inline` mode
+            $.fn.editable.defaults.mode = 'popup';     
+            
+            //make username editable
+            $('#username').editable();
+            
+            //make status editable
+            $('#status').editable({
+                type: 'select',
+                title: 'Select status',
+                placement: 'right',
+                value: 2,
+                source: [
+                    {value: 1, text: 'status 1'},
+                    {value: 2, text: 'status 2'},
+                    {value: 3, text: 'status 3'}
+                ]
+                /*
+                //uncomment these lines to send data on server
+                ,pk: 1
+                ,url: '/post'
+                */
+            });
 
-            alert("wtf");
-
-            $('#collapseOne').collapse();
-        
         });
 
-    });
-
     </script>
+
   </head>
 
   <body>
@@ -75,9 +96,19 @@
 
 
     <div class="container-fluid">
-        <div class="container-fluid background">
+
+        <?php if(Config::get('constant.g_currentPage') == '/' || Config::get('constant.g_currentPage') == '/login') { ?>
+        <div class="container-fluid">
+
+        <?php } else { ?>
+
+            <div class="container-fluid background">
+
+        <?php } ?>
+
             @yield('main')
         </div>
+    
     </div> <!-- /container -->
 
     <script src="/scripts/app.js"></script>

@@ -134,12 +134,21 @@ class EmailsRepository implements EmailsRepositoryInterface {
                     $std_email->body = array_slice($std_email->body, 9);
                 }
 
-                if(in_array('Dear', $std_email->body) || 'Dear Alexander') {
+                // 
+                // if strpos($mystring, $findme)
+                // We might want to search the string 
+                // -> if it contains the keyword of "Dear" or simmilar
+                // 
+
+                if(in_array('Dear', $std_email->body) 
+                || in_array('Dear Alexander', $std_email->body) 
+                || in_array("Dear Alexander Notifications,", $std_email->body)) {
+
                     $std_email->body = array_slice($std_email->body, 1);
                 }
 
                 // Put everything all togather
-                $std_email->body = implode("\n", $std_email->body);
+                $std_email->body = implode("\n", $std_email->body); 
 
             }
 

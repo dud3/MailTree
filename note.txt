@@ -1,0 +1,4 @@
+## Install
+First of all it's highly important that you check if the version of php is PHP >= 5.4
+and also you have "MCrypt PHP Extension" installed already, since sometimes you'll get
+irelecant errors

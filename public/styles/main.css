@@ -26,3 +26,7 @@
 }
 
 
+#main-anim-duration-3 {
+  -vendor-animation-duration: 3s;
+  -vendor-animation-delay: 4s;
+}

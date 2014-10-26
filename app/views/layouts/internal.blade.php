@@ -16,6 +16,9 @@
     <!-- Bootstrap additional theme -->
     <link href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
+    <!-- Main Animate CSS -->
+    <link href="/bower_components/animate.css/animate.css" rel="stylesheet">
+
     <!-- Log-in style -->
     <link href="/styles/login.css" rel="stylesheet">
     <link href="/styles/main.css" rel="stylesheet">
@@ -53,6 +56,52 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+
+        <?php if(Config::get('constant.g_currentPage') == '/' || Config::get('constant.g_currentPage') == '/login') { ?>
+        <div class="container-fluid">
+
+        <?php } else { ?>
+
+            @include("layouts.internalNavbar")
+
+            <div class="container-fluid background animated fadeInDownBig">
+
+        <?php } ?>
+
+            @yield('main')
+            
+        </div>
+    
+    </div> <!-- /container -->
+
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/authCtrl.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script>
+    // ------------------------
+    // Windows 8 viewport hack
+    // ------------------------
+    (function () {
+    'use strict';
+      if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement('style')
+        msViewportStyle.appendChild(
+          document.createTextNode(
+            '@-ms-viewport{width:auto!important}'
+          )
+        ) 
+        document.querySelector('head').appendChild(msViewportStyle)
+      }
+    })();
+    </script>
+
+
     <script type="text/javascript">
 
         $(document).ready(function() {
@@ -89,49 +138,6 @@
 
     </script>
 
-  </head>
-
-  <body>
-
-
-
-    <div class="container-fluid">
-
-        <?php if(Config::get('constant.g_currentPage') == '/' || Config::get('constant.g_currentPage') == '/login') { ?>
-        <div class="container-fluid">
-
-        <?php } else { ?>
-
-            <div class="container-fluid background">
-
-        <?php } ?>
-
-            @yield('main')
-        </div>
-    
-    </div> <!-- /container -->
-
-    <script src="/scripts/app.js"></script>
-    <script src="/scripts/controllers/authCtrl.js"></script>
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script>
-    // ------------------------
-    // Windows 8 viewport hack
-    // ------------------------
-    (function () {
-    'use strict';
-      if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-        var msViewportStyle = document.createElement('style')
-        msViewportStyle.appendChild(
-          document.createTextNode(
-            '@-ms-viewport{width:auto!important}'
-          )
-        ) 
-        document.querySelector('head').appendChild(msViewportStyle)
-      }
-    })();
-    </script>
   </body>
 </html>
 

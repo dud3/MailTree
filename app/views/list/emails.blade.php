@@ -6,8 +6,13 @@
 	<thead>
 		<tr>
 			<th>Emails</th>
+			<th></th>
+			<th></th>
+			<th style="width:5%"></th>
 		</tr>
 	</thead>
+
+	<tbody>
 		<tr>
 			<td><input type="checkbox" name="" value=""></td>
 			<td>Title of email with some keywords like <span class="label label-primary">California</span> and whatever</td>
@@ -45,6 +50,7 @@
 			<td>Date</td>
 			<td><button class="btn btn-success btn-sm">Sendt&nbsp;<span class="fa fa-envelope"></span></button></td>
 		</tr>
+	</tbody>
 	
 </table>
 

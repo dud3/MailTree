@@ -25,3 +25,6 @@ Examples
 
 #### Keywords Page
 ![ScreenShot](https://raw.githubusercontent.com/dud3/MailTree/master/public/app_samples/keywords_page.png)
+
+#### Mails Page
+![ScreenShot](https://raw.githubusercontent.com/dud3/MailTree/master/public/app_samples/mails-p.png)

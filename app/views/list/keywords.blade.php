@@ -9,8 +9,17 @@
 
 			<div class="panel-heading">
 			  <h4 class="panel-title">
-			    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="pull-right"><b>+</b></a>
-			      Keywords: <span class="label label-primary">dabvis</span> <span class="label label-primary">CLA</span><a class="fa fa-pencil-square-o" style="float: right;"></a><a style="float:right;"><b>x</b></a>
+		
+				<a href="javascript:void(0)">			    
+			  		<span class="text-danger" style="float:right; padding-left:15px;"><b>x</b></span>
+			  	</a>
+
+			    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="pull-right nounderline">
+			    	<span class=""><b>+</b></span>
+			    </a>
+
+			      Keywords: <span class="label label-primary">dabvis</span> <span class="label label-primary">CLA</span>
+
 			  </h4>
 			</div>
 
@@ -52,7 +61,15 @@
 				
 			<div class="panel-heading">
 			  <h4 class="panel-title">
-			    <a data-toggle="collapse" data-parent="" href="#collapseTwo" class="pull-right" id="clickCol"><b>+</b></a>
+
+			  	<a href="javascript:void(0)">			    
+			  		<span class="text-danger" style="float:right; padding-left:15px;"><b>x</b></span>
+			  	</a>
+
+			    <a data-toggle="collapse" data-parent="" href="#collapseTwo" class="pull-right nounderline" id="clickCol">
+			    	<span class=""><b>+</b></span>
+			    </a>
+			      
 			      Keywords: <span class="label label-primary">example1</span> <span class="label label-primary">example2</span>
 			  </h4>
 			</div>
@@ -94,7 +111,15 @@
 				
 			<div class="panel-heading">
 			  <h4 class="panel-title">
-			   <a data-toggle="collapse" data-parent="" href="#collapseThree" class="pull-right"><b>+</b></a>
+
+			  	<a href="javascript:void(0)">			    
+			  		<span class="text-danger" style="float:right; padding-left:15px;"><b>x</b></span>
+			  	</a>
+
+			   <a data-toggle="collapse" data-parent="" href="#collapseThree" class="pull-right nounderline">
+			   		<span><b>+</b></span>
+			   </a>
+			     
 			      Keywords: <span class="label label-primary">example1</span> <span class="label label-primary">example2</span>
 			    
 			  </h4>
@@ -116,7 +141,15 @@
 				
 			<div class="panel-heading">
 			  <h4 class="panel-title">
-			    <a data-toggle="collapse" data-parent="" href="#collapseFour" class="pull-right"><b>+</b></a>
+
+			  	<a href="javascript:void(0)">			    
+			  		<span class="text-danger" style="float:right; padding-left:15px;"><b>x</b></span>
+			  	</a>
+
+			    <a data-toggle="collapse" data-parent="" href="#collapseFour" class="pull-right nounderline">
+			    	<span><b>+</b></span>
+			    </a>
+			     
 			      Keywords: <span class="label label-primary">example1</span> <span class="label label-primary">example2</span>
 			  </h4>
 			</div>
@@ -137,7 +170,15 @@
 
 			<div class="panel-heading">
 			  <h4 class="panel-title">
-			    <a data-toggle="collapse" data-parent="" href="#collapseFive" class="pull-right"><b>+</b></a>
+
+			  	<a href="javascript:void(0)">			    
+			  		<span class="text-danger" style="float:right; padding-left:15px;"><b>x</b></span>
+			  	</a>
+
+			    <a data-toggle="collapse" data-parent="" href="#collapseFive" class="pull-right nounderline">
+			    	<span><b>+</b></span>
+			    </a>
+			     
 			      Keywords: <span class="label label-primary">dabvis</span> <span class="label label-primary">CLA</span>
 			  </h4>
 			</div>
@@ -158,7 +199,15 @@
 
 			<div class="panel-heading">
 			  <h4 class="panel-title">
-			    <a data-toggle="collapse" data-parent="" href="#collapseSix" class="pull-right"><b>+</b></a>
+
+			  	<a href="javascript:void(0)">			    
+			  		<span class="text-danger" style="float:right; padding-left:15px;"><b>x</b></span>
+			  	</a>
+
+			    <a data-toggle="collapse" data-parent="" href="#collapseSix" class="pull-right nounderline">
+			    	<span><b>+</b></span>
+			    </a>
+			     
 			      Keywords: <span class="label label-primary">dabvis</span> <span class="label label-primary">CLA</span>
 			  </h4>
 			</div>

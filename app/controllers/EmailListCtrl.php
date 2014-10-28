@@ -42,23 +42,22 @@ class EmailListCtrl extends internalCtrl {
 	 * [view_emails description]
 	 * @return [type] [description]
 	 */
-	public function view_emails() {
+	public function index() {
 
+		/*
 		$_emails;
 		$_inbox = $this->inbox;
 
-		/* if emails are returned, cycle through each... */
 		if($this->emails) {
 			
-			/* begin output var */
 			$output = '';
 			
-			/* put the newest emails on top */
 			rsort($this->emails);
 
 			$_emails = $this->emails;
 
 		}
+		*/
 
 		$view = View::make('list.emails', compact('_emails', '_inbox'));
 

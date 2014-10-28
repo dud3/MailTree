@@ -25,8 +25,24 @@
   padding: 50px 15px;
 }
 
+.nounderline {text-decoration: none}
+.nounderline:hover {text-decoration: none}
 
 #main-anim-duration-3 {
   -vendor-animation-duration: 3s;
   -vendor-animation-delay: 4s;
 }
+
+/*.table-hover tbody tr:hover td {
+    background: rgba(255,255,255, 0.5);
+}*/
+
+table {
+  background: rgba(255,255,255, 0.8);
+}
+
+thead {
+  text-align: center;
+   background: rgba(217,217,217, 0.8);
+}
+

@@ -23,7 +23,7 @@
     <link href="/styles/login.css" rel="stylesheet">
     <link href="/styles/main.css" rel="stylesheet">
     <link href="/bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/bower_components/bootstrap3-editable-1.5.1/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
+    <link href="/bower_components/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
 
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 
@@ -48,7 +48,7 @@
     <script src="/bower_components/bootstrap/js/scrollspy.js"></script>
     <script src="/bower_components/bootstrap/js/tab.js"></script>
     <script src="/bower_components/bootstrap/js/transition.js"></script>
-    <script src="/bower_components/bootstrap3-editable-1.5.1/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+    <script src="/bower_components/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

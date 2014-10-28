@@ -14,6 +14,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
     public $username = ['notifications@acsbill.com', 'notification@alexent.com'];
     public $password = '8655morro';
 
+    public $search_for = [];
+
     public $inbox;
     public $emails;
 
@@ -102,7 +104,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             $std_email->subject = implode(" ", $std_email->subject);
 
-            if(!self::$enable_html_email) {
+            if(self::$enable_html_email || !self::$enable_html_email) {
 
                 // Explode the email into pieces
                 $std_email->body = explode("\n", $std_email->body);
@@ -140,11 +142,19 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 // -> if it contains the keyword of "Dear" or simmilar
                 // 
 
-                if(in_array('Dear', $std_email->body) 
-                || in_array('Dear Alexander', $std_email->body) 
-                || in_array("Dear Alexander Notifications,", $std_email->body)) {
+                if(self::$enable_html_email) {
+                    $this->search_for = ["Dear Alexander Notifications,<br /><br />", "", ""];
+                } else {
+                    $this->search_for = ["Dear", "Dear Alexander", "Dear Alexander Notifications,"];
+                }
 
-                    $std_email->body = array_slice($std_email->body, 1);
+                var_dump($this->search_for);
+
+                if(in_array($this->search_for[0], $std_email->body) 
+                || in_array($this->search_for[1], $std_email->body) 
+                || in_array($this->search_for[2], $std_email->body)) {
+
+                    $std_email->body = array_slice($std_email->body, 3);
                 }
 
                 // Put everything all togather

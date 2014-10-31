@@ -22,6 +22,49 @@ App::after(function($request, $response)
 	//
 });
 
+
+
+/*
+|--------------------------------------------------------------------------
+| Exception handlers
+|--------------------------------------------------------------------------
+|
+| These are general exception handlers
+| http://net.tutsplus.com/tutorials/javascript-ajax/combining-laravel-4-and-backbone/
+|
+*/
+App::error( function(Symfony\Component\HttpKernel\Exception\HttpException $e, $code)
+{
+
+  $headers = $e->getHeaders();
+  // Else go here
+  switch($code)
+  {
+    case 401:
+      $default_message = 'Invalid API key';
+      $headers['WWW-Authenticate'] = 'Basic realm="CRM REST API"';
+    break;
+ 
+    case 403:
+      $default_message = 'Insufficient privileges to perform this action';
+    break;
+
+    case 404:
+      $default_message = 'The API route not found';
+    break;
+ 
+    default:
+      $default_message = 'An error was encountered';
+  }
+
+  return Response::json(array(
+    'error' => $e->getMessage() ?: $default_message
+  ), $code, $headers);
+
+});
+ 
+
+
 /*
 |--------------------------------------------------------------------------
 | Authentication Filters
@@ -87,4 +130,18 @@ Route::filter('csrf', function()
 	{
 		throw new Illuminate\Session\TokenMismatchException;
 	}
+});
+
+/*
+|--------------------------------------------------------------------------
+| Page not found
+|--------------------------------------------------------------------------
+|
+| The exception handler when on route not found.
+|
+*/
+
+App::missing(function($exception)
+{
+    return Response::view('__errors__.__error__404', array(), 404);
 });

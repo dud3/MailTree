@@ -1,7 +1,6 @@
 @extends('layouts.internal')
 @section('main')
 
-
     <div toggle-switch class="switch-primary" model="switchStatus"></div>
     <div toggle-switch class="switch-info" model="switchStatus"></div>
     <div toggle-switch class="switch-success" model="switchStatus"></div>

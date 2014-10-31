@@ -26,6 +26,26 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 	 */
 	public function get_all() {
 
+		$sql_keywords = DB::select(
+
+			"SELECT k.id, k.keywords
+
+			 FROM keywords k"
+		
+		);
+
+		foreach ($sql_keywords as $keyword) {
+
+			$keyword->email = DB::select(
+			
+				"SELECT e_a_l.id AS email_list_id, e_a_l.email, e_a_l.full_name
+				
+				 FROM email_address_list e_a_l"
+			
+			);
+
+		}
+
 	}
 
 	/**

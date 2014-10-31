@@ -6,7 +6,7 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
 
-class EloquentListRepository extends EmailsRepository implements EloquentListRepositoryInterface {
+class EloquentListRepository implements EloquentListRepositoryInterface {
 
 	protected $main_sql = null;
 
@@ -28,7 +28,7 @@ class EloquentListRepository extends EmailsRepository implements EloquentListRep
 	 * @param  [type] $type [description]
 	 * @return [type]       [description]
 	 */
-	public function _call_list($type) {
+	public function __call_list($type) {
 
 		$this->list_type = $type;
 

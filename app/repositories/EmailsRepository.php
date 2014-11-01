@@ -583,14 +583,6 @@ class EmailsRepository implements EmailsRepositoryInterface {
     }
 
 
-    // ------------------------------
-    // Helper functions
-    // ------------------------------
-    // 
-    // Helper functions.
-    // 
-    // 
-
     /**
      * Trim values.
      * @param  [type] $value [description]
@@ -599,6 +591,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
     public function trim_value(&$value) { 
         $value = trim($value); 
     }
+    
 
     /**
      * Replace value

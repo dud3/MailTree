@@ -7,7 +7,7 @@ interface EloquentListRepositoryInterface {
 	 * @param  [type] $type [description]
 	 * @return [type]       [description]
 	 */
-	public function _call_list($type);
+	public function __call_list($type);
 
 	/**
 	 * Main query gues here
@@ -15,19 +15,16 @@ interface EloquentListRepositoryInterface {
 	 */
 	public function mainQuery();
 
-
 	/**
 	 * Get list by keywords.
 	 * @return [type] [description]
 	 */
 	public function get_list_by_keyword();
 
-
 	/**
 	 * Get list by emails.
 	 * @return [type] [description]
 	 */
 	public function get_list_by_email();
-
 
 }

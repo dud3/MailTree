@@ -10,7 +10,7 @@ $app['Cartalyst\Sentry\Sentry'] = $app['sentry'];
 
 App::bind('UserRepositoryInterface', 				'SentryUserRepository');
 App::bind('EmailsRepositoryInterface', 				'EmailsRepository');
-App::bind('EmailsRepositoryInterface',				'EloquentListRepository');
+App::bind('EloquentListRepository',					'EloquentListRepositoryInterface');
 App::bind('EloquentEmailsRepositoryInterface',		'EloquentEmailsRepository');
 App::bind('EloquentKeywordsRepositoryInterface',	'EloquentKeywordsRepository');
 

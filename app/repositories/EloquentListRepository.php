@@ -9,11 +9,6 @@ use Symfony\Component\Console\Input\InputArgument;
 class EloquentListRepository implements EloquentListRepositoryInterface {
 
 	protected $main_sql = null;
-
-	protected $user;
-	protected $list;
-	protected $emails;
-
 	protected $list_type;
 
 	/**

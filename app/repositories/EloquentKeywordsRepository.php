@@ -94,11 +94,11 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 		} catch(RuntimeException $e) {
 
 			$error = new stdClass();
-    		$error->message = $e->getMessage();
-    		$error->code = $e->getCode();
-    		$error->error = true;
+			$error->message = $e->getMessage();
+			$error->code = $e->getCode();
+			$error->error = true;
 
-    		return $error;
+			return $error;
 
 		}
 	}
@@ -140,11 +140,11 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 		} catch(RuntimeException $e) {
 
 			$error = new stdClass();
-    		$error->message = $e->getMessage();
-    		$error->code = $e->getCode();
-    		$error->error = true;
+			$error->message = $e->getMessage();
+			$error->code = $e->getCode();
+			$error->error = true;
 
-    		return $error;
+			return $error;
 
 		}
 

@@ -20,35 +20,14 @@ interface EloquentKeywordsRepositoryInterface {
 	 * @param  [type] $data [description]
 	 * @return [type]       [description]
 	 */
-	public function store($data);
+	public function store($data = null);
 
 	/**
 	 * Updaten the email
 	 * @param  [type] $data [description]
 	 * @return [type]       [description]
 	 */
-	public function update($data);
-
-	/**
-	 * Read the email.
-	 * @param  [type] $data [description]
-	 * @return [type]       [description]
-	 */
-	public function read($data);
-
-	/**
-	 * Forward single emails.
-	 * @param  [type] $data [description]
-	 * @return [type]       [description]
-	 */
-	public function forward_single($data);
-
-	/**
-	 * Forward multiple mails.
-	 * @param  [type] $data [description]
-	 * @return [type]       [description]
-	 */
-	public function forward_multiple($data);
+	public function update($data = null);
 
 	/**
 	 * Delete single email.
@@ -63,5 +42,11 @@ interface EloquentKeywordsRepositoryInterface {
 	 * @return [type]       [description]
 	 */
 	public function delete_multiple($data);
+
+	/**
+	 * Validate keywords.
+	 * @return [type] [description]
+	 */
+	public static function validate($data);
 
 }

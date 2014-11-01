@@ -10,6 +10,14 @@ class keywords_list extends Eloquent {
 	protected $table = 'keywords_list';
 
 	protected $guarded = array();
-    // protected $fillable = ['id', 'token']
+
+	/**
+	 * Modal rules.
+	 * @var array
+	 */
+	public static $rules = array(
+        'id',
+ 		'keywords' => 'required'
+	);
 	
 }

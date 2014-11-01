@@ -7,14 +7,12 @@ use Symfony\Component\Console\Input\InputArgument;
 
 class EloquentKeywordsRepository extends EloquentListRepository implements EloquentKeywordsRepositoryInterface {
 
-	protected $main_sql = null;
-
-	protected $user;
-	protected $list;
-	protected $emails;
-
 	/**
 	 * Main Constructor.
+	 *
+	 * @note: I'm unsire if we actually need
+	 * -> a constructor at all.
+	 * 
 	 */
 	public function __construct() {
 
@@ -40,11 +38,15 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 			
 				"SELECT e_a_l.id AS email_list_id, e_a_l.email, e_a_l.full_name
 				
-				 FROM email_address_list e_a_l"
+				 FROM email_address_list e_a_l
+
+				 WHERE e_a_l.keyword_id = ?"
 			
-			);
+			,[$keyword->id]);
 
 		}
+
+		return $sql_keywords;
 
 	}
 
@@ -54,7 +56,7 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 	 * @return [type]     [description]
 	 */
 	public function get_by_id($id = null) {
-
+		return keywords_list::find($id);
 	}
 
 	/**
@@ -62,8 +64,43 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 	 * @param  [type] $data [description]
 	 * @return [type]       [description]
 	 */
-	public function store($data) {
+	public function store($data = null) {
 
+		try {
+			
+			if($data != null) {
+
+				if(!empty($data)) {
+
+					if(self::validate($data)) {
+
+						return keywords_list::create($data);
+
+					} else {
+						throw new RuntimeException("Error Processing Request", 1);
+					}
+
+				} else {
+					throw new RuntimeException("Error, The array can not be empty", 0.2);
+					
+				}
+
+			} else {
+				throw new RuntimeException("Errorm The array can not be null", 0.1);
+			}
+
+		}	
+
+		} catch(RuntimeException $e) {
+
+			$error = new stdClass();
+    		$error->message = $e->getMessage();
+    		$error->code = $e->getCode();
+    		$error->error = true;
+
+    		return $error;
+
+		}
 	}
 
 	/**
@@ -71,34 +108,45 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 	 * @param  [type] $data [description]
 	 * @return [type]       [description]
 	 */
-	public function update($data) {
+	public function update($data = null) {
 
-	}
+		try {
+			
+			if($data != null) {
 
-	/**
-	 * Read the email.
-	 * @param  [type] $data [description]
-	 * @return [type]       [description]
-	 */
-	public function read($data) {
+				if(!empty($data)) {
 
-	}
+					if(self::validate($data)) {
 
-	/**
-	 * Forward single emails.
-	 * @param  [type] $data [description]
-	 * @return [type]       [description]
-	 */
-	public function forward_single($data) {
+						 $k = keywords_list::fill($data);
+						 $k->save();
+						 return $k;
 
-	}
+					} else {
+						throw new RuntimeException("Error Processing Request", 1);
+					}
 
-	/**
-	 * Forward multiple mails.
-	 * @param  [type] $data [description]
-	 * @return [type]       [description]
-	 */
-	public function forward_multiple($data) {
+				} else {
+					throw new RuntimeException("Error, The array can not be empty", 0.2);
+					
+				}
+
+			} else {
+				throw new RuntimeException("Errorm The array can not be null", 0.1);
+			}
+
+		}	
+
+		} catch(RuntimeException $e) {
+
+			$error = new stdClass();
+    		$error->message = $e->getMessage();
+    		$error->code = $e->getCode();
+    		$error->error = true;
+
+    		return $error;
+
+		}
 
 	}
 
@@ -108,7 +156,9 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 	 * @return [type]     [description]
 	 */
 	public function delete_single($id) {
-
+		$k = $this->get_by_id($id);
+		$k->delete();
+		return $k;
 	}
 
 	/**
@@ -117,7 +167,20 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 	 * @return [type]       [description]
 	 */
 	public function delete_multiple($data) {
+		foreach ($data as $k) {
+			$this->delete_single($k->id);
+		}
+		return true;
+	}
 
+	/**
+	 * Validate keywords.
+	 * @return [type] [description]
+	 */
+	public static function validate($data) {
+		$validator = Validator::make($data, keywords_list::$rules);
+		if($validator->fails()) throw new ValidationException($validator);
+		return true;
 	}
 
 }

@@ -58,26 +58,32 @@
 
   </head>
 
-  <body>
+  <body class="body-background">
 
-    <div class="container-fluid">
+    <div id="wrapper" class="toggled">
 
-        <?php if(Config::get('constant.g_currentPage') == '/' || Config::get('constant.g_currentPage') == '/login') { ?>
+        @include("layouts.internalSideBar")
+
         <div class="container-fluid">
 
-        <?php } else { ?>
+            <?php if(Config::get('constant.g_currentPage') == '/' || Config::get('constant.g_currentPage') == '/login') { ?>
+            <div class="container-fluid">
 
-            @include("layouts.internalNavbar")
+                <?php } else { ?>
 
-            <div class="container-fluid background animated fadeInDownBig">
+                    @include("layouts.internalNavbar")
 
-        <?php } ?>
+                    <div id="app-internal" class="container-fluid app-background animated fadeInDownBig">
 
-            @yield('main')
-            
-        </div>
-    
-    </div> <!-- /container -->
+                <?php } ?>
+
+                    @yield('main')
+                
+                    </div>
+        
+            </div> <!-- /container -->
+
+    </div>
 
     <script src="/scripts/app.js"></script>
     <script src="/scripts/controllers/authCtrl.js"></script>
@@ -105,6 +111,11 @@
     <script type="text/javascript">
 
         $(document).ready(function() {
+
+            $("#barnd-img").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
             
             $("#clickCol").click(function() {
                 $('#collapseOne').collapse();

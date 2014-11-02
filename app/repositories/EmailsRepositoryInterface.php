@@ -6,7 +6,7 @@ interface EmailsRepositoryInterface {
      * Read all the emails.
      * @return [type] [description]
      */
-    public function readMails($html_enable);
+    public function readMails($html_enable, $email_search);
 
     /**
      * Send stored mails from the database.

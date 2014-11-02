@@ -55,10 +55,36 @@ class EmailsRepository implements EmailsRepositoryInterface {
         $this->server = new \Fetch\Server($this->server_name[1], $this->port[0]);
         $this->server->setAuthentication($this->username[1], $this->password);
 
-        $this->inbox = $this->server->getMessages();
-
-        // Read the inbox
-        $this->emails = $this->inbox;
+        /*
+        ---------------------------------------------------------------------------------------------------------
+         State of emails (http://php.net/manual/en/function.imap-search.php)
+        ---------------------------------------------------------------------------------------------------------       
+        ALL - return all messages matching the rest of the criteria
+        ANSWERED - match messages with the \\ANSWERED flag set
+        BCC "string" - match messages with "string" in the Bcc: field
+        BEFORE "date" - match messages with Date: before "date"
+        BODY "string" - match messages with "string" in the body of the message
+        CC "string" - match messages with "string" in the Cc: field
+        DELETED - match deleted messages
+        FLAGGED - match messages with the \\FLAGGED (sometimes referred to as Important or Urgent) flag set
+        FROM "string" - match messages with "string" in the From: field
+        KEYWORD "string" - match messages with "string" as a keyword
+        NEW - match new messages
+        OLD - match old messages
+        ON "date" - match messages with Date: matching "date"
+        RECENT - match messages with the \\RECENT flag set
+        SEEN - match messages that have been read (the \\SEEN flag is set)
+        SINCE "date" - match messages with Date: after "date"
+        SUBJECT "string" - match messages with "string" in the Subject:
+        TEXT "string" - match messages with text "string"
+        TO "string" - match messages with "string" in the To:
+        UNANSWERED - match messages that have not been answered
+        UNDELETED - match messages that are not deleted
+        UNFLAGGED - match messages that are not flagged
+        UNKEYWORD "string" - match messages that do not have the keyword "string"
+        UNSEEN - match messages which have not been read yet
+        ---------------------------------------------------------------------------------------------------------
+        */
 
     }
 
@@ -67,7 +93,25 @@ class EmailsRepository implements EmailsRepositoryInterface {
      * Read all the emails.
      * @return [type] [description]
      */
-    public function readMails($html_enable) {
+    public function readMails($html_enable, $email_search) {
+
+        //
+        // @note: read only unssen emails
+        // First of all make the artisan command accespt some 
+        // -> argouments so we can easily switch between "read all emails"
+        // -> and "unseen emails"
+        // $this->server->search('UNSEEN')
+        //
+        // Default value;
+        // $this->inbox = $this->server->getMessages();
+        // 
+
+        $this->inbox = $this->server->search($email_search);
+
+        var_dump($this->inbox);
+
+        // Read the inbox
+        $this->emails = $this->inbox;
 
         self::$enable_html_email = $html_enable;
 

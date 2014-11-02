@@ -253,6 +253,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
                      "message_body" => $message_body,
                      "message_subject" => $message_subject];
 
+            // Set sent to 1
+            $this->updateEmailStatus($mail->id, ["sent" => 1]);
 
             //
             // Basically what we're doing here is that
@@ -275,11 +277,6 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 }
 
             }
-
-            // Set sent to 1
-            $find_mail = $this->findMailByID($mail->id)->first();
-            $find_mail->fill(["sent" => 1]);
-            $find_mail->save();
 
             var_dump($data["message_body"]);
 
@@ -338,6 +335,18 @@ class EmailsRepository implements EmailsRepositoryInterface {
      */
     public function getEmailBody() {
 
+    }
+
+    /**
+     * Basically update the status of the email
+     * Such as if the emails is:
+     * * sent
+     * * seen
+     * * deleted
+     * @return [type] [description]
+     */
+    public function updateEmailStatus($id, $data) {
+        $smoething = $this->findMailByID($id)->fill($data)->save();
     }
 
 

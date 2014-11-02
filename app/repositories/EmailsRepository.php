@@ -108,8 +108,6 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
         $this->inbox = $this->server->search($email_search);
 
-        var_dump($this->inbox);
-
         // Read the inbox
         $this->emails = $this->inbox;
 

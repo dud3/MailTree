@@ -26,13 +26,18 @@ Artisan Commands
 
 **Read Emails:**
 ```sh
-./artisan emai:read --html_enable=bool --email_search=string
+./artisan email:read --html_enable=bool --email_search=string
 ```
 <i>Options:</i>
 <br>
 ``--html_enable`` - Boolean(true/false) - which basically specifies if the email should include "HTML" tags or be only plain text.
 <br>
 ``--email_search`` - Read email based on it's state(see: <i>~Imap_search Values</i> section below)
+
+**Send Emails:***
+```sh
+./artisan email:send
+```
 
 **Clean Dump Files**
 ```sh

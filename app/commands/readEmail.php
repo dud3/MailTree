@@ -60,8 +60,16 @@ class readEmail extends Command {
 		$_option_html_enable = $this->option('html_enable');
 		$_option_email_search = $this->option('email_search');
 
-		if($_option_html_enable == null || $_option_email_search == null)  { 
-			$this->error("Missing options:"); $this->info("--html_enable=[...]"); $this->info("--email_search=[...]"); exit;
+		if($_option_html_enable == null || $_option_email_search == null) {
+			$this->error("Missing options:");
+		}
+
+		if($_option_html_enable == null)  { 
+			$this->info("--html_enable=[...]"); exit;
+		}
+
+		if($_option_email_search == null) {
+			$this->info("--email_search=[...]"); exit;
 		}
 
 		if(!in_array($_option_email_search, $this->email_state)) {

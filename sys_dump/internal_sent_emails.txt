@@ -130,3 +130,95 @@ November 2, 2014, 6:52 pm
 November 2, 2014, 6:52 pm
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
+
+November 2, 2014, 7:45 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+November 2, 2014, 7:46 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+November 2, 2014, 8:05 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+November 2, 2014, 8:09 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"The file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+November 2, 2014, 8:09 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"dk18184@gmail.com",
+	"full_name":"Dren",
+	"message_body":"Run 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+November 2, 2014, 8:09 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com ",
+	"full_name":"Tim",
+	"message_body":"The file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+November 2, 2014, 8:09 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexander-co.com ",
+	"full_name":"Tim",
+	"message_body":"Run 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+November 2, 2014, 8:09 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com",
+	"full_name":"Tim",
+	"message_body":"The file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+November 2, 2014, 8:09 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"tlac@acsbill.com",
+	"full_name":"Tim",
+	"message_body":"Run 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------
+
+November 2, 2014, 8:09 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com",
+	"full_name":"Tim",
+	"message_body":"The file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application\nby username: tlac at 10\/17\/2014 22:05\n\n\n",
+	"message_subject":"File Uploaded to CALCTY: California City Application"
+}
+----------------------------------------------------------------------------------------------------
+
+November 2, 2014, 8:09 pm
+----------------------------------------------------------------------------------------------------
+{
+	"email":"ta@alexent.com",
+	"full_name":"Tim",
+	"message_body":"Run 201410200936                                                                                         for the application CALCTY                   : California City Application\nhas been REJECTED by username: tlac at 10\/20\/2014 11:52\n\n\n\nRemarks regarding the denial of approval:\n\nCorrection in message content per Cindy\n\n\nHere are the process results.\n\n\n\n\nClick here to examine the process.\n\n\n\n\n\n\n",
+	"message_subject":"Application CALCTY: California City Application REJECTED."
+}
+----------------------------------------------------------------------------------------------------

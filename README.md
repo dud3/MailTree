@@ -34,7 +34,7 @@ Artisan Commands
 <br>
 ``--email_search`` - Read email based on it's state(see: <i>~Imap_search Values</i> section below)
 
-**Send Emails:***
+**Send Emails:**
 ```sh
 ./artisan email:send
 ```

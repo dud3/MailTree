@@ -348,7 +348,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
     public function getEmailKeywords($data) {
 
         foreach ($data as $email) {
-     
+
             // Get the keywords from the DB
             $get_keywords =  explode(" ", $email->subject);
             $k_db = keywords_list::all()->toArray();
@@ -409,6 +409,18 @@ class EmailsRepository implements EmailsRepositoryInterface {
                             $std_store_email->full_name = $e_list["full_name"];
                             $std_store_email->subject = $email->subject;
                             $std_store_email->body = $email->body;
+                            $std_store_email->__date = $email->header->date;
+                            $std_store_email->__message_id = $email->header->message_id;
+                            $std_store_email->__size = $email->overview->size;
+                            $std_store_email->__uid = $email->overview->uid;
+                            $std_store_email->__msgno = $email->overview->msgno;
+                            $std_store_email->__recent = $email->overview->recent;
+                            $std_store_email->__flagged = $email->overview->flagged;
+                            $std_store_email->__answered = $email->overview->answered;
+                            $std_store_email->__deleted = $email->overview->deleted;
+                            $std_store_email->__seen = $email->overview->seen;
+                            $std_store_email->__draft = $email->overview->draft;
+                            $std_store_email->__udate = $email->overview->udate;
 
                             //
                             // Let's insert the name of the user that 
@@ -442,10 +454,31 @@ class EmailsRepository implements EmailsRepositoryInterface {
      * @return [type]       [description]
      */
     public function storeMail($data) {
-        mails::create(["email_address_id" => $data->email_address_id, "subject" => $data->subject, "body" => $data->body]);
+
+        $insert_data = ["email_address_id" => $data->email_address_id, 
+                 "subject" => $data->subject, 
+                 "body" => $data->body,
+                 "__message_id" => $data->__message_id,
+                 "__date" => $data->__date,
+                 "__size" => $data->__size,
+                 "__uid" => $data->__uid,
+                 "__msgno" => $data->__msgno,
+                 "__recent" => $data->__recent,
+                 "__flagged" => $data->__flagged,
+                 "__answered" => $data->__answered,
+                 "__deleted" => $data->__deleted,
+                 "__seen" => $data->__seen,
+                 "__draft" => $data->__draft,
+                 "__udate" => $data->__udate];
+
+        mails::create($insert_data);
+        
         $dump_sent_emails = ("Email stored for: " . " \t| ID: " . $data->email_address_id . " \t| Email: " . $data->email . " \t| Name: " . $data->full_name . "\n");
+        
         self::dump_output('store_emails', $dump_sent_emails);
+        
         echo($dump_sent_emails);
+
     }
 
 

@@ -2897,3 +2897,191 @@ November 2, 2014, 6:45 pm
 November 2, 2014, 6:45 pm
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
+
+November 2, 2014, 6:52 pm
+----------------------------------------------------------------------------------------------------
+{
+	"date":"Fri, 17 Oct 2014 22:05:57 -0500 (CDT)",
+	"Date":"Fri, 17 Oct 2014 22:05:57 -0500 (CDT)",
+	"subject":"File Uploaded to CALCTY: California City Application",
+	"Subject":"File Uploaded to CALCTY: California City Application",
+	"message_id":"<22694752.2011413601557541.JavaMail.humprey@mail.sebis.com>",
+	"toaddress":"notification@alexent.com",
+	"to":[
+		{
+			"mailbox":"notification",
+			"host":"alexent.com"
+		}
+	],
+	"fromaddress":"access@sebis.com",
+	"from":[
+		{
+			"mailbox":"access",
+			"host":"sebis.com"
+		}
+	],
+	"reply_toaddress":"access@sebis.com",
+	"reply_to":[
+		{
+			"mailbox":"access",
+			"host":"sebis.com"
+		}
+	],
+	"senderaddress":"access@sebis.com",
+	"sender":[
+		{
+			"mailbox":"access",
+			"host":"sebis.com"
+		}
+	],
+	"udate":1413601557
+}
+{
+	"date":"Fri, 17 Oct 2014 22:54:06 -0500 (CDT)",
+	"Date":"Fri, 17 Oct 2014 22:54:06 -0500 (CDT)",
+	"subject":"Application CALCTY: California City Application processed.",
+	"Subject":"Application CALCTY: California City Application processed.",
+	"message_id":"<15691560.429001413604446260.JavaMail.humprey@keats.sebis.com>",
+	"toaddress":"notification@alexent.com",
+	"to":[
+		{
+			"mailbox":"notification",
+			"host":"alexent.com"
+		}
+	],
+	"fromaddress":"access@sebis.com",
+	"from":[
+		{
+			"mailbox":"access",
+			"host":"sebis.com"
+		}
+	],
+	"reply_toaddress":"access@sebis.com",
+	"reply_to":[
+		{
+			"mailbox":"access",
+			"host":"sebis.com"
+		}
+	],
+	"senderaddress":"access@sebis.com",
+	"sender":[
+		{
+			"mailbox":"access",
+			"host":"sebis.com"
+		}
+	],
+	"udate":1413604446
+}
+{
+	"date":"Mon, 20 Oct 2014 10:32:09 -0500 (CDT)",
+	"Date":"Mon, 20 Oct 2014 10:32:09 -0500 (CDT)",
+	"subject":"Application CALCTY: California City Application processed.",
+	"Subject":"Application CALCTY: California City Application processed.",
+	"message_id":"<22138084.437291413819129864.JavaMail.humprey@keats.sebis.com>",
+	"toaddress":"notification@alexent.com",
+	"to":[
+		{
+			"mailbox":"notification",
+			"host":"alexent.com"
+		}
+	],
+	"fromaddress":"access@sebis.com",
+	"from":[
+		{
+			"mailbox":"access",
+			"host":"sebis.com"
+		}
+	],
+	"reply_toaddress":"access@sebis.com",
+	"reply_to":[
+		{
+			"mailbox":"access",
+			"host":"sebis.com"
+		}
+	],
+	"senderaddress":"access@sebis.com",
+	"sender":[
+		{
+			"mailbox":"access",
+			"host":"sebis.com"
+		}
+	],
+	"udate":1413819129
+}
+{
+	"date":"Mon, 20 Oct 2014 11:52:30 -0500 (CDT)",
+	"Date":"Mon, 20 Oct 2014 11:52:30 -0500 (CDT)",
+	"subject":"Application CALCTY: California City Application REJECTED.",
+	"Subject":"Application CALCTY: California City Application REJECTED.",
+	"message_id":"<12633302.1401413823950853.JavaMail.humprey@keats.sebis.com>",
+	"toaddress":"notification@alexent.com",
+	"to":[
+		{
+			"mailbox":"notification",
+			"host":"alexent.com"
+		}
+	],
+	"fromaddress":"access@sebis.com",
+	"from":[
+		{
+			"mailbox":"access",
+			"host":"sebis.com"
+		}
+	],
+	"reply_toaddress":"access@sebis.com",
+	"reply_to":[
+		{
+			"mailbox":"access",
+			"host":"sebis.com"
+		}
+	],
+	"senderaddress":"access@sebis.com",
+	"sender":[
+		{
+			"mailbox":"access",
+			"host":"sebis.com"
+		}
+	],
+	"udate":1413823950
+}
+{
+	"date":"Mon, 20 Oct 2014 15:16:18 -0500 (CDT)",
+	"Date":"Mon, 20 Oct 2014 15:16:18 -0500 (CDT)",
+	"subject":"Application CALCTY: California City Application processed.",
+	"Subject":"Application CALCTY: California City Application processed.",
+	"message_id":"<17478349.442991413836178352.JavaMail.humprey@keats.sebis.com>",
+	"toaddress":"notification@alexent.com",
+	"to":[
+		{
+			"mailbox":"notification",
+			"host":"alexent.com"
+		}
+	],
+	"fromaddress":"access@sebis.com",
+	"from":[
+		{
+			"mailbox":"access",
+			"host":"sebis.com"
+		}
+	],
+	"reply_toaddress":"access@sebis.com",
+	"reply_to":[
+		{
+			"mailbox":"access",
+			"host":"sebis.com"
+		}
+	],
+	"senderaddress":"access@sebis.com",
+	"sender":[
+		{
+			"mailbox":"access",
+			"host":"sebis.com"
+		}
+	],
+	"udate":1413836178
+}
+----------------------------------------------------------------------------------------------------
+
+November 2, 2014, 6:52 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------

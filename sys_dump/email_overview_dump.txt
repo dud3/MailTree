@@ -1414,3 +1414,96 @@ November 2, 2014, 6:45 pm
 November 2, 2014, 6:45 pm
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
+
+November 2, 2014, 6:52 pm
+----------------------------------------------------------------------------------------------------
+{
+	"subject":"File Uploaded to CALCTY: California City Application",
+	"from":"access@sebis.com",
+	"to":"notification@alexent.com",
+	"date":"Fri, 17 Oct 2014 22:05:57 -0500 (CDT)",
+	"message_id":"<22694752.2011413601557541.JavaMail.humprey@mail.sebis.com>",
+	"size":1308,
+	"uid":1,
+	"msgno":1,
+	"recent":0,
+	"flagged":0,
+	"answered":0,
+	"deleted":0,
+	"seen":0,
+	"draft":0,
+	"udate":1413601565
+}
+{
+	"subject":"Application CALCTY: California City Application processed.",
+	"from":"access@sebis.com",
+	"to":"notification@alexent.com",
+	"date":"Fri, 17 Oct 2014 22:54:06 -0500 (CDT)",
+	"message_id":"<15691560.429001413604446260.JavaMail.humprey@keats.sebis.com>",
+	"size":6506,
+	"uid":2,
+	"msgno":2,
+	"recent":0,
+	"flagged":0,
+	"answered":0,
+	"deleted":0,
+	"seen":0,
+	"draft":0,
+	"udate":1413604453
+}
+{
+	"subject":"Application CALCTY: California City Application processed.",
+	"from":"access@sebis.com",
+	"to":"notification@alexent.com",
+	"date":"Mon, 20 Oct 2014 10:32:09 -0500 (CDT)",
+	"message_id":"<22138084.437291413819129864.JavaMail.humprey@keats.sebis.com>",
+	"size":6506,
+	"uid":3,
+	"msgno":3,
+	"recent":0,
+	"flagged":0,
+	"answered":0,
+	"deleted":0,
+	"seen":0,
+	"draft":0,
+	"udate":1413819136
+}
+{
+	"subject":"Application CALCTY: California City Application REJECTED.",
+	"from":"access@sebis.com",
+	"to":"notification@alexent.com",
+	"date":"Mon, 20 Oct 2014 11:52:30 -0500 (CDT)",
+	"message_id":"<12633302.1401413823950853.JavaMail.humprey@keats.sebis.com>",
+	"size":1838,
+	"uid":4,
+	"msgno":4,
+	"recent":0,
+	"flagged":0,
+	"answered":0,
+	"deleted":0,
+	"seen":0,
+	"draft":0,
+	"udate":1413823953
+}
+{
+	"subject":"Application CALCTY: California City Application processed.",
+	"from":"access@sebis.com",
+	"to":"notification@alexent.com",
+	"date":"Mon, 20 Oct 2014 15:16:18 -0500 (CDT)",
+	"message_id":"<17478349.442991413836178352.JavaMail.humprey@keats.sebis.com>",
+	"size":6506,
+	"uid":5,
+	"msgno":5,
+	"recent":0,
+	"flagged":0,
+	"answered":0,
+	"deleted":0,
+	"seen":0,
+	"draft":0,
+	"udate":1413836184
+}
+----------------------------------------------------------------------------------------------------
+
+November 2, 2014, 6:52 pm
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------

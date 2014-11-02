@@ -11,7 +11,7 @@ class dumpFile extends Command {
 	 *
 	 * @var string
 	 */
-	protected $name = 'command:name';
+	protected $name = 'dumpFile:clean';
 
 	/**
 	 * The console command description.

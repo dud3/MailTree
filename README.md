@@ -16,6 +16,18 @@ Install imap dependency. <br>
 Add to the end of "php.ini" file.<br>
 ``extension=imap.so``
 
+**Composer**
+
+cd to the root folder of tha app:<br>
+``composer install``<br>
+<i>This will install all PHP dependencies.</i>
+
+**grunt**
+
+cd to the the ``/public`` directory:<br>
+``grunt install``<br>
+<i>This will install all javaScript dependencies.</i>
+
 
 Artisan Commands
 -----------------

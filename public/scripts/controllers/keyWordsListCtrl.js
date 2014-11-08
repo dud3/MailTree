@@ -37,7 +37,23 @@ angular.module('app.keyWordsList')
 				.getAll()
 					.success(function(data){
 
-						$rootScope.keyWordsList = data;
+						// From string to actual javaScript object
+						angular.forEach(data.keywords, function(item) {
+							item.keywords = angular.fromJson(item.keywords);
+						})
+
+						$rootScope.keyWordsList = data.keywords;
+
+						// 
+						// Note the internal keywords should be 
+						// -> accessed like: $rootScope.keyWordsList[0].keywords["0"]
+						// 
+						// and not like: $rootScope.keyWordsList[0].keywords.0
+						// 
+						// The second one returns error.
+						// 
+
+						console.log($rootScope.keyWordsList[0].keywords["0"]);
 
 				}).error(function(data){
 					console.log(data);

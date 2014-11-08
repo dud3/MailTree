@@ -18,15 +18,15 @@ Add to the end of "php.ini" file.<br>
 
 **Composer**
 
-In the root folder of tha app:<br>
+cd to the root folder of tha app:<br>
 ``composer install``<br>
-<i>this will install all PHP dependencies</i>
+<i>This will install all PHP dependencies.</i>
 
 **grunt**
 
-In the ``/public`` directory:<br>
+cd to the the ``/public`` directory:<br>
 ``grunt install``<br>
-<i>this will install all javaScript dependencies</i>
+<i>This will install all javaScript dependencies.</i>
 
 
 Artisan Commands

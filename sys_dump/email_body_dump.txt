@@ -10349,3 +10349,428 @@ November 2, 2014, 9:24 pm
 November 2, 2014, 9:24 pm
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
+
+November 7, 2014, 10:11 am
+----------------------------------------------------------------------------------------------------
+The file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application
+by username: tlac at 10/17/2014 22:05
+
+
+
+The application CALCTY: California City Application                                       has been processed.
+
+Here are the process results.
+
+
+Click here to examine and approve the process.
+
+
+
+Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date/time : Fri-Oct-17-2014&nbsp;10:54:00
+Process Message
+
+
+
+
+
+
+
+
+
+Sheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;
+1) Please approve the above process results.
+2) Check the appropriate box.
+3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.
+
+[ ] Process results are correct,  Proceed with job.
+
+[ ] Process results are NOT correct, DO NOT proceed with job.
+
+
+Approval:__________________________________________ Date:_______________
+
+
+
+
+You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006
+
+The application CALCTY: California City Application                                       has been processed.
+
+Here are the process results.
+
+
+Click here to examine and approve the process.
+
+
+
+Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date/time : Mon-Oct-20-2014&nbsp;10:32:01
+Process Message
+
+
+
+
+
+
+
+
+
+Sheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;
+1) Please approve the above process results.
+2) Check the appropriate box.
+3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.
+
+[ ] Process results are correct,  Proceed with job.
+
+[ ] Process results are NOT correct, DO NOT proceed with job.
+
+
+Approval:__________________________________________ Date:_______________
+
+
+
+
+You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006
+
+Run 201410200936                                                                                         for the application CALCTY                   : California City Application
+has been REJECTED by username: tlac at 10/20/2014 11:52
+
+
+
+Remarks regarding the denial of approval:
+
+Correction in message content per Cindy
+
+
+Here are the process results.
+
+
+
+
+Click here to examine the process.
+
+
+
+
+
+
+
+The application CALCTY: California City Application                                       has been processed.
+
+Here are the process results.
+
+
+Click here to examine and approve the process.
+
+
+
+Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date/time : Mon-Oct-20-2014&nbsp;03:16:03
+Process Message
+
+
+
+
+
+
+
+
+
+Sheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;
+1) Please approve the above process results.
+2) Check the appropriate box.
+3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.
+
+[ ] Process results are correct,  Proceed with job.
+
+[ ] Process results are NOT correct, DO NOT proceed with job.
+
+
+Approval:__________________________________________ Date:_______________
+
+
+
+
+You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006
+
+Run 201410200936                                                                                         for the application CALCTY                   : California City Application
+has been approved by username: tlac at 10/20/2014 15:51
+
+
+
+
+Here are the process results.
+
+
+Click here to examine the process.
+
+
+
+
+
+
+Assembly & Mailing for job California City Utility Billing - October 2014 and segment MAIN  and application California City Application
+
+was completed at 8:05 PM on 10/21/2014.
+
+
+Items 1-3607 having a quantity of 3607 were mailed at 10/22/2014 9:00 AM.
+
+Click here to examine the task.
+
+The file acsbills.zip of filesize 2048311 was uploaded to application ATASCADERO1              : Atascadero Mutual Water Company Billing
+by username: talexander at 10/23/2014 10:43
+
+
+
+The application ATASCADERO1: Atascadero Mutual Water Company Billing                           has been processed.
+
+Here are the process results.
+
+
+Click here to examine and approve the process.
+
+
+
+Sebis Direct, Inc.Process Resultsapplication code : ATASCADERO1run id : 201410231048date/time : Thu-Oct-23-2014&nbsp;12:44:05
+Process Message
+
+
+
+
+
+
+
+
+
+Sheets per Outer Envelope18716131192281528631106141259531425117111131512013425618312518221146361295Duplicate BillD1474E1N10545      Due Date11/22/201410545          TotalsPayments Received:$-857,253.85&nbsp;Previous Balance:$805,715.21Current Charges:$641,248.32&nbsp;Share an Envelope:2802Past Due Charges:$101,613.65&nbsp;Receiving a reply envelope:8167Bank Draft:1032&nbsp;Total Due:$742,861.97Record Count:12020&nbsp;Forced Non-Households:6Total Records Printed:11518&nbsp;&nbsp;&nbsp;&nbsp;
+1) Please approve the above process results.
+2) Check the appropriate box.
+3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.
+
+[ ] Process results are correct,  Proceed with job.
+
+[ ] Process results are NOT correct, DO NOT proceed with job.
+
+
+Approval:__________________________________________ Date:_______________
+
+
+
+
+You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006
+
+Run 201410231048                                                                                         for the application ATASCADERO1              : Atascadero Mutual Water Company Billing
+has been REJECTED by username: talexander at 10/23/2014 13:48
+
+
+
+Remarks regarding the denial of approval:
+
+Bill Message Change
+
+
+Here are the process results.
+
+
+
+
+Click here to examine the process.
+
+
+
+
+
+
+
+The file acsbills.zip of filesize 2048311 was uploaded to application ATASCADERO1              : Atascadero Mutual Water Company Billing
+by username: talexander at 10/23/2014 13:51
+
+
+
+The application ATASCADERO1: Atascadero Mutual Water Company Billing                           has been processed.
+
+Here are the process results.
+
+
+There is one or more constraint violations.  Please examine the results carefully before approving!
+
+
+The last run of this application had the same set quantity!
+
+
+
+
+Click here to examine and approve the process.
+
+
+
+Sebis Direct, Inc.Process Resultsapplication code : ATASCADERO1run id : 201410231602date/time : Thu-Oct-23-2014&nbsp;05:54:04
+Process Message
+
+
+
+
+
+
+
+
+
+Sheets per Outer Envelope18716131192281528631106141259531425117111131512013425618312518221146361295Duplicate BillD1474E1N10545      Due Date11/22/201410545          TotalsPayments Received:$-857,253.85&nbsp;Previous Balance:$805,715.21Current Charges:$641,248.32&nbsp;Share an Envelope:2802Past Due Charges:$101,613.65&nbsp;Receiving a reply envelope:8167Bank Draft:1032&nbsp;Total Due:$742,861.97Record Count:12020&nbsp;Forced Non-Households:6Total Records Printed:11518&nbsp;&nbsp;&nbsp;&nbsp;
+1) Please approve the above process results.
+2) Check the appropriate box.
+3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.
+
+[ ] Process results are correct,  Proceed with job.
+
+[ ] Process results are NOT correct, DO NOT proceed with job.
+
+
+Approval:__________________________________________ Date:_______________
+
+
+
+
+You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006
+
+Run 201410231602                                                                                         for the application ATASCADERO1              : Atascadero Mutual Water Company Billing
+has been approved by username: talexander at 10/23/2014 19:12
+
+
+
+
+Here are the process results.
+
+
+Click here to examine the process.
+
+
+
+
+
+
+Assembly & Mailing for job Atascadero Utility Billing - October 2014 and segment MAIN  and application Atascadero Mutual Water Company Billing
+
+was completed at 2:24 PM on 10/25/2014.
+
+
+Items 1-9604 having a quantity of 9604 were mailed at 10/25/2014 7:00 PM.
+
+Click here to examine the task.
+
+The file Davis1114.zip of filesize 2991569 was uploaded to application DAVIS                    : City of Davis
+by username: talexander at 10/28/2014 18:03
+
+
+
+The application DAVIS: City of Davis                                                     has been processed.
+
+Here are the process results.
+
+
+Click here to examine and approve the process.
+
+
+
+Sebis Direct, Inc.Process Resultsapplication code : DAVISrun id : 201410281806date/time : Tue-Oct-28-2014&nbsp;07:22:07
+Sheets Per Outer Envelope112078131127502824227121041432013153526861071152221331581861114172251391619951341721261464    Due Date11/30/201415793          TotalsMulti-page records:22&nbsp;Bank Draft:4352Receiving a Reply Envelope:8976&nbsp;Payments:$-3,883,578.33Current Charges:$3,373,449.79&nbsp;Total Due:$3,924,800.89Previous Balance:$551,006.10&nbsp;Total Service Charges:$3,924,455.89Total Records Processed:15793&nbsp;&nbsp;&nbsp;&nbsp;
+1) Please approve the above process results.
+2) Check the appropriate box.
+3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.
+
+[ ] Process results are correct,  Proceed with job.
+
+[ ] Process results are NOT correct, DO NOT proceed with job.
+
+
+Approval:__________________________________________ Date:_______________
+
+
+
+
+You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006
+
+The file Davis1114.zip of filesize 2991569 was uploaded to application DAVIS                    : City of Davis
+by username: cmchugh at 10/29/2014 08:31
+
+
+
+Run 201410281806                                                                                         for the application DAVIS                    : City of Davis
+has been REJECTED by username: cmchugh at 10/29/2014 08:31
+
+
+
+Remarks regarding the denial of approval:
+
+Updating the Web2Print message.
+
+
+Here are the process results.
+
+
+
+
+Click here to examine the process.
+
+
+
+
+
+
+
+The application DAVIS: City of Davis                                                     has been processed.
+
+Here are the process results.
+
+
+Click here to examine and approve the process.
+
+
+
+Sebis Direct, Inc.Process Resultsapplication code : DAVISrun id : 201410290832date/time : Wed-Oct-29-2014&nbsp;09:45:09
+Sheets Per Outer Envelope112078131127502824227121041432013153526861071152221331581861114172251391619951341721261464    Due Date11/30/201415793          TotalsMulti-page records:22&nbsp;Bank Draft:4352Receiving a Reply Envelope:8976&nbsp;Payments:$-3,883,578.33Current Charges:$3,373,449.79&nbsp;Total Due:$3,924,800.89Previous Balance:$551,006.10&nbsp;Total Service Charges:$3,924,455.89Total Records Processed:15793&nbsp;&nbsp;&nbsp;&nbsp;
+1) Please approve the above process results.
+2) Check the appropriate box.
+3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.
+
+[ ] Process results are correct,  Proceed with job.
+
+[ ] Process results are NOT correct, DO NOT proceed with job.
+
+
+Approval:__________________________________________ Date:_______________
+
+
+
+
+You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006
+
+Run 201410290832                                                                                         for the application DAVIS                    : City of Davis
+has been approved by username: talexander at 10/29/2014 09:47
+
+
+
+
+Here are the process results.
+
+
+Click here to examine the process.
+
+
+
+
+
+
+Assembly & Mailing for job City of Davis Utility Billing - October 2014 and segment MAIN  and application City of Davis
+
+was completed at 10:30 PM on 10/30/2014.
+
+
+Items 1-13147 having a quantity of 13147 were mailed at 10/31/2014 9:00 AM.
+
+Click here to examine the task.
+
+test new...
+2222
+test test ...
+asdsad
+ddddd
+----------------------------------------------------------------------------------------------------

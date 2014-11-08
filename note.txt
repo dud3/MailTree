@@ -1,4 +1,14 @@
-## Install
-First of all it's highly important that you check if the version of php is PHP >= 5.4
+# Install
+
+## Shared Hosts
+
+- First of all it's highly important that you check if the version of php is PHP >= 5.4
 and also you have "MCrypt PHP Extension" installed already, since sometimes you'll get
 irelecant errors
+
+- If there's a CPANEL aviable and has a feature of creating sub-domains
+point the sub-domain root folder to the `/public` directory of the app, such as:
+`/www/myapp/public/`.
+NOTE: a .htaccess file that redirects to `/public` directory wouldn't be a good 
+solution, since in my case it was trying to find the routes by the `/public` folder
+such as: `/public/app`...

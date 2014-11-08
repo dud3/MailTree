@@ -1480,3 +1480,33 @@ November 2, 2014, 9:24 pm
 November 2, 2014, 9:24 pm
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
+
+November 7, 2014, 10:11 am
+----------------------------------------------------------------------------------------------------
+File Uploaded to CALCTY: California City Application
+Application CALCTY: California City Application processed.
+Application CALCTY: California City Application processed.
+Application CALCTY: California City Application REJECTED.
+Application CALCTY: California City Application processed.
+Application Results CALCTY: California City Application approved.
+Assembly & Mailing for job California City Utility Billing - October 2014 Segment:MAIN completed.
+File Uploaded to ATASCADERO1: Atascadero Mutual Water Company Billing
+Application ATASCADERO1: Atascadero Mutual Water Company Billing processed.
+Application ATASCADERO1: Atascadero Mutual Water Company Billing REJECTED.
+File Uploaded to ATASCADERO1: Atascadero Mutual Water Company Billing
+*** Constraint Violation! *** Application ATASCADERO1: Atascadero Mutual Water Company Billing processed. *** Constraint Violation! ***
+Application Results ATASCADERO1: Atascadero Mutual Water Company Billing approved.
+Assembly & Mailing for job Atascadero Utility Billing - October 2014 Segment:MAIN completed.
+File Uploaded to DAVIS: City of Davis
+Application DAVIS: City of Davis processed.
+File Uploaded to DAVIS: City of Davis
+Application DAVIS: City of Davis REJECTED.
+Application DAVIS: City of Davis processed.
+Application Results DAVIS: City of Davis approved.
+Assembly & Mailing for job City of Davis Utility Billing - October 2014 Segment:MAIN completed.
+test new
+test again
+test
+asdasd
+dddd
+----------------------------------------------------------------------------------------------------

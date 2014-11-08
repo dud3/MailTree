@@ -12,12 +12,13 @@
 class ListController extends internalCtrl {
 
     public $user;
+    public $ketwords;
 
     /**
      * [__construct description]
      */
-    public function __construct() {
-
+    public function __construct(EloquentKeywordsRepositoryInterface $keywords) {
+    	$this->keywords = $keywords;
     }
 
 	
@@ -31,6 +32,14 @@ class ListController extends internalCtrl {
 
 		return $view;
 
+	}
+
+	/**
+	 * Get all keyowrds
+	 * @return [object] [object of keywords]
+	 */
+	public function get_all_keywords() {
+		return Response::json(['keywords' => $this->keywords->get_all()], 200);
 	}
 
 }

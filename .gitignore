@@ -8,3 +8,5 @@ composer.lock
 Thumbs.db
 /sys_dump/*
 /sys_dump
+sys_dump
+sys_dump/*

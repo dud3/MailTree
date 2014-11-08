@@ -34,3 +34,9 @@ Route::group(array('before' => 'auth'), function()
 	// Route::get('/app',			'EmailListCtrl@view_emails');
 
 });
+
+
+Route::group(array('prefix' => 'api/v1'), function() 
+{
+	Route::get('getAllKeywords', 		'ListController@get_all_keywords');
+});

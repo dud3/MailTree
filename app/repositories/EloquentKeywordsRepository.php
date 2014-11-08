@@ -28,7 +28,7 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 
 			"SELECT k.id, k.keywords
 
-			 FROM keywords k"
+			 FROM keywords_list k"
 		
 		);
 
@@ -89,8 +89,6 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 				throw new RuntimeException("Errorm The array can not be null", 0.1);
 			}
 
-		}	
-
 		} catch(RuntimeException $e) {
 
 			$error = new stdClass();
@@ -134,8 +132,6 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 			} else {
 				throw new RuntimeException("Errorm The array can not be null", 0.1);
 			}
-
-		}	
 
 		} catch(RuntimeException $e) {
 

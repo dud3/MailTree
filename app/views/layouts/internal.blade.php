@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="mailTree">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -87,6 +87,11 @@
 
     <script src="/scripts/app.js"></script>
     <script src="/scripts/controllers/authCtrl.js"></script>
+
+    <script src="/scripts/controllers/keyWordsListCtrl.js"></script>
+    <script src="/scripts/controllers/emailsListCtrl.js"></script>
+
+    <script src="/scripts/factories/keyWordsListSvc.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script>

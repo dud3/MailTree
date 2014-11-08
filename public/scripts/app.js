@@ -49,9 +49,8 @@ angular
 
 
 // Main configuration
-angular.module('app')
-    .config(function($provide, $httpProvider, cfpLoadingBarProvider, $asideProvider, $tooltipProvider, 
-                        $stateProvider, $urlRouterProvider, $interpolateProvider, ngClipProvider) {
+angular.module('mailTree')
+    .config(function($provide, $httpProvider, $interpolateProvider) {
 
 // ---------------------------------------------------
 // Intercept http calls.
@@ -101,15 +100,17 @@ $provide.factory('MyHttpInterceptor', function ($q, $log) {
       // -> server errors
       if(rejection.status === 500) {
 
-        console.warn(rejection); // Contains the data about the error.
-        $log.error("Something went wrong, or either server sessions are over.");
+          console.warn(rejection); // Contains the data about the error.
+          $log.error("Something went wrong, or either server sessions are over.");
+          
+          // Let's suppose that the error is because of sessions are over...
+          // Untill we make all the methods throw proper exceptions from 
+          // -> the server side...
         
-        // Let's suppose that the error is because of sessions are over...
-        // Untill we make all the methods throw proper exceptions from 
-        // -> the server side...
-      
-      // Return the promise rejection.
-      return $q.reject(rejection);
+        // Return the promise rejection.
+        return $q.reject(rejection);
+
+      }
 
     }
 

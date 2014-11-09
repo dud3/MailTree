@@ -24,8 +24,7 @@
     <link href="/styles/main.css" rel="stylesheet">
     <link href="/bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="/bower_components/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
-
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <link href="/bower_components/AngularJS-Toaster/toaster.css"></link>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -62,57 +61,8 @@
 
     </div>
 
-    <script>
-
-    // ------------------------
-    // Windows 8 viewport hack
-    // ------------------------
-    (function () {
-    'use strict';
-      if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-        var msViewportStyle = document.createElement('style')
-        msViewportStyle.appendChild(
-          document.createTextNode(
-            '@-ms-viewport{width:auto!important}'
-          )
-        ) 
-        document.querySelector('head').appendChild(msViewportStyle)
-      }
-    })();
-
-    $(document).ready(function() {
-
-        $("#barnd-img").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
-        
-        $("#clickCol").click(function() {
-            $('#collapseOne').collapse();
-        });
-
-        //toggle `popup` / `inline` mode
-        $.fn.editable.defaults.mode = 'popup';     
-        
-        //make username editable
-        $('#username').editable();
-        
-        //make status editable
-        $('#status').editable({
-            type: 'select',
-            title: 'Select status',
-            placement: 'right',
-            value: 2,
-            source: [
-                {value: 1, text: 'status 1'},
-                {value: 2, text: 'status 2'},
-                {value: 3, text: 'status 3'}
-            ]
-        });
-
-    });
-
-    </script>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/scripts/main.js"></script>
 
     <!-- Assets -->
     <script src="/bower_components/angular/angular.min.js"></script>
@@ -126,6 +76,7 @@
     <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
     <script src="/bower_components/angular-strap/dist/angular-strap.min.js"></script>
     <script src="/bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+    <script src="/bower_components/AngularJS-Toaster/toaster.js"></script>
 
     <script src="/bower_components/bootstrap/js/affix.js"></script>
     <script src="/bower_components/bootstrap/js/alert.js"></script>
@@ -145,6 +96,7 @@
     <script src="/scripts/app.js"></script>
 
     <script>
+    
         // Send token
         angular.module("app.auth").constant("CSRF_TOKEN", '<?php echo csrf_token(); ?>');
         //
@@ -154,6 +106,7 @@
         // 
         // Password token to null as well
         angular.module("app.auth").constant("_pwdToken", null);
+
     </script>
 
     <script src="/scripts/controllers/authCtrl.js"></script>

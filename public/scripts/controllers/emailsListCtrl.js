@@ -10,25 +10,56 @@
 angular.module('app.emailsList')
   .controller('emailsListCtrl', ['$scope', '$rootScope', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore', 'emailsListSvc',
 	function ($scope, $rootScope, $http, $q, $compile, $location, $sce, $cookies, $cookieStore, emailsListSvc) {
-       
-       	/**
-       	 * Emails holder
-       	 * @type {Array}
-       	 */
+
+
+    /**
+    * Emails holder
+    * @type {Array}
+    */
 		$rootScope.emails = [];
 
-	
+
 		/**
 		 * Hold the data of the email to be edited or created.
 		 * @type {Object}
 		 */
 		$rootScope.email = {
+
 			id: null,
 			keywords: [],
+
 			subject: "",
 			body: "",
 
+			x_message_id: null,
+			x_date: null,
+			x_size: null,
+			x_uid: null,
+			x_msgno: null,
+			x_recent: 0,
+			x_flagged: 0,
+			x_answered: 0,
+			x_deleted: 0,
+			x_seen: 0,
+			x_draft: 0,
+			x_udate: 0
+
 		};
+
+
+		/**
+		 * filters
+		 * @type {Object}
+		 */
+		$rootScope.filter = {
+
+			subject: "",
+			body: "",
+			date: null,
+			sent: false
+
+		};
+
 
 		/**
 		 * Get all the keywords
@@ -36,33 +67,34 @@ angular.module('app.emailsList')
 		 */
 		$scope.getAllKeywords = function() {
 
-			keyWordsListSvc
+			emailsListSvc
 				.getAll()
 					.success(function(data){
 
 						// From string to actual javaScript object
-						angular.forEach(data.keywords, function(item) {
+						angular.forEach(data.emails, function(item) {
 							item.keywords = angular.fromJson(item.keywords);
 						})
 
-						$rootScope.keyWordsLists = data.keywords;
+						$rootScope.emails = data.emails;
 
-						// 
-						// Note the internal keywords should be 
+						//
+						// Note the internal keywords should be
 						// -> accessed like: $rootScope.keyWordsList[0].keywords["0"]
-						// 
+						//
 						// and not like: $rootScope.keyWordsList[0].keywords.0
-						// 
+						//
 						// The second one returns error.
-						// 
-
-						console.log($rootScope.keyWordsLists);
+						//
+						
+						console.log($rootScope.emails);
 
 				}).error(function(data){
 					console.log(data);
 			});
 
-		};
+		}();
+
 
 		/**
 		 * Create entity.
@@ -80,15 +112,17 @@ angular.module('app.emailsList')
 
 		};
 
+
 		/**
 		 * Update The whole keyword_entity
-		 * Update only recipent 
+		 * Update only recipent
 		 * Update only keyword
 		 * @return {[type]} [description]
 		 */
 		$scope.submit = function() {
 
 		};
+
 
 		/**
 		 * Remove keyword
@@ -98,6 +132,7 @@ angular.module('app.emailsList')
 
 		};
 
+
 		/**
 		 * Remove recipent
 		 * @return {[type]} [description]
@@ -105,6 +140,7 @@ angular.module('app.emailsList')
 		$scope.remove_recipent = function() {
 
 		};
+
 
 		/**
 		 * Search globaly

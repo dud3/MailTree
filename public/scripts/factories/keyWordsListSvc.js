@@ -23,7 +23,7 @@ var services = {
     },
 
     delete: function(id) {
-      return $http({ method: 'DELETE', url: '/api/v1/deleteKeyword/'+id });
+      return $http({ method: 'DELETE', url: '/api/v1/deleteKeyword/' + id});
     },
 
     search: function(id) {

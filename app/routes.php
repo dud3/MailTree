@@ -1,20 +1,24 @@
 <?php
 
-#													   #
+#													   													 #
 ########################################################
-##		    ____              __ 					  ##
-##		   / __ \____  __  __/ /____  _____ 		  ##
-##		  / /_/ / __ \/ / / / __/ _ \/ ___/ 		  ##
-##		 / _, _/ /_/ / /_/ / /_/  __(__  ) 			  ##
-##		/_/ |_|\____/\__,_/\__/\___/____/ 			  ##
-## 													  ##
+##		    ____              __ 					  						##
+##		   / __ \____  __  __/ /____  _____ 		  			##
+##		  / /_/ / __ \/ / / / __/ _ \/ ___/ 		  			##
+##		 / _, _/ /_/ / /_/ / /_/  __(__  ) 			  			##
+##		/_/ |_|\____/\__,_/\__/\___/____/ 			  			##
+## 													  												##
 ########################################################
-# All nescecary routes reide here 					   #
+# All nescecary routes reide here 					   				 #
 
-// -------------------
+// -------------------------------------
 // :: Before log-in ::
-// -------------------
-Route::group(array('before' => 'guest'), function() 
+// -------------------------------------
+//
+// Everything before authentication
+// -> goes here.
+//
+Route::group(array('before' => 'guest'), function()
 {
 	Route::get('/', 			'AuthCtrl@view_login');
 	Route::get('/login',		'AuthCtrl@view_login');
@@ -26,17 +30,40 @@ Route::get('/phpinfo',			'HelpCtrl@phpinfo');
 Route::get('/app',				'ListController@view_k_list');
 Route::get('/app/emails',		'EmailListCtrl@index');
 
-// ------------------
+// ------------------------------------
 // :: After log-in ::
-// ------------------
+// ------------------------------------
+//
+// All the routes after authentication
+// -> goes here.
+//
 Route::group(array('before' => 'auth'), function()
 {
 	// Route::get('/app',			'EmailListCtrl@view_emails');
 
 });
 
-
-Route::group(array('prefix' => 'api/v1'), function() 
+// ------------------------------------
+// :: API ::
+// ------------------------------------
+//
+// All JSON calls goes here.
+//
+Route::group(array('prefix' => 'api/v1'), function()
 {
+
 	Route::get('getAllKeywords', 		'ListController@get_all_keywords');
+
+	Route::group(array('prefix' => 'emails'), function()
+	{
+
+		Route::get('get_all',			'EmailListCtrl@get_all');
+		Route::get('get/{id}',			'EmailListCtrl@get');
+		Route::post('create',			'EmailListCtrl@create');
+		Route::post('update',			'EmailListCtrl@update');
+		Route::post('delete/{id}',		'EmailListCtrl@delete');
+		Route::post('search',			'EmailListCtrl@search');
+
+	});
+
 });

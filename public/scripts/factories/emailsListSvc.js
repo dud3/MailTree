@@ -4,26 +4,26 @@ angular.module('app.emailsList')
 var services = {
 
     getAll: function() {
-      var results = $http.get('/api/v1/email/get');
+      var results = $http.get('/api/v1/emails/get_all');
       return results;
     },
 
     create: function(email) {
-      var results = $http.post('/api/v1/email/create', angular.toJson(training));
+      var results = $http.post('/api/v1/emails/create', angular.toJson(training));
       return results;
     },
 
     updateKeyword: function(email) {
-      var results = $http.post('/api/v1/email/update', angular.toJson(training));
+      var results = $http.post('/api/v1/emails/update', angular.toJson(training));
       return results;
     },
 
     delete: function(id) {
-      return $http({ method: 'DELETE', url: '/api/v1/email/delete/'+id });
+      return $http({ method: 'DELETE', url: '/api/v1/emails/delete/'+id });
     },
 
     search: function(email) {
-      return $http.get('/api/v1/email/search', angular.toJson());
+      return $http.get('/api/v1/emails/search', angular.toJson());
     }
 
   };

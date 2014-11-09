@@ -96,7 +96,7 @@
     <script src="/scripts/app.js"></script>
 
     <script>
-    
+
         // Send token
         angular.module("app.auth").constant("CSRF_TOKEN", '<?php echo csrf_token(); ?>');
         //
@@ -114,6 +114,7 @@
     <script src="/scripts/controllers/emailsListCtrl.js"></script>
 
     <script src="/scripts/factories/keyWordsListSvc.js"></script>
+    <script src="/scripts/factories/emailsListSvc.js"></script>
     <script src="/scripts/factories/authSvc.js"></script>
 
 

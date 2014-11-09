@@ -190,8 +190,6 @@ class EmailsRepository implements EmailsRepositoryInterface {
                     $this->search_for = ["Dear", "Dear Alexander", "Dear Alexander Notifications,"];
                 }
 
-                var_dump($this->search_for);
-
                 if(in_array($this->search_for[0], $std_email->body) 
                 || in_array($this->search_for[1], $std_email->body) 
                 || in_array($this->search_for[2], $std_email->body)) {

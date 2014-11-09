@@ -11,32 +11,15 @@
 
 class EmailListCtrl extends internalCtrl {
 
-    protected $server;
-    protected $server_name = 'imap.gmail.com';
-    protected $username = 'notifications@acsbill.com';
-    protected $password = '8655morro';
-
-    public $inbox;
-
-    protected $emails;
-
     public $user;
+    public $repo_emails;
 
     /**
      * [__construct description]
      */
-    public function __construct() {
-
-        $this->server = new \Fetch\Server($this->server_name, 993);
-        $this->server->setAuthentication($this->username, $this->password);
-
-        $this->inbox = $this->server->getMessages();
-
-        // Read the inbox
-        $this->emails = $this->inbox;
-
+    public function __construct(EloquentEmailsRepositoryInterface $repo_emails) {
+    	$this->repo_emails = $repo_emails;
     }
-
 	
 	/**
 	 * [view_emails description]
@@ -44,25 +27,64 @@ class EmailListCtrl extends internalCtrl {
 	 */
 	public function index() {
 
-		/*
-		$_emails;
-		$_inbox = $this->inbox;
-
-		if($this->emails) {
-			
-			$output = '';
-			
-			rsort($this->emails);
-
-			$_emails = $this->emails;
-
-		}
-		*/
-
 		$view = View::make('list.emails', compact('_emails', '_inbox'));
 
 		return $view;
 
 	}
+
+	/**
+	 * Get all emails
+	 * @return [type] [description]
+	 */
+	public function get_all() {
+		return Response::json(["emails" => $this->repo_emails->get_all()], 200);
+	}
+
+	/**
+	 * Get by ID
+	 * @param  [type] $id [description]
+	 * @return [type]     [description]
+	 */
+	public function get($id) {
+
+	}
+
+	/**
+	 * Create new
+	 * @param  [type] $id [description]
+	 * @return [type]     [description]
+	 */
+	public function create() {
+		$input = Input::all();
+	}
+
+	/**
+	 * Update
+	 * @param  [type] $id [description]
+	 * @return [type]     [description]
+	 */
+	public function update() {
+		$input = Input::all();
+	}
+
+	/**
+	 * Search
+	 * @param  [type] $id [description]
+	 * @return [type]     [description]
+	 */
+	public function search() {
+		$input = Input::all();
+	}
+
+	/**
+	 * Delete
+	 * @param  [type] $id [description]
+	 * @return [type]     [description]
+	 */
+	public function delete($id) {
+
+	}
+
 
 }

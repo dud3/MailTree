@@ -35,7 +35,8 @@ angular
     'toaster',
     
     'app.auth',
-    'app.keyWordsList'
+    'app.keyWordsList',
+    'app.emailsList'
 
   ])
   .config(function ($routeProvider) {

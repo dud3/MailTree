@@ -26,6 +26,54 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 	 */
 	public function get_all() {
 
+		$sql_emails = DB::select(
+
+		"SELECT	m.id, m.email_address_id, m.subject, m.body, m.body_html, m.optional_text, m.sender_email, m.reciver_email,
+							m.fwd_accept, m.sent,
+							m.x_message_id, m.x_date,	m.x_size, m.x_uid, m.x_msgno,	m.x_recent, m.x_flagged, m.x_answered, m.x_deleted,
+							m.x_seen,	m.x_draft, m.x_udate,
+							k_l.keywords
+
+		FROM mails m
+
+			LEFT JOIN email_address_list e_a_l
+				ON e_a_l.id = m.email_address_id
+
+			LEFT JOIN keywords_list k_l
+				ON k_l.id = e_a_l.keyword_id
+
+		");
+
+		foreach ($sql_emails as $email) {
+
+			$keywords = [];
+
+			// trim the string
+			$keywords = trim($email->keywords);
+
+			// decode the JSON string
+			$keywords = json_decode($email->keywords, true);
+
+			// Search the keywords from the email subject
+			$subject = explode(" ", $email->subject);
+
+			// Basically label around the keywords 
+			// -> found in the email's subject.
+			foreach ($keywords as $keyword) {
+
+	            if(false !== $key = array_search($keyword, $subject)) {
+	            	$subject[$key] = "<span class='label label-primary'>" . $subject[$key] . "</span>";
+	            }
+
+        	}
+
+        	// Put everything back togather
+            $email->subject = implode(" ", $subject);
+
+		}
+
+		return $sql_emails;
+
 	}
 
 	/**

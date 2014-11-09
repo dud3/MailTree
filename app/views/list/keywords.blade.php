@@ -3,7 +3,55 @@
 
 
     <div class="col-md-12" ng-controller="keyWordsListCtrl">
-	<div class="col-md-6">
+
+    	<!-- <* keyWordsLists *> -->
+
+		<div class="col-md-6" ng-repeat="keyWordsList in keyWordsLists">
+			
+			<div class="panel-group" id="accordion<* keyWordsList.id *>">
+				<div class="panel panel-default">
+
+					<div class="panel-heading">
+					  <h4 class="panel-title">
+				
+						<a href="javascript:void(0)">			    
+					  		<span class="text-danger" style="float:right; padding-left:15px;"><b>x</b></span>
+					  	</a>
+
+					    <a data-toggle="collapse" data-parent="#accordion" href="#collapse<* keyWordsList.id *>" class="pull-right nounderline">
+					    	<span class=""><b>+</b></span>
+					    </a>
+
+					      Keywords: <span style="margin-right:2px;" ng-repeat="(key, value) in keyWordsList.keywords" class="label label-primary"><* value *></span>
+
+					  </h4>
+					</div>
+
+					<div id="collapse<* keyWordsList.id *>" class="panel-collapse collapse in">
+					  <div class="panel-body">
+					  	<h5>Recipients:</h5>
+
+					  	<table class="table table-bordered">
+					  		<tr>
+					  			<th>Salutation</th>
+					  			<th>Email</th>
+					  		</tr>
+
+					  		<tr ng-repeat="email in keyWordsList.email" id="id-tr-email-<* email.email_list_id *>">
+					  			<td><* email.full_name *></td>
+					  			<td><* email.email *></td>
+					  		</tr>
+					  	</table>
+
+					  </div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div class="col-md-6">
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
 

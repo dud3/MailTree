@@ -16,7 +16,7 @@ angular.module('app.keyWordsList')
 		 * By keyword entity we mean that it includes the keyword itself, but also the recipents
 		 * @type {Object}
 		 */
-		$rootScope.keyWordsList = {};
+		$rootScope.keyWordsLists = [];
 
 		/**
 		 * Holds the data of keyword entities that is going to be created or updated.
@@ -42,7 +42,7 @@ angular.module('app.keyWordsList')
 							item.keywords = angular.fromJson(item.keywords);
 						})
 
-						$rootScope.keyWordsList = data.keywords;
+						$rootScope.keyWordsLists = data.keywords;
 
 						// 
 						// Note the internal keywords should be 
@@ -53,7 +53,7 @@ angular.module('app.keyWordsList')
 						// The second one returns error.
 						// 
 
-						console.log($rootScope.keyWordsList[0].keywords["0"]);
+						console.log($rootScope.keyWordsLists);
 
 				}).error(function(data){
 					console.log(data);

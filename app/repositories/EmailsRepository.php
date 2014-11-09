@@ -418,6 +418,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                             $std_store_email->full_name = $e_list["full_name"];
                             $std_store_email->subject = $email->subject;
                             $std_store_email->body = $email->body;
+
                             $std_store_email->__date = $email->header->date;
                             $std_store_email->__message_id = $email->header->message_id;
                             $std_store_email->__size = $email->overview->size;
@@ -464,21 +465,26 @@ class EmailsRepository implements EmailsRepositoryInterface {
      */
     public function storeMail($data) {
 
-        $insert_data = ["email_address_id" => $data->email_address_id, 
+        $insert_data = [
+
+                 "email_address_id" => $data->email_address_id, 
                  "subject" => $data->subject, 
                  "body" => $data->body,
-                 "__message_id" => $data->__message_id,
-                 "__date" => $data->__date,
-                 "__size" => $data->__size,
-                 "__uid" => $data->__uid,
-                 "__msgno" => $data->__msgno,
-                 "__recent" => $data->__recent,
-                 "__flagged" => $data->__flagged,
-                 "__answered" => $data->__answered,
-                 "__deleted" => $data->__deleted,
-                 "__seen" => $data->__seen,
-                 "__draft" => $data->__draft,
-                 "__udate" => $data->__udate];
+
+                 "x_message_id" => $data->__message_id,
+                 "x_date" => $data->__date,
+                 "x_size" => $data->__size,
+                 "x_uid" => $data->__uid,
+                 "x_msgno" => $data->__msgno,
+                 "x_recent" => $data->__recent,
+                 "x_flagged" => $data->__flagged,
+                 "x_answered" => $data->__answered,
+                 "x_deleted" => $data->__deleted,
+                 "x_seen" => $data->__seen,
+                 "x_draft" => $data->__draft,
+                 "x_udate" => $data->__udate
+
+        ];
 
         mails::create($insert_data);
         

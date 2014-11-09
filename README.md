@@ -95,3 +95,6 @@ Examples
 
 #### Mails Page
 ![ScreenShot](https://raw.githubusercontent.com/dud3/MailTree/master/public/app_samples/mails-p.png)
+
+#### Left Pane
+![ScreenShot](https://raw.githubusercontent.com/dud3/MailTree/master/public/app_samples/mailtree-leftpane.png)

@@ -27,29 +27,6 @@
 
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 
-    <script src="/bower_components/angular/angular.min.js"></script>
-    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="/bower_components/angular-cookies/angular-cookies.min.js"></script>
-    <script src="/bower_components/angular-mocks/angular-mocks.js"></script>
-    <script src="/bower_components/angular-resource/angular-resource.min.js"></script>
-    <script src="/bower_components/angular-route/angular-route.min.js"></script>
-    <script src="/bower_components/angular-scenario/angular-scenario.js"></script>
-    <script src="/bower_components/angular-touch/angular-touch.min.js"></script>
-    <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-    <script src="/bower_components/bootstrap/js/affix.js"></script>
-    <script src="/bower_components/bootstrap/js/alert.js"></script>
-    <script src="/bower_components/bootstrap/js/button.js"></script>
-    <script src="/bower_components/bootstrap/js/carousel.js"></script>
-    <script src="/bower_components/bootstrap/js/collapse.js"></script>
-    <script src="/bower_components/bootstrap/js/dropdown.js"></script>
-    <script src="/bower_components/bootstrap/js/modal.js"></script>
-    <script src="/bower_components/bootstrap/js/tooltip.js"></script>
-    <script src="/bower_components/bootstrap/js/popover.js"></script>
-    <script src="/bower_components/bootstrap/js/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap/js/tab.js"></script>
-    <script src="/bower_components/bootstrap/js/transition.js"></script>
-    <script src="/bower_components/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -85,16 +62,8 @@
 
     </div>
 
-    <script src="/scripts/app.js"></script>
-    <script src="/scripts/controllers/authCtrl.js"></script>
-
-    <script src="/scripts/controllers/keyWordsListCtrl.js"></script>
-    <script src="/scripts/controllers/emailsListCtrl.js"></script>
-
-    <script src="/scripts/factories/keyWordsListSvc.js"></script>
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script>
+
     // ------------------------
     // Windows 8 viewport hack
     // ------------------------
@@ -110,49 +79,90 @@
         document.querySelector('head').appendChild(msViewportStyle)
       }
     })();
-    </script>
 
+    $(document).ready(function() {
 
-    <script type="text/javascript">
-
-        $(document).ready(function() {
-
-            $("#barnd-img").click(function(e) {
-                e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
-            });
-            
-            $("#clickCol").click(function() {
-                $('#collapseOne').collapse();
-            });
-
-            //toggle `popup` / `inline` mode
-            $.fn.editable.defaults.mode = 'popup';     
-            
-            //make username editable
-            $('#username').editable();
-            
-            //make status editable
-            $('#status').editable({
-                type: 'select',
-                title: 'Select status',
-                placement: 'right',
-                value: 2,
-                source: [
-                    {value: 1, text: 'status 1'},
-                    {value: 2, text: 'status 2'},
-                    {value: 3, text: 'status 3'}
-                ]
-                /*
-                //uncomment these lines to send data on server
-                ,pk: 1
-                ,url: '/post'
-                */
-            });
-
+        $("#barnd-img").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+        
+        $("#clickCol").click(function() {
+            $('#collapseOne').collapse();
         });
 
+        //toggle `popup` / `inline` mode
+        $.fn.editable.defaults.mode = 'popup';     
+        
+        //make username editable
+        $('#username').editable();
+        
+        //make status editable
+        $('#status').editable({
+            type: 'select',
+            title: 'Select status',
+            placement: 'right',
+            value: 2,
+            source: [
+                {value: 1, text: 'status 1'},
+                {value: 2, text: 'status 2'},
+                {value: 3, text: 'status 3'}
+            ]
+        });
+
+    });
+
     </script>
+
+    <!-- Assets -->
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="/bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="/bower_components/angular-scenario/angular-scenario.js"></script>
+    <script src="/bower_components/angular-touch/angular-touch.min.js"></script>
+    <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="/bower_components/angular-strap/dist/angular-strap.min.js"></script>
+    <script src="/bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+
+    <script src="/bower_components/bootstrap/js/affix.js"></script>
+    <script src="/bower_components/bootstrap/js/alert.js"></script>
+    <script src="/bower_components/bootstrap/js/button.js"></script>
+    <script src="/bower_components/bootstrap/js/carousel.js"></script>
+    <script src="/bower_components/bootstrap/js/collapse.js"></script>
+    <script src="/bower_components/bootstrap/js/dropdown.js"></script>
+    <script src="/bower_components/bootstrap/js/modal.js"></script>
+    <script src="/bower_components/bootstrap/js/tooltip.js"></script>
+    <script src="/bower_components/bootstrap/js/popover.js"></script>
+    <script src="/bower_components/bootstrap/js/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap/js/tab.js"></script>
+    <script src="/bower_components/bootstrap/js/transition.js"></script>
+    <script src="/bower_components/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+
+    <!-- app -->
+    <script src="/scripts/app.js"></script>
+
+    <script>
+        // Send token
+        angular.module("app.auth").constant("CSRF_TOKEN", '<?php echo csrf_token(); ?>');
+        //
+        // User session to null for now
+        // Probably will just handle sessions through PHP better
+        angular.module("app.auth").constant("_userSessions", null);
+        // 
+        // Password token to null as well
+        angular.module("app.auth").constant("_pwdToken", null);
+    </script>
+
+    <script src="/scripts/controllers/authCtrl.js"></script>
+    <script src="/scripts/controllers/keyWordsListCtrl.js"></script>
+    <script src="/scripts/controllers/emailsListCtrl.js"></script>
+
+    <script src="/scripts/factories/keyWordsListSvc.js"></script>
+    <script src="/scripts/factories/authSvc.js"></script>
+
 
   </body>
 </html>

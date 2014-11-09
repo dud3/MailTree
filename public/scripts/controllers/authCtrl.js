@@ -1,11 +1,8 @@
 'use strict';
 
 angular.module('app.auth')
-  .controller('AuthCtrl', ['$scope', '$http', '$q', '$compile', '$location', '$sce', '$tooltip',
-                          '$cookies', '$cookieStore', '$analytics', '$aside', 'AuthSvc', 'pwdToken', 
-                          'cfpLoadingBar', '_userSessions', 
-              function ($scope, $http, $q, $compile, $location, $sce, $tooltip, $cookies, $cookieStore, 
-                        $analytics, $aside, AuthSvc, pwdToken, cfpLoadingBar, _userSessions) {
+  .controller('AuthCtrl', ['$scope', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore', 'AuthSvc', '_userSessions', '_pwdToken', 
+      function ($scope, $http, $q, $compile, $location, $sce, $cookies, $cookieStore, AuthSvc, _userSessions, _pwdToken) {
 
 
   // ====================
@@ -16,7 +13,6 @@ angular.module('app.auth')
     getRedirect : $cookieStore.get('redirect'),
     getUserSession : $cookieStore.get('sessions')
   };
-
 
 
   // ==============
@@ -31,6 +27,7 @@ angular.module('app.auth')
 
   var gCounter = 0;
   $scope.login = function() {
+
     var l = Ladda.create(document.querySelector('.lading-btn')); // Ladda loading button
     l.start();
 
@@ -47,8 +44,7 @@ angular.module('app.auth')
 
     // Little cookies fun
     ($scope.loginCredentials.remember) ? $cookieStore.put('rememberMe', true) : $cookieStore.remove('rememberMe');
-     AuthSvc.login($scope.loginCredentials) 
-
+     AuthSvc.login($scope.loginCredentials)
         .success(function(data) {
 
           var group = {
@@ -309,13 +305,13 @@ angular.module('app.auth')
   // =======================
   $scope.credentials_pwd = {
     // email: $("#email").val(),
-    token: pwdToken,
+    token: _pwdToken,
     password: "",
     repeatPassword: ""
   };
   $scope.resetPassword = function() {
     var l = Ladda.create(document.querySelector('.lading-btn'));
-    // console.log(pwdToken);
+    // console.log(_pwdToken);
     // console.log($scope.credentials_pwd);
     l.start();
     AuthSvc.resetPassword($scope.credentials_pwd)

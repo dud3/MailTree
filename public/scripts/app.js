@@ -31,6 +31,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'mgcrea.ngStrap',
     
     'app.auth',
     'app.keyWordsList'

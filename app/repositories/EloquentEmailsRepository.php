@@ -28,19 +28,21 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 
 		$sql_emails = DB::select(
 
-		"SELECT	m.id, m.email_address_id, m.subject, m.body, m.body_html, m.optional_text, m.sender_email, m.reciver_email,
-							m.fwd_accept, m.sent,
-							m.x_message_id, m.x_date,	m.x_size, m.x_uid, m.x_msgno,	m.x_recent, m.x_flagged, m.x_answered, m.x_deleted,
-							m.x_seen,	m.x_draft, m.x_udate,
-							k_l.keywords
+		"SELECT m.id, m.email_address_id, m.subject, m.body, m.body_html, m.optional_text, m.sender_email, m.reciver_email,
+				m.fwd_accept, m.sent,
+				m.x_message_id, m.x_date,	m.x_size, m.x_uid, m.x_msgno,	m.x_recent, m.x_flagged, m.x_answered, m.x_deleted,
+				m.x_seen, m.x_draft, m.x_udate,
+				k_l.keywords
 
 		FROM mails m
 
-			LEFT JOIN email_address_list e_a_l
+			INNER JOIN email_address_list e_a_l
 				ON e_a_l.id = m.email_address_id
 
-			LEFT JOIN keywords_list k_l
+			INNER JOIN keywords_list k_l
 				ON k_l.id = e_a_l.keyword_id
+
+			GROUP BY m.x_uid
 
 		");
 
@@ -69,6 +71,9 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 
         	// Put everything back togather
             $email->subject = implode(" ", $subject);
+
+            // Conver to easily readable date format
+            $email->utc_time =  date('l, F Y h:i:s A', $email->x_udate);
 
 		}
 

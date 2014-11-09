@@ -7,7 +7,7 @@
 
 		<thead>
 			<tr>
-				<th style="width:1%;"><input type="checkbox" id="mail-check-all" /></th>
+				<th style="width:3%; padding-left: 14px;"><input type="checkbox" id="mail-check-all" /></th>
 				<th>Subject</th>
 				<th>Date</th>
 				<!-- th>Body</th -->
@@ -16,6 +16,14 @@
 		</thead>
 
 		<tbody>
+
+			<tr ng-repeat="email in emails" id="id-email<* email.id *>">
+				<td style="padding:12px;"><input type="checkbox" id="check-email<* email.id *>" name="check-email<* email.id *>"></td>
+				<td ng-bind-html="email.subject"></td>
+				<td><* email.utc_time *></td>
+				<td><button class="btn btn-info btn-sm">Send&nbsp;<span class="fa fa-paper-plane"></span></button></td>
+			</tr>
+
 			<tr>
 				<td><input type="checkbox" name="" value=""></td>
 				<td>Title of email with some keywords like <span class="label label-primary">California</span> and whatever</td>

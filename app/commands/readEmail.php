@@ -57,18 +57,31 @@ class readEmail extends Command {
 	public function fire()
 	{
 	
+		$__options = $this->option('options');
 		$_option_html_enable = $this->option('html_enable');
 		$_option_email_search = $this->option('email_search');
 
-		if($_option_html_enable == null || $_option_email_search == null) {
-			$this->error("Missing options:");
+		if($_option_html_enable == null && $_option_email_search == null) {
+
+			echo "\n";
+
+			$this->comment("options");
+			
+			$_option_html_enable = false;
+			$_option_email_search = "UNSEEN";
+
+			$this->info("  --html_enable=false");
+			$this->info("  --email_search='UNSEEN'");
+
+			echo "\n";
+
 		}
 
-		if($_option_html_enable == null)  { 
+		if($_option_html_enable === null)  { 
 			$this->info("--html_enable=[...]"); exit;
 		}
 
-		if($_option_email_search == null) {
+		if($_option_email_search === null) {
 			$this->info("--email_search=[...]"); exit;
 		}
 
@@ -111,7 +124,13 @@ class readEmail extends Command {
 		($_option_html_enable == "true") ? $_option_html_enable = true : $_option_html_enable = false;
 
 		$this->comment("Reading emails..." . "(" . $_option_email_search .")");
+		
+		echo "\n";
+		
 		$this->emails->readMails($html_enable = $_option_html_enable, $email_search = $_option_email_search);
+		
+		echo "\n";
+
 		$this->info("Emails has been readen.");
 
 	}
@@ -169,6 +188,7 @@ class readEmail extends Command {
 	protected function getOptions()
 	{
 		return array(
+			array('options', null, InputOption::VALUE_OPTIONAL, 'Help', null),
 			array('html_enable', null, InputOption::VALUE_REQUIRED, 'Argument as option.', null),
 			array('email_search', null, InputOption::VALUE_REQUIRED, 'Type of email(New, seen, unseen...).', null),
 		);

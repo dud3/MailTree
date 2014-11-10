@@ -1,8 +1,10 @@
 @extends('layouts.internal')
 @section('main')
 
-
     <div class="col-md-12" ng-controller="keyWordsListCtrl">
+
+	<div style="padding-top:0px; margin-top:-30px; margin-bottom:20px;"><button class="btn btn-default" style="margin:0px;" ng-click="addUser()">Add Keyword List <span class="fa fa-plus" style="font-size:13px"></span></button></div>
+
 
     	<!-- <* keyWordsLists *> -->
 
@@ -29,12 +31,12 @@
 
 					<div id="collapse<* keyWordsList.id *>" class="panel-collapse collapse in">
 					  <div class="panel-body">
-					  	<h5>Recipients:</h5>
 
-					  	<table class="table table-bordered">
+					  	<table class="table table-bordered" style="margin:4px 0px 4px 0px;">
 					  		<tr>
 					  			<th>Salutation</th>
 					  			<th>Email</th>
+					  			<th>Action</th>
 					  		</tr>
 
 					  		<tr ng-repeat="email in keyWordsList.email" id="id-tr-email-<* email.email_list_id *>">
@@ -42,6 +44,8 @@
 					  			<td><* email.email *></td>
 					  		</tr>
 					  	</table>
+
+					  	 <button class="btn btn-default" ng-click="addUser()">Add <span class="fa fa-plus" style="font-size:13px"></span></button>
 
 					  </div>
 					</div>

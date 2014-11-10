@@ -91,7 +91,7 @@
     <script src="/bower_components/bootstrap/js/tab.js"></script>
     <script src="/bower_components/bootstrap/js/transition.js"></script>
     <script src="/bower_components/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
-
+    
     <!-- app -->
     <script src="/scripts/app.js"></script>
 

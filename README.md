@@ -98,3 +98,7 @@ Examples
 
 #### Left Pane
 ![ScreenShot](https://raw.githubusercontent.com/dud3/MailTree/master/public/app_samples/mailtree-leftpane.png)
+
+Copyright and License
+=====================
+Code and documentation copyright 2011-2014 @dud3(Dren Kajmakci), Inc. Code released under the GPLv2 license.

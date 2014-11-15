@@ -33,6 +33,8 @@ angular
     'ngTouch',
     'mgcrea.ngStrap',
     'toaster',
+
+    'utilFilters',
     
     'app.auth',
     'app.keyWordsList',
@@ -164,6 +166,6 @@ $interpolateProvider.endSymbol('*>');
 // ---------------------
 // Other moodules
 // ---------------------
-angular.module('app.auth', ['ngSanitize', 'mgcrea.ngStrap', 'toaster']);
-angular.module('app.keyWordsList', ['ngSanitize', 'mgcrea.ngStrap', 'toaster']);
-angular.module('app.emailsList', ['ngSanitize', 'mgcrea.ngStrap', 'toaster']);
+angular.module('app.auth', ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'utilFilters']);
+angular.module('app.keyWordsList', ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'utilFilters']);
+angular.module('app.emailsList', ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'utilFilters']);

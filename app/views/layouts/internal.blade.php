@@ -121,6 +121,7 @@
     <script src="/scripts/factories/emailsListSvc.js"></script>
     <script src="/scripts/factories/authSvc.js"></script>
 
+    <script src="/scripts/filters/filters.js"></script>
 
   </body>
 </html>

@@ -53,6 +53,12 @@
   opacity:0.7
 }
 
+.g-content-loader {
+  font-size:150px; 
+  margin-left:60%; 
+  margin-top:5%;
+}
+
 /*.table-hover tbody tr:hover td {
     background: rgba(255,255,255, 0.5);
 }*/

@@ -75,7 +75,7 @@ $provide.factory('MyHttpInterceptor', function ($q, $log) {
 
     // On request success
     request: function (config) {
-      // console.log(config); // Contains the data about the request before it is sent.
+      console.log(config); // Contains the data about the request before it is sent.
        
       // Return the config or wrap it in a promise if blank.
       return config || $q.when(config);
@@ -91,9 +91,40 @@ $provide.factory('MyHttpInterceptor', function ($q, $log) {
      
     // On response success
     response: function (response) {
+
       // console.log(response); // Contains the data from the response.
       // Return the response or promise.
+      //
+
+      if(response.status == 200) {
+
+        // Just a little awesomenes
+        // -> To let users know what's going on the background
+        var randomAnimation = Math.floor((Math.random()*9)+1)
+
+        var idtoClass = {'1': "animated bounce",
+                         '3': "animated pulse",
+                         '5': "animated bounceIn",
+                         '6': "animated rollIn",
+                         '7': "animated flipInX",
+                         '8': "animated flipInY",
+                         '9': "animated bounceInDown",
+                         '10': "animated fadeInDown",
+                         '11': "animated fadeInDownBig"};
+
+        var randomClass = idtoClass[randomAnimation];
+
+        $("#g-content-loader").hide();
+        $("#app-internal").show();
+
+        $("#app-internal").removeClass(randomClass).addClass(randomClass).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+          $(this).removeClass(randomClass);
+        });
+
+      }
+
       return response || $q.when(response);
+
     },
      
     // On response failture

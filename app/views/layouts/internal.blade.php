@@ -51,7 +51,8 @@
 
                     @include("layouts.internalNavbar")
 
-                    <div id="app-internal" class="container-fluid app-background animated fadeInDownBig">
+                    <div id="g-content-loader" class="row col-md-12 g-content-loader"><i class="fa-li fa fa-refresh fa-spin"></i></div>
+                    <div id="app-internal" class="container-fluid app-background g-internal-container" style="display:none;">
 
                 <?php } ?>
 

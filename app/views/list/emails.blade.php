@@ -24,7 +24,12 @@
 				<td><button class="btn btn-info btn-sm">Send&nbsp;<span class="fa fa-paper-plane"></span></button></td>
 			</tr>
 
-			<tr>
+			<!-- 
+				Smaple templates
+			-->
+
+			<!-- New Mails -->
+			<!-- tr>
 				<td><input type="checkbox" name="" value=""></td>
 				<td>Title of email with some keywords like <span class="label label-primary">California</span> and whatever</td>
 				<td>Date</td>
@@ -54,13 +59,16 @@
 				<td>This title <span class="label label-primary">Example3</span> is pretty long <span class="label label-primary">example4</span>it has and some more <span class="label label-primary">keywords</span></td>
 				<td>Date</td>
 				<td><button class="btn btn-info btn-sm">Send&nbsp;<span class="fa fa-paper-plane"></span></button></td>
-			</tr>
-			<tr class="mail-sent">
+			</tr -->
+
+			<!-- Sent mails -->
+			<!-- tr class="mail-sent">
 				<td><input type="checkbox" name="" value=""></td>
 				<td>Title of email with some keywords like <span class="label label-primary">California</span> and whatever</td>
 				<td>Date</td>
 				<td><span class="label label-success mail-sent-label">Sent&nbsp;<span class="fa fa-envelope"></span></span></td>
-			</tr>
+			</tr -->
+
 		</tbody>
 
 	</table>

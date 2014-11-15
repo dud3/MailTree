@@ -1,6 +1,6 @@
 angular.module('app.auth')
-.factory('AuthSvc', [ '$http', '$rootScope', '$sanitize', 'CSRF_TOKEN', /*'pwdToken',*/
-  function($http, $rootScope, $sanitize, CSRF_TOKEN /*pwdToken*/) {
+.factory('AuthSvc', [ '$http', '$rootScope', '$sanitize', 'CSRF_TOKEN', '_pwdToken',
+  function($http, $rootScope, $sanitize, CSRF_TOKEN, _pwdToken) {
 
   var cacheSession   = function(data, status, headers, config) {
     SessionSvc.set('authenticated', true);

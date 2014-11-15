@@ -109,7 +109,7 @@ angular.module('app.keyWordsList')
 		 */
 		$scope.search = function() {
 
-		}
+		};
 
 
 }]);

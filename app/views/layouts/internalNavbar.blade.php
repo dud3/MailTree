@@ -14,7 +14,6 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
         <li><a href="/app/emails">Emails</a></li>
-        <li><a href="#contact">Contact</a></li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
@@ -35,6 +34,17 @@
           </ul>
         </li>
       </ul>
+
+      <div class="col-sm-3 col-md-3 pull-left" style="padding:0px;">
+          <form class="navbar-form" role="search" autocomplete="off">
+              <div class="input-group">
+                  <input type="text" class="form-control" ng-model="search_anything" placeholder="Search anything..." name="q">
+                  <div class="input-group-btn">
+                      <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                  </div>
+              </div>
+          </form>
+      </div>
 
     </div><!--/.nav-collapse -->
   </div>

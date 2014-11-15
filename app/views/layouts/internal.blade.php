@@ -45,6 +45,7 @@
         <div class="container-fluid">
 
             <?php if(Config::get('constant.g_currentPage') == '/' || Config::get('constant.g_currentPage') == '/login') { ?>
+
             <div class="container-fluid">
 
                 <?php } else { ?>

@@ -27,6 +27,8 @@ angular.module('app.keyWordsList')
 			Recipients: [{}]
 		};
 
+		$scope.search = "";
+
 		/**
 		 * Get all the keywords
 		 * @return {[type]} [description]

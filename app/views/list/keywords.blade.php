@@ -8,7 +8,7 @@
 
     	<!-- <* keyWordsLists *> -->
 
-		<div class="col-md-6" ng-repeat="keyWordsList in keyWordsLists">
+		<div class="col-md-6" ng-repeat="keyWordsList in keyWordsLists | filter:search_anything">
 			
 			<div class="panel-group" id="accordion<* keyWordsList.id *>">
 				<div class="panel panel-default">
@@ -45,7 +45,7 @@
 					  		</tr>
 					  	</table>
 
-					  	 <button class="btn btn-default" ng-click="addUser()">Add <span class="fa fa-plus" style="font-size:13px"></span></button>
+					  	 <button class="btn btn-sm btn-default" ng-click="addUser()">Add <span class="fa fa-plus" style="font-size:13px"></span></button>
 
 					  </div>
 					</div>

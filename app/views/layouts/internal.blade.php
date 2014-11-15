@@ -24,7 +24,9 @@
     <link href="/styles/main.css" rel="stylesheet">
     <link href="/bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="/bower_components/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
-    <link href="/bower_components/AngularJS-Toaster/toaster.css"></link>
+    <link href="/bower_components/AngularJS-Toaster/toaster.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed|PT+Sans|Titillium+Web' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

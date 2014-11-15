@@ -16,7 +16,6 @@
 		</thead>
 
 		<tbody>
-
 			<tr ng-repeat="email in emails" id="id-email<* email.id *>">
 				<td style="padding:12px;"><input type="checkbox" id="check-email<* email.id *>" name="check-email<* email.id *>"></td>
 				<td ng-bind-html="email.subject"></td>

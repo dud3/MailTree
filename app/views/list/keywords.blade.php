@@ -8,6 +8,8 @@
 
     	<!-- <* keyWordsLists *> -->
 
+    			<div><i class="fa-li fa fa-refresh fa-spin"></i></div>
+
 		<div class="col-md-6" ng-repeat="keyWordsList in keyWordsLists">
 			
 			<div class="panel-group" id="accordion<* keyWordsList.id *>">

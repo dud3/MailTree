@@ -54,6 +54,9 @@ angular
       });
   });
 
+angular.module('mailTree').run(function(editableOptions) {
+  editableOptions.theme = 'bs3';
+});
 
 // Main configuration
 angular.module('mailTree')

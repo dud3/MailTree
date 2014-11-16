@@ -93,7 +93,7 @@ angular.module('app.keyWordsList')
 		 * Remove keyword
 		 * @return {[type]} [description]
 		 */
-		$scope.remove_keyword = function() {
+		$scope.removeKeyword = function() {
 
 		};
 
@@ -101,8 +101,38 @@ angular.module('app.keyWordsList')
 		 * Remove recipent
 		 * @return {[type]} [description]
 		 */
-		$scope.remove_recipent = function() {
+		$scope.removeRecipent = function(parentIndex, index) {
+			$rootScope.keyWordsLists[parentIndex].email.splice(index, 1);
+		};
 
+		$scope.users = [
+			{id: 1, name: 'awesome user1', status: 2, group: 4, groupName: 'admin'},
+			{id: 2, name: 'awesome user2', status: undefined, group: 3, groupName: 'vip'},
+			{id: 3, name: 'awesome user3', status: 2, group: null}
+		]; 
+
+		$scope.statuses = [
+			{value: 1, text: 'status1'},
+			{value: 2, text: 'status2'},
+			{value: 3, text: 'status3'},
+			{value: 4, text: 'status4'}
+		]; 
+
+		$scope.saveUser = function(data, id) {
+			//$scope.user not updated yet
+			angular.extend(data, {id: id});
+			return $http.post('/saveUser', data);
+		};
+
+		// add user
+		$scope.addRecipent = function() {
+			$scope.inserted = {
+			  id: $scope.users.length + 1,
+			  name: '',
+			  status: null,
+			  group: null 
+			};
+			$scope.users.push($scope.inserted);
 		};
 
 		/**
@@ -112,6 +142,7 @@ angular.module('app.keyWordsList')
 		$scope.search = function() {
 
 		};
+
 
 
 		//------------------------------

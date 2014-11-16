@@ -5,7 +5,6 @@
 
 	<div style="padding-top:0px; margin-top:-30px; margin-bottom:20px;"><button class="btn btn-default" style="margin:0px;" ng-click="addUser()">Add Keyword List <span class="fa fa-plus" style="font-size:13px"></span></button></div>
 
-
     	<!-- <* keyWordsLists *> -->
 
 		<div class="col-md-6" ng-repeat="keyWordsList in keyWordsLists | filter:__G__search">
@@ -33,16 +32,43 @@
 					  <div class="panel-body">
 
 					  	<table class="table table-bordered" style="margin:4px 0px 4px 0px;">
+
 					  		<tr>
 					  			<th>Salutation</th>
 					  			<th>Email</th>
-					  			<th>Action</th>
+					  			<th style="width:1%">Action</th>
 					  		</tr>
 
 					  		<tr ng-repeat="email in keyWordsList.email" id="id-tr-email-<* email.email_list_id *>">
-					  			<td><* email.full_name *></td>
-					  			<td><* email.email *></td>
+					  			<td>
+					  				<span editable-text="email.full_name" e-name="full_name" e-form="rowform" e-required>
+					  					<* email.full_name || 'empty' *>
+					  				</span>
+					  			</td>
+					  			<td>
+					  				<span editable-text="email.email" e-name="email" e-form="rowform" e-required>
+					  					<* email.email *>
+					  				</span>
+					  			</td>
+
+					  			<td style="white-space: nowrap">
+							        <!-- form -->
+							        <form editable-form name="rowform" onbeforesave="saveUser($data, user.id)" ng-show="rowform.$visible" class="form-buttons form-inline" >
+							          <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
+							            save
+							          </button>
+							          <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">
+							            cancel
+							          </button>
+							        </form>
+							        <div class="buttons" ng-show="!rowform.$visible">
+							          <button class="btn btn-primary" ng-click="rowform.$show()">edit</button>
+							          <button class="btn btn-danger" ng-click="removeRecipent($parent.$index, $index)">del</button>
+							        </div>  
+						      	</td>
+
 					  		</tr>
+
 					  	</table>
 
 					  	 <button class="btn btn-sm btn-default" ng-click="addUser()">Add <span class="fa fa-plus" style="font-size:13px"></span></button>

@@ -107,8 +107,9 @@ angular.module('app.keyWordsList')
 
 			keyWordsListSvc.removeRecipent(findRecipient).success(function(data){
 				$rootScope.keyWordsLists[parentIndex].email.splice(index, 1);
+				toaster.pop('success', "Message", "Recipient Deleted.");
 			}).error(function(data){
-				toaster.pop('error', "title", "Something went wrong, please try again.");
+				toaster.pop('error', "Message", "Something went wrong, please try again.");
 			});
 
 		};

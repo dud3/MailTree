@@ -27,7 +27,7 @@ var services = {
     },
 
     removeRecipent: function(id) {
-      return $http.post('/api/v1/removeRecipent/' + id);
+      return $http.post('/api/v1/emails/removeRecipent/' + id);
     },
 
     search: function(param) {

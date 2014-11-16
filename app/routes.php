@@ -57,12 +57,13 @@ Route::group(array('prefix' => 'api/v1'), function()
 	Route::group(array('prefix' => 'emails'), function()
 	{
 
-		Route::get('get_all',			'EmailListCtrl@get_all');
-		Route::get('get/{id}',			'EmailListCtrl@get');
-		Route::post('create',			'EmailListCtrl@create');
-		Route::post('update',			'EmailListCtrl@update');
-		Route::post('delete/{id}',		'EmailListCtrl@delete');
-		Route::post('search',			'EmailListCtrl@search');
+		Route::get('get_all',				'EmailListCtrl@get_all');
+		Route::get('get/{id}',				'EmailListCtrl@get');
+		Route::post('create',				'EmailListCtrl@create');
+		Route::post('update',				'EmailListCtrl@update');
+		Route::post('delete/{id}',			'EmailListCtrl@delete');
+		Route::post('removeRecipent/{id}',	'EmailListCtrl@removeRecipent');
+		Route::post('search',				'EmailListCtrl@search');
 
 	});
 

@@ -86,8 +86,7 @@ $provide.factory('MyHttpInterceptor', function ($q, $log) {
 
     // On request success
     request: function (config) {
-      console.log(config); // Contains the data about the request before it is sent.
-       
+      // console.log(config); // Contains the data about the request before it is sent.
       // Return the config or wrap it in a promise if blank.
       return config || $q.when(config);
     },
@@ -109,28 +108,33 @@ $provide.factory('MyHttpInterceptor', function ($q, $log) {
 
       if(response.status == 200) {
 
-        // Just a little awesomenes
-        // -> To let users know what's going on the background
-        var randomAnimation = Math.floor((Math.random()*9)+1)
+        // Only this routes for now
+        if(response.config.url == "/api/v1/getAllKeywords" || response.config.url == "/api/v1/emails/get_all") {
 
-        var idtoClass = {'1': "animated bounce",
-                         '3': "animated pulse",
-                         '5': "animated bounceIn",
-                         '6': "animated rollIn",
-                         '7': "animated flipInX",
-                         '8': "animated flipInY",
-                         '9': "animated bounceInDown",
-                         '10': "animated fadeInDown",
-                         '11': "animated fadeInDownBig"};
+          // Just a little awesomenes
+          // -> To let users know what's going on the background
+          var randomAnimation = Math.floor((Math.random()*9)+1)
 
-        var randomClass = idtoClass[randomAnimation];
+          var idtoClass = {'1': "animated bounce",
+                           '3': "animated pulse",
+                           '5': "animated bounceIn",
+                           '6': "animated rollIn",
+                           '7': "animated flipInX",
+                           '8': "animated flipInY",
+                           '9': "animated bounceInDown",
+                           '10': "animated fadeInDown",
+                           '11': "animated fadeInDownBig"};
 
-        $("#g-content-loader").hide();
-        $("#app-internal").show();
+          var randomClass = idtoClass[randomAnimation];
 
-        $("#app-internal").removeClass(randomClass).addClass(randomClass).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-          $(this).removeClass(randomClass);
-        });
+          $("#g-content-loader").hide();
+          $("#app-internal").show();
+
+          $("#app-internal").removeClass(randomClass).addClass(randomClass).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+            $(this).removeClass(randomClass);
+          });
+
+        }
 
       }
 

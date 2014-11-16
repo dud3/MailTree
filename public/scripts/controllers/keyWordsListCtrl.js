@@ -105,15 +105,10 @@ angular.module('app.keyWordsList')
 			
 			var findRecipient = $rootScope.keyWordsLists[parentIndex].email[index].email_list_id;
 
-			console.log(findRecipient);
-			console.log($rootScope.keyWordsLists[parentIndex]);
-	        toaster.pop('note', "title", "text");
-			return;
-
 			keyWordsListSvc.removeRecipent(findRecipient).success(function(data){
 				$rootScope.keyWordsLists[parentIndex].email.splice(index, 1);
 			}).error(function(data){
-				toaster.pop('error', "title", '<ul><li>Render html</li></ul>', null, 'trustedHtml');
+				toaster.pop('error', "title", "Something went wrong, please try again.");
 			});
 
 		};

@@ -153,4 +153,13 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 
 	}
 
+	/**
+	 * Remove recipent from the keywords list.
+	 * @param  [type] $id [description]
+	 * @return [type]     [description]
+	 */
+	public function removeRecipent($id) {
+		return email_address_list::find($id)->delete();
+	}
+
 }

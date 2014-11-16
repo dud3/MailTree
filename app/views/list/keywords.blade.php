@@ -8,7 +8,7 @@
 
     	<!-- <* keyWordsLists *> -->
 
-		<div class="col-md-6" ng-repeat="keyWordsList in keyWordsLists | filter:search_anything">
+		<div class="col-md-6" ng-repeat="keyWordsList in keyWordsLists | filter:__G__search">
 			
 			<div class="panel-group" id="accordion<* keyWordsList.id *>">
 				<div class="panel panel-default">

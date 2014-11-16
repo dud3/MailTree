@@ -35,10 +35,10 @@
         </li>
       </ul>
 
-      <div class="col-sm-3 col-md-3 pull-left" style="padding:0px;">
+    <div class="col-sm-3 col-md-3 pull-left" style="padding:0px;">
           <form class="navbar-form" role="search" autocomplete="off">
               <div class="input-group">
-                  <input type="text" class="form-control" ng-model="search_anything" placeholder="Search anything..." name="q">
+                  <input type="text" class="form-control" ng-model="__G__search" placeholder="Search anything..." name="q">
                   <div class="input-group-btn">
                       <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                   </div>

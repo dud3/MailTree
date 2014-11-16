@@ -116,6 +116,7 @@
     <script src="/scripts/controllers/authCtrl.js"></script>
     <script src="/scripts/controllers/keyWordsListCtrl.js"></script>
     <script src="/scripts/controllers/emailsListCtrl.js"></script>
+    <script src="/scripts/controllers/searchCtrl.js"></script>
 
     <script src="/scripts/factories/keyWordsListSvc.js"></script>
     <script src="/scripts/factories/emailsListSvc.js"></script>

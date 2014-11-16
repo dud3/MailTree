@@ -38,7 +38,8 @@ angular
     
     'app.auth',
     'app.keyWordsList',
-    'app.emailsList'
+    'app.emailsList',
+    'app.search'
 
   ])
   .config(function ($routeProvider) {
@@ -169,3 +170,4 @@ $interpolateProvider.endSymbol('*>');
 angular.module('app.auth', ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'utilFilters']);
 angular.module('app.keyWordsList', ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'utilFilters']);
 angular.module('app.emailsList', ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'utilFilters']);
+angular.module('app.search',  ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'utilFilters']);

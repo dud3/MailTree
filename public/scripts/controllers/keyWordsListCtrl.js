@@ -114,4 +114,15 @@ angular.module('app.keyWordsList')
 		};
 
 
+		//------------------------------
+		// Scope Watchers
+		//------------------------------
+		//
+
+		$scope.$watch('keyWordsLists', function(){
+
+			console.log($scope.keyWordsLists);
+
+		}, true);
+
 }]);

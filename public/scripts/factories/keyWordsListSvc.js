@@ -19,15 +19,19 @@ var services = {
     },
 
     updateRecipient: function(user) {
-      return $http.get('/api/v1/updateRecipients' + angular.toJson(user));
+      return $http.get('/api/v1/updateRecipients', angular.toJson(user));
     },
 
     delete: function(id) {
       return $http({ method: 'DELETE', url: '/api/v1/deleteKeyword/' + id});
     },
 
-    search: function(id) {
-      return $http.get('/api/v1/deleteTrainingSubGroupByID/' + id);
+    removeRecipent: function(id) {
+      return $http.post('/api/v1/removeRecipent/' + id);
+    },
+
+    search: function(param) {
+      return $http.get('/api/v1/search', angular.toJson(param));
     }
 
   };

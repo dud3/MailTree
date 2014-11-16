@@ -32,6 +32,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'mgcrea.ngStrap',
+    'ngAnimate', 
     'toaster',
     'xeditable',
 
@@ -44,6 +45,8 @@ angular
 
   ])
   .config(function ($routeProvider) {
+    
+    // Save awesomeness for later on...
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -52,6 +55,7 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+
   });
 
 angular.module('mailTree').run(function(editableOptions) {

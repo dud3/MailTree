@@ -25,7 +25,7 @@
     <link href="/bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="/bower_components/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
     <link href="/bower_components/angular-xeditable/dist/css/xeditable.css">
-    <link href="/bower_components/AngularJS-Toaster/toaster.css">
+    <link href="/bower_components/AngularJS-Toaster/toaster.css" rel="stylesheet" />
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed|PT+Sans|Titillium+Web' rel='stylesheet' type='text/css'>
 
@@ -53,7 +53,23 @@
 
                     @include("layouts.internalNavbar")
 
+                    <!-- System Messaged -->
+                    <toaster-container 
+                    toaster-options="{'position-class': 'toast-bottom-full-width', 
+                                      'showDuration': '300',
+                                      'hideDuration': '1000',
+                                      'timeOut': '1000',
+                                      'extendedTimeOut': '1000',
+                                      'showEasing': 'swing',
+                                      'hideEasing': 'linear',
+                                      'showMethod': 'fadeIn',
+                                      'hideMethod': 'fadeOut'}">
+                    </toaster-container>
+
+                    <!-- System loading anim -->
                     <div id="g-content-loader" class="row col-md-12 g-content-loader"><i class="fa-li fa fa-refresh fa-spin"></i></div>
+
+                    <!-- App container -->
                     <div id="app-internal" class="container-fluid app-background g-internal-container" style="display:none;">
 
                 <?php } ?>

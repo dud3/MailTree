@@ -8,8 +8,8 @@
  * Controller of the publicApp
  */
 angular.module('app.keyWordsList')
-  .controller('keyWordsListCtrl', ['$scope', '$rootScope', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore', 'keyWordsListSvc',
-	function ($scope, $rootScope, $http, $q, $compile, $location, $sce, $cookies, $cookieStore, keyWordsListSvc) {
+  .controller('keyWordsListCtrl', ['$scope', '$rootScope', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore', 'keyWordsListSvc', 'toaster',
+	function ($scope, $rootScope, $http, $q, $compile, $location, $sce, $cookies, $cookieStore, keyWordsListSvc, toaster) {
 
 		/**
 		 * Holds all keyword entities.
@@ -102,7 +102,20 @@ angular.module('app.keyWordsList')
 		 * @return {[type]} [description]
 		 */
 		$scope.removeRecipent = function(parentIndex, index) {
-			$rootScope.keyWordsLists[parentIndex].email.splice(index, 1);
+			
+			var findRecipient = $rootScope.keyWordsLists[parentIndex].email[index].email_list_id;
+
+			console.log(findRecipient);
+			console.log($rootScope.keyWordsLists[parentIndex]);
+	        toaster.pop('note', "title", "text");
+			return;
+
+			keyWordsListSvc.removeRecipent(findRecipient).success(function(data){
+				$rootScope.keyWordsLists[parentIndex].email.splice(index, 1);
+			}).error(function(data){
+				toaster.pop('error', "title", '<ul><li>Render html</li></ul>', null, 'trustedHtml');
+			});
+
 		};
 
 		$scope.users = [

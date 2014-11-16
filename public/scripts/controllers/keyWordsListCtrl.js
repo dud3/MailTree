@@ -102,15 +102,21 @@ angular.module('app.keyWordsList')
 		 * @return {[type]} [description]
 		 */
 		$scope.removeRecipent = function(parentIndex, index) {
-			
+
 			var findRecipient = $rootScope.keyWordsLists[parentIndex].email[index].email_list_id;
 
-			keyWordsListSvc.removeRecipent(findRecipient).success(function(data){
+			if(!isNaN(findRecipient)) {
+
+				keyWordsListSvc.removeRecipent(findRecipient).success(function(data){
+					$rootScope.keyWordsLists[parentIndex].email.splice(index, 1);
+					toaster.pop('success', "Message", "Recipient Deleted.");
+				}).error(function(data){
+					toaster.pop('error', "Message", "Something went wrong, please try again.");
+				});
+
+			} else {
 				$rootScope.keyWordsLists[parentIndex].email.splice(index, 1);
-				toaster.pop('success', "Message", "Recipient Deleted.");
-			}).error(function(data){
-				toaster.pop('error', "Message", "Something went wrong, please try again.");
-			});
+			}
 
 		};
 
@@ -118,14 +124,7 @@ angular.module('app.keyWordsList')
 			{id: 1, name: 'awesome user1', status: 2, group: 4, groupName: 'admin'},
 			{id: 2, name: 'awesome user2', status: undefined, group: 3, groupName: 'vip'},
 			{id: 3, name: 'awesome user3', status: 2, group: null}
-		]; 
-
-		$scope.statuses = [
-			{value: 1, text: 'status1'},
-			{value: 2, text: 'status2'},
-			{value: 3, text: 'status3'},
-			{value: 4, text: 'status4'}
-		]; 
+		];
 
 		$scope.saveUser = function(data, id) {
 			//$scope.user not updated yet
@@ -133,15 +132,23 @@ angular.module('app.keyWordsList')
 			return $http.post('/saveUser', data);
 		};
 
-		// add user
-		$scope.addRecipent = function() {
+		/**
+		 * Add recipent
+		 * @param {[type]} index [description]
+		 */
+		$scope.addRecipent = function(index) {
+
+			var recipientList = $rootScope.keyWordsLists[index];
+			console.log(recipientList);
+
 			$scope.inserted = {
-			  id: $scope.users.length + 1,
-			  name: '',
-			  status: null,
-			  group: null 
+				email_list_id: recipientList.length + 1,
+				email: '',
+				full_name: '' 
 			};
-			$scope.users.push($scope.inserted);
+
+			$rootScope.keyWordsLists[index].email.push($scope.inserted);
+
 		};
 
 		/**

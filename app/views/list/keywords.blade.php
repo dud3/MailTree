@@ -47,7 +47,7 @@
 					  			</td>
 					  			<td>
 					  				<span editable-text="email.email" e-name="email" e-form="rowform" e-required>
-					  					<* email.email *>
+					  					<* email.email || 'empty' *>
 					  				</span>
 					  			</td>
 
@@ -71,7 +71,7 @@
 
 					  	</table>
 
-					  	 <button class="btn btn-sm btn-default" ng-click="addUser()">Add <span class="fa fa-plus" style="font-size:13px"></span></button>
+					  	 <button class="btn btn-sm btn-default" ng-click="addRecipent($index)">Add <span class="fa fa-plus" style="font-size:13px"></span></button>
 
 					  </div>
 					</div>

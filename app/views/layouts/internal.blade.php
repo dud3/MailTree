@@ -24,6 +24,7 @@
     <link href="/styles/main.css" rel="stylesheet">
     <link href="/bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="/bower_components/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
+    <link href="/bower_components/angular-xeditable/dist/css/xeditable.css">
     <link href="/bower_components/AngularJS-Toaster/toaster.css">
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed|PT+Sans|Titillium+Web' rel='stylesheet' type='text/css'>
@@ -68,20 +69,6 @@
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/scripts/main.js"></script>
 
-    <!-- Assets -->
-    <script src="/bower_components/angular/angular.min.js"></script>
-    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="/bower_components/angular-cookies/angular-cookies.min.js"></script>
-    <script src="/bower_components/angular-mocks/angular-mocks.js"></script>
-    <script src="/bower_components/angular-resource/angular-resource.min.js"></script>
-    <script src="/bower_components/angular-route/angular-route.min.js"></script>
-    <script src="/bower_components/angular-scenario/angular-scenario.js"></script>
-    <script src="/bower_components/angular-touch/angular-touch.min.js"></script>
-    <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-    <script src="/bower_components/angular-strap/dist/angular-strap.min.js"></script>
-    <script src="/bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
-    <script src="/bower_components/AngularJS-Toaster/toaster.js"></script>
-
     <script src="/bower_components/bootstrap/js/affix.js"></script>
     <script src="/bower_components/bootstrap/js/alert.js"></script>
     <script src="/bower_components/bootstrap/js/button.js"></script>
@@ -95,6 +82,21 @@
     <script src="/bower_components/bootstrap/js/tab.js"></script>
     <script src="/bower_components/bootstrap/js/transition.js"></script>
     <script src="/bower_components/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+
+    <!-- Assets -->
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="/bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="/bower_components/angular-scenario/angular-scenario.js"></script>
+    <script src="/bower_components/angular-touch/angular-touch.min.js"></script>
+    <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="/bower_components/angular-strap/dist/angular-strap.min.js"></script>
+    <script src="/bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+    <script src="/bower_components/AngularJS-Toaster/toaster.js"></script>
+    <script src="/bower_components/angular-xeditable/dist/js/xeditable.js"></script>
     
     <!-- app -->
     <script src="/scripts/app.js"></script>

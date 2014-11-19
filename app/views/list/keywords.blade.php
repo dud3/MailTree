@@ -71,7 +71,7 @@
 
 					  	</table>
 
-					  	 <button class="btn btn-sm btn-default" ng-click="addRecipent($index)">Add <span class="fa fa-plus" style="font-size:13px"></span></button>
+					  	 <button class="btn btn-sm btn-default" ng-click="addRecipent($index);">Add <span class="fa fa-plus" style="font-size:13px"></span></button>
 
 					  </div>
 					</div>

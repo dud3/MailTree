@@ -35,6 +35,7 @@ $(document).ready(function() {
         $('#collapseOne').collapse();
     });
 
+    /*
     //toggle `popup` / `inline` mode
     $.fn.editable.defaults.mode = 'popup';     
     
@@ -53,5 +54,6 @@ $(document).ready(function() {
             {value: 3, text: 'status 3'}
         ]
     });
+    */
 
 });

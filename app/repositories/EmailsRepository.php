@@ -307,7 +307,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
             }
 
             // Sleep a little
-            sleep(4);
+            sleep(2);
 
             var_dump("Sending message to: " . $data["email"] . " | full_name: " . $data["full_name"] . " | email_id:" . $mail->id);
             self::dump_output('send_emails', $data);

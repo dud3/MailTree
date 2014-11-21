@@ -227,19 +227,26 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
         $sql_mails = DB::select(
 
-            "SELECT * FROM mails m
+            "SELECT DISTINCT m.id, m.email_address_id, m.body, m.subject,
+            e_a_l.email, e_a_l.full_name
 
-             LEFT JOIN email_address_list e_a_l
+            FROM mails m
+
+             LEFT OUTER JOIN email_address_list e_a_l
                 ON m.email_address_id = e_a_l.id
 
              WHERE m.sent = 0
-             ORDER BY e_a_l.id"
 
-        );
+             ORDER BY e_a_l.email"
+
+        ,[]);
 
         foreach ($sql_mails as $mail) {
 
             self::openDump();
+
+            // Set sent to 1
+            $this->updateEmailStatus($mail->id, ["sent" => 1]);
 
             $email = $mail->email;
             $full_name = $mail->full_name;
@@ -250,9 +257,6 @@ class EmailsRepository implements EmailsRepositoryInterface {
                      "full_name" => $full_name,
                      "message_body" => $message_body,
                      "message_subject" => $message_subject];
-
-            // Set sent to 1
-            $this->updateEmailStatus($mail->id, ["sent" => 1]);
 
             //
             // Basically what we're doing here is that
@@ -276,7 +280,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             }
 
-            var_dump($data["message_body"]);
+            // var_dump($data["message_body"]);
 
             $data["message_body"] = implode("\n", $data["message_body"]);
 
@@ -302,7 +306,10 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             }
 
-            var_dump("To: " . $data["email"] . " | full_name: " . $data["full_name"]);
+            // Sleep a little
+            sleep(4);
+
+            var_dump("Sending message to: " . $data["email"] . " | full_name: " . $data["full_name"] . " | email_id:" . $mail->id);
             self::dump_output('send_emails', $data);
             self::closeDump();
 
@@ -344,7 +351,9 @@ class EmailsRepository implements EmailsRepositoryInterface {
      * @return [type] [description]
      */
     public function updateEmailStatus($id, $data) {
-        $smoething = $this->findMailByID($id)->fill($data)->save();
+        $findOne = $this->findMailByID($id);
+        $findOne->fill($data);
+        $findOne->save();
     }
 
 

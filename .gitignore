@@ -6,7 +6,4 @@ composer.lock
 .env.php
 .DS_Store
 Thumbs.db
-/sys_dump/*
 /sys_dump
-sys_dump
-sys_dump/*

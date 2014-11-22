@@ -12,8 +12,20 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="/app/emails">Emails</a></li>
+
+        <li 
+          @if(Config::get('constant.g_currentPage') == 'app')
+            class="active"
+          @endif
+        ><a href="/app">Home</a>
+        </li>
+
+        <li 
+          @if(Config::get('constant.g_currentPage') == 'app/emails')
+            class="active"
+          @endif
+        ><a href="/app/emails">Emails</a></li>
+
       </ul>
       
       <ul class="nav navbar-nav navbar-right">

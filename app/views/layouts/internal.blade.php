@@ -16,7 +16,7 @@
     <!-- Bootstrap additional theme -->
     <link href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
-    <!-- Main Animate CSS -->s
+    <!-- Main Animate CSS -->
     <link href="/bower_components/animate.css/animate.css" rel="stylesheet">
 
     <!-- Log-in style -->

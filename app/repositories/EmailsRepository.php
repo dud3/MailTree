@@ -223,8 +223,19 @@ class EmailsRepository implements EmailsRepositoryInterface {
      * Send stored mails from the database.
      * @return [type] [description]
      */
-    public function sendMails($fwd_from = null) {
+    public function sendMails($fwd_from = null, $test_user_only = false) {
 
+        $where = "";
+        $arg = [];
+        if($test_user_only)  {
+            $where = " AND m.email_address_id IN(?, ?, ?, ?, ?) ";
+            $arg[] = 1;
+            $arg[] = 12;
+            $arg[] = 21;
+            $arg[] = 20;
+            $arg[] = 16;
+        }
+        
         $sql_mails = DB::select(
 
             "SELECT DISTINCT m.id, m.email_address_id, m.body, m.subject,
@@ -237,9 +248,11 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
              WHERE m.sent = 0
 
+             " . $where . "
+
              ORDER BY e_a_l.email"
 
-        ,[]);
+        ,$arg);
 
         foreach ($sql_mails as $mail) {
 

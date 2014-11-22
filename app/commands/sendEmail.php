@@ -42,9 +42,13 @@ class sendEmail extends Command {
 	public function fire()
 	{
 
+		$__option_test_user_only = $this->option('test_user');
+
 		$this->comment("Sending emails...");
 
-		$this->emails->sendMails($fwd_from = null);
+		($__option_test_user_only) ? $this->comment("Test user: enabled") : $this->comment("Test user: disabled");
+
+		$this->emails->sendMails($fwd_from = null, $__option_test_user_only);
 		
 		$this->info("Emails sent.");
 
@@ -55,14 +59,15 @@ class sendEmail extends Command {
 	 *
 	 * @return array
 	 */
-	/*
-	protected function getArguments()
+	protected function getOptions()
 	{
 		return array(
-			array('fwd_from', InputArgument::REQUIRED, 'An example argument.'),
+			array('options', null, InputOption::VALUE_OPTIONAL, 'Help', null),
+			array('html_enable', null, InputOption::VALUE_REQUIRED, 'Argument as option.', null),
+			array('email_search', null, InputOption::VALUE_REQUIRED, 'Type of email(New, seen, unseen...).', null),
+			array('test_user', null, InputOption::VALUE_REQUIRED, 'Only Test user(s).', null),
 		);
 	}
-	*/
 
 	/**
 	 * Get the console command options.

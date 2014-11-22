@@ -24,7 +24,8 @@
           @if(Config::get('constant.g_currentPage') == 'app/emails')
             class="active"
           @endif
-        ><a href="/app/emails">Emails</a></li>
+        ><a href="/app/emails">Emails</a>
+        </li>
 
       </ul>
       

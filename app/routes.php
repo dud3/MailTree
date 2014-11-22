@@ -1,15 +1,15 @@
 <?php
 
-#													   													 #
+#													   #
 ########################################################
-##		    ____              __ 					  						##
-##		   / __ \____  __  __/ /____  _____ 		  			##
-##		  / /_/ / __ \/ / / / __/ _ \/ ___/ 		  			##
-##		 / _, _/ /_/ / /_/ / /_/  __(__  ) 			  			##
-##		/_/ |_|\____/\__,_/\__/\___/____/ 			  			##
-## 													  												##
+##		    ____              __ 					  ##
+##		   / __ \____  __  __/ /____  _____ 		  ##
+##		  / /_/ / __ \/ / / / __/ _ \/ ___/ 		  ##
+##		 / _, _/ /_/ / /_/ / /_/  __(__  ) 			  ##
+##		/_/ |_|\____/\__,_/\__/\___/____/ 			  ##
+## 													  ##
 ########################################################
-# All nescecary routes reide here 					   				 #
+# All nescecary routes reide here 					   #
 
 // -------------------------------------
 // :: Before log-in ::
@@ -20,13 +20,18 @@
 //
 Route::group(array('before' => 'guest'), function()
 {
-	Route::get('/', 			'AuthCtrl@view_login');
-	Route::get('/login',		'AuthCtrl@view_login');
-	Route::post('/login',		'AuthCtrl@login');
+
+	Route::resource('/', 			'AuthCtrl');
+	Route::resource('/login',		'AuthCtrl');
+
+	Route::group(array('prefix' => 'auth'), function()
+	{
+		Route::post('/login',		'AuthCtrl@login');
+	});
+
 });
 
 
-Route::get('/phpinfo',			'HelpCtrl@phpinfo');
 Route::get('/app',				'ListController@view_k_list');
 Route::get('/app/emails',		'EmailListCtrl@index');
 
@@ -67,4 +72,15 @@ Route::group(array('prefix' => 'api/v1'), function()
 
 	});
 
+});
+
+// ------------------------------------
+// :: Helpers ::
+// ------------------------------------
+//
+// All JSON calls goes here.
+//
+Route::group(array('prefix' => 'help'), function()
+{
+	Route::get('/phpinfo',			'HelpCtrl@phpinfo');
 });

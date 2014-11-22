@@ -16,7 +16,7 @@ class AuthCtrl extends BaseController {
 	 * Render the view of the log in.
 	 * @return [type] [description]
 	 */
-	public function view_login()
+	public function index()
 	{
 		return View::make('login');
 	}
@@ -35,9 +35,7 @@ class AuthCtrl extends BaseController {
 		}
 		catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
 		{
-			// User wasn't found, should only happen if the user was deleted
-			// when they were already logged in or had a "remember me" cookie set
-			// and they were deleted.
+
 		}
 	}
 

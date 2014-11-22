@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Log-in</title>
+    <title><?php echo (Config::get('constant.g_currentPage')) == '/' ? 'Welcome' : Config::get('constant.g_currentPage'); ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -16,7 +16,7 @@
     <!-- Bootstrap additional theme -->
     <link href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
-    <!-- Main Animate CSS -->
+    <!-- Main Animate CSS -->s
     <link href="/bower_components/animate.css/animate.css" rel="stylesheet">
 
     <!-- Log-in style -->
@@ -45,7 +45,7 @@
 
         <div class="container-fluid">
 
-            <?php if(Config::get('constant.g_currentPage') == '/' || Config::get('constant.g_currentPage') == '/login') { ?>
+            <?php if(Config::get('constant.g_currentPage') == '/' || Config::get('constant.g_currentPage') == 'login') { ?>
 
             <div class="container-fluid">
 

@@ -235,7 +235,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
             $arg[] = 20;
             $arg[] = 16;
         }
-        
+
         $sql_mails = DB::select(
 
             "SELECT DISTINCT m.id, m.email_address_id, m.body, m.subject,
@@ -425,7 +425,18 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 //
                 $k_arr_diff = array_diff($k_db, $get_keywords);
 
+                echo "\n-------------------- DB --------------------\n";
+                var_dump($k_db);
+                echo "\n-------------------- Get --------------------\n";
+                var_dump($get_keywords);
+                echo "\n-------------------- Intersect --------------------\n";
+                var_dump($k_intersect);
+                echo "\n-------------------- Diff Array --------------------\n";
+                var_dump($k_arr_diff);
+
                 if(count($k_arr_diff) == 0) {
+
+                    var_dump("we're in...");
 
                    $e_add_list = email_address_list::where("keyword_id", "=", $k_id)->get()->toArray();
 

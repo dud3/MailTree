@@ -1,1181 +1,6291 @@
-[33mSending emails...[39m
-array(36) {
+[33mReading emails...(ALL)[39m
+
+= = = = = =
+Read Emails
+= = = = = =
+Count Emails: 31
+-------------------------------------------------------------------------------------
+
+-------------------- DB --------------------
+array(3) {
   [0]=>
-  object(stdClass)#612 (6) {
-    ["id"]=>
-    string(1) "9"
-    ["email_address_id"]=>
-    string(1) "1"
-    ["body"]=>
-    string(1011) "The application CALCTY: California City Application                                       has been processed.
-
-Here are the process results.
-
-
-Click here to examine and approve the process.
-
-
-
-Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date/time : Mon-Oct-20-2014&nbsp;10:32:01
-Process Message
-
-
-
-
-
-
-
-
-
-Sheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;
-1) Please approve the above process results.
-2) Check the appropriate box.
-3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.
-
-[ ] Process results are correct,  Proceed with job.
-
-[ ] Process results are NOT correct, DO NOT proceed with job.
-
-
-Approval:__________________________________________ Date:_______________
-
-
-
-
-You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006
-"
-    ["subject"]=>
-    string(58) "Application CALCTY: California City Application processed."
-    ["email"]=>
-    string(17) "dk18184@gmail.com"
-    ["full_name"]=>
-    string(4) "Dren"
-  }
+  string(8) "Assembly"
   [1]=>
-  object(stdClass)#613 (6) {
-    ["id"]=>
-    string(2) "17"
-    ["email_address_id"]=>
-    string(1) "1"
-    ["body"]=>
-    string(1011) "The application CALCTY: California City Application                                       has been processed.
-
-Here are the process results.
-
-
-Click here to examine and approve the process.
-
-
-
-Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date/time : Mon-Oct-20-2014&nbsp;03:16:03
-Process Message
-
-
-
-
-
-
-
-
-
-Sheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;
-1) Please approve the above process results.
-2) Check the appropriate box.
-3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.
-
-[ ] Process results are correct,  Proceed with job.
-
-[ ] Process results are NOT correct, DO NOT proceed with job.
-
-
-Approval:__________________________________________ Date:_______________
-
-
-
-
-You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006
-"
-    ["subject"]=>
-    string(58) "Application CALCTY: California City Application processed."
-    ["email"]=>
-    string(17) "dk18184@gmail.com"
-    ["full_name"]=>
-    string(4) "Dren"
-  }
+  string(7) "Mailing"
   [2]=>
-  object(stdClass)#614 (6) {
-    ["id"]=>
-    string(2) "21"
-    ["email_address_id"]=>
-    string(1) "1"
-    ["body"]=>
-    string(312) "Run 201410200936                                                                                         for the application CALCTY                   : California City Application
-has been approved by username: tlac at 10/20/2014 15:51
-
-
-
-
-Here are the process results.
-
-
-Click here to examine the process.
-
-
-
-
-
-"
-    ["subject"]=>
-    string(65) "Application Results CALCTY: California City Application approved."
-    ["email"]=>
-    string(17) "dk18184@gmail.com"
-    ["full_name"]=>
-    string(4) "Dren"
-  }
-  [3]=>
-  object(stdClass)#615 (6) {
-    ["id"]=>
-    string(2) "26"
-    ["email_address_id"]=>
-    string(2) "12"
-    ["body"]=>
-    string(286) "Assembly & Mailing for job California City Utility Billing - October 2014 and segment MAIN  and application California City Application
-
-was completed at 8:05 PM on 10/21/2014.
-
-
-Items 1-3607 having a quantity of 3607 were mailed at 10/22/2014 9:00 AM.
-
-Click here to examine the task.
-"
-    ["subject"]=>
-    string(97) "Assembly & Mailing for job California City Utility Billing - October 2014 Segment:MAIN completed."
-    ["email"]=>
-    string(17) "dk18184@gmail.com"
-    ["full_name"]=>
-    string(4) "Dren"
-  }
-  [4]=>
-  object(stdClass)#616 (6) {
-    ["id"]=>
-    string(2) "30"
-    ["email_address_id"]=>
-    string(1) "1"
-    ["body"]=>
-    string(286) "Assembly & Mailing for job California City Utility Billing - October 2014 and segment MAIN  and application California City Application
-
-was completed at 8:05 PM on 10/21/2014.
-
-
-Items 1-3607 having a quantity of 3607 were mailed at 10/22/2014 9:00 AM.
-
-Click here to examine the task.
-"
-    ["subject"]=>
-    string(97) "Assembly & Mailing for job California City Utility Billing - October 2014 Segment:MAIN completed."
-    ["email"]=>
-    string(17) "dk18184@gmail.com"
-    ["full_name"]=>
-    string(4) "Dren"
-  }
-  [5]=>
-  object(stdClass)#617 (6) {
-    ["id"]=>
-    string(2) "34"
-    ["email_address_id"]=>
-    string(1) "1"
-    ["body"]=>
-    string(178) "The file CalCity_20141210.zip of filesize 420294 was uploaded to application CALCTY                   : California City Application
-by username: talexander at 11/18/2014 19:11
-
-
-"
-    ["subject"]=>
-    string(52) "File Uploaded to CALCTY: California City Application"
-    ["email"]=>
-    string(17) "dk18184@gmail.com"
-    ["full_name"]=>
-    string(4) "Dren"
-  }
-  [6]=>
-  object(stdClass)#618 (6) {
-    ["id"]=>
-    string(2) "38"
-    ["email_address_id"]=>
-    string(1) "1"
-    ["body"]=>
-    string(1011) "The application CALCTY: California City Application                                       has been processed.
-
-Here are the process results.
-
-
-Click here to examine and approve the process.
-
-
-
-Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201411190926date/time : Wed-Nov-19-2014&nbsp;10:16:01
-Process Message
-
-
-
-
-
-
-
-
-
-Sheets Per Outer Envelope101234134236211223151172122315256181191      TotalsTotal Records Printed:4005&nbsp;Total Records Processed:4323Receiving a reply envelope:3494&nbsp;&nbsp;&nbsp;&nbsp;
-1) Please approve the above process results.
-2) Check the appropriate box.
-3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.
-
-[ ] Process results are correct,  Proceed with job.
-
-[ ] Process results are NOT correct, DO NOT proceed with job.
-
-
-Approval:__________________________________________ Date:_______________
-
-
-
-
-You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006
-"
-    ["subject"]=>
-    string(58) "Application CALCTY: California City Application processed."
-    ["email"]=>
-    string(17) "dk18184@gmail.com"
-    ["full_name"]=>
-    string(4) "Dren"
-  }
-  [7]=>
-  object(stdClass)#619 (6) {
-    ["id"]=>
-    string(2) "42"
-    ["email_address_id"]=>
-    string(1) "1"
-    ["body"]=>
-    string(318) "Run 201411190926                                                                                         for the application CALCTY                   : California City Application
-has been approved by username: talexander at 11/20/2014 15:35
-
-
-
-
-Here are the process results.
-
-
-Click here to examine the process.
-
-
-
-
-
-"
-    ["subject"]=>
-    string(65) "Application Results CALCTY: California City Application approved."
-    ["email"]=>
-    string(17) "dk18184@gmail.com"
-    ["full_name"]=>
-    string(4) "Dren"
-  }
-  [8]=>
-  object(stdClass)#620 (6) {
-    ["id"]=>
-    string(2) "25"
-    ["email_address_id"]=>
-    string(1) "7"
-    ["body"]=>
-    string(286) "Assembly & Mailing for job California City Utility Billing - October 2014 and segment MAIN  and application California City Application
-
-was completed at 8:05 PM on 10/21/2014.
-
-
-Items 1-3607 having a quantity of 3607 were mailed at 10/22/2014 9:00 AM.
-
-Click here to examine the task.
-"
-    ["subject"]=>
-    string(97) "Assembly & Mailing for job California City Utility Billing - October 2014 Segment:MAIN completed."
-    ["email"]=>
-    string(14) "drk3@gmail.com"
-    ["full_name"]=>
-    string(6) "Dren.K"
-  }
-  [9]=>
-  object(stdClass)#621 (6) {
-    ["id"]=>
-    string(1) "4"
-    ["email_address_id"]=>
-    string(2) "11"
-    ["body"]=>
-    string(172) "The file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application
-by username: tlac at 10/17/2014 22:05
-
-
-"
-    ["subject"]=>
-    string(52) "File Uploaded to CALCTY: California City Application"
-    ["email"]=>
-    string(20) "ta@alexander-co.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [10]=>
-  object(stdClass)#622 (6) {
-    ["id"]=>
-    string(1) "8"
-    ["email_address_id"]=>
-    string(2) "11"
-    ["body"]=>
-    string(1011) "The application CALCTY: California City Application                                       has been processed.
-
-Here are the process results.
-
-
-Click here to examine and approve the process.
-
-
-
-Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410172206date/time : Fri-Oct-17-2014&nbsp;10:54:00
-Process Message
-
-
-
-
-
-
-
-
-
-Sheets Per Outer Envelope101234093156611112014217212221151191131      TotalsTotal Records Printed:3945&nbsp;Total Records Processed:4247Receiving a reply envelope:3439&nbsp;&nbsp;&nbsp;&nbsp;
-1) Please approve the above process results.
-2) Check the appropriate box.
-3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.
-
-[ ] Process results are correct,  Proceed with job.
-
-[ ] Process results are NOT correct, DO NOT proceed with job.
-
-
-Approval:__________________________________________ Date:_______________
-
-
-
-
-You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006
-"
-    ["subject"]=>
-    string(58) "Application CALCTY: California City Application processed."
-    ["email"]=>
-    string(20) "ta@alexander-co.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [11]=>
-  object(stdClass)#623 (6) {
-    ["id"]=>
-    string(2) "16"
-    ["email_address_id"]=>
-    string(2) "11"
-    ["body"]=>
-    string(399) "Run 201410200936                                                                                         for the application CALCTY                   : California City Application
-has been REJECTED by username: tlac at 10/20/2014 11:52
-
-
-
-Remarks regarding the denial of approval:
-
-Correction in message content per Cindy
-
-
-Here are the process results.
-
-
-
-
-Click here to examine the process.
-
-
-
-
-
-
-"
-    ["subject"]=>
-    string(57) "Application CALCTY: California City Application REJECTED."
-    ["email"]=>
-    string(20) "ta@alexander-co.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [12]=>
-  object(stdClass)#624 (6) {
-    ["id"]=>
-    string(2) "20"
-    ["email_address_id"]=>
-    string(2) "11"
-    ["body"]=>
-    string(1011) "The application CALCTY: California City Application                                       has been processed.
-
-Here are the process results.
-
-
-Click here to examine and approve the process.
-
-
-
-Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date/time : Mon-Oct-20-2014&nbsp;03:16:03
-Process Message
-
-
-
-
-
-
-
-
-
-Sheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;
-1) Please approve the above process results.
-2) Check the appropriate box.
-3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.
-
-[ ] Process results are correct,  Proceed with job.
-
-[ ] Process results are NOT correct, DO NOT proceed with job.
-
-
-Approval:__________________________________________ Date:_______________
-
-
-
-
-You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006
-"
-    ["subject"]=>
-    string(58) "Application CALCTY: California City Application processed."
-    ["email"]=>
-    string(20) "ta@alexander-co.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [13]=>
-  object(stdClass)#625 (6) {
-    ["id"]=>
-    string(2) "24"
-    ["email_address_id"]=>
-    string(2) "11"
-    ["body"]=>
-    string(312) "Run 201410200936                                                                                         for the application CALCTY                   : California City Application
-has been approved by username: tlac at 10/20/2014 15:51
-
-
-
-
-Here are the process results.
-
-
-Click here to examine the process.
-
-
-
-
-
-"
-    ["subject"]=>
-    string(65) "Application Results CALCTY: California City Application approved."
-    ["email"]=>
-    string(20) "ta@alexander-co.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [14]=>
-  object(stdClass)#626 (6) {
-    ["id"]=>
-    string(2) "29"
-    ["email_address_id"]=>
-    string(2) "15"
-    ["body"]=>
-    string(286) "Assembly & Mailing for job California City Utility Billing - October 2014 and segment MAIN  and application California City Application
-
-was completed at 8:05 PM on 10/21/2014.
-
-
-Items 1-3607 having a quantity of 3607 were mailed at 10/22/2014 9:00 AM.
-
-Click here to examine the task.
-"
-    ["subject"]=>
-    string(97) "Assembly & Mailing for job California City Utility Billing - October 2014 Segment:MAIN completed."
-    ["email"]=>
-    string(20) "ta@alexander-co.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [15]=>
-  object(stdClass)#627 (6) {
-    ["id"]=>
-    string(2) "33"
-    ["email_address_id"]=>
-    string(2) "11"
-    ["body"]=>
-    string(286) "Assembly & Mailing for job California City Utility Billing - October 2014 and segment MAIN  and application California City Application
-
-was completed at 8:05 PM on 10/21/2014.
-
-
-Items 1-3607 having a quantity of 3607 were mailed at 10/22/2014 9:00 AM.
-
-Click here to examine the task.
-"
-    ["subject"]=>
-    string(97) "Assembly & Mailing for job California City Utility Billing - October 2014 Segment:MAIN completed."
-    ["email"]=>
-    string(20) "ta@alexander-co.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [16]=>
-  object(stdClass)#628 (6) {
-    ["id"]=>
-    string(2) "37"
-    ["email_address_id"]=>
-    string(2) "11"
-    ["body"]=>
-    string(178) "The file CalCity_20141210.zip of filesize 420294 was uploaded to application CALCTY                   : California City Application
-by username: talexander at 11/18/2014 19:11
-
-
-"
-    ["subject"]=>
-    string(52) "File Uploaded to CALCTY: California City Application"
-    ["email"]=>
-    string(20) "ta@alexander-co.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [17]=>
-  object(stdClass)#629 (6) {
-    ["id"]=>
-    string(2) "41"
-    ["email_address_id"]=>
-    string(2) "11"
-    ["body"]=>
-    string(1011) "The application CALCTY: California City Application                                       has been processed.
-
-Here are the process results.
-
-
-Click here to examine and approve the process.
-
-
-
-Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201411190926date/time : Wed-Nov-19-2014&nbsp;10:16:01
-Process Message
-
-
-
-
-
-
-
-
-
-Sheets Per Outer Envelope101234134236211223151172122315256181191      TotalsTotal Records Printed:4005&nbsp;Total Records Processed:4323Receiving a reply envelope:3494&nbsp;&nbsp;&nbsp;&nbsp;
-1) Please approve the above process results.
-2) Check the appropriate box.
-3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.
-
-[ ] Process results are correct,  Proceed with job.
-
-[ ] Process results are NOT correct, DO NOT proceed with job.
-
-
-Approval:__________________________________________ Date:_______________
-
-
-
-
-You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006
-"
-    ["subject"]=>
-    string(58) "Application CALCTY: California City Application processed."
-    ["email"]=>
-    string(20) "ta@alexander-co.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [18]=>
-  object(stdClass)#630 (6) {
-    ["id"]=>
-    string(2) "45"
-    ["email_address_id"]=>
-    string(2) "11"
-    ["body"]=>
-    string(318) "Run 201411190926                                                                                         for the application CALCTY                   : California City Application
-has been approved by username: talexander at 11/20/2014 15:35
-
-
-
-
-Here are the process results.
-
-
-Click here to examine the process.
-
-
-
-
-
-"
-    ["subject"]=>
-    string(65) "Application Results CALCTY: California City Application approved."
-    ["email"]=>
-    string(20) "ta@alexander-co.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [19]=>
-  object(stdClass)#631 (6) {
-    ["id"]=>
-    string(1) "3"
-    ["email_address_id"]=>
-    string(1) "6"
-    ["body"]=>
-    string(172) "The file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application
-by username: tlac at 10/17/2014 22:05
-
-
-"
-    ["subject"]=>
-    string(52) "File Uploaded to CALCTY: California City Application"
-    ["email"]=>
-    string(15) "ta@alexent.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [20]=>
-  object(stdClass)#632 (6) {
-    ["id"]=>
-    string(2) "19"
-    ["email_address_id"]=>
-    string(1) "6"
-    ["body"]=>
-    string(1011) "The application CALCTY: California City Application                                       has been processed.
-
-Here are the process results.
-
-
-Click here to examine and approve the process.
-
-
-
-Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date/time : Mon-Oct-20-2014&nbsp;03:16:03
-Process Message
-
-
-
-
-
-
-
-
-
-Sheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;
-1) Please approve the above process results.
-2) Check the appropriate box.
-3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.
-
-[ ] Process results are correct,  Proceed with job.
-
-[ ] Process results are NOT correct, DO NOT proceed with job.
-
-
-Approval:__________________________________________ Date:_______________
-
-
-
-
-You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006
-"
-    ["subject"]=>
-    string(58) "Application CALCTY: California City Application processed."
-    ["email"]=>
-    string(15) "ta@alexent.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [21]=>
-  object(stdClass)#633 (6) {
-    ["id"]=>
-    string(2) "23"
-    ["email_address_id"]=>
-    string(1) "6"
-    ["body"]=>
-    string(312) "Run 201410200936                                                                                         for the application CALCTY                   : California City Application
-has been approved by username: tlac at 10/20/2014 15:51
-
-
-
-
-Here are the process results.
-
-
-Click here to examine the process.
-
-
-
-
-
-"
-    ["subject"]=>
-    string(65) "Application Results CALCTY: California City Application approved."
-    ["email"]=>
-    string(15) "ta@alexent.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [22]=>
-  object(stdClass)#634 (6) {
-    ["id"]=>
-    string(2) "28"
-    ["email_address_id"]=>
-    string(2) "14"
-    ["body"]=>
-    string(286) "Assembly & Mailing for job California City Utility Billing - October 2014 and segment MAIN  and application California City Application
-
-was completed at 8:05 PM on 10/21/2014.
-
-
-Items 1-3607 having a quantity of 3607 were mailed at 10/22/2014 9:00 AM.
-
-Click here to examine the task.
-"
-    ["subject"]=>
-    string(97) "Assembly & Mailing for job California City Utility Billing - October 2014 Segment:MAIN completed."
-    ["email"]=>
-    string(15) "ta@alexent.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [23]=>
-  object(stdClass)#635 (6) {
-    ["id"]=>
-    string(2) "32"
-    ["email_address_id"]=>
-    string(1) "6"
-    ["body"]=>
-    string(286) "Assembly & Mailing for job California City Utility Billing - October 2014 and segment MAIN  and application California City Application
-
-was completed at 8:05 PM on 10/21/2014.
-
-
-Items 1-3607 having a quantity of 3607 were mailed at 10/22/2014 9:00 AM.
-
-Click here to examine the task.
-"
-    ["subject"]=>
-    string(97) "Assembly & Mailing for job California City Utility Billing - October 2014 Segment:MAIN completed."
-    ["email"]=>
-    string(15) "ta@alexent.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [24]=>
-  object(stdClass)#636 (6) {
-    ["id"]=>
-    string(2) "36"
-    ["email_address_id"]=>
-    string(1) "6"
-    ["body"]=>
-    string(178) "The file CalCity_20141210.zip of filesize 420294 was uploaded to application CALCTY                   : California City Application
-by username: talexander at 11/18/2014 19:11
-
-
-"
-    ["subject"]=>
-    string(52) "File Uploaded to CALCTY: California City Application"
-    ["email"]=>
-    string(15) "ta@alexent.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [25]=>
-  object(stdClass)#637 (6) {
-    ["id"]=>
-    string(2) "40"
-    ["email_address_id"]=>
-    string(1) "6"
-    ["body"]=>
-    string(1011) "The application CALCTY: California City Application                                       has been processed.
-
-Here are the process results.
-
-
-Click here to examine and approve the process.
-
-
-
-Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201411190926date/time : Wed-Nov-19-2014&nbsp;10:16:01
-Process Message
-
-
-
-
-
-
-
-
-
-Sheets Per Outer Envelope101234134236211223151172122315256181191      TotalsTotal Records Printed:4005&nbsp;Total Records Processed:4323Receiving a reply envelope:3494&nbsp;&nbsp;&nbsp;&nbsp;
-1) Please approve the above process results.
-2) Check the appropriate box.
-3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.
-
-[ ] Process results are correct,  Proceed with job.
-
-[ ] Process results are NOT correct, DO NOT proceed with job.
-
-
-Approval:__________________________________________ Date:_______________
-
-
-
-
-You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006
-"
-    ["subject"]=>
-    string(58) "Application CALCTY: California City Application processed."
-    ["email"]=>
-    string(15) "ta@alexent.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [26]=>
-  object(stdClass)#638 (6) {
-    ["id"]=>
-    string(2) "44"
-    ["email_address_id"]=>
-    string(1) "6"
-    ["body"]=>
-    string(318) "Run 201411190926                                                                                         for the application CALCTY                   : California City Application
-has been approved by username: talexander at 11/20/2014 15:35
-
-
-
-
-Here are the process results.
-
-
-Click here to examine the process.
-
-
-
-
-
-"
-    ["subject"]=>
-    string(65) "Application Results CALCTY: California City Application approved."
-    ["email"]=>
-    string(15) "ta@alexent.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [27]=>
-  object(stdClass)#639 (6) {
-    ["id"]=>
-    string(1) "2"
-    ["email_address_id"]=>
-    string(1) "5"
-    ["body"]=>
-    string(172) "The file CalCity_20141110.zip of filesize 460333 was uploaded to application CALCTY                   : California City Application
-by username: tlac at 10/17/2014 22:05
-
-
-"
-    ["subject"]=>
-    string(52) "File Uploaded to CALCTY: California City Application"
-    ["email"]=>
-    string(17) "tlac@acsbill.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [28]=>
-  object(stdClass)#640 (6) {
-    ["id"]=>
-    string(2) "10"
-    ["email_address_id"]=>
-    string(1) "5"
-    ["body"]=>
-    string(1011) "The application CALCTY: California City Application                                       has been processed.
-
-Here are the process results.
-
-
-Click here to examine and approve the process.
-
-
-
-Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date/time : Mon-Oct-20-2014&nbsp;10:32:01
-Process Message
-
-
-
-
-
-
-
-
-
-Sheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;
-1) Please approve the above process results.
-2) Check the appropriate box.
-3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.
-
-[ ] Process results are correct,  Proceed with job.
-
-[ ] Process results are NOT correct, DO NOT proceed with job.
-
-
-Approval:__________________________________________ Date:_______________
-
-
-
-
-You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006
-"
-    ["subject"]=>
-    string(58) "Application CALCTY: California City Application processed."
-    ["email"]=>
-    string(17) "tlac@acsbill.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [29]=>
-  object(stdClass)#641 (6) {
-    ["id"]=>
-    string(2) "18"
-    ["email_address_id"]=>
-    string(1) "5"
-    ["body"]=>
-    string(1011) "The application CALCTY: California City Application                                       has been processed.
-
-Here are the process results.
-
-
-Click here to examine and approve the process.
-
-
-
-Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201410200936date/time : Mon-Oct-20-2014&nbsp;03:16:03
-Process Message
-
-
-
-
-
-
-
-
-
-Sheets Per Outer Envelope134081313156611012014217211121151191122      TotalsTotal Records Printed:3944&nbsp;Total Records Processed:4247Receiving a reply envelope:3435&nbsp;&nbsp;&nbsp;&nbsp;
-1) Please approve the above process results.
-2) Check the appropriate box.
-3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.
-
-[ ] Process results are correct,  Proceed with job.
-
-[ ] Process results are NOT correct, DO NOT proceed with job.
-
-
-Approval:__________________________________________ Date:_______________
-
-
-
-
-You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006
-"
-    ["subject"]=>
-    string(58) "Application CALCTY: California City Application processed."
-    ["email"]=>
-    string(17) "tlac@acsbill.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [30]=>
-  object(stdClass)#642 (6) {
-    ["id"]=>
-    string(2) "22"
-    ["email_address_id"]=>
-    string(1) "5"
-    ["body"]=>
-    string(312) "Run 201410200936                                                                                         for the application CALCTY                   : California City Application
-has been approved by username: tlac at 10/20/2014 15:51
-
-
-
-
-Here are the process results.
-
-
-Click here to examine the process.
-
-
-
-
-
-"
-    ["subject"]=>
-    string(65) "Application Results CALCTY: California City Application approved."
-    ["email"]=>
-    string(17) "tlac@acsbill.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [31]=>
-  object(stdClass)#643 (6) {
-    ["id"]=>
-    string(2) "27"
-    ["email_address_id"]=>
-    string(2) "13"
-    ["body"]=>
-    string(286) "Assembly & Mailing for job California City Utility Billing - October 2014 and segment MAIN  and application California City Application
-
-was completed at 8:05 PM on 10/21/2014.
-
-
-Items 1-3607 having a quantity of 3607 were mailed at 10/22/2014 9:00 AM.
-
-Click here to examine the task.
-"
-    ["subject"]=>
-    string(97) "Assembly & Mailing for job California City Utility Billing - October 2014 Segment:MAIN completed."
-    ["email"]=>
-    string(17) "tlac@acsbill.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [32]=>
-  object(stdClass)#644 (6) {
-    ["id"]=>
-    string(2) "31"
-    ["email_address_id"]=>
-    string(1) "5"
-    ["body"]=>
-    string(286) "Assembly & Mailing for job California City Utility Billing - October 2014 and segment MAIN  and application California City Application
-
-was completed at 8:05 PM on 10/21/2014.
-
-
-Items 1-3607 having a quantity of 3607 were mailed at 10/22/2014 9:00 AM.
-
-Click here to examine the task.
-"
-    ["subject"]=>
-    string(97) "Assembly & Mailing for job California City Utility Billing - October 2014 Segment:MAIN completed."
-    ["email"]=>
-    string(17) "tlac@acsbill.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [33]=>
-  object(stdClass)#645 (6) {
-    ["id"]=>
-    string(2) "35"
-    ["email_address_id"]=>
-    string(1) "5"
-    ["body"]=>
-    string(178) "The file CalCity_20141210.zip of filesize 420294 was uploaded to application CALCTY                   : California City Application
-by username: talexander at 11/18/2014 19:11
-
-
-"
-    ["subject"]=>
-    string(52) "File Uploaded to CALCTY: California City Application"
-    ["email"]=>
-    string(17) "tlac@acsbill.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [34]=>
-  object(stdClass)#646 (6) {
-    ["id"]=>
-    string(2) "39"
-    ["email_address_id"]=>
-    string(1) "5"
-    ["body"]=>
-    string(1011) "The application CALCTY: California City Application                                       has been processed.
-
-Here are the process results.
-
-
-Click here to examine and approve the process.
-
-
-
-Sebis Direct, Inc.Process Resultsapplication code : CALCTYrun id : 201411190926date/time : Wed-Nov-19-2014&nbsp;10:16:01
-Process Message
-
-
-
-
-
-
-
-
-
-Sheets Per Outer Envelope101234134236211223151172122315256181191      TotalsTotal Records Printed:4005&nbsp;Total Records Processed:4323Receiving a reply envelope:3494&nbsp;&nbsp;&nbsp;&nbsp;
-1) Please approve the above process results.
-2) Check the appropriate box.
-3) Fax this form back to the Sebis Direct Data Center: 708-546-2006.
-
-[ ] Process results are correct,  Proceed with job.
-
-[ ] Process results are NOT correct, DO NOT proceed with job.
-
-
-Approval:__________________________________________ Date:_______________
-
-
-
-
-You may also print and fax us the above approval document.  If you choose to fax the above approval document, please fax it to: 708-546-2006
-"
-    ["subject"]=>
-    string(58) "Application CALCTY: California City Application processed."
-    ["email"]=>
-    string(17) "tlac@acsbill.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
-  [35]=>
-  object(stdClass)#647 (6) {
-    ["id"]=>
-    string(2) "43"
-    ["email_address_id"]=>
-    string(1) "5"
-    ["body"]=>
-    string(318) "Run 201411190926                                                                                         for the application CALCTY                   : California City Application
-has been approved by username: talexander at 11/20/2014 15:35
-
-
-
-
-Here are the process results.
-
-
-Click here to examine the process.
-
-
-
-
-
-"
-    ["subject"]=>
-    string(65) "Application Results CALCTY: California City Application approved."
-    ["email"]=>
-    string(17) "tlac@acsbill.com1"
-    ["full_name"]=>
-    string(3) "Tim"
-  }
+  string(10) "California"
 }
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(7) "CALCTY:"
+  [4]=>
+  string(10) "California"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(11) "Application"
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(7) "CALCTY:"
+  [4]=>
+  string(10) "California"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(11) "Application"
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 1 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 6 	| Email: tlac@alexent.com 	| Name: Tim
+Email stored for:  	| ID: 11 	| Email: ta@alexander-co.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(7) "CALCTY:"
+  [4]=>
+  string(10) "California"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(11) "Application"
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(7) "CALCTY:"
+  [4]=>
+  string(10) "California"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(11) "Application"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(7) "CALCTY:"
+  [4]=>
+  string(10) "California"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(11) "Application"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 1 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 6 	| Email: tlac@alexent.com 	| Name: Tim
+Email stored for:  	| ID: 11 	| Email: ta@alexander-co.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 1 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 6 	| Email: tlac@alexent.com 	| Name: Tim
+Email stored for:  	| ID: 11 	| Email: ta@alexander-co.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(9) "REJECTED."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(9) "REJECTED."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 1 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 6 	| Email: tlac@alexent.com 	| Name: Tim
+Email stored for:  	| ID: 11 	| Email: ta@alexander-co.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(9) "REJECTED."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(9) "REJECTED."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(9) "REJECTED."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 1 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 6 	| Email: tlac@alexent.com 	| Name: Tim
+Email stored for:  	| ID: 11 	| Email: ta@alexander-co.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(7) "CALCTY:"
+  [3]=>
+  string(10) "California"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(11) "Application"
+  [6]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(7) "CALCTY:"
+  [3]=>
+  string(10) "California"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(11) "Application"
+  [6]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 1 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 6 	| Email: tlac@alexent.com 	| Name: Tim
+Email stored for:  	| ID: 11 	| Email: ta@alexander-co.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(7) "CALCTY:"
+  [3]=>
+  string(10) "California"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(11) "Application"
+  [6]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(7) "CALCTY:"
+  [3]=>
+  string(10) "California"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(11) "Application"
+  [6]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(7) "CALCTY:"
+  [3]=>
+  string(10) "California"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(11) "Application"
+  [6]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(14) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(10) "California"
+  [6]=>
+  string(4) "City"
+  [7]=>
+  string(7) "Utility"
+  [8]=>
+  string(7) "Billing"
+  [9]=>
+  string(1) "-"
+  [10]=>
+  string(7) "October"
+  [11]=>
+  string(4) "2014"
+  [12]=>
+  string(12) "Segment:MAIN"
+  [13]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 7 	| Email: drk3@gmail.com 	| Name: Dren.K
+Email stored for:  	| ID: 12 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 14 	| Email: tlac@alexent.com 	| Name: Tim
+Email stored for:  	| ID: 15 	| Email: ta@alexander-co.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(14) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(10) "California"
+  [6]=>
+  string(4) "City"
+  [7]=>
+  string(7) "Utility"
+  [8]=>
+  string(7) "Billing"
+  [9]=>
+  string(1) "-"
+  [10]=>
+  string(7) "October"
+  [11]=>
+  string(4) "2014"
+  [12]=>
+  string(12) "Segment:MAIN"
+  [13]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 1 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 6 	| Email: tlac@alexent.com 	| Name: Tim
+Email stored for:  	| ID: 11 	| Email: ta@alexander-co.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(14) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(10) "California"
+  [6]=>
+  string(4) "City"
+  [7]=>
+  string(7) "Utility"
+  [8]=>
+  string(7) "Billing"
+  [9]=>
+  string(1) "-"
+  [10]=>
+  string(7) "October"
+  [11]=>
+  string(4) "2014"
+  [12]=>
+  string(12) "Segment:MAIN"
+  [13]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(14) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(10) "California"
+  [6]=>
+  string(4) "City"
+  [7]=>
+  string(7) "Utility"
+  [8]=>
+  string(7) "Billing"
+  [9]=>
+  string(1) "-"
+  [10]=>
+  string(7) "October"
+  [11]=>
+  string(4) "2014"
+  [12]=>
+  string(12) "Segment:MAIN"
+  [13]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(14) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(10) "California"
+  [6]=>
+  string(4) "City"
+  [7]=>
+  string(7) "Utility"
+  [8]=>
+  string(7) "Billing"
+  [9]=>
+  string(1) "-"
+  [10]=>
+  string(7) "October"
+  [11]=>
+  string(4) "2014"
+  [12]=>
+  string(12) "Segment:MAIN"
+  [13]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(9) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(12) "ATASCADERO1:"
+  [4]=>
+  string(10) "Atascadero"
+  [5]=>
+  string(6) "Mutual"
+  [6]=>
+  string(5) "Water"
+  [7]=>
+  string(7) "Company"
+  [8]=>
+  string(7) "Billing"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(9) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(12) "ATASCADERO1:"
+  [4]=>
+  string(10) "Atascadero"
+  [5]=>
+  string(6) "Mutual"
+  [6]=>
+  string(5) "Water"
+  [7]=>
+  string(7) "Company"
+  [8]=>
+  string(7) "Billing"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(9) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(12) "ATASCADERO1:"
+  [4]=>
+  string(10) "Atascadero"
+  [5]=>
+  string(6) "Mutual"
+  [6]=>
+  string(5) "Water"
+  [7]=>
+  string(7) "Company"
+  [8]=>
+  string(7) "Billing"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(9) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(12) "ATASCADERO1:"
+  [4]=>
+  string(10) "Atascadero"
+  [5]=>
+  string(6) "Mutual"
+  [6]=>
+  string(5) "Water"
+  [7]=>
+  string(7) "Company"
+  [8]=>
+  string(7) "Billing"
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 21 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 23 	| Email: ta@alexander-co.com 	| Name: Tim
+Email stored for:  	| ID: 25 	| Email: tlac@alexent.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(9) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(12) "ATASCADERO1:"
+  [4]=>
+  string(10) "Atascadero"
+  [5]=>
+  string(6) "Mutual"
+  [6]=>
+  string(5) "Water"
+  [7]=>
+  string(7) "Company"
+  [8]=>
+  string(7) "Billing"
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(8) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(12) "ATASCADERO1:"
+  [2]=>
+  string(10) "Atascadero"
+  [3]=>
+  string(6) "Mutual"
+  [4]=>
+  string(5) "Water"
+  [5]=>
+  string(7) "Company"
+  [6]=>
+  string(7) "Billing"
+  [7]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(8) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(12) "ATASCADERO1:"
+  [2]=>
+  string(10) "Atascadero"
+  [3]=>
+  string(6) "Mutual"
+  [4]=>
+  string(5) "Water"
+  [5]=>
+  string(7) "Company"
+  [6]=>
+  string(7) "Billing"
+  [7]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(8) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(12) "ATASCADERO1:"
+  [2]=>
+  string(10) "Atascadero"
+  [3]=>
+  string(6) "Mutual"
+  [4]=>
+  string(5) "Water"
+  [5]=>
+  string(7) "Company"
+  [6]=>
+  string(7) "Billing"
+  [7]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(8) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(12) "ATASCADERO1:"
+  [2]=>
+  string(10) "Atascadero"
+  [3]=>
+  string(6) "Mutual"
+  [4]=>
+  string(5) "Water"
+  [5]=>
+  string(7) "Company"
+  [6]=>
+  string(7) "Billing"
+  [7]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 21 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 23 	| Email: ta@alexander-co.com 	| Name: Tim
+Email stored for:  	| ID: 25 	| Email: tlac@alexent.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(8) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(12) "ATASCADERO1:"
+  [2]=>
+  string(10) "Atascadero"
+  [3]=>
+  string(6) "Mutual"
+  [4]=>
+  string(5) "Water"
+  [5]=>
+  string(7) "Company"
+  [6]=>
+  string(7) "Billing"
+  [7]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(8) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(12) "ATASCADERO1:"
+  [2]=>
+  string(10) "Atascadero"
+  [3]=>
+  string(6) "Mutual"
+  [4]=>
+  string(5) "Water"
+  [5]=>
+  string(7) "Company"
+  [6]=>
+  string(7) "Billing"
+  [7]=>
+  string(9) "REJECTED."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(8) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(12) "ATASCADERO1:"
+  [2]=>
+  string(10) "Atascadero"
+  [3]=>
+  string(6) "Mutual"
+  [4]=>
+  string(5) "Water"
+  [5]=>
+  string(7) "Company"
+  [6]=>
+  string(7) "Billing"
+  [7]=>
+  string(9) "REJECTED."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(8) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(12) "ATASCADERO1:"
+  [2]=>
+  string(10) "Atascadero"
+  [3]=>
+  string(6) "Mutual"
+  [4]=>
+  string(5) "Water"
+  [5]=>
+  string(7) "Company"
+  [6]=>
+  string(7) "Billing"
+  [7]=>
+  string(9) "REJECTED."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(8) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(12) "ATASCADERO1:"
+  [2]=>
+  string(10) "Atascadero"
+  [3]=>
+  string(6) "Mutual"
+  [4]=>
+  string(5) "Water"
+  [5]=>
+  string(7) "Company"
+  [6]=>
+  string(7) "Billing"
+  [7]=>
+  string(9) "REJECTED."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 21 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 23 	| Email: ta@alexander-co.com 	| Name: Tim
+Email stored for:  	| ID: 25 	| Email: tlac@alexent.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(8) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(12) "ATASCADERO1:"
+  [2]=>
+  string(10) "Atascadero"
+  [3]=>
+  string(6) "Mutual"
+  [4]=>
+  string(5) "Water"
+  [5]=>
+  string(7) "Company"
+  [6]=>
+  string(7) "Billing"
+  [7]=>
+  string(9) "REJECTED."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(9) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(12) "ATASCADERO1:"
+  [4]=>
+  string(10) "Atascadero"
+  [5]=>
+  string(6) "Mutual"
+  [6]=>
+  string(5) "Water"
+  [7]=>
+  string(7) "Company"
+  [8]=>
+  string(7) "Billing"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(9) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(12) "ATASCADERO1:"
+  [4]=>
+  string(10) "Atascadero"
+  [5]=>
+  string(6) "Mutual"
+  [6]=>
+  string(5) "Water"
+  [7]=>
+  string(7) "Company"
+  [8]=>
+  string(7) "Billing"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(9) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(12) "ATASCADERO1:"
+  [4]=>
+  string(10) "Atascadero"
+  [5]=>
+  string(6) "Mutual"
+  [6]=>
+  string(5) "Water"
+  [7]=>
+  string(7) "Company"
+  [8]=>
+  string(7) "Billing"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(9) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(12) "ATASCADERO1:"
+  [4]=>
+  string(10) "Atascadero"
+  [5]=>
+  string(6) "Mutual"
+  [6]=>
+  string(5) "Water"
+  [7]=>
+  string(7) "Company"
+  [8]=>
+  string(7) "Billing"
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 21 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 23 	| Email: ta@alexander-co.com 	| Name: Tim
+Email stored for:  	| ID: 25 	| Email: tlac@alexent.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(9) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(12) "ATASCADERO1:"
+  [4]=>
+  string(10) "Atascadero"
+  [5]=>
+  string(6) "Mutual"
+  [6]=>
+  string(5) "Water"
+  [7]=>
+  string(7) "Company"
+  [8]=>
+  string(7) "Billing"
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(16) {
+  [0]=>
+  string(3) "***"
+  [1]=>
+  string(10) "Constraint"
+  [2]=>
+  string(10) "Violation!"
+  [3]=>
+  string(3) "***"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(12) "ATASCADERO1:"
+  [6]=>
+  string(10) "Atascadero"
+  [7]=>
+  string(6) "Mutual"
+  [8]=>
+  string(5) "Water"
+  [9]=>
+  string(7) "Company"
+  [10]=>
+  string(7) "Billing"
+  [11]=>
+  string(10) "processed."
+  [12]=>
+  string(3) "***"
+  [13]=>
+  string(10) "Constraint"
+  [14]=>
+  string(10) "Violation!"
+  [15]=>
+  string(3) "***"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(16) {
+  [0]=>
+  string(3) "***"
+  [1]=>
+  string(10) "Constraint"
+  [2]=>
+  string(10) "Violation!"
+  [3]=>
+  string(3) "***"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(12) "ATASCADERO1:"
+  [6]=>
+  string(10) "Atascadero"
+  [7]=>
+  string(6) "Mutual"
+  [8]=>
+  string(5) "Water"
+  [9]=>
+  string(7) "Company"
+  [10]=>
+  string(7) "Billing"
+  [11]=>
+  string(10) "processed."
+  [12]=>
+  string(3) "***"
+  [13]=>
+  string(10) "Constraint"
+  [14]=>
+  string(10) "Violation!"
+  [15]=>
+  string(3) "***"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(16) {
+  [0]=>
+  string(3) "***"
+  [1]=>
+  string(10) "Constraint"
+  [2]=>
+  string(10) "Violation!"
+  [3]=>
+  string(3) "***"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(12) "ATASCADERO1:"
+  [6]=>
+  string(10) "Atascadero"
+  [7]=>
+  string(6) "Mutual"
+  [8]=>
+  string(5) "Water"
+  [9]=>
+  string(7) "Company"
+  [10]=>
+  string(7) "Billing"
+  [11]=>
+  string(10) "processed."
+  [12]=>
+  string(3) "***"
+  [13]=>
+  string(10) "Constraint"
+  [14]=>
+  string(10) "Violation!"
+  [15]=>
+  string(3) "***"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(16) {
+  [0]=>
+  string(3) "***"
+  [1]=>
+  string(10) "Constraint"
+  [2]=>
+  string(10) "Violation!"
+  [3]=>
+  string(3) "***"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(12) "ATASCADERO1:"
+  [6]=>
+  string(10) "Atascadero"
+  [7]=>
+  string(6) "Mutual"
+  [8]=>
+  string(5) "Water"
+  [9]=>
+  string(7) "Company"
+  [10]=>
+  string(7) "Billing"
+  [11]=>
+  string(10) "processed."
+  [12]=>
+  string(3) "***"
+  [13]=>
+  string(10) "Constraint"
+  [14]=>
+  string(10) "Violation!"
+  [15]=>
+  string(3) "***"
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 21 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 23 	| Email: ta@alexander-co.com 	| Name: Tim
+Email stored for:  	| ID: 25 	| Email: tlac@alexent.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(16) {
+  [0]=>
+  string(3) "***"
+  [1]=>
+  string(10) "Constraint"
+  [2]=>
+  string(10) "Violation!"
+  [3]=>
+  string(3) "***"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(12) "ATASCADERO1:"
+  [6]=>
+  string(10) "Atascadero"
+  [7]=>
+  string(6) "Mutual"
+  [8]=>
+  string(5) "Water"
+  [9]=>
+  string(7) "Company"
+  [10]=>
+  string(7) "Billing"
+  [11]=>
+  string(10) "processed."
+  [12]=>
+  string(3) "***"
+  [13]=>
+  string(10) "Constraint"
+  [14]=>
+  string(10) "Violation!"
+  [15]=>
+  string(3) "***"
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(9) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(12) "ATASCADERO1:"
+  [3]=>
+  string(10) "Atascadero"
+  [4]=>
+  string(6) "Mutual"
+  [5]=>
+  string(5) "Water"
+  [6]=>
+  string(7) "Company"
+  [7]=>
+  string(7) "Billing"
+  [8]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(9) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(12) "ATASCADERO1:"
+  [3]=>
+  string(10) "Atascadero"
+  [4]=>
+  string(6) "Mutual"
+  [5]=>
+  string(5) "Water"
+  [6]=>
+  string(7) "Company"
+  [7]=>
+  string(7) "Billing"
+  [8]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(9) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(12) "ATASCADERO1:"
+  [3]=>
+  string(10) "Atascadero"
+  [4]=>
+  string(6) "Mutual"
+  [5]=>
+  string(5) "Water"
+  [6]=>
+  string(7) "Company"
+  [7]=>
+  string(7) "Billing"
+  [8]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(9) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(12) "ATASCADERO1:"
+  [3]=>
+  string(10) "Atascadero"
+  [4]=>
+  string(6) "Mutual"
+  [5]=>
+  string(5) "Water"
+  [6]=>
+  string(7) "Company"
+  [7]=>
+  string(7) "Billing"
+  [8]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 21 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 23 	| Email: ta@alexander-co.com 	| Name: Tim
+Email stored for:  	| ID: 25 	| Email: tlac@alexent.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(9) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(12) "ATASCADERO1:"
+  [3]=>
+  string(10) "Atascadero"
+  [4]=>
+  string(6) "Mutual"
+  [5]=>
+  string(5) "Water"
+  [6]=>
+  string(7) "Company"
+  [7]=>
+  string(7) "Billing"
+  [8]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(13) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(10) "Atascadero"
+  [6]=>
+  string(7) "Utility"
+  [7]=>
+  string(7) "Billing"
+  [8]=>
+  string(1) "-"
+  [9]=>
+  string(7) "October"
+  [10]=>
+  string(4) "2014"
+  [11]=>
+  string(12) "Segment:MAIN"
+  [12]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(13) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(10) "Atascadero"
+  [6]=>
+  string(7) "Utility"
+  [7]=>
+  string(7) "Billing"
+  [8]=>
+  string(1) "-"
+  [9]=>
+  string(7) "October"
+  [10]=>
+  string(4) "2014"
+  [11]=>
+  string(12) "Segment:MAIN"
+  [12]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(13) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(10) "Atascadero"
+  [6]=>
+  string(7) "Utility"
+  [7]=>
+  string(7) "Billing"
+  [8]=>
+  string(1) "-"
+  [9]=>
+  string(7) "October"
+  [10]=>
+  string(4) "2014"
+  [11]=>
+  string(12) "Segment:MAIN"
+  [12]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(13) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(10) "Atascadero"
+  [6]=>
+  string(7) "Utility"
+  [7]=>
+  string(7) "Billing"
+  [8]=>
+  string(1) "-"
+  [9]=>
+  string(7) "October"
+  [10]=>
+  string(4) "2014"
+  [11]=>
+  string(12) "Segment:MAIN"
+  [12]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 21 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 23 	| Email: ta@alexander-co.com 	| Name: Tim
+Email stored for:  	| ID: 25 	| Email: tlac@alexent.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(13) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(10) "Atascadero"
+  [6]=>
+  string(7) "Utility"
+  [7]=>
+  string(7) "Billing"
+  [8]=>
+  string(1) "-"
+  [9]=>
+  string(7) "October"
+  [10]=>
+  string(4) "2014"
+  [11]=>
+  string(12) "Segment:MAIN"
+  [12]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 16 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 17 	| Email: ta@alexander-co.com 	| Name: Tim
+Email stored for:  	| ID: 18 	| Email: tlac@alexent.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(6) "DAVIS:"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(2) "of"
+  [6]=>
+  string(5) "Davis"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(6) "DAVIS:"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(2) "of"
+  [6]=>
+  string(5) "Davis"
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(6) "DAVIS:"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(2) "of"
+  [6]=>
+  string(5) "Davis"
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 20 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 22 	| Email: ta@alexander-co.com 	| Name: Tim
+Email stored for:  	| ID: 24 	| Email: tlac@alexent.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(6) "DAVIS:"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(2) "of"
+  [6]=>
+  string(5) "Davis"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(6) "DAVIS:"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(2) "of"
+  [6]=>
+  string(5) "Davis"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(6) "DAVIS:"
+  [2]=>
+  string(4) "City"
+  [3]=>
+  string(2) "of"
+  [4]=>
+  string(5) "Davis"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(6) "DAVIS:"
+  [2]=>
+  string(4) "City"
+  [3]=>
+  string(2) "of"
+  [4]=>
+  string(5) "Davis"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(6) "DAVIS:"
+  [2]=>
+  string(4) "City"
+  [3]=>
+  string(2) "of"
+  [4]=>
+  string(5) "Davis"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 20 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 22 	| Email: ta@alexander-co.com 	| Name: Tim
+Email stored for:  	| ID: 24 	| Email: tlac@alexent.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(6) "DAVIS:"
+  [2]=>
+  string(4) "City"
+  [3]=>
+  string(2) "of"
+  [4]=>
+  string(5) "Davis"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(6) "DAVIS:"
+  [2]=>
+  string(4) "City"
+  [3]=>
+  string(2) "of"
+  [4]=>
+  string(5) "Davis"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(6) "DAVIS:"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(2) "of"
+  [6]=>
+  string(5) "Davis"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(6) "DAVIS:"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(2) "of"
+  [6]=>
+  string(5) "Davis"
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(6) "DAVIS:"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(2) "of"
+  [6]=>
+  string(5) "Davis"
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 20 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 22 	| Email: ta@alexander-co.com 	| Name: Tim
+Email stored for:  	| ID: 24 	| Email: tlac@alexent.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(6) "DAVIS:"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(2) "of"
+  [6]=>
+  string(5) "Davis"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(6) "DAVIS:"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(2) "of"
+  [6]=>
+  string(5) "Davis"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(6) "DAVIS:"
+  [2]=>
+  string(4) "City"
+  [3]=>
+  string(2) "of"
+  [4]=>
+  string(5) "Davis"
+  [5]=>
+  string(9) "REJECTED."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(6) "DAVIS:"
+  [2]=>
+  string(4) "City"
+  [3]=>
+  string(2) "of"
+  [4]=>
+  string(5) "Davis"
+  [5]=>
+  string(9) "REJECTED."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(6) "DAVIS:"
+  [2]=>
+  string(4) "City"
+  [3]=>
+  string(2) "of"
+  [4]=>
+  string(5) "Davis"
+  [5]=>
+  string(9) "REJECTED."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 20 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 22 	| Email: ta@alexander-co.com 	| Name: Tim
+Email stored for:  	| ID: 24 	| Email: tlac@alexent.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(6) "DAVIS:"
+  [2]=>
+  string(4) "City"
+  [3]=>
+  string(2) "of"
+  [4]=>
+  string(5) "Davis"
+  [5]=>
+  string(9) "REJECTED."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(6) "DAVIS:"
+  [2]=>
+  string(4) "City"
+  [3]=>
+  string(2) "of"
+  [4]=>
+  string(5) "Davis"
+  [5]=>
+  string(9) "REJECTED."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(6) "DAVIS:"
+  [2]=>
+  string(4) "City"
+  [3]=>
+  string(2) "of"
+  [4]=>
+  string(5) "Davis"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(6) "DAVIS:"
+  [2]=>
+  string(4) "City"
+  [3]=>
+  string(2) "of"
+  [4]=>
+  string(5) "Davis"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(6) "DAVIS:"
+  [2]=>
+  string(4) "City"
+  [3]=>
+  string(2) "of"
+  [4]=>
+  string(5) "Davis"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 20 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 22 	| Email: ta@alexander-co.com 	| Name: Tim
+Email stored for:  	| ID: 24 	| Email: tlac@alexent.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(6) "DAVIS:"
+  [2]=>
+  string(4) "City"
+  [3]=>
+  string(2) "of"
+  [4]=>
+  string(5) "Davis"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(6) "DAVIS:"
+  [2]=>
+  string(4) "City"
+  [3]=>
+  string(2) "of"
+  [4]=>
+  string(5) "Davis"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(6) "DAVIS:"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(2) "of"
+  [5]=>
+  string(5) "Davis"
+  [6]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(6) "DAVIS:"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(2) "of"
+  [5]=>
+  string(5) "Davis"
+  [6]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(6) "DAVIS:"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(2) "of"
+  [5]=>
+  string(5) "Davis"
+  [6]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 20 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 22 	| Email: ta@alexander-co.com 	| Name: Tim
+Email stored for:  	| ID: 24 	| Email: tlac@alexent.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(6) "DAVIS:"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(2) "of"
+  [5]=>
+  string(5) "Davis"
+  [6]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(6) "DAVIS:"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(2) "of"
+  [5]=>
+  string(5) "Davis"
+  [6]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(15) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(2) "of"
+  [7]=>
+  string(5) "Davis"
+  [8]=>
+  string(7) "Utility"
+  [9]=>
+  string(7) "Billing"
+  [10]=>
+  string(1) "-"
+  [11]=>
+  string(7) "October"
+  [12]=>
+  string(4) "2014"
+  [13]=>
+  string(12) "Segment:MAIN"
+  [14]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(15) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(2) "of"
+  [7]=>
+  string(5) "Davis"
+  [8]=>
+  string(7) "Utility"
+  [9]=>
+  string(7) "Billing"
+  [10]=>
+  string(1) "-"
+  [11]=>
+  string(7) "October"
+  [12]=>
+  string(4) "2014"
+  [13]=>
+  string(12) "Segment:MAIN"
+  [14]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(15) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(2) "of"
+  [7]=>
+  string(5) "Davis"
+  [8]=>
+  string(7) "Utility"
+  [9]=>
+  string(7) "Billing"
+  [10]=>
+  string(1) "-"
+  [11]=>
+  string(7) "October"
+  [12]=>
+  string(4) "2014"
+  [13]=>
+  string(12) "Segment:MAIN"
+  [14]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 20 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 22 	| Email: ta@alexander-co.com 	| Name: Tim
+Email stored for:  	| ID: 24 	| Email: tlac@alexent.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(15) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(2) "of"
+  [7]=>
+  string(5) "Davis"
+  [8]=>
+  string(7) "Utility"
+  [9]=>
+  string(7) "Billing"
+  [10]=>
+  string(1) "-"
+  [11]=>
+  string(7) "October"
+  [12]=>
+  string(4) "2014"
+  [13]=>
+  string(12) "Segment:MAIN"
+  [14]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(15) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(2) "of"
+  [7]=>
+  string(5) "Davis"
+  [8]=>
+  string(7) "Utility"
+  [9]=>
+  string(7) "Billing"
+  [10]=>
+  string(1) "-"
+  [11]=>
+  string(7) "October"
+  [12]=>
+  string(4) "2014"
+  [13]=>
+  string(12) "Segment:MAIN"
+  [14]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(2) {
+  [0]=>
+  string(4) "test"
+  [1]=>
+  string(3) "new"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(2) {
+  [0]=>
+  string(4) "test"
+  [1]=>
+  string(3) "new"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(2) {
+  [0]=>
+  string(4) "test"
+  [1]=>
+  string(3) "new"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(2) {
+  [0]=>
+  string(4) "test"
+  [1]=>
+  string(3) "new"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(2) {
+  [0]=>
+  string(4) "test"
+  [1]=>
+  string(3) "new"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(2) {
+  [0]=>
+  string(4) "test"
+  [1]=>
+  string(5) "again"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(2) {
+  [0]=>
+  string(4) "test"
+  [1]=>
+  string(5) "again"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(2) {
+  [0]=>
+  string(4) "test"
+  [1]=>
+  string(5) "again"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(2) {
+  [0]=>
+  string(4) "test"
+  [1]=>
+  string(5) "again"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(2) {
+  [0]=>
+  string(4) "test"
+  [1]=>
+  string(5) "again"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(1) {
+  [0]=>
+  string(4) "test"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(1) {
+  [0]=>
+  string(4) "test"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(1) {
+  [0]=>
+  string(4) "test"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(1) {
+  [0]=>
+  string(4) "test"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(1) {
+  [0]=>
+  string(4) "test"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(1) {
+  [0]=>
+  string(6) "asdasd"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(1) {
+  [0]=>
+  string(6) "asdasd"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(1) {
+  [0]=>
+  string(6) "asdasd"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(1) {
+  [0]=>
+  string(6) "asdasd"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(1) {
+  [0]=>
+  string(6) "asdasd"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(1) {
+  [0]=>
+  string(4) "dddd"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(1) {
+  [0]=>
+  string(4) "dddd"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(1) {
+  [0]=>
+  string(4) "dddd"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(1) {
+  [0]=>
+  string(4) "dddd"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(1) {
+  [0]=>
+  string(4) "dddd"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(7) "CALCTY:"
+  [4]=>
+  string(10) "California"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(11) "Application"
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(7) "CALCTY:"
+  [4]=>
+  string(10) "California"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(11) "Application"
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 1 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 6 	| Email: tlac@alexent.com 	| Name: Tim
+Email stored for:  	| ID: 11 	| Email: ta@alexander-co.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(7) "CALCTY:"
+  [4]=>
+  string(10) "California"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(11) "Application"
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(7) "CALCTY:"
+  [4]=>
+  string(10) "California"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(11) "Application"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(4) "File"
+  [1]=>
+  string(8) "Uploaded"
+  [2]=>
+  string(2) "to"
+  [3]=>
+  string(7) "CALCTY:"
+  [4]=>
+  string(10) "California"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(11) "Application"
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 1 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 6 	| Email: tlac@alexent.com 	| Name: Tim
+Email stored for:  	| ID: 11 	| Email: ta@alexander-co.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(6) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "CALCTY:"
+  [2]=>
+  string(10) "California"
+  [3]=>
+  string(4) "City"
+  [4]=>
+  string(11) "Application"
+  [5]=>
+  string(10) "processed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(7) "CALCTY:"
+  [3]=>
+  string(10) "California"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(11) "Application"
+  [6]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(7) "CALCTY:"
+  [3]=>
+  string(10) "California"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(11) "Application"
+  [6]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 1 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 6 	| Email: tlac@alexent.com 	| Name: Tim
+Email stored for:  	| ID: 11 	| Email: ta@alexander-co.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(7) "CALCTY:"
+  [3]=>
+  string(10) "California"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(11) "Application"
+  [6]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(7) "CALCTY:"
+  [3]=>
+  string(10) "California"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(11) "Application"
+  [6]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(7) {
+  [0]=>
+  string(11) "Application"
+  [1]=>
+  string(7) "Results"
+  [2]=>
+  string(7) "CALCTY:"
+  [3]=>
+  string(10) "California"
+  [4]=>
+  string(4) "City"
+  [5]=>
+  string(11) "Application"
+  [6]=>
+  string(9) "approved."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(13) {
+  [0]=>
+  string(5) "Laser"
+  [1]=>
+  string(7) "Imaging"
+  [2]=>
+  string(3) "for"
+  [3]=>
+  string(3) "job"
+  [4]=>
+  string(10) "California"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(7) "Utility"
+  [7]=>
+  string(7) "Billing"
+  [8]=>
+  string(1) "-"
+  [9]=>
+  string(8) "November"
+  [10]=>
+  string(4) "2014"
+  [11]=>
+  string(12) "Segment:MAIN"
+  [12]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Diff Array --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(13) {
+  [0]=>
+  string(5) "Laser"
+  [1]=>
+  string(7) "Imaging"
+  [2]=>
+  string(3) "for"
+  [3]=>
+  string(3) "job"
+  [4]=>
+  string(10) "California"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(7) "Utility"
+  [7]=>
+  string(7) "Billing"
+  [8]=>
+  string(1) "-"
+  [9]=>
+  string(8) "November"
+  [10]=>
+  string(4) "2014"
+  [11]=>
+  string(12) "Segment:MAIN"
+  [12]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 1 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 6 	| Email: tlac@alexent.com 	| Name: Tim
+Email stored for:  	| ID: 11 	| Email: ta@alexander-co.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(13) {
+  [0]=>
+  string(5) "Laser"
+  [1]=>
+  string(7) "Imaging"
+  [2]=>
+  string(3) "for"
+  [3]=>
+  string(3) "job"
+  [4]=>
+  string(10) "California"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(7) "Utility"
+  [7]=>
+  string(7) "Billing"
+  [8]=>
+  string(1) "-"
+  [9]=>
+  string(8) "November"
+  [10]=>
+  string(4) "2014"
+  [11]=>
+  string(12) "Segment:MAIN"
+  [12]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(13) {
+  [0]=>
+  string(5) "Laser"
+  [1]=>
+  string(7) "Imaging"
+  [2]=>
+  string(3) "for"
+  [3]=>
+  string(3) "job"
+  [4]=>
+  string(10) "California"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(7) "Utility"
+  [7]=>
+  string(7) "Billing"
+  [8]=>
+  string(1) "-"
+  [9]=>
+  string(8) "November"
+  [10]=>
+  string(4) "2014"
+  [11]=>
+  string(12) "Segment:MAIN"
+  [12]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(13) {
+  [0]=>
+  string(5) "Laser"
+  [1]=>
+  string(7) "Imaging"
+  [2]=>
+  string(3) "for"
+  [3]=>
+  string(3) "job"
+  [4]=>
+  string(10) "California"
+  [5]=>
+  string(4) "City"
+  [6]=>
+  string(7) "Utility"
+  [7]=>
+  string(7) "Billing"
+  [8]=>
+  string(1) "-"
+  [9]=>
+  string(8) "November"
+  [10]=>
+  string(4) "2014"
+  [11]=>
+  string(12) "Segment:MAIN"
+  [12]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Get --------------------
+array(14) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(10) "California"
+  [6]=>
+  string(4) "City"
+  [7]=>
+  string(7) "Utility"
+  [8]=>
+  string(7) "Billing"
+  [9]=>
+  string(1) "-"
+  [10]=>
+  string(8) "November"
+  [11]=>
+  string(4) "2014"
+  [12]=>
+  string(12) "Segment:MAIN"
+  [13]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "California"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 7 	| Email: drk3@gmail.com 	| Name: Dren.K
+Email stored for:  	| ID: 12 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 14 	| Email: tlac@alexent.com 	| Name: Tim
+Email stored for:  	| ID: 15 	| Email: ta@alexander-co.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Get --------------------
+array(14) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(10) "California"
+  [6]=>
+  string(4) "City"
+  [7]=>
+  string(7) "Utility"
+  [8]=>
+  string(7) "Billing"
+  [9]=>
+  string(1) "-"
+  [10]=>
+  string(8) "November"
+  [11]=>
+  string(4) "2014"
+  [12]=>
+  string(12) "Segment:MAIN"
+  [13]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(10) "California"
+  [1]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(0) {
+}
+string(11) "we're in..."
+Email stored for:  	| ID: 1 	| Email: dk18184@gmail.com 	| Name: Dren
+Email stored for:  	| ID: 6 	| Email: tlac@alexent.com 	| Name: Tim
+Email stored for:  	| ID: 11 	| Email: ta@alexander-co.com 	| Name: Tim
+
+-------------------- DB --------------------
+array(2) {
+  [0]=>
+  string(4) "City"
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- Get --------------------
+array(14) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(10) "California"
+  [6]=>
+  string(4) "City"
+  [7]=>
+  string(7) "Utility"
+  [8]=>
+  string(7) "Billing"
+  [9]=>
+  string(1) "-"
+  [10]=>
+  string(8) "November"
+  [11]=>
+  string(4) "2014"
+  [12]=>
+  string(12) "Segment:MAIN"
+  [13]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(1) {
+  [0]=>
+  string(4) "City"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [1]=>
+  string(5) "Davis"
+}
+
+-------------------- DB --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(14) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(10) "California"
+  [6]=>
+  string(4) "City"
+  [7]=>
+  string(7) "Utility"
+  [8]=>
+  string(7) "Billing"
+  [9]=>
+  string(1) "-"
+  [10]=>
+  string(8) "November"
+  [11]=>
+  string(4) "2014"
+  [12]=>
+  string(12) "Segment:MAIN"
+  [13]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(0) {
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [0]=>
+  string(10) "Atascadero"
+}
+
+-------------------- DB --------------------
+array(3) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+  [2]=>
+  string(10) "Atascadero"
+}
+
+-------------------- Get --------------------
+array(14) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(1) "&"
+  [2]=>
+  string(7) "Mailing"
+  [3]=>
+  string(3) "for"
+  [4]=>
+  string(3) "job"
+  [5]=>
+  string(10) "California"
+  [6]=>
+  string(4) "City"
+  [7]=>
+  string(7) "Utility"
+  [8]=>
+  string(7) "Billing"
+  [9]=>
+  string(1) "-"
+  [10]=>
+  string(8) "November"
+  [11]=>
+  string(4) "2014"
+  [12]=>
+  string(12) "Segment:MAIN"
+  [13]=>
+  string(10) "completed."
+}
+
+-------------------- Intersect --------------------
+array(2) {
+  [0]=>
+  string(8) "Assembly"
+  [1]=>
+  string(7) "Mailing"
+}
+
+-------------------- Diff Array --------------------
+array(1) {
+  [2]=>
+  string(10) "Atascadero"
+}
+
+[32mEmails has been readen.[39m

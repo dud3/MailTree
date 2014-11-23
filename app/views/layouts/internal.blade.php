@@ -55,7 +55,7 @@
 
                     <!-- System Messaged -->
                     <toaster-container 
-                    toaster-options="{'position-class': 'toast-bottom-full-width', 
+                    toaster-options="{'position-class': 'toast-top-right', 
                                       'showDuration': '300',
                                       'hideDuration': '1000',
                                       'timeOut': '1000',

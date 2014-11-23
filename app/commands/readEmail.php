@@ -127,7 +127,7 @@ class readEmail extends Command {
 		
 		echo "\n";
 		
-		$this->emails->readMails($html_enable = $_option_html_enable, $email_search = $_option_email_search, $enable_test_user = $__option_test_user_only);
+		$this->emails->readMails($html_enable = $_option_html_enable, $email_search = $_option_email_search);
 		
 		echo "\n";
 
@@ -191,7 +191,6 @@ class readEmail extends Command {
 			array('options', null, InputOption::VALUE_OPTIONAL, 'Help', null),
 			array('html_enable', null, InputOption::VALUE_REQUIRED, 'Argument as option.', null),
 			array('email_search', null, InputOption::VALUE_REQUIRED, 'Type of email(New, seen, unseen...).', null),
-			array('test_user', null, InputOption::VALUE_REQUIRED, 'Only Test user(s).', null),
 		);
 	}
 

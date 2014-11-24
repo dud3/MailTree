@@ -44,7 +44,7 @@ angular
     'app.search'
 
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $modalProvider) {
     
     // Save awesomeness for later on...
     $routeProvider
@@ -56,6 +56,10 @@ angular
         redirectTo: '/'
       });
 
+    angular.extend($modalProvider.defaults, {
+      html: true
+    });
+    
   });
 
 angular.module('mailTree').run(function(editableOptions) {

@@ -113,7 +113,7 @@ $provide.factory('MyHttpInterceptor', function ($q, $log) {
       if(response.status == 200) {
 
         // Only this routes for now
-        if(response.config.url == "/api/v1/getAllKeywords" || response.config.url == "/api/v1/emails/get_all") {
+        if(response.config.url == "/api/v1/keywords/get" || response.config.url == "/api/v1/emails/get_all") {
 
           // Just a little awesomenes
           // -> To let users know what's going on the background

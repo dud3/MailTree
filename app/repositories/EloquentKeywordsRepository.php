@@ -66,6 +66,8 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 	 */
 	public function store($data = null) {
 
+		$ret = [];
+
 		try {
 			
 			if($data != null) {
@@ -74,7 +76,8 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 
 					if(self::validate($data)) {
 
-						return keywords_list::create($data);
+						$ret = keywords_list::create($data);
+						return $ret;
 
 					} else {
 						throw new RuntimeException("Error Processing Request", 1);
@@ -114,15 +117,11 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 
 				if(!empty($data)) {
 
-					if(self::validate($data)) {
 
-						 $k = keywords_list::fill($data);
-						 $k->save();
-						 return $k;
-
-					} else {
-						throw new RuntimeException("Error Processing Request", 1);
-					}
+					 $k = keywords_list::fill($data);
+					 $k->save();
+					 $k->error = false;
+					 return $k;
 
 				} else {
 					throw new RuntimeException("Error, The array can not be empty", 0.2);

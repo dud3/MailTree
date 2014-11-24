@@ -4,12 +4,12 @@ angular.module('app.keyWordsList')
 var services = {
 
     getAll: function() {
-      var results = $http.get('/api/v1/getAllKeywords');
+      var results = $http.get('/api/v1/keywords/get');
       return results;
     },
 
     create: function(data) {
-      var results = $http.post('/api/v1/createKeyword', angular.toJson(training));
+      var results = $http.post('/api/v1/keywords/create', angular.toJson(training));
       return results;
     },
 

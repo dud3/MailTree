@@ -8,23 +8,24 @@ interface EloquentListRepositoryInterface {
 	 * @return [type]       [description]
 	 */
 	public function __call_list($type);
-
-	/**
-	 * Main query gues here
-	 * @return [type] [description]
-	 */
-	public function mainQuery();
-
+	
 	/**
 	 * Get list by keywords.
 	 * @return [type] [description]
 	 */
-	public function get_list_by_keyword();
+	public function get_email_list();
 
 	/**
 	 * Get list by emails.
 	 * @return [type] [description]
 	 */
-	public function get_list_by_email();
+	public function get_keyword_list();
+
+	/**
+	 * Create keywords list
+	 * @param  [array] $data [array of objects]
+	 * @return [array]       [array of objects]
+	 */
+	public function create_keywords_list($data);
 
 }

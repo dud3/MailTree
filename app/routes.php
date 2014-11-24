@@ -57,7 +57,10 @@ Route::group(array('before' => 'auth'), function()
 Route::group(array('prefix' => 'api/v1'), function()
 {
 
-	Route::get('getAllKeywords', 		'ListController@get_all_keywords');
+	Route::group(array('prefix' => 'keywords'), function(){
+		Route::get('get', 		'ListController@get_all_keywords');
+		Route::get('create', 	'ListController@create_keywords_list');
+	});
 
 	Route::group(array('prefix' => 'emails'), function()
 	{

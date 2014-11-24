@@ -9,8 +9,10 @@
 $app['Cartalyst\Sentry\Sentry'] = $app['sentry'];
 
 App::bind('UserRepositoryInterface', 				'SentryUserRepository');
+
+App::bind('EloquentListRepositoryInterface',		'EloquentListRepository');
+
 App::bind('EmailsRepositoryInterface', 				'EmailsRepository');
-App::bind('EloquentListRepository',					'EloquentListRepositoryInterface');
 App::bind('EloquentEmailsRepositoryInterface',		'EloquentEmailsRepository');
 App::bind('EloquentKeywordsRepositoryInterface',	'EloquentKeywordsRepository');
 
@@ -30,6 +32,7 @@ ClassLoader::addDirectories(array(
 	app_path().'/commands',
 	app_path().'/controllers',
 	app_path().'/models',
+	app_path().'/repositories',
 	app_path().'/database/seeds',
 
 ));

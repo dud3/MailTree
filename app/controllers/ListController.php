@@ -12,26 +12,36 @@
 class ListController extends internalCtrl {
 
     public $user;
-    public $ketwords;
+    public $lists;
+    public $keywords;
+    public $emails;
 
     /**
      * [__construct description]
      */
-    public function __construct(EloquentKeywordsRepositoryInterface $keywords) {
+    public function __construct(EloquentListRepositoryInterface $lists, EloquentKeywordsRepositoryInterface $keywords, EloquentEmailsRepository $emails) {
+    	$this->lists = $lists;
     	$this->keywords = $keywords;
+    	$this->emails = $emails;
     }
 
 	
 	/**
-	 * [view_emails description]
+	 * view keywords list.
 	 * @return [type] [description]
 	 */
 	public function view_k_list() {
-
 		$view = View::make('list.keywords');
-
 		return $view;
+	}
 
+	/**
+	 * view emails list.
+	 * @return [type] [description]
+	 */
+	public function view_e_list() {
+		$view = View::make('list.emails');
+		return $view;
 	}
 
 	/**
@@ -40,6 +50,23 @@ class ListController extends internalCtrl {
 	 */
 	public function get_all_keywords() {
 		return Response::json(['keywords' => $this->keywords->get_all()], 200);
+	}
+
+	/**
+	 * Create keywords list
+	 * @return [array] [array of objects]
+	 */
+	public function create_keywords_list() {
+		
+		$input = Input::all();
+		$ret = $this->lists->create_keywords_list($input);
+
+		if(!$ret->error) {
+			$ret = Response::json(["ketwordsList" => $ret], 200);
+		} else {
+			$ret = Response::json([$ret->error], 401);
+		}
+
 	}
 
 }

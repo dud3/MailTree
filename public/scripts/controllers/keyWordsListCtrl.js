@@ -123,6 +123,11 @@ angular.module('app.keyWordsList')
 		 * @return {[type]} [description]
 		 */
 		$scope.show_create_modal = function() {
+			$rootScope.keywordEntity = {
+				keywords: [{ keyword:'' }],
+				recipients: [{ full_name:'', email:'' }]
+			};
+
 			$("#id-modal-create_keywordList").modal('show');
 		};
 
@@ -131,6 +136,11 @@ angular.module('app.keyWordsList')
 		 * @return {[type]} [description]
 		 */
 		$scope.hide_create_modal = function() {
+			$rootScope.keywordEntity = {
+				keywords: [{ keyword:'' }],
+				recipients: [{ full_name:'', email:'' }]
+			};
+
 			$("#id-modal-create_keywordList").modal('hide');
 		};
 
@@ -140,10 +150,20 @@ angular.module('app.keyWordsList')
 		 */
 		$scope.create = function() {
 
-			console.log($scope.keywordEntity);
+			var _keywordEntity = { keywords: [{}], recipients: [{}] };
+
+			_keywordEntity.keywords = $scope.associative_to_array($scope.keywordEntity.keywords);
+			_keywordEntity.keywords = $scope.array_to_associative(_keywordEntity.keywords);
+			_keywordEntity.keywords = $scope.array_stringify(_keywordEntity.keywords);
+
+			_keywordEntity.recipients = $scope.keywordEntity.recipients;
+
+			console.log(_keywordEntity);
+
+			return;
 
 			keyWordsList
-				.create()
+				.create(_keywordEntity)
 					.success(function(data){
 
 				}).error(function(data){
@@ -238,6 +258,51 @@ angular.module('app.keyWordsList')
 
 		};
 
+
+		//------------------------------
+		// Helper Functions
+		//------------------------------
+		//
+
+		/**
+		 * Turn associative array to an array.
+		 * @param  {[type]} object [description]
+		 * @return {[type]}        [description]
+		 */
+		$scope.associative_to_array = function(object) {
+			var array = [];
+			for(var item in object){
+				if(object[item].hasOwnProperty('keyword')) {
+					array.push(object[item].keyword);
+				} else {
+					array.push(object[item]);
+				}
+			}
+			return array;
+		};
+
+		/**
+		 * Oposite of associative_to_array.
+		 * @param  {[type]} array [description]
+		 * @return {[type]}       [description]
+		 */
+		$scope.array_to_associative = function(array) {
+			var obj = {};
+			for(var i = 0; i < array.length; i++) {
+			    obj[i] = array[i];   	// Assign the next element as a value of the object,
+			                             // using the current value as key
+			}
+			return obj;
+		};
+
+		/**
+		 * Stringify the object/associative array.
+		 * @param  {[type]} object [description]
+		 * @return {[type]}        [description]
+		 */
+		$scope.array_stringify = function(object) {
+			return JSON.stringify(object);
+		}
 
 
 		//------------------------------

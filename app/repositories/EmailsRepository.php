@@ -243,7 +243,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             FROM mails m
 
-             LEFT OUTER JOIN email_address_list e_a_l
+             LEFT JOIN email_address_list e_a_l
                 ON m.email_address_id = e_a_l.id
 
              WHERE m.sent = 0
@@ -270,6 +270,15 @@ class EmailsRepository implements EmailsRepositoryInterface {
                      "full_name" => $full_name,
                      "message_body" => $message_body,
                      "message_subject" => $message_subject];
+
+            // Error handling
+            foreach ($data as $inputs) {
+                if($inputs == null || empty($inputs)) {
+                    var_dump($data);
+                    throw new Exception("Some data is missing", 1);
+                    exit;
+                }
+            }
 
             //
             // Basically what we're doing here is that
@@ -435,8 +444,6 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 var_dump($k_arr_diff);
 
                 if(count($k_arr_diff) == 0) {
-
-                    var_dump("we're in...");
 
                    $e_add_list = email_address_list::where("keyword_id", "=", $k_id)->get()->toArray();
 

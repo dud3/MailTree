@@ -271,7 +271,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                      "message_body" => $message_body,
                      "message_subject" => $message_subject];
 
-            // Error handling
+            // Some Error handling
             foreach ($data as $inputs) {
                 if($inputs == null || empty($inputs)) {
                     var_dump($data);

@@ -62,10 +62,12 @@ class ListController extends internalCtrl {
 		$ret = $this->lists->create_keywords_list($input);
 
 		if(!$ret->error) {
-			$ret = Response::json(["ketwordsList" => $ret], 200);
+			$ret = Response::json(["ketwordsList" => $ret->data], 200);
 		} else {
-			$ret = Response::json([$ret->error], 401);
+			$ret = Response::json([$ret->message], 401);
 		}
+
+		return $ret;
 
 	}
 

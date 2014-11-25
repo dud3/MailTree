@@ -8,13 +8,13 @@ var services = {
       return results;
     },
 
-    create: function(data) {
-      var results = $http.post('/api/v1/keywords/create', angular.toJson(training));
+    create: function(keyWordsListEntity) {
+      var results = $http.post('/api/v1/keywords/create', angular.toJson(keyWordsListEntity));
       return results;
     },
 
     updateKeyword: function(keyword) {
-      var results = $http.post('/api/v1/updateKeyword', angular.toJson(training));
+      var results = $http.post('/api/v1/updateKeyword', angular.toJson(keyword));
       return results;
     },
 

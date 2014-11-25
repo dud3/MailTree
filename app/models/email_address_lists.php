@@ -10,6 +10,16 @@ class email_address_list extends Eloquent {
 	protected $table = 'email_address_list';
 
 	protected $guarded = array();
-    // protected $fillable = ['id', 'token']
+    
+    /**
+	 * Modal rules.
+	 * @var array
+	 */
+	public static $rules = array(
+        'id',
+        'email' => 'required|email',
+ 		'full_name' => 'required',
+ 		'keyword_id' => 'required'
+	);
 
 }

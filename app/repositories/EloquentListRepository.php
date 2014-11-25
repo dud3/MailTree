@@ -65,7 +65,7 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
 	 */
 	public function create_keywords_list($data) {
 
-		$ret = [];
+		$ret = new stdClass();
 
 		try {
 			
@@ -73,11 +73,41 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
 
 				if(!empty($data)) {
 
-					$keywords = $this->keywords->store($data["keywords"]);
+					/*! First of all store the keyword(s) */
+					$keywords = $this->keywords->store(["keywords" => $data["keywords"]]);
+
+					if(!$keywords->error) {
+
+						/* If no errors returned get the created keywords */
+						$keywords = $keywords->toArray();
+
+						/*! To each of the recipents assign the keyword id(s) */
+						for($i = 0; $i < count($data["recipients"]); $i++) {
+							$data["recipients"][$i]["keyword_id"] = $keywords["id"];
+						}
+
+					} else {
+						/** 
+						 *If error returned return the error 
+						 * the keyword variable itself will descriebe the errorto the parent class
+						 */
+						return $keywords;
+					}
+
+					/* Finally store the recipients with the assigned keywords to them */
 					$recipients = $this->emails->store($data["recipients"]);
-					
-					$ret = ["id" => $keywords['id'], "keywords" => $keywords["keywords"], "email" => $recipients["emails"]];
-					return $ret;
+
+					/* If no error returned */
+					if(!$recipients->error) {
+						
+						/* Return proper data, and let the js handled the rest */
+						$ret->error = $recipients->error;
+						$ret->data = ["id" => $keywords['id'], "keywords" => $keywords["keywords"], "email" => $recipients->data[0]->toArray()];
+						return $ret;
+
+					} else {
+						throw new RuntimeException("Error, recipients has couldn't succeed.", 0.2);
+					}
 
 				} else {
 					throw new RuntimeException("Error, The array can not be empty", 0.2);

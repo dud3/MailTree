@@ -68,6 +68,8 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 
 		$ret = [];
 
+		$count_keywords = keywords_list::where('keywords', '=', $data['keywords'])->count();
+
 		try {
 			
 			if($data != null) {
@@ -76,11 +78,17 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 
 					if(self::validate($data)) {
 
-						$ret = keywords_list::create($data);
-						return $ret;
+						if($count_keywords == 0) {
 
-					} else {
-						throw new RuntimeException("Error Processing Request", 1);
+							$ret = keywords_list::create($data);
+							$ret->error = false;
+							return $ret;
+
+						} else {
+							($count_keywords > 1) ? $plural = "s" : $plural = "";
+							throw new RuntimeException("The keyword ". $plural ." already exits, please pick another one.", 0.3);
+						}
+
 					}
 
 				} else {
@@ -102,6 +110,7 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 			return $error;
 
 		}
+
 	}
 
 	/**
@@ -117,19 +126,18 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 
 				if(!empty($data)) {
 
-
-					 $k = keywords_list::fill($data);
-					 $k->save();
-					 $k->error = false;
-					 return $k;
+						$k = keywords_list::fill($data);
+						$k->save();
+						$k->error = false;
+						return $k;
 
 				} else {
-					throw new RuntimeException("Error, The array can not be empty", 0.2);
+					throw new RuntimeException("Error, The array can not be empty.", 0.2);
 					
 				}
 
 			} else {
-				throw new RuntimeException("Errorm The array can not be null", 0.1);
+				throw new RuntimeException("Errorm The array can not be null.", 0.1);
 			}
 
 		} catch(RuntimeException $e) {

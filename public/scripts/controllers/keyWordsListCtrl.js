@@ -160,9 +160,7 @@ angular.module('app.keyWordsList')
 
 			console.log(_keywordEntity);
 
-			return;
-
-			keyWordsList
+			keyWordsListSvc
 				.create(_keywordEntity)
 					.success(function(data){
 
@@ -294,10 +292,14 @@ angular.module('app.keyWordsList')
 			});
 
 			angular.forEach($scope.keywordEntity.recipients, function(recipient){
+				console.log(recipient);
 				if(recipient.full_name.length == 0) {
 					$("#id-create-keywordList").attr('disabled', 'disabled');
 				}
 				if(recipient.email.length == 0) {
+					$("#id-create-keywordList").attr('disabled', 'disabled');
+				}
+				if(!$scope.validateEmail(recipient.email)) {
 					$("#id-create-keywordList").attr('disabled', 'disabled');
 				}
 			});
@@ -369,5 +371,15 @@ angular.module('app.keyWordsList')
 		$scope.array_stringify = function(object) {
 			return JSON.stringify(object);
 		}
+
+		/**
+		 * Validate email.
+		 * @param  {[type]} email [description]
+		 * @return {[type]}       [description]
+		 */
+		$scope.validateEmail = function(email) { 
+		    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		    return re.test(email);
+		} 
 
 }]);

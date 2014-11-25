@@ -97,6 +97,44 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 	 */
 	public function store($data) {
 
+		$ret = new stdClass();
+
+		try {
+
+			if($data != null) {
+
+				if(!empty($data)) {
+
+					foreach ($data as $recipent) {
+
+						if(self::validate($recipent)) {
+							$ret->data[] = email_address_list::create($recipent);
+							$ret->error = false;
+						} 
+
+					}
+
+					return $ret;
+
+				} else {
+					throw new RuntimeException("Error, The array can not be empty", 0.2);
+				}
+
+			} else {
+				throw new RuntimeException("Errorm The array can not be null", 0.1);
+			}
+
+		} catch(RuntimeException $e) {
+
+			$error = new stdClass();
+			$error->message = $e->getMessage();
+			$error->code = $e->getCode();
+			$error->error = true;
+
+			return $error;
+
+		}
+
 	}
 
 	/**
@@ -160,6 +198,16 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 	 */
 	public function removeRecipent($id) {
 		return email_address_list::find($id)->delete();
+	}
+
+	/**
+	 * Validate email_address_loist.
+	 * @return [type] [description]
+	 */
+	public static function validate($data) {
+		$validator = Validator::make($data, email_address_list::$rules);
+		if($validator->fails()) return $validator->messages();
+		return true;
 	}
 
 }

@@ -55,36 +55,36 @@ class EmailsRepository implements EmailsRepositoryInterface {
         $this->server = new \Fetch\Server($this->server_name[1], $this->port[0]);
         $this->server->setAuthentication($this->username[1], $this->password);
 
-        /*
-        ---------------------------------------------------------------------------------------------------------
-         State of emails (http://php.net/manual/en/function.imap-search.php)
-        ---------------------------------------------------------------------------------------------------------       
-        ALL - return all messages matching the rest of the criteria
-        ANSWERED - match messages with the \\ANSWERED flag set
-        BCC "string" - match messages with "string" in the Bcc: field
-        BEFORE "date" - match messages with Date: before "date"
-        BODY "string" - match messages with "string" in the body of the message
-        CC "string" - match messages with "string" in the Cc: field
-        DELETED - match deleted messages
-        FLAGGED - match messages with the \\FLAGGED (sometimes referred to as Important or Urgent) flag set
-        FROM "string" - match messages with "string" in the From: field
-        KEYWORD "string" - match messages with "string" as a keyword
-        NEW - match new messages
-        OLD - match old messages
-        ON "date" - match messages with Date: matching "date"
-        RECENT - match messages with the \\RECENT flag set
-        SEEN - match messages that have been read (the \\SEEN flag is set)
-        SINCE "date" - match messages with Date: after "date"
-        SUBJECT "string" - match messages with "string" in the Subject:
-        TEXT "string" - match messages with text "string"
-        TO "string" - match messages with "string" in the To:
-        UNANSWERED - match messages that have not been answered
-        UNDELETED - match messages that are not deleted
-        UNFLAGGED - match messages that are not flagged
-        UNKEYWORD "string" - match messages that do not have the keyword "string"
-        UNSEEN - match messages which have not been read yet
-        ---------------------------------------------------------------------------------------------------------
-        */
+     /**
+      * ---------------------------------------------------------------------------------------------------------
+      *  State of emails (http://php.net/manual/en/function.imap-search.php)
+      * ---------------------------------------------------------------------------------------------------------       
+      *  ALL - return all messages matching the rest of the criteria
+      *  ANSWERED - match messages with the \\ANSWERED flag set
+      *  BCC "string" - match messages with "string" in the Bcc: field
+      *  BEFORE "date" - match messages with Date: before "date"
+      *  BODY "string" - match messages with "string" in the body of the message
+      *  CC "string" - match messages with "string" in the Cc: field
+      *  DELETED - match deleted messages
+      *  FLAGGED - match messages with the \\FLAGGED (sometimes referred to as Important or Urgent) flag set
+      *  FROM "string" - match messages with "string" in the From: field
+      *  KEYWORD "string" - match messages with "string" as a keyword
+      *  NEW - match new messages
+      *  OLD - match old messages
+      *  ON "date" - match messages with Date: matching "date"
+      *  RECENT - match messages with the \\RECENT flag set
+      *  SEEN - match messages that have been read (the \\SEEN flag is set)
+      *  SINCE "date" - match messages with Date: after "date"
+      *  SUBJECT "string" - match messages with "string" in the Subject:
+      *  TEXT "string" - match messages with text "string"
+      *  TO "string" - match messages with "string" in the To:
+      *  UNANSWERED - match messages that have not been answered
+      *  UNDELETED - match messages that are not deleted
+      *  UNFLAGGED - match messages that are not flagged
+      *  UNKEYWORD "string" - match messages that do not have the keyword "string"
+      *  UNSEEN - match messages which have not been read yet
+      *  ---------------------------------------------------------------------------------------------------------
+      */
 
     }
 
@@ -95,20 +95,21 @@ class EmailsRepository implements EmailsRepositoryInterface {
      */
     public function readMails($html_enable, $email_search) {
 
-        //
-        // @note: read only unssen emails
-        // First of all make the artisan command accespt some 
-        // -> argouments so we can easily switch between "read all emails"
-        // -> and "unseen emails"
-        // $this->server->search('UNSEEN')
-        //
-        // Default value;
-        // $this->inbox = $this->server->getMessages();
-        // 
+        /**
+         * @note: read only unssen emails
+         * First of all make the artisan command accespt some 
+         * -> argouments so we can easily switch between "read all emails"
+         * -> and "unseen emails"
+         * $this->server->search('UNSEEN')
+         *
+         * Default value;
+         * $this->inbox = $this->server->getMessages();
+         *
+         */
 
         $this->inbox = $this->server->search($email_search);
 
-        // Read the inbox
+        /* Read the inbox */
         $this->emails = $this->inbox;
 
         self::$enable_html_email = $html_enable;
@@ -148,41 +149,41 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             if(self::$enable_html_email || !self::$enable_html_email) {
 
-                // Explode the email into pieces
+                /* Explode the email into pieces */
                 $std_email->body = explode("\n", $std_email->body);
 
-                //
-                // Trim the value otherwise at the end of the each mail
-                // -> we will strat seeing the value of ^M after exploding
-                // -> the string, and this makes imposibble to compare the 
-                // -> keywords from the database even if we include the 
-                // -> ^M symbol at the end of each array element.
-                //  
+               /**
+                * Trim the value otherwise at the end of the each mail
+                * -> we will strat seeing the value of ^M after exploding
+                * -> the string, and this makes imposibble to compare the 
+                * -> keywords from the database even if we include the 
+                * -> ^M symbol at the end of each array element.
+                */ 
 
                 array_walk($std_email->body, array($this, 'trim_value'));
 
-                //
-                // Two of this following conditions are for:
-                // * if the mail is forwarded by a person/automatic email forwarder
-                // * if the mail contains the keyword of "Dear"
-                // 
-                // The reason for the first one is that, we don't want to store mails into the 
-                // -> DB with the forwarded information.
-                // 
-                // The second one is that we won't eventually want to erase the mail that has been
-                // -> forwarded to an X person since we will forward the same email to multiple
-                // -> users that match the keyword(s), and replace their name on the emal.
-                // 
+               /**
+                * Two of this following conditions are for:
+                * * if the mail is forwarded by a person/automatic email forwarder
+                * * if the mail contains the keyword of "Dear"
+                * 
+                * The reason for the first one is that, we don't want to store mails into the 
+                * -> DB with the forwarded information.
+                * 
+                * The second one is that we won't eventually want to erase the mail that has been
+                * -> forwarded to an X person since we will forward the same email to multiple
+                * -> users that match the keyword(s), and replace their name on the emal.
+                */
         
                 if(in_array('---------- Forwarded message ----------', $std_email->body)) {
                     $std_email->body = array_slice($std_email->body, 9);
                 }
 
-                // 
-                // if strpos($mystring, $findme)
-                // We might want to search the string 
-                // -> if it contains the keyword of "Dear" or simmilar
-                // 
+               /** 
+                * if strpos($mystring, $findme)
+                * We might want to search the string 
+                * -> if it contains the keyword of "Dear" or simmilar.
+                */
 
                 if(self::$enable_html_email) {
                     $this->search_for = ["Dear Alexander Notifications,<br /><br />", "", ""];
@@ -280,16 +281,16 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 }
             }
 
-            //
-            // Basically what we're doing here is that
-            // -> whenever we see a text that says 'Click here'
-            // -> automatically splice "Click here" text and
-            // -> everything else that comes after it.
-            // 
-            // Let's just have this one here right now.
-            // And maybe later on we can actually prevent this data
-            // -> get into the DB at the frst place.
-            //
+           /**
+            * Basically what we're doing here is that
+            * -> whenever we see a text that says 'Click here'
+            * -> automatically splice "Click here" text and
+            * -> everything else that comes after it.
+            * 
+            * Let's just have this one here right now.
+            * And maybe later on we can actually prevent this data
+            * -> get into the DB at the frst place.
+            */
             $data["message_body"] = explode("\n", $data["message_body"]);
 
             array_walk($data["message_body"], array($this, 'trim_value'));
@@ -301,8 +302,6 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 }
 
             }
-
-            // var_dump($data["message_body"]);
 
             $data["message_body"] = implode("\n", $data["message_body"]);
 
@@ -328,7 +327,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             }
 
-            // Sleep a little
+            /* Sleep a little */
             sleep(2);
 
             var_dump("Sending message to: " . $data["email"] . " | full_name: " . $data["full_name"] . " | email_id:" . $mail->id);
@@ -400,38 +399,36 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 $k_db = trim($k_db);
                 $k_db = json_decode($k_db, true);
 
-                //
-                //
-                // Get the common between the database keywords that belong 
-                // -> to each user and the keywords from the emails subject.
-                // 
-                // Sample: 
-                //          * Email Keyword: 'dog', 'fish', 'rocket', 'etc'
-                //          * DB Keywords: 'dog', 'rocket'
-                // 
-                // Union and the output will be 'dog' and 'fish'   
-                //
-                // 
+               /**
+                * Get the common between the database keywords that belong 
+                * -> to each user and the keywords from the emails subject.
+                * 
+                * Sample: 
+                *          * Email Keyword: 'dog', 'fish', 'rocket', 'etc'
+                *          * DB Keywords: 'dog', 'rocket'
+                * 
+                * Union and the output will be 'dog' and 'fish'   
+                *
+                */ 
                 $k_intersect = array_intersect($k_db, $get_keywords);
 
 
-                //
-                //
-                // After we union the smmilarities check if there's a difference
-                // -> between the DB array and the filtered array from the "email subject"
-                // -> this way we can figure it out if they are identical.
-                // 
-                //  Since the `array_intersect()` get's the common between both of arrays
-                //  -> we might have a situation like the following:
-                //  
-                //  * Email Keywords: 'dog', 'fish', 'rocket', '-', 'something'
-                //  * DB Keywords: 'dog', 'fish', 'dolphin'
-                //  
-                //  array_intersect($e_kwd, $db_kwd) => 'dog', 'fish'
-                //  
-                //  -> so e_kwd != $db_kwd => because the 'dolphin' should match also.
-                //  
-                //
+               /**
+                * After we union the smmilarities check if there's a difference
+                * -> between the DB array and the filtered array from the "email subject"
+                * -> this way we can figure it out if they are identical.
+                * 
+                *  Since the `array_intersect()` get's the common between both of arrays
+                *  -> we might have a situation like the following:
+                *  
+                *  * Email Keywords: 'dog', 'fish', 'rocket', '-', 'something'
+                *  * DB Keywords: 'dog', 'fish', 'dolphin'
+                *  
+                *  array_intersect($e_kwd, $db_kwd) => 'dog', 'fish'
+                *  
+                *  -> so e_kwd != $db_kwd => because the 'dolphin' should match also.
+                *  
+                */
                 $k_arr_diff = array_diff($k_db, $get_keywords);
 
                 echo "\n-------------------- DB --------------------\n";
@@ -470,18 +467,19 @@ class EmailsRepository implements EmailsRepositoryInterface {
                             $std_store_email->__draft = $email->overview->draft;
                             $std_store_email->__udate = $email->overview->udate;
 
-                            //
-                            // Let's insert the name of the user that 
-                            // -> will get the eamil.
-                            // 
-                            // Explode into pieces
-                            // $std_store_email->body = explode("\n", $std_store_email->body);
-
-                            // Reorder the array and push this one on top of the queue
-                            // array_unshift($std_store_email->body, "Dear " . $e_list["full_name"] . ",\n");
-                            
-                            // Put everything togather
-                            // $std_store_email->body = implode("\n", $std_store_email->body);
+                           /**
+                            * Let's insert the name of the user that 
+                            * -> will get the eamil.
+                            * 
+                            * Explode into pieces
+                            * $std_store_email->body = explode("\n", $std_store_email->body);
+                            *
+                            * Reorder the array and push this one on top of the queue
+                            * array_unshift($std_store_email->body, "Dear " . $e_list["full_name"] . ",\n");
+                            * 
+                            * Put everything togather
+                            * $std_store_email->body = implode("\n", $std_store_email->body);
+                            */
 
                             $this->storeMail($std_store_email);
                             
@@ -586,13 +584,14 @@ class EmailsRepository implements EmailsRepositoryInterface {
         echo PHP_EOL;
     }
 
-    // ------------------------------- 
-    // Helper Functions
-    // -------------------------------
-    // 
-    // Helper functions reside here.
-    // 
-    // --------------------------------
+    /*
+    |-------------------------------------------------------------- 
+    | Helper Functions
+    |--------------------------------------------------------------
+    |
+    | Helper functions reside here.
+    |
+    */
 
     /**
      * Dump sent messages.

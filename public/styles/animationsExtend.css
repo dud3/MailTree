@@ -1,0 +1,18 @@
+.item {
+  -webkit-transition: color 0.6s, background-color 0.3s;
+  -moz-transition: color 0.6s, background-color 0.3s;
+  -ms-transition: color 0.6s, background-color 0.3s;
+  transition: color 0.6s, background-color 0.3s;
+}
+.item.ng-enter {
+  -webkit-animation: fadeInDown 1.2s;
+  -moz-animation: fadeInDown 1.2s;
+  -ms-animation: fadeInDown 1.2s;
+  animation: fadeInDown 1.2s;
+}
+.item.ng-leave {
+  -webkit-animation: bounceOut 2s;
+  -moz-animation: bounceOut 2s;
+  -ms-animation: bounceOut 2s;
+  animation: bounceOut 2s;
+}

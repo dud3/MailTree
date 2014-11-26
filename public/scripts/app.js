@@ -112,33 +112,27 @@ $provide.factory('MyHttpInterceptor', function ($q, $log) {
 
       if(response.status == 200) {
 
-        // Only this routes for now
+        // All the pages that we want to animate
         if(response.config.url == "/api/v1/keywords/get" || response.config.url == "/api/v1/emails/get_all") {
 
           // Just a little awesomenes
-          // -> To let users know what's going on the background
-          var randomAnimation = Math.floor((Math.random()*9)+1)
+          var randomAnimation = Math.floor((Math.random()*4)+1)
 
-          var idtoClass = {'1': "animated bounce",
-                           '3': "animated pulse",
-                           '5': "animated bounceIn",
-                           '6': "animated rollIn",
-                           '7': "animated flipInX",
-                           '8': "animated flipInY",
-                           '9': "animated bounceInDown",
-                           '10': "animated fadeInDown",
-                           '11': "animated fadeInDownBig"};
+          var idtoClass = {'1': "animated flipInX",
+                           '2': "animated fadeInDown",
+                           '3': "animated fadeInDownBig",
+                           '4': "animated zoomInDown"};
 
           var randomClass = idtoClass[randomAnimation];
-
-          $("#g-content-loader").hide();
-          $("#app-internal").show();
 
           $("#app-internal").removeClass(randomClass).addClass(randomClass).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
             $(this).removeClass(randomClass);
           });
 
         }
+
+        $("#g-content-loader").hide();
+        $("#app-internal").show();
 
       }
 
@@ -184,6 +178,6 @@ $interpolateProvider.endSymbol('*>');
 // Other moodules
 // ---------------------
 angular.module('app.auth', ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'utilFilters']);
-angular.module('app.keyWordsList', ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'xeditable', 'utilFilters']);
-angular.module('app.emailsList', ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'xeditable', 'utilFilters']);
-angular.module('app.search',  ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'xeditable', 'utilFilters']);
+angular.module('app.keyWordsList', ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'xeditable', 'utilFilters', 'ngAnimate']);
+angular.module('app.emailsList', ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'xeditable', 'utilFilters', 'ngAnimate']);
+angular.module('app.search',  ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'xeditable', 'utilFilters', 'ngAnimate']);

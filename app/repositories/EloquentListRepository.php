@@ -99,10 +99,15 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
 
 					/* If no error returned */
 					if(!$recipients->error) {
+
+						$rec_arr = [];
+						foreach ($recipients->data as $rec) {
+							$rec_arr[] = $rec->toArray();
+						}
 						
 						/* Return proper data, and let the js handled the rest */
 						$ret->error = $recipients->error;
-						$ret->data = ["id" => $keywords['id'], "keywords" => $keywords["keywords"], "email" => $recipients->data[0]->toArray()];
+						$ret->data = ["id" => $keywords['id'], "keywords" => $keywords["keywords"], "email" => $rec_arr];
 						return $ret;
 
 					} else {

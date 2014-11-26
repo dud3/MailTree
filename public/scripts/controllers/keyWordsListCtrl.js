@@ -152,20 +152,36 @@ angular.module('app.keyWordsList')
 
 			var _keywordEntity = { keywords: [{}], recipients: [{}] };
 
+			// Before trun the associative array into non-associative array 
+			// since we can actally insert an associative array into the database
+			// but we can't make it readable to backend, so take of the keys.
 			_keywordEntity.keywords = $scope.associative_to_array($scope.keywordEntity.keywords);
+			// turn the non-associative array into the associative array again
+			// but this time make the keys equal to non-associative array keys, like the following:
+			// keywords: {"0": "dolphin", "1": "dog", "2": "fish"}.
 			_keywordEntity.keywords = $scope.array_to_associative(_keywordEntity.keywords);
+			// and finally we can store it in this format as a string type into the database.
+			// This is all because we want to make it able to store arrays into the database
+			// and also make it playable/readable for the backend programming.
 			_keywordEntity.keywords = $scope.array_stringify(_keywordEntity.keywords);
-
+			// Recipients
 			_keywordEntity.recipients = $scope.keywordEntity.recipients;
-
-			console.log(_keywordEntity);
 
 			keyWordsListSvc
 				.create(_keywordEntity)
 					.success(function(data){
 
-				}).error(function(data){
+						// From string to actual javaScript object
+						data.ketwordsList.keywords = angular.fromJson(data.ketwordsList.keywords);
 
+						// Push it back the the items array						
+						$rootScope.keyWordsLists.push(data.ketwordsList);
+						toaster.pop('success', "Message", "Keyword List Created Successfully.");
+						$scope.hide_create_modal();
+
+				}).error(function(data){
+					toaster.pop('error', "Message", "Something went wrong, please try again.");
+					$scope.hide_create_modal();
 			});
 
 		};
@@ -264,7 +280,7 @@ angular.module('app.keyWordsList')
 		// Keywords List
 		$scope.$watch('keyWordsLists', function(){
 
-			console.log($scope.keyWordsLists);
+			// console.log($scope.keyWordsLists);
 
 		}, true);
 

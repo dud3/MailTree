@@ -45,7 +45,7 @@ class ListController extends internalCtrl {
 	}
 
 	/**
-	 * Get all keyowrds
+	 * Get all keyowrds.
 	 * @return [object] [object of keywords]
 	 */
 	public function get_all_keywords() {
@@ -53,7 +53,7 @@ class ListController extends internalCtrl {
 	}
 
 	/**
-	 * Create keywords list
+	 * Create keywords list.
 	 * @return [array] [array of objects]
 	 */
 	public function create_keywords_list() {
@@ -68,6 +68,22 @@ class ListController extends internalCtrl {
 		}
 
 		return $ret;
+
+	}
+
+	/**
+	 * Remove from the keywords list.
+	 * @param  [type] $id [description]
+	 * @return [type]     [description]
+	 */
+	public function remove_keywords_list($id) {
+
+		$ret = $this->lists->remove_keywords_list($id);
+		if(!$ret->error) {
+			$ret = Response::json(["ketwordsList" => $ret->data], 200);
+		} else {
+			$ret = Response::json([$ret->message], 401);
+		}
 
 	}
 

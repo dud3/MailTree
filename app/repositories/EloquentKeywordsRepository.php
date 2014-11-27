@@ -51,6 +51,15 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 	}
 
 	/**
+	 * Find keyword by ID.
+	 * @param  [type] $id [description]
+	 * @return [type]     [description]
+	 */
+	public function find($id) {
+		return keywords_list::find($id);
+	}
+
+	/**
 	 * Get email by ID.
 	 * @param  [type] $id [description]
 	 * @return [type]     [description]

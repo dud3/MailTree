@@ -13,11 +13,18 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
 	protected $emails;
 
 	/**
+	 * Return data.
+	 * @var stdClass
+	 */
+	protected $ret;
+
+	/**
 	 * Main Constructor.
 	 */
 	public function __construct(EloquentKeywordsRepositoryInterface $keywords, EloquentEmailsRepository $emails) {
 		$this->keywords = $keywords;
 		$this->emails = $emails;
+		$this->ret = new stdClass();
 	}
 
 	/**
@@ -112,6 +119,72 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
 
 					} else {
 						throw new RuntimeException("Error, recipients has couldn't succeed.", 0.2);
+					}
+
+				} else {
+					throw new RuntimeException("Error, The array can not be empty", 0.2);
+					
+				}
+
+			} else {
+				throw new RuntimeException("Errorm The array can not be null", 0.1);
+			}
+
+		} catch(RuntimeException $e) {
+
+			$error = new stdClass();
+			$error->message = $e->getMessage();
+			$error->code = $e->getCode();
+			$error->error = true;
+
+			return $error;
+
+		}
+
+	}
+
+	/**
+	 * Remove from the keywords list.
+	 * @param  [type] $id [description]
+	 * @return [type]     [description]
+	 */
+	public function remove_keywords_list($id) {
+
+		try {
+			
+			if($id != null) {
+
+				if(!empty($id)) {
+
+					/*! First of all find all the users with keywords */					
+					$recipients_with_keywords = $this->emails->find_recipients_by_keyword($id);
+
+					/* There might be keyword lists without recipients */
+					if(count($recipients_with_keywords) > 0) {
+						$recipients_with_keywords->delete();
+					} else {
+						$recipients_with_keywords = true;
+					}
+
+					if($recipients_with_keywords) {
+
+						/* Return proper data, and let the js handled the rest */
+						$keywords = $this->keywords->find($id);
+
+						/* If we're all good delete keywords as well */
+						if($keywords->delete()) {
+
+							$this->ret->error = false;
+							$this->ret->data = "Cool KeywordList deleted";
+
+							return $this->ret;
+
+						} else {
+							throw new RuntimeException("Error, recipients couldn't be deleted.", 0.2);
+						}
+
+					} else {
+						throw new RuntimeException("Error, recipients couldn't be deleted.", 0.2);
 					}
 
 				} else {

@@ -91,6 +91,15 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 	}
 
 	/**
+	 * Find recipients by keyword.
+	 * @param  [type] $id [description]
+	 * @return [type]     [description]
+	 */
+	public function find_recipients_by_keyword($id) {
+		return email_address_list::where("keyword_id", "=", $id);
+	}
+
+	/**
 	 * Store a new email.
 	 * @param  [type] $data [description]
 	 * @return [type]       [description]

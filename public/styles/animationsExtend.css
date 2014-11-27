@@ -11,8 +11,8 @@
   animation: fadeInDown 1.2s;
 }
 .item.ng-leave {
-  -webkit-animation: bounceOut 2s;
-  -moz-animation: bounceOut 2s;
-  -ms-animation: bounceOut 2s;
-  animation: bounceOut 2s;
+  -webkit-animation: bounceOut 1.3s;
+  -moz-animation: bounceOut 1.3s;
+  -ms-animation: bounceOut 1.3s;
+  animation: bounceOut 1.3s;
 }

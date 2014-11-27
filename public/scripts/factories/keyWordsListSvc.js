@@ -13,6 +13,10 @@ var services = {
       return results;
     },
 
+    removeKeywordEntity: function(id) {
+      return $http.post('/api/v1/keywords/remove/' + id);
+    },
+
     updateKeyword: function(keyword) {
       var results = $http.post('/api/v1/updateKeyword', angular.toJson(keyword));
       return results;

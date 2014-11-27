@@ -17,7 +17,7 @@
 					<div class="panel-heading">
 					  <h4 class="panel-title">
 				
-						<a href="javascript:void(0)">			    
+						<a href="javascript:void(0)" ng-click="removeKeywordEntity($index, '<* keyWordsList.id *>')">			    
 					  		<span class="text-danger" style="float:right; padding-left:15px;"><b>x</b></span>
 					  	</a>
 

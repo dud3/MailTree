@@ -186,18 +186,6 @@ angular.module('app.keyWordsList')
 
 		};
 
-
-		  // $modal({title: 'My Title', content: tmpl, show: true});
-		  // Pre-fetch an external template populated with a custom scope
-		  // 
-		  // This templade way doesn't work, let's go with usual pattern first until we figure out what's wrong with this one.
-		  // 
-		  // var myOtherModal = $modal({scope: $scope, template: '/scripts/templates/create_keywordsList.tpl.html', show: false});
-		  // Show when some event occurs (use $promise property to ensure the template has been loaded)
-		  // $scope.showModal = function() {
-		  //  myOtherModal.$promise.then(myOtherModal.show);
-		  // };
-
 		/**
 		 * Update The whole keywordEntity
 		 * Update only recipent 
@@ -206,6 +194,26 @@ angular.module('app.keyWordsList')
 		 */
 		$scope.submit = function() {
 
+		};
+
+		/**
+		 * Remove keyword entity
+		 * @param  {[type]} index [description]
+		 * @return {[type]}       [description]
+		 */
+		$scope.removeKeywordEntity = function(index, keyWordsLists_id) {
+			console.log(index);
+			console.log(keyWordsLists_id);
+			$scope.keyWordsLists.splice(index, 1);
+
+			keyWordsListSvc
+				.removeKeywordEntity(keyWordsLists_id)
+					.success(function(data){
+						
+				}).error(function(data){
+					toaster.pop('error', "Message", "Something went wrong, please try again.");
+			});
+				
 		};
 
 		/**
@@ -271,6 +279,17 @@ angular.module('app.keyWordsList')
 		$scope.search = function() {
 
 		};
+
+		// $modal({title: 'My Title', content: tmpl, show: true});
+		// Pre-fetch an external template populated with a custom scope
+		// 
+		// This templade way doesn't work, let's go with usual pattern first until we figure out what's wrong with this one.
+		// 
+		// var myOtherModal = $modal({scope: $scope, template: '/scripts/templates/create_keywordsList.tpl.html', show: false});
+		// Show when some event occurs (use $promise property to ensure the template has been loaded)
+		// $scope.showModal = function() {
+		//  myOtherModal.$promise.then(myOtherModal.show);
+		// };
 
 		//------------------------------
 		// Scope Watchers
@@ -386,7 +405,7 @@ angular.module('app.keyWordsList')
 		 */
 		$scope.array_stringify = function(object) {
 			return JSON.stringify(object);
-		}
+		};
 
 		/**
 		 * Validate email.
@@ -396,6 +415,21 @@ angular.module('app.keyWordsList')
 		$scope.validateEmail = function(email) { 
 		    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		    return re.test(email);
-		} 
+		};
+
+		/**
+		 * Find object by it's attribute value.
+		 * @param  {[type]} array [description]
+		 * @param  {[type]} attr  [description]
+		 * @param  {[type]} value [description]
+		 * @return {[type]}       [description]
+		 */
+		$scope.findWithAttr = function(array, attr, value) {
+			for(var i = 0; i < array.length; i += 1) {
+				if(array[i][attr] === value) {
+				    return i;
+				}
+			}
+		}
 
 }]);

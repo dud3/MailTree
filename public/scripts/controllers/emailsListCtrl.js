@@ -74,7 +74,8 @@ angular.module('app.emailsList')
 						// From string to actual javaScript object
 						angular.forEach(data.emails, function(item) {
 							item.keywords = angular.fromJson(item.keywords);
-						})
+							item.sent = parseInt(item.sent);
+						});
 
 						$rootScope.emails = data.emails;
 

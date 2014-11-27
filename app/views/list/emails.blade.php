@@ -16,12 +16,19 @@
 		</thead>
 
 		<tbody>
-			<tr ng-repeat="email in emails | filter:__G__search" id="id-email<* email.id *>">
+			<tr ng-repeat="email in emails | filter:__G__search" id="id-email<* email.id *>" ng-class="{ 'mail-sent': email.sent }">
 				<td style="padding:8px 0px 0px 15px; margin:0px;"><input type="checkbox" id="check-email<* email.id *>" name="check-email<* email.id *>"></td>
 				<td ng-bind-html="email.subject"></td>
 				<td><* email.utc_time *></td>
 				<!-- td ng-bind-html="email.body"></td -->
-				<td class="text-right" style="padding:6px 10px"><button style="font-size:10px; padding:2px 15px 2px 15px;" class="btn btn-info btn-sm">Send&nbsp;<span class="fa fa-paper-plane"></span></button></td>
+				<td class="text-right" style="padding:6px 10px">
+					<span ng-show="email.sent" class="label label-success mail-sent-label" style="padding:5px 19px 5px 15px;">
+						Sent&nbsp;<span class="fa fa-envelope"></span>
+					</span>
+					<button ng-show="!email.sent" style="font-size:10px; padding:2px 15px 2px 15px;" class="btn btn-info btn-sm">
+						Send&nbsp;<span class="fa fa-paper-plane"></span>
+					</button>
+				</td>
 			</tr>
 
 			<!-- 
@@ -66,7 +73,7 @@
 				<td><input type="checkbox" name="" value=""></td>
 				<td>Title of email with some keywords like <span class="label label-primary">California</span> and whatever</td>
 				<td>Date</td>
-				<td><span class="label label-success mail-sent-label" style="padding:5px 19px 5px 15px;">Sent&nbsp;<span class="fa fa-envelope"></span></span></td>
+				<td><span class="label label-success mail-sent-label" style="padding:5px 19px 5px 15px;">Sent&nbsp;<span class="fa fa-envelope"></span><</td>
 			</tr -->
 
 		</tbody>

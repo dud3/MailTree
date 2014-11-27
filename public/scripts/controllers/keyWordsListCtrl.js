@@ -179,6 +179,20 @@ angular.module('app.keyWordsList')
 						toaster.pop('success', "Message", "Keyword List Created Successfully.");
 						$scope.hide_create_modal();
 
+						// Scroll to the bottom
+						setTimeout(function(){
+
+							$('html, body').scrollTop( $(document).height() - $(window).height() );
+
+							// Indicate a new added item
+							$("#accordion" + data.ketwordsList.id).removeClass('animated zoomIn').addClass('animated zoomIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+								$(this).removeClass('animated zoomIn');
+							});
+
+						}, 300);
+
+
+
 				}).error(function(data){
 					toaster.pop('error', "Message", "Something went wrong, please try again.");
 					$scope.hide_create_modal();

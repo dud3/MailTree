@@ -22,7 +22,7 @@
 				<td><* email.utc_time *></td>
 				<!-- td ng-bind-html="email.body"></td -->
 				<td class="text-right" style="padding:6px 10px">
-					<span ng-show="email.sent" class="label label-success mail-sent-label" style="padding:5px 19px 5px 15px;">
+					<span ng-show="email.sent" class="label label-success mail-sent-label" style="padding:2.5px 19px 2.5px 15px;">
 						Sent&nbsp;<span class="fa fa-envelope"></span>
 					</span>
 					<button ng-show="!email.sent" style="font-size:10px; padding:2px 15px 2px 15px;" class="btn btn-info btn-sm">

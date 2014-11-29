@@ -43,6 +43,7 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 				ON k_l.id = e_a_l.keyword_id
 
 			GROUP BY m.x_uid
+			ORDER BY m.id DESC
 
 		");
 

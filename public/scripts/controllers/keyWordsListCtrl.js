@@ -25,7 +25,8 @@ angular.module('app.keyWordsList')
 		 */
 		$rootScope.keywordEntity = {
 			keywords: [{ keyword:'' }],
-			recipients: [{ full_name:'', email:'' }]
+			recipients: [{ full_name:'', email:'' }],
+			original_content: false
 		};
 
 		$scope.search = "";
@@ -71,7 +72,7 @@ angular.module('app.keyWordsList')
 		* @note: This is used on the `Create Keyword List` modal.
 		*/
 		$scope.addKeywordInput = function(){
-			$scope.keywordEntity.keywords.push({ keyword:'' });
+			$rootScope.keywordEntity.keywords.push({ keyword:'' });
 			setTimeout(function(){
 				$("#id-keywords-container").children()[$("#id-keywords-container").children().length - 1].children[0].focus();
 			}, 300);
@@ -84,7 +85,7 @@ angular.module('app.keyWordsList')
 		* @note: This is used on the `Create Keyword List` modal.
 		*/
 		$scope.addRecipentInput = function(index){
-			$scope.keywordEntity.recipients.push({ full_name:'', email:'' });
+			$rootScope.keywordEntity.recipients.push({ full_name:'', email:'' });
 			setTimeout(function(){
 				$("#id-recipients-container").children()[$("#id-recipients-container").children().length - 1].children[0].children[0].focus();
 			}, 300);
@@ -98,9 +99,9 @@ angular.module('app.keyWordsList')
 		*/
 		$scope.removeKeywordInput = function(index){
 			if(isNaN(index)) {
-				$scope.keywordEntity.keywords.splice($scope.keywordEntity.keywords.length - 1, 1);
+				$rootScope.keywordEntity.keywords.splice($rootScope.keywordEntity.keywords.length - 1, 1);
 			} else {
-				$scope.keywordEntity.keywords.splice(index, 1);
+				$rootScope.keywordEntity.keywords.splice(index, 1);
 			}
 		};
 
@@ -112,9 +113,9 @@ angular.module('app.keyWordsList')
 		*/
 		$scope.removeRecipentInput = function(index){
 			if(isNaN(index)) {
-				$scope.keywordEntity.recipients.splice($scope.keywordEntity.recipients.length - 1, 1);
+				$rootScope.keywordEntity.recipients.splice($rootScope.keywordEntity.recipients.length - 1, 1);
 			} else {
-				$scope.keywordEntity.recipients.splice(index, 1);
+				$rootScope.keywordEntity.recipients.splice(index, 1);
 			}
 		};
 
@@ -125,7 +126,8 @@ angular.module('app.keyWordsList')
 		$scope.show_create_modal = function() {
 			$rootScope.keywordEntity = {
 				keywords: [{ keyword:'' }],
-				recipients: [{ full_name:'', email:'' }]
+				recipients: [{ full_name:'', email:'' }],
+				original_content: false
 			};
 
 			$("#id-modal-create_keywordList").modal('show');
@@ -138,7 +140,8 @@ angular.module('app.keyWordsList')
 		$scope.hide_create_modal = function() {
 			$rootScope.keywordEntity = {
 				keywords: [{ keyword:'' }],
-				recipients: [{ full_name:'', email:'' }]
+				recipients: [{ full_name:'', email:'' }],
+				original_content: false
 			};
 
 			$("#id-modal-create_keywordList").modal('hide');
@@ -155,7 +158,7 @@ angular.module('app.keyWordsList')
 			// Before trun the associative array into non-associative array 
 			// since we can actally insert an associative array into the database
 			// but we can't make it readable to backend, so take of the keys.
-			_keywordEntity.keywords = $scope.associative_to_array($scope.keywordEntity.keywords);
+			_keywordEntity.keywords = $scope.associative_to_array($rootScope.keywordEntity.keywords);
 			// turn the non-associative array into the associative array again
 			// but this time make the keys equal to non-associative array keys, like the following:
 			// keywords: {"0": "dolphin", "1": "dog", "2": "fish"}.
@@ -164,8 +167,15 @@ angular.module('app.keyWordsList')
 			// This is all because we want to make it able to store arrays into the database
 			// and also make it playable/readable for the backend programming.
 			_keywordEntity.keywords = $scope.array_stringify(_keywordEntity.keywords);
+
+			// push the state of original_content model, since the `original_content` column belongs to `keywods_list` table.
+			_keywordEntity.original_content = $rootScope.keywordEntity.original_content;
+
 			// Recipients
-			_keywordEntity.recipients = $scope.keywordEntity.recipients;
+			_keywordEntity.recipients = $rootScope.keywordEntity.recipients;
+
+			console.log($rootScope.keywordEntity);
+			console.log(_keywordEntity);
 
 			keyWordsListSvc
 				.create(_keywordEntity)
@@ -218,7 +228,7 @@ angular.module('app.keyWordsList')
 		$scope.removeKeywordEntity = function(index, keyWordsLists_id) {
 			console.log(index);
 			console.log(keyWordsLists_id);
-			$scope.keyWordsLists.splice(index, 1);
+			$rootScope.keyWordsLists.splice(index, 1);
 
 			keyWordsListSvc
 				.removeKeywordEntity(keyWordsLists_id)
@@ -313,35 +323,34 @@ angular.module('app.keyWordsList')
 		// Keywords List
 		$scope.$watch('keyWordsLists', function(){
 
-			// console.log($scope.keyWordsLists);
+			// console.log($rootScope.keyWordsLists);
 
 		}, true);
 
 		// Keyword Entity
 		$scope.$watch('keywordEntity', function(){
 
-			console.log($scope.keywordEntity);
+			console.log($rootScope.keywordEntity);
 
 			$("#id-create-keywordList").removeAttr('disabled');
 			$("#id-remove-keyword").hide();
 			$("#id-remove-recipient").hide();
 
-			if($scope.keywordEntity.keywords.length > 1) {
+			if($rootScope.keywordEntity.keywords.length > 1) {
 				$("#id-remove-keyword").show();
 			}
 
-			if($scope.keywordEntity.recipients.length > 1) {
+			if($rootScope.keywordEntity.recipients.length > 1) {
 				$("#id-remove-recipient").show();
 			}
 
-			angular.forEach($scope.keywordEntity.keywords, function(keyword){
+			angular.forEach($rootScope.keywordEntity.keywords, function(keyword){
 				if(keyword.keyword.length == 0) {
 					$("#id-create-keywordList").attr('disabled', 'disabled');
 				}
 			});
 
-			angular.forEach($scope.keywordEntity.recipients, function(recipient){
-				console.log(recipient);
+			angular.forEach($rootScope.keywordEntity.recipients, function(recipient){
 				if(recipient.full_name.length == 0) {
 					$("#id-create-keywordList").attr('disabled', 'disabled');
 				}

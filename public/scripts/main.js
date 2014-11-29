@@ -35,6 +35,8 @@ $(document).ready(function() {
         $('#collapseOne').collapse();
     });
 
+    $('[data-toggle="tooltip"]').tooltip()
+
     /*
     //toggle `popup` / `inline` mode
     $.fn.editable.defaults.mode = 'popup';     

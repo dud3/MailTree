@@ -8,8 +8,8 @@
  * Controller of the publicApp
  */
 angular.module('app.emailsList')
-  .controller('emailsListCtrl', ['$scope', '$rootScope', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore', 'emailsListSvc', 'toaster',
-	function ($scope, $rootScope, $http, $q, $compile, $location, $sce, $cookies, $cookieStore, emailsListSvc, toaster) {
+  .controller('emailsListCtrl', ['$scope', '$rootScope', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore', 'emailsListSvc', 'toaster', '$tooltip',
+	function ($scope, $rootScope, $http, $q, $compile, $location, $sce, $cookies, $cookieStore, emailsListSvc, toaster, $tooltip) {
 
 
 		/**
@@ -17,6 +17,8 @@ angular.module('app.emailsList')
 		 * @type {Object}
 		 */
 		$scope.__mailCfg = { listen_delay: 200000, cache: false };
+
+		$scope.tooltip = {title: '<small>View email</small>'};
 
 
 	    /**
@@ -190,21 +192,19 @@ angular.module('app.emailsList')
 
 		};
 
-
 		/**
-		 * Remove keyword
+		 * Compose new email.
 		 * @return {[type]} [description]
 		 */
-		$scope.remove_keyword = function() {
+		$scope.composeEmail = function() {
 
 		};
 
-
 		/**
-		 * Remove recipent
+		 * Forward emails collectively.
 		 * @return {[type]} [description]
 		 */
-		$scope.remove_recipent = function() {
+		$scope.fwdCollective = function() {
 
 		};
 
@@ -215,6 +215,6 @@ angular.module('app.emailsList')
 		 */
 		$scope.search = function() {
 
-		}
+		};
 
 }]);

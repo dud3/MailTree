@@ -55,6 +55,11 @@
       </div>
 
       <div class="modal-footer">
+        <div class="checkbox pull-left" style="vertical-align:middle;" data-toggle="tooltip" data-placement="left" title="This option will save the email's original content, no matter keyword conditions.">
+          <label>
+            <input type="checkbox" ng-model="keywordEntity.original_content"><span class="text-info">Keep Original Content</span>
+          </label>
+        </div>
         <button type="button" id="id-close-keywordList" class="btn btn-default" data-dismiss="modal" ng-click="hide_create_modal()">Close</button>
         <button type="button" id="id-create-keywordList" class="btn btn-primary" ng-click="create()">Save changes</button>
       </div>

@@ -36,7 +36,6 @@
             <span style="" class="user">Someone@xmail.com</span> 
             <span class="caret"></span>
           </a>
-          </a>
            <ul class="dropdown-menu" role="menu">
             <li><a href="#">Settings</a></li>
             <li><a href="#">Create User</a></li>

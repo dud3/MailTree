@@ -81,7 +81,8 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
 				if(!empty($data)) {
 
 					/*! First of all store the keyword(s) */
-					$keywords = $this->keywords->store(["keywords" => $data["keywords"]]);
+					$keywords = $this->keywords->store(["keywords" => $data["keywords"]], 
+														$original_content = (isset($data["original_content"]) ? $data["original_content"] : false) );
 
 					if(!$keywords->error) {
 

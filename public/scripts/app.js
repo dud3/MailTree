@@ -44,7 +44,7 @@ angular
     'app.search'
 
   ])
-  .config(function ($routeProvider, $modalProvider) {
+  .config(function ($routeProvider, $modalProvider, $tooltipProvider) {
     
     // Save awesomeness for later on...
     $routeProvider
@@ -57,6 +57,10 @@ angular
       });
 
     angular.extend($modalProvider.defaults, {
+      html: true
+    });
+
+    angular.extend($tooltipProvider.defaults, {
       html: true
     });
     

@@ -70,14 +70,17 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 
 	/**
 	 * Store a new email.
-	 * @param  [type] $data [description]
-	 * @return [type]       [description]
+	 * @param  [text] $data 			[text formated array of keywords]
+	 * @param  [bool] $original_content [keep the original content or not]
+	 * @return [type]       			[array of created keywords]
 	 */
-	public function store($data = null) {
+	public function store($data = null, $original_content = false) {
 
 		$ret = [];
 
 		$count_keywords = keywords_list::where('keywords', '=', $data['keywords'])->count();
+
+		($original_content) ? $data["original_content"] = true : false;
 
 		try {
 			

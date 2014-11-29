@@ -16,3 +16,23 @@
   -ms-animation: bounceOut 1.3s;
   animation: bounceOut 1.3s;
 }
+
+.item-email {
+  -webkit-transition: color 0.6s, background-color 0.3s;
+  -moz-transition: color 0.6s, background-color 0.3s;
+  -ms-transition: color 0.6s, background-color 0.3s;
+  transition: color 0.6s, background-color 0.3s;
+}
+.item-email.ng-enter {
+  -webkit-animation: flipInX 1s;
+  -moz-animation: flipInX 1s;
+  -ms-animation: flipInX 1s;
+  animation: flipInX 1s;
+}
+.item-email.ng-leave {
+  -webkit-animation: flipOutX 1s;
+  -moz-animation: flipOutX 1s;
+  -ms-animation: flipOutX 1s;
+  animation: flipOutX 1s;
+}
+

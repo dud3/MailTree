@@ -27,7 +27,7 @@
 
 			<tbody>
 
-				<tr ng-repeat="email in emails | filter:__G__search" id="id-email<* email.id *>" ng-class="{ 'mail-sent': email.sent }" class="item">
+				<tr ng-repeat="email in emails | filter:__G__search" id="id-email<* email.id *>" ng-class="{ 'mail-sent': email.sent }" class="item-email">
 					<td style="padding:7px 6px 6px 10px; background-color:#eee;"><input  ng-show="!email.sent" type="checkbox" id="check-email<* email.id *>" name="check-email<* email.id *>"></td>
 					<td ng-bind-html="email.subject"></td>
 					<td><* email.utc_time *></td>

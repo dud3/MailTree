@@ -17,13 +17,27 @@
 					<div class="panel-heading">
 					  <h4 class="panel-title">
 				
-						<a href="javascript:void(0)" ng-click="removeKeywordEntity($index, '<* keyWordsList.id *>')">			    
-					  		<span class="text-danger" style="float:right; padding-left:15px;"><b>x</b></span>
-					  	</a>
+					  	<div class="col-md-2 pull-right" style="padding:0px; width:9.5%;">
 
-					    <a data-toggle="collapse" data-parent="#accordion" href="#collapse<* keyWordsList.id *>" class="pull-right nounderline">
-					    	<span class=""><b>+</b></span>
-					    </a>
+							<span data-animation="am-flip-x" placement="left" bs-tooltip="tooltip">
+								<input 	
+										type="checkbox"
+										id="check_<* keyWordsList.id *>"
+										ng-click="keepOriginalContent(<* keyWordsList.id *>)"
+										ng-checked="keyWordsList.original_content"
+										style="padding-right:0px; margin-right:0px;"
+								/>
+							</span>
+
+							<a href="javascript:void(0)" ng-click="removeKeywordEntity($index, '<* keyWordsList.id *>')">			    
+						  		<span class="text-danger" style="float:right; padding-left:15px;"><b>x</b></span>
+						  	</a>
+
+						    <a data-toggle="collapse" data-parent="#accordion" href="#collapse<* keyWordsList.id *>" class="pull-right nounderline">
+						    	<span class=""><b>+</b></span>
+						    </a>
+
+						</div>
 
 					      Keywords: <span style="margin-right:2px;" ng-repeat="(key, value) in keyWordsList.keywords" class="label label-primary"><* value *></span>
 
@@ -55,7 +69,7 @@
 
 					  			<td style="white-space: nowrap">
 							        <!-- form -->
-							        <form editable-form name="rowform" onbeforesave="saveUser($data, user.id)" ng-show="rowform.$visible" class="form-buttons form-inline" >
+							        <form editable-form name="rowform" onbeforesave="saveRecipient($data, user.id)" ng-show="rowform.$visible" class="form-buttons form-inline" >
 							          <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
 							            save
 							          </button>

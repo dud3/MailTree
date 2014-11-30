@@ -26,7 +26,7 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 
 		$sql_keywords = DB::select(
 
-			"SELECT k.id, k.keywords
+			"SELECT k.id, k.keywords, k.original_content
 
 			 FROM keywords_list k"
 		
@@ -186,6 +186,18 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 			$this->delete_single($k->id);
 		}
 		return true;
+	}
+
+	/**
+	 * Set the value to keep the original content of email.
+	 * Basically if we want to include HTML or not.
+	 * @param [object] $data [keywordEntity_id, state]
+	 */
+	public function keepOriginalContent($data) {
+		$keywordEntity = keywords_list::find($data["id"]);
+		$keywordEntity->fill(["original_content" => $data["original_content"]]);
+		$keywordEntity->save();
+		return $keywordEntity;
 	}
 
 	/**

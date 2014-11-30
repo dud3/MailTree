@@ -15,6 +15,7 @@ class ListController extends internalCtrl {
     public $lists;
     public $keywords;
     public $emails;
+    public $ret;
 
     /**
      * [__construct description]
@@ -84,6 +85,30 @@ class ListController extends internalCtrl {
 		} else {
 			$ret = Response::json([$ret->message], 401);
 		}
+
+		return $ret;
+
+	}
+
+	/**
+	 * Set the value to keep the original content of email.
+	 * Basically if we want to include HTML or not.
+	 * @param [object] $data [keywordEntity_id, state]
+	 */
+	public function keepOriginalContent($data = null) {
+
+		if($data == null) {
+			$data = Input::all();
+		}
+
+		$this->ret = $this->keywords->keepOriginalContent($data);
+		if(!$this->ret->error) {
+			$this->ret = Response::json(["ketwordsList" => $this->ret->data], 200);
+		} else {
+			$this->ret = Response::json([$this->ret->message], 401);
+		}
+
+		return $this->ret;
 
 	}
 

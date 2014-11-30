@@ -11,7 +11,6 @@ angular.module('app.emailsList')
   .controller('emailsListCtrl', ['$scope', '$rootScope', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore', 'emailsListSvc', 'toaster', '$tooltip',
 	function ($scope, $rootScope, $http, $q, $compile, $location, $sce, $cookies, $cookieStore, emailsListSvc, toaster, $tooltip) {
 
-
 		/**
 		 * Mail related config.
 		 * @type {Object}
@@ -20,13 +19,17 @@ angular.module('app.emailsList')
 
 		$scope.tooltip = {title: '<small>View email</small>'};
 
-
 	    /**
 	    * Emails holder
 	    * @type {Array}
 	    */
 		$rootScope.emails = [];
 
+		/**
+		 * Sent emails counter.
+		 * @type {Number}
+		 */
+		$scope.count_sent_emails = 0;
 
 		/**
 		 * Hold the data of the email to be edited or created.
@@ -55,7 +58,6 @@ angular.module('app.emailsList')
 
 		};
 
-
 		/**
 		 * filters
 		 * @type {Object}
@@ -69,7 +71,6 @@ angular.module('app.emailsList')
 
 		};
 
-
 		/**
 		 * Get all the keywords
 		 * @return {[type]} [description]
@@ -82,8 +83,14 @@ angular.module('app.emailsList')
 
 						// From string to actual javaScript object
 						angular.forEach(data.emails, function(item) {
+
 							item.keywords = angular.fromJson(item.keywords);
 							item.sent = parseInt(item.sent);
+							
+							if(item.sent) {
+								$scope.count_sent_emails++;
+							}
+
 						});
 
 						$rootScope.emails = data.emails;

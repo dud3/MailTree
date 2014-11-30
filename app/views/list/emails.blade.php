@@ -17,7 +17,10 @@
 
 			<thead>
 				<tr>
-					<th style="width:2%; padding-left: 10px;"><input type="checkbox" id="mail-check-all" /></th>
+					<th style="width:2%; padding-left: 10px;">
+						<input ng-show="count_sent_emails < emails.length" type="checkbox" id="mail-check-all" />
+						<span ng-show="count_sent_emails == emails.length" class="fa fa-check-square-o fa-lg text-success"></span>
+					</th>
 					<th>Subject</th>
 					<th>Date</th>
 					<!-- th>Body</th -->
@@ -28,7 +31,10 @@
 			<tbody>
 
 				<tr ng-repeat="email in emails | filter:__G__search" id="id-email<* email.id *>" ng-class="{ 'mail-sent': email.sent }" class="item-email">
-					<td style="padding:7px 6px 6px 10px; background-color:#eee;"><input  ng-show="!email.sent" type="checkbox" id="check-email<* email.id *>" name="check-email<* email.id *>"></td>
+					<td style="padding:7px 6px 6px 10px; background-color:#eee;">
+						<input  ng-show="!email.sent" type="checkbox" id="check-email<* email.id *>" name="check-email<* email.id *>">
+						<span ng-show="email.sent" class="fa fa-check-square-o fa-lg text-success"></span>
+					</td>
 					<td ng-bind-html="email.subject"></td>
 					<td><* email.utc_time *></td>
 					<!-- td ng-bind-html="email.body"></td -->

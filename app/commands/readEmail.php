@@ -123,7 +123,24 @@ class readEmail extends Command {
 
 		($_option_html_enable == "true") ? $_option_html_enable = true : $_option_html_enable = false;
 
-		$this->comment("Reading emails..." . "(" . $_option_email_search .")");
+		$this->comment("Reading Emails:");
+
+		$email_search_info = "Email search: " . $_option_email_search;
+		$email_search_info = str_pad($email_search_info, strlen($email_search_info) + 2, " ", STR_PAD_LEFT);
+
+		$this->info($email_search_info);
+
+		$email_html_info = "HTML enabled:";
+
+		if($_option_html_enable) { 
+			$email_html_info = $email_html_info . " true";
+		} else {
+			 $email_html_info = $email_html_info . " false";
+		}
+
+		$email_html_info = str_pad($email_html_info, strlen($email_html_info) + 2, " ", STR_PAD_LEFT);
+		
+		$this->info($email_html_info);
 		
 		echo "\n";
 		

@@ -139,15 +139,17 @@ class EmailsRepository implements EmailsRepositoryInterface {
             $std_email->body = $message->getMessageBody($html_enable);
             $std_email->date = $message->getDate();
 
+            /* Check the subject fitst */
             $std_email->subject = explode(" ", $std_email->subject);
             
+            /* If Fwd is present in the subject */
             if(in_array('Fwd:', $std_email->subject)) {
                 unset($std_email->subject[0]);
             }
 
             $std_email->subject = implode(" ", $std_email->subject);
 
-            if(self::$enable_html_email || !self::$enable_html_email) {
+            if(!self::$enable_html_email) {
 
                 /* Explode the email into pieces */
                 $std_email->body = explode("\n", $std_email->body);
@@ -159,7 +161,6 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 * -> keywords from the database even if we include the 
                 * -> ^M symbol at the end of each array element.
                 */ 
-
                 array_walk($std_email->body, array($this, 'trim_value'));
 
                /**
@@ -174,23 +175,16 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 * -> forwarded to an X person since we will forward the same email to multiple
                 * -> users that match the keyword(s), and replace their name on the emal.
                 */
-        
                 if(in_array('---------- Forwarded message ----------', $std_email->body)) {
                     $std_email->body = array_slice($std_email->body, 9);
                 }
 
                /** 
                 * if strpos($mystring, $findme)
-                * We might want to search the string 
-                * -> if it contains the keyword of "Dear" or simmilar.
+                * We might want to search the string if it contains the keyword of "Dear" or simmilar.
                 */
-
-                if(self::$enable_html_email) {
-                    $this->search_for = ["Dear Alexander Notifications,<br /><br />", "", ""];
-                } else {
-                    $this->search_for = ["Dear", "Dear Alexander", "Dear Alexander Notifications,"];
-                }
-
+                $this->search_for = ["Dear", "Dear Alexander", "Dear Alexander Notifications,"];
+              
                 if(in_array($this->search_for[0], $std_email->body) 
                 || in_array($this->search_for[1], $std_email->body) 
                 || in_array($this->search_for[2], $std_email->body)) {
@@ -198,10 +192,35 @@ class EmailsRepository implements EmailsRepositoryInterface {
                     $std_email->body = array_slice($std_email->body, 3);
                 }
 
-                // Put everything all togather
-                $std_email->body = implode("\n", $std_email->body); 
+            /**
+             * -----------------
+             * !If HTML enabled
+             * -----------------
+             */
+            } else if(self::$enable_html_email) {
+
+                /* Explode the email into pieces */
+                $std_email->body = explode("\n", $std_email->body);
+
+                /* Repeat the simmilar as for non-HTML emails */
+                array_walk($std_email->body, array($this, 'trim_value'));
+        
+                /* If the mail is forwarded in case */
+                if(in_array('---------- Forwarded message ----------', $std_email->body)) {
+                    $std_email->body = array_slice($std_email->body, 9);
+                }
+
+                /* Search for default values in the mail */
+                $this->search_for = ["Dear Alexander Notifications,<br /><br />"];
+
+                if(in_array($this->search_for[0], $std_email->body)) {
+                  $std_email->body = array_slice($std_email->body, 3);
+                }
 
             }
+
+            /* Put everything all togather */
+            $std_email->body = implode("\n", $std_email->body); 
 
             $arr_emails[] = $std_email;
 
@@ -213,6 +232,9 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
         }
 
+        /**
+         * This one actualy does the magic for us.
+         */
         $this->getEmailKeywords($arr_emails);
 
         self::closeDump();
@@ -386,7 +408,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
         foreach ($data as $email) {
 
-            // Get the keywords from the DB
+            /* Get the keywords from the  */
             $get_keywords =  explode(" ", $email->subject);
             $k_db = keywords_list::all()->toArray();
             $k_intersect = [];
@@ -398,6 +420,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
                 $k_db = trim($k_db);
                 $k_db = json_decode($k_db, true);
+
+                $k_db_original_content = (int)$db_keywords["original_content"];
 
                /**
                 * Get the common between the database keywords that belong 
@@ -431,6 +455,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 */
                 $k_arr_diff = array_diff($k_db, $get_keywords);
 
+                /*
                 echo "\n-------------------- DB --------------------\n";
                 var_dump($k_db);
                 echo "\n-------------------- Get --------------------\n";
@@ -439,8 +464,11 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 var_dump($k_intersect);
                 echo "\n-------------------- Diff Array --------------------\n";
                 var_dump($k_arr_diff);
+                */
 
                 if(count($k_arr_diff) == 0) {
+
+                  // echo ">>>>>>>>>>>>>>>>>>>>>>>> BINGO <<<<<<<<<<<<<<<<<<<<<<<<";
 
                    $e_add_list = email_address_list::where("keyword_id", "=", $k_id)->get()->toArray();
 
@@ -453,6 +481,22 @@ class EmailsRepository implements EmailsRepositoryInterface {
                             $std_store_email->full_name = $e_list["full_name"];
                             $std_store_email->subject = $email->subject;
                             $std_store_email->body = $email->body;
+                            $std_store_email->html = 0;
+
+                            /**
+                             * Since we would want to distingush between the
+                             * emails that depent on HTML we should first check if
+                             * the email listener listens with html_enable = true
+                             * and if they keywordEndtity wants to save the email in it's original content,
+                             * if so flag the email.
+                             */
+                            if(self::$enable_html_email) {
+                              if($k_db_original_content == 1) {
+                                $std_store_email->html = 1;
+                              } else {
+                                continue;
+                              }
+                            }
 
                             $std_store_email->__date = $email->header->date;
                             $std_store_email->__message_id = $email->header->message_id;
@@ -480,7 +524,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                             * Put everything togather
                             * $std_store_email->body = implode("\n", $std_store_email->body);
                             */
-
+                           
                             $this->storeMail($std_store_email);
                             
                         }
@@ -506,6 +550,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                  "email_address_id" => $data->email_address_id, 
                  "subject" => $data->subject, 
                  "body" => $data->body,
+                 "html" => $data->html,
 
                  "x_message_id" => $data->__message_id,
                  "x_date" => $data->__date,

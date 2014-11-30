@@ -26,6 +26,10 @@ var services = {
       return $http.get('/api/v1/updateRecipients', angular.toJson(user));
     },
 
+    keepOriginalContent: function(keyWordEntity) {
+      return $http.post('/api/v1/keywords/keepOriginalContent', angular.toJson(keyWordEntity));
+    },
+
     delete: function(id) {
       return $http({ method: 'DELETE', url: '/api/v1/deleteKeyword/' + id});
     },

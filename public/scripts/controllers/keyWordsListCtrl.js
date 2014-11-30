@@ -29,6 +29,16 @@ angular.module('app.keyWordsList')
 			original_content: false
 		};
 
+		/**
+		 * Simple tooltip.
+		 * @type {Object}
+		 */
+		$scope.tooltip = {title: 'Keep the origianl format of the email.'};
+
+		/**
+		 * Search model.
+		 * @type {String}
+		 */
 		$scope.search = "";
 
 		/**
@@ -44,7 +54,8 @@ angular.module('app.keyWordsList')
 						// From string to actual javaScript object
 						angular.forEach(data.keywords, function(item) {
 							item.keywords = angular.fromJson(item.keywords);
-						})
+							item.original_content = parseInt(item.original_content);
+						});
 
 						$rootScope.keyWordsLists = data.keywords;
 
@@ -117,6 +128,27 @@ angular.module('app.keyWordsList')
 			} else {
 				$rootScope.keywordEntity.recipients.splice(index, 1);
 			}
+		};
+
+		/** 
+		 * Keep the original content of the email(s) associated with keywords.
+		 * @param {[type]} keyword_id [description]
+		 */
+		$scope.keepOriginalContent = function(keyword_id) {
+
+			var checked = document.getElementById("check_" + keyword_id).checked;
+
+			var _keywordEntity = { id: keyword_id, original_content: checked }; 
+
+			keyWordsListSvc
+				.keepOriginalContent(_keywordEntity)
+					.success(function(data){
+						toaster.pop('success', "Message", "Changed Successfully.");
+					}).error(function(data){
+						toaster.pop('error', "Message", "Failed to Changed, please try again.");
+						document.getElementById("check_" + keyword_id).checked = false;
+					});
+
 		};
 
 		/**
@@ -226,8 +258,7 @@ angular.module('app.keyWordsList')
 		 * @return {[type]}       [description]
 		 */
 		$scope.removeKeywordEntity = function(index, keyWordsLists_id) {
-			console.log(index);
-			console.log(keyWordsLists_id);
+
 			$rootScope.keyWordsLists.splice(index, 1);
 
 			keyWordsListSvc
@@ -271,7 +302,7 @@ angular.module('app.keyWordsList')
 
 		};
 
-		$scope.saveUser = function(data, id) {
+		$scope.saveRecipient = function(data, id) {
 			//$scope.user not updated yet
 			angular.extend(data, {id: id});
 			return $http.post('/saveUser', data);

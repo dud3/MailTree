@@ -28,7 +28,7 @@
     <link href="/bower_components/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
     <link href="/bower_components/angular-xeditable/dist/css/xeditable.css">
     <link href="/bower_components/AngularJS-Toaster/toaster.css" rel="stylesheet">
-    <lnik href="/bower_components/angular-bootstrap-toggle-switch/style/bootstrap3/angular-toggle-switch-bootstrap-3.css" rel="stylesheet">
+    <!-- lnik href="/bower_components/angular-bootstrap-toggle-switch/style/bootstrap3/angular-toggle-switch-bootstrap-3.css" rel="stylesheet" -->
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed|PT+Sans|Titillium+Web' rel='stylesheet' type='text/css'>
 
@@ -116,7 +116,7 @@
     <script src="/bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
     <script src="/bower_components/AngularJS-Toaster/toaster.js"></script>
     <script src="/bower_components/angular-xeditable/dist/js/xeditable.js"></script>
-    <script src="/bower_components/angular-bootstrap-toggle-switch/angular-toggle-switch.min.js"></script>
+    <!-- script src="/bower_components/angular-bootstrap-toggle-switch/angular-toggle-switch.min.js"></script -->
     
     <!-- app -->
     <script src="/scripts/app.js"></script>

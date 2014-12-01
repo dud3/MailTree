@@ -17,7 +17,7 @@
 					<div class="panel-heading">
 					  <h4 class="panel-title">
 				
-					  	<div class="col-md-2 pull-right" style="padding:0px; width:9.5%;">
+					  	<div class="col-md-2 pull-right" style="padding:0px; width:11%;">
 
 							<span data-animation="am-flip-x" placement="left" bs-tooltip="tooltip">
 								<input 	
@@ -30,7 +30,7 @@
 							</span>
 
 							<a href="javascript:void(0)" ng-click="removeKeywordEntity($index, '<* keyWordsList.id *>')">			    
-						  		<span class="text-danger" style="float:right; padding-left:15px;"><b>x</b></span>
+						  		<span class="text-danger" style="float:right; margin-left:15px;"><b>x</b></span>
 						  	</a>
 
 						    <a data-toggle="collapse" data-parent="#accordion" href="#collapse<* keyWordsList.id *>" class="pull-right nounderline">

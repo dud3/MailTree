@@ -1,16 +1,10 @@
 <?php
 
+/**
+ * InternalCtrl.
+ * Simply share gloal data through all the views..
+ */
 class internalCtrl extends BaseController {
-
-	/*
-	|--------------------------------------------------------------------------
-	| Internal Controller
-	|--------------------------------------------------------------------------
-	|
-	| Everything else extend this controller, unless the AuthCtrl 
-	| -> and repositories.
-	|
-	*/
 
 	/**
 	 * Current enviroment

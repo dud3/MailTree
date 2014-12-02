@@ -45,7 +45,7 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
 			case 'get_keyword_list':
 				$this->get_keyword_list();
 				break;
-			
+
 		}
 
 	}
@@ -75,7 +75,7 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
 		$ret = new stdClass();
 
 		try {
-			
+
 			if($data != null) {
 
 				if(!empty($data)) {
@@ -112,7 +112,7 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
 						foreach ($recipients->data as $rec) {
 							$rec_arr[] = $rec->toArray();
 						}
-						
+
 						/* Return proper data, and let the js handled the rest */
 						$ret->error = $recipients->error;
 						$ret->data = ["id" => $keywords['id'], "keywords" => $keywords["keywords"], "email" => $rec_arr];
@@ -124,7 +124,7 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
 
 				} else {
 					throw new RuntimeException("Error, The array can not be empty", 0.2);
-					
+
 				}
 
 			} else {
@@ -152,12 +152,12 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
 	public function remove_keywords_list($id) {
 
 		try {
-			
+
 			if($id != null) {
 
 				if(!empty($id)) {
 
-					/*! First of all find all the users with keywords */					
+					/*! First of all find all the users with keywords */
 					$recipients_with_keywords = $this->emails->find_recipients_by_keyword($id);
 
 					/* There might be keyword lists without recipients */
@@ -190,7 +190,7 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
 
 				} else {
 					throw new RuntimeException("Error, The array can not be empty", 0.2);
-					
+
 				}
 
 			} else {

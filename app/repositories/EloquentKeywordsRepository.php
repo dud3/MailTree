@@ -12,7 +12,7 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 	 *
 	 * @note: I'm unsire if we actually need
 	 * -> a constructor at all.
-	 * 
+	 *
 	 */
 	public function __construct() {
 
@@ -29,19 +29,19 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 			"SELECT k.id, k.keywords, k.original_content
 
 			 FROM keywords_list k"
-		
+
 		);
 
 		foreach ($sql_keywords as $keyword) {
 
 			$keyword->email = DB::select(
-			
+
 				"SELECT e_a_l.id AS email_list_id, e_a_l.email, e_a_l.full_name
-				
+
 				 FROM email_address_list e_a_l
 
 				 WHERE e_a_l.keyword_id = ?"
-			
+
 			,[$keyword->id]);
 
 		}
@@ -83,7 +83,7 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 		($original_content) ? $data["original_content"] = true : false;
 
 		try {
-			
+
 			if($data != null) {
 
 				if(!empty($data)) {
@@ -105,7 +105,7 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 
 				} else {
 					throw new RuntimeException("Error, The array can not be empty", 0.2);
-					
+
 				}
 
 			} else {
@@ -133,7 +133,7 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 	public function update($data = null) {
 
 		try {
-			
+
 			if($data != null) {
 
 				if(!empty($data)) {
@@ -145,7 +145,7 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 
 				} else {
 					throw new RuntimeException("Error, The array can not be empty.", 0.2);
-					
+
 				}
 
 			} else {

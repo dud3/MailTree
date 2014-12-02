@@ -35,7 +35,7 @@
           <div id="id-recipients-container">
             <div ng-repeat="recipient in keywordEntity.recipients">
               <div class="col-md-6" style="padding:0px 5px 5px 0px;">
-                <input type="text" ng-model="recipient.full_name" placeholder="Salutation..." class="form-control">
+                <input type="text" ng-model="recipient.full_name" placeholder="Greetings..." class="form-control">
               </div>
               <div class="col-md-6" style="padding:0px 0px 5px 0px;">
                 <input ng-model="recipient.email" placeholder="Email..." class="form-control">

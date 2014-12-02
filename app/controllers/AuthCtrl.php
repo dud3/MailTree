@@ -1,16 +1,9 @@
 <?php
 
+/**
+ * Authentication controller.
+ */
 class AuthCtrl extends BaseController {
-
-	/*
-	|--------------------------------------------------------------------------
-	| AuthCtrl
-	|--------------------------------------------------------------------------
-	|
-	| Authentication controller before any users get logged in.
-	|
-	|
-	*/
 
 	/**
 	 * Render the view of the log in.
@@ -117,7 +110,6 @@ class AuthCtrl extends BaseController {
 	    	throw new AuthenticationException('User is banned.');
 		}	
 	}
-
 
 	/**
 	 * Create users.

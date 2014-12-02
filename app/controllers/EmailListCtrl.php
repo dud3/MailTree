@@ -1,14 +1,9 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| emailListCtrl Controller
-|--------------------------------------------------------------------------
-|
-| This is where the enmails go.
-|
-*/
-
+/**
+ * EmailListCtrl.
+ * This is where the enmails go.
+ */
 class EmailListCtrl extends internalCtrl {
 
     public $user;
@@ -26,11 +21,8 @@ class EmailListCtrl extends internalCtrl {
 	 * @return [type] [description]
 	 */
 	public function index() {
-
 		$view = View::make('list.emails', compact('_emails', '_inbox'));
-
 		return $view;
-
 	}
 
 	/**
@@ -94,6 +86,5 @@ class EmailListCtrl extends internalCtrl {
 	public function removeRecipent($id) {
 		return Response::json(["deleted" => $this->repo_emails->removeRecipent($id)], 200);
 	}
-
 
 }

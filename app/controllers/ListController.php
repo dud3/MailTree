@@ -1,14 +1,10 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| ListController Controller
-|--------------------------------------------------------------------------
-|
-| This is where the enmails go.
-|
-*/
-
+/**
+ * ListController class.
+ * The view and whatever type of a function that includes
+ * interaction of emails and keywords together are listed here.
+ */
 class ListController extends internalCtrl {
 
     public $user;
@@ -26,7 +22,6 @@ class ListController extends internalCtrl {
     	$this->emails = $emails;
     }
 
-	
 	/**
 	 * view keywords list.
 	 * @return [type] [description]
@@ -58,7 +53,7 @@ class ListController extends internalCtrl {
 	 * @return [array] [array of objects]
 	 */
 	public function create_keywords_list() {
-		
+
 		$input = Input::all();
 		$ret = $this->lists->create_keywords_list($input);
 

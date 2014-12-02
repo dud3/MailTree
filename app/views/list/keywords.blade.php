@@ -50,7 +50,7 @@
 					  	<table class="table table-bordered" style="margin:4px 0px 4px 0px;">
 
 					  		<tr>
-					  			<th>Salutation</th>
+					  			<th>Greetings</th>
 					  			<th>Email</th>
 					  			<th style="width:1%">Action</th>
 					  		</tr>
@@ -173,7 +173,7 @@
 			    	<h5>Recipients:</h5>
 			  	<table class="table table-bordered">
 			  		<tr>
-			  			<th>Salutation</th>
+			  			<th>Greetings</th>
 			  			<th>Email</th>
 			  		</tr>
 			  		<tr>

@@ -11,13 +11,14 @@
 ########################################################
 # All nescecary routes reide here 					   #
 
-// -------------------------------------
-// :: Before log-in ::
-// -------------------------------------
-//
-// Everything before authentication
-// -> goes here.
-//
+/**-------------------------------------
+ * :: Before log-in ::
+ * -------------------------------------
+ *
+ * Everything before authentication
+ * goes here.
+ *
+ */
 Route::group(array('before' => 'guest'), function()
 {
 
@@ -35,25 +36,27 @@ Route::group(array('before' => 'guest'), function()
 Route::get('/app',				'ListController@view_k_list');
 Route::get('/app/emails',		'EmailListCtrl@index');
 
-// ------------------------------------
-// :: After log-in ::
-// ------------------------------------
-//
-// All the routes after authentication
-// -> goes here.
-//
+/**------------------------------------
+ * :: After log-in ::
+ * ------------------------------------
+ *
+ * All the routes after authentication
+ * goes here.
+ *
+ */
 Route::group(array('before' => 'auth'), function()
 {
 	// Route::get('/app',			'EmailListCtrl@view_emails');
 
 });
 
-// ------------------------------------
-// :: API ::
-// ------------------------------------
-//
-// All JSON calls goes here.
-//
+/**------------------------------------
+ * :: API ::
+ * ------------------------------------
+ *
+ * All JSON calls goes here.
+ *
+ */
 Route::group(array('prefix' => 'api/v1'), function()
 {
 
@@ -80,12 +83,13 @@ Route::group(array('prefix' => 'api/v1'), function()
 
 });
 
-// ------------------------------------
-// :: Helpers ::
-// ------------------------------------
-//
-// All JSON calls goes here.
-//
+/**------------------------------------
+ * :: Helpers ::
+ * ------------------------------------
+ *
+ * All JSON calls goes here.
+ *
+ */
 Route::group(array('prefix' => 'help'), function()
 {
 	Route::get('/phpinfo',			'HelpCtrl@phpinfo');

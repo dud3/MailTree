@@ -1,16 +1,10 @@
 <?php
 
+/**
+ * HelpCtrl.
+ * Basic phpinfo stuff.
+ */
 class HelpCtrl extends internalCtrl {
-
-	/*
-	|--------------------------------------------------------------------------
-	| Internal Controller
-	|--------------------------------------------------------------------------
-	|
-	| Everything else extend this controller, unless the AuthCtrl 
-	| -> and repositories.
-	|
-	*/
 
 	public $user;
 

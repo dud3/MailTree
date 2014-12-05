@@ -42,11 +42,6 @@
 
   <body class="body-background">
 
-    <!-- System loading anim -->
-    <div id="g-content-loader">
-        <span class="col-md-12 fa fa-refresh fa-spin"></span>
-    </div>
-
     <div id="wrapper" class="toggled">
 
         @include("layouts.internalSideBar")
@@ -61,7 +56,7 @@
 
                     @include("layouts.internalNavbar")
 
-                    <!-- System Messaged -->
+                    {{-- System Messaged --}}
                     <toaster-container
                     toaster-options="{'position-class': 'toast-top-right',
                                       'showDuration': '300',
@@ -74,7 +69,12 @@
                                       'hideMethod': 'fadeOut'}">
                     </toaster-container>
 
-                    <!-- App container -->
+                    {{-- System loading anim --}}
+                    <div id="g-content-loader">
+                        <span class="col-md-12 fa fa-refresh fa-spin"></span>
+                    </div>
+
+                    {{-- App container --}}
                     <div id="app-internal" class="container-fluid app-background g-internal-container" style="display:none;">
 
                 <?php } ?>

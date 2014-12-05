@@ -57,8 +57,8 @@
                     @include("layouts.internalNavbar")
 
                     <!-- System Messaged -->
-                    <toaster-container 
-                    toaster-options="{'position-class': 'toast-top-right', 
+                    <toaster-container
+                    toaster-options="{'position-class': 'toast-top-right',
                                       'showDuration': '300',
                                       'hideDuration': '1000',
                                       'timeOut': '1000',
@@ -78,9 +78,9 @@
                 <?php } ?>
 
                     @yield('main')
-                
+
                     </div>
-        
+
             </div> <!-- /container -->
 
     </div>
@@ -117,7 +117,7 @@
     <script src="/bower_components/AngularJS-Toaster/toaster.js"></script>
     <script src="/bower_components/angular-xeditable/dist/js/xeditable.js"></script>
     <!-- script src="/bower_components/angular-bootstrap-toggle-switch/angular-toggle-switch.min.js"></script -->
-    
+
     <!-- app -->
     <script src="/scripts/app.js"></script>
 
@@ -129,7 +129,7 @@
         // User session to null for now
         // Probably will just handle sessions through PHP better
         angular.module("app.auth").constant("_userSessions", null);
-        // 
+        //
         // Password token to null as well
         angular.module("app.auth").constant("_pwdToken", null);
 

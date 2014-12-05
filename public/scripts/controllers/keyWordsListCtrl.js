@@ -8,8 +8,8 @@
  * Controller of the publicApp
  */
 angular.module('app.keyWordsList')
-  .controller('keyWordsListCtrl', ['$scope', '$rootScope', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore', 
-  			'keyWordsListSvc', '$modal', 'toaster', 
+  .controller('keyWordsListCtrl', ['$scope', '$rootScope', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore',
+  			'keyWordsListSvc', '$modal', 'toaster',
 	function ($scope, $rootScope, $http, $q, $compile, $location, $sce, $cookies, $cookieStore, keyWordsListSvc, $modal, toaster) {
 
 		/**
@@ -59,14 +59,14 @@ angular.module('app.keyWordsList')
 
 						$rootScope.keyWordsLists = data.keywords;
 
-						// 
-						// Note the internal keywords should be 
+						//
+						// Note the internal keywords should be
 						// -> accessed like: $rootScope.keyWordsList[0].keywords["0"]
-						// 
+						//
 						// and not like: $rootScope.keyWordsList[0].keywords.0
-						// 
+						//
 						// The second one returns error.
-						// 
+						//
 
 						console.log($rootScope.keyWordsLists);
 
@@ -92,7 +92,7 @@ angular.module('app.keyWordsList')
 		/**
 		* Add recipient inputs.
 		* Assign multiple recipients to the users on the fly.
-		* 
+		*
 		* @note: This is used on the `Create Keyword List` modal.
 		*/
 		$scope.addRecipentInput = function(index){
@@ -119,7 +119,7 @@ angular.module('app.keyWordsList')
 		/**
 		* Remove recipient inputs.
 		* Remove multiple recipients to the users on the fly.
-		* 
+		*
 		* @note: This is used on the `Create Keyword List` modal.
 		*/
 		$scope.removeRecipentInput = function(index){
@@ -130,7 +130,7 @@ angular.module('app.keyWordsList')
 			}
 		};
 
-		/** 
+		/**
 		 * Keep the original content of the email(s) associated with keywords.
 		 * @param {[type]} keyword_id [description]
 		 */
@@ -138,7 +138,7 @@ angular.module('app.keyWordsList')
 
 			var checked = document.getElementById("check_" + keyword_id).checked;
 
-			var _keywordEntity = { id: keyword_id, original_content: checked }; 
+			var _keywordEntity = { id: keyword_id, original_content: checked };
 
 			keyWordsListSvc
 				.keepOriginalContent(_keywordEntity)
@@ -187,7 +187,7 @@ angular.module('app.keyWordsList')
 
 			var _keywordEntity = { keywords: [{}], recipients: [{}] };
 
-			// Before trun the associative array into non-associative array 
+			// Before trun the associative array into non-associative array
 			// since we can actally insert an associative array into the database
 			// but we can't make it readable to backend, so take of the keys.
 			_keywordEntity.keywords = $scope.associative_to_array($rootScope.keywordEntity.keywords);
@@ -216,7 +216,7 @@ angular.module('app.keyWordsList')
 						// From string to actual javaScript object
 						data.ketwordsList.keywords = angular.fromJson(data.ketwordsList.keywords);
 
-						// Push it back the the items array						
+						// Push it back the the items array
 						$rootScope.keyWordsLists.push(data.ketwordsList);
 						toaster.pop('success', "Message", "Keyword List Created Successfully.");
 						$scope.hide_create_modal();
@@ -244,7 +244,7 @@ angular.module('app.keyWordsList')
 
 		/**
 		 * Update The whole keywordEntity
-		 * Update only recipent 
+		 * Update only recipent
 		 * Update only keyword
 		 * @return {[type]} [description]
 		 */
@@ -264,11 +264,11 @@ angular.module('app.keyWordsList')
 			keyWordsListSvc
 				.removeKeywordEntity(keyWordsLists_id)
 					.success(function(data){
-						
+
 				}).error(function(data){
 					toaster.pop('error', "Message", "Something went wrong, please try again.");
 			});
-				
+
 		};
 
 		/**
@@ -320,7 +320,7 @@ angular.module('app.keyWordsList')
 			$scope.inserted = {
 				email_list_id: recipientList.length + 1,
 				email: '',
-				full_name: '' 
+				full_name: ''
 			};
 
 			$rootScope.keyWordsLists[index].email.push($scope.inserted);
@@ -337,9 +337,9 @@ angular.module('app.keyWordsList')
 
 		// $modal({title: 'My Title', content: tmpl, show: true});
 		// Pre-fetch an external template populated with a custom scope
-		// 
+		//
 		// This templade way doesn't work, let's go with usual pattern first until we figure out what's wrong with this one.
-		// 
+		//
 		// var myOtherModal = $modal({scope: $scope, template: '/scripts/templates/create_keywordsList.tpl.html', show: false});
 		// Show when some event occurs (use $promise property to ensure the template has been loaded)
 		// $scope.showModal = function() {
@@ -466,7 +466,7 @@ angular.module('app.keyWordsList')
 		 * @param  {[type]} email [description]
 		 * @return {[type]}       [description]
 		 */
-		$scope.validateEmail = function(email) { 
+		$scope.validateEmail = function(email) {
 		    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		    return re.test(email);
 		};

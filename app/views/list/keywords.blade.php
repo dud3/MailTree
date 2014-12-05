@@ -10,17 +10,17 @@
     	<!-- <* keyWordsLists *> -->
 
 		<div class="col-md-6 item" ng-repeat="keyWordsList in keyWordsLists | filter:__G__search">
-			
+
 			<div class="panel-group" id="accordion<* keyWordsList.id *>">
 				<div class="panel panel-default">
 
 					<div class="panel-heading">
 					  <h4 class="panel-title">
-				
+
 					  	<div class="col-md-2 pull-right" style="padding:0px; width:11%;">
 
 							<span data-animation="am-flip-x" placement="left" bs-tooltip="tooltip">
-								<input 	
+								<input
 										type="checkbox"
 										id="check_<* keyWordsList.id *>"
 										ng-click="keepOriginalContent(<* keyWordsList.id *>)"
@@ -29,7 +29,7 @@
 								/>
 							</span>
 
-							<a href="javascript:void(0)" ng-click="removeKeywordEntity($index, '<* keyWordsList.id *>')">			    
+							<a href="javascript:void(0)" ng-click="removeKeywordEntity($index, '<* keyWordsList.id *>')">
 						  		<span class="text-danger" style="float:right; margin-left:15px;"><b>x</b></span>
 						  	</a>
 
@@ -80,7 +80,7 @@
 							        <div class="buttons" ng-show="!rowform.$visible">
 							          <button class="btn btn-primary" ng-click="rowform.$show()">edit</button>
 							          <button class="btn btn-danger" ng-click="removeRecipent($parent.$index, $index)">del</button>
-							        </div>  
+							        </div>
 						      	</td>
 
 					  		</tr>
@@ -103,8 +103,8 @@
 
 			<div class="panel-heading">
 			  <h4 class="panel-title">
-		
-				<a href="javascript:void(0)">			    
+
+				<a href="javascript:void(0)">
 			  		<span class="text-danger" style="float:right; padding-left:15px;"><b>x</b></span>
 			  	</a>
 
@@ -152,18 +152,18 @@
 	<div class="col-md-6">
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
-				
+
 			<div class="panel-heading">
 			  <h4 class="panel-title">
 
-			  	<a href="javascript:void(0)">			    
+			  	<a href="javascript:void(0)">
 			  		<span class="text-danger" style="float:right; padding-left:15px;"><b>x</b></span>
 			  	</a>
 
 			    <a data-toggle="collapse" data-parent="" href="#collapseTwo" class="pull-right nounderline" id="clickCol">
 			    	<span class=""><b>+</b></span>
 			    </a>
-			      
+
 			      Keywords: <span class="label label-primary">example1</span> <span class="label label-primary">example2</span>
 			  </h4>
 			</div>
@@ -202,20 +202,20 @@
 	<div class="col-md-6">
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
-				
+
 			<div class="panel-heading">
 			  <h4 class="panel-title">
 
-			  	<a href="javascript:void(0)">			    
+			  	<a href="javascript:void(0)">
 			  		<span class="text-danger" style="float:right; padding-left:15px;"><b>x</b></span>
 			  	</a>
 
 			   <a data-toggle="collapse" data-parent="" href="#collapseThree" class="pull-right nounderline">
 			   		<span><b>+</b></span>
 			   </a>
-			     
+
 			      Keywords: <span class="label label-primary">example1</span> <span class="label label-primary">example2</span>
-			    
+
 			  </h4>
 			</div>
 
@@ -232,18 +232,18 @@
 	<div class="col-md-6">
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
-				
+
 			<div class="panel-heading">
 			  <h4 class="panel-title">
 
-			  	<a href="javascript:void(0)">			    
+			  	<a href="javascript:void(0)">
 			  		<span class="text-danger" style="float:right; padding-left:15px;"><b>x</b></span>
 			  	</a>
 
 			    <a data-toggle="collapse" data-parent="" href="#collapseFour" class="pull-right nounderline">
 			    	<span><b>+</b></span>
 			    </a>
-			     
+
 			      Keywords: <span class="label label-primary">example1</span> <span class="label label-primary">example2</span>
 			  </h4>
 			</div>
@@ -265,14 +265,14 @@
 			<div class="panel-heading">
 			  <h4 class="panel-title">
 
-			  	<a href="javascript:void(0)">			    
+			  	<a href="javascript:void(0)">
 			  		<span class="text-danger" style="float:right; padding-left:15px;"><b>x</b></span>
 			  	</a>
 
 			    <a data-toggle="collapse" data-parent="" href="#collapseFive" class="pull-right nounderline">
 			    	<span><b>+</b></span>
 			    </a>
-			     
+
 			      Keywords: <span class="label label-primary">dabvis</span> <span class="label label-primary">CLA</span>
 			  </h4>
 			</div>
@@ -294,14 +294,14 @@
 			<div class="panel-heading">
 			  <h4 class="panel-title">
 
-			  	<a href="javascript:void(0)">			    
+			  	<a href="javascript:void(0)">
 			  		<span class="text-danger" style="float:right; padding-left:15px;"><b>x</b></span>
 			  	</a>
 
 			    <a data-toggle="collapse" data-parent="" href="#collapseSix" class="pull-right nounderline">
 			    	<span><b>+</b></span>
 			    </a>
-			     
+
 			      Keywords: <span class="label label-primary">dabvis</span> <span class="label label-primary">CLA</span>
 			  </h4>
 			</div>
@@ -315,7 +315,7 @@
 			</div>
 		</div>
 	</div -->
-	
+
 	@include('__modals__.keywords_list.create')
 	</div>
 

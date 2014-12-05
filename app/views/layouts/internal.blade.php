@@ -42,6 +42,11 @@
 
   <body class="body-background">
 
+    <!-- System loading anim -->
+    <div id="g-content-loader">
+        <span class="col-md-12 fa fa-refresh fa-spin"></span>
+    </div>
+
     <div id="wrapper" class="toggled">
 
         @include("layouts.internalSideBar")
@@ -68,9 +73,6 @@
                                       'showMethod': 'fadeIn',
                                       'hideMethod': 'fadeOut'}">
                     </toaster-container>
-
-                    <!-- System loading anim -->
-                    <div id="g-content-loader" class="row col-md-12 g-content-loader"><i class="fa-li fa fa-refresh fa-spin"></i></div>
 
                     <!-- App container -->
                     <div id="app-internal" class="container-fluid app-background g-internal-container" style="display:none;">

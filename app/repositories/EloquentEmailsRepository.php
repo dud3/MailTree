@@ -60,7 +60,7 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 			// Search the keywords from the email subject
 			$subject = explode(" ", $email->subject);
 
-			// Basically label around the keywords 
+			// Basically label around the keywords
 			// -> found in the email's subject.
 			foreach ($keywords as $keyword) {
 
@@ -120,7 +120,7 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 						if(self::validate($recipent)) {
 							$ret->data[] = email_address_list::create($recipent);
 							$ret->error = false;
-						} 
+						}
 
 					}
 

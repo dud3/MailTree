@@ -12,19 +12,22 @@
 // Windows 8 viewport hack
 // ------------------------
 (function () {
-'use strict';
-  if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-    var msViewportStyle = document.createElement('style')
-    msViewportStyle.appendChild(
-      document.createTextNode(
-        '@-ms-viewport{width:auto!important}'
-      )
-    )
-    document.querySelector('head').appendChild(msViewportStyle)
-  }
-})();
 
-$(document).ready(function() {
+'use strict';
+
+    if(document.getElementsByTagName('body')[0].clientWidth <= 754) {
+        $("#wrapper").toggleClass("toggled");
+    }
+
+    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement('style')
+        msViewportStyle.appendChild(
+          document.createTextNode(
+            '@-ms-viewport{width:auto!important}'
+          )
+        )
+        document.querySelector('head').appendChild(msViewportStyle)
+    }
 
     /**
      * Show the slide-pane animation
@@ -55,6 +58,8 @@ $(document).ready(function() {
         $('#collapseOne').collapse();
     });
 
-    $('[data-toggle="tooltip"]').tooltip();
+})();
 
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
 });

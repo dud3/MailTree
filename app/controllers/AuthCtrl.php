@@ -37,7 +37,7 @@ class AuthCtrl extends BaseController {
 	 * @param  [type] $data [description]
 	 * @return [type]       [description]
 	 */
-	public function logIn($data) 
+	public function logIn($data)
 	{
 		try
 		{
@@ -47,7 +47,7 @@ class AuthCtrl extends BaseController {
 
  		$userByEmail = Sentry::findUserByLogin($email);
  		$throttle = Sentry::findThrottlerByUserId($userByEmail['attributes']['id']);
-        
+
         if($throttle->check()) {
 
 		    	// Set login credentials
@@ -57,7 +57,7 @@ class AuthCtrl extends BaseController {
 		    	);
 
 		    	// Remember me if true
-				// This will simply remembere us as cookies 
+				// This will simply remembere us as cookies
 				// -> even if we close the browser
 				if(isset($data['remember'])){
 					if($data['remember']) {
@@ -67,7 +67,7 @@ class AuthCtrl extends BaseController {
 			    	// Try to authenticate the user per default session duration
 					$user = Sentry::authenticate($credentials, false);
 				}
-				
+
 				// Get current user
 				$currentUser = $this->getCurrentUser();
 
@@ -86,6 +86,10 @@ class AuthCtrl extends BaseController {
 		{
 	    	throw new AuthenticationException('Password field is required.');
 		}
+		catch (Cartalyst\Sentry\Users\UserNotActivatedException $e)
+		{
+	    	throw new AuthenticationException('User is not activated.');
+		}
 		catch (Cartalyst\Sentry\Users\WrongPasswordException $e)
 		{
 	    	throw new AuthenticationException('Wrong password, try again.');
@@ -94,11 +98,6 @@ class AuthCtrl extends BaseController {
 		{
 	    	throw new AuthenticationException('code.0');
 		}
-		catch (Cartalyst\Sentry\Users\UserNotActivatedException $e)
-		{
-	    	throw new AuthenticationException('User is not activated.');
-		}
-
 		// The following is only required if throttle is enabled
 		catch (Cartalyst\Sentry\Throttling\UserSuspendedException $e)
 		{
@@ -108,7 +107,7 @@ class AuthCtrl extends BaseController {
 		catch (Cartalyst\Sentry\Throttling\UserBannedException $e)
 		{
 	    	throw new AuthenticationException('User is banned.');
-		}	
+		}
 	}
 
 	/**
@@ -116,7 +115,7 @@ class AuthCtrl extends BaseController {
 	 * @param  [type] $data [description]
 	 * @return [type]       [description]
 	 */
-	public function createUser($data) 
+	public function createUser($data)
 	{
 		try
 		{
@@ -138,11 +137,11 @@ class AuthCtrl extends BaseController {
 					'first_login' => 0,
 					'company_id' => $data['company_id']
 				], true);
-			
+
 				return User::find($user->id);
-			
+
 		}
-		
+
 		catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
 		{
 			throw new AuthenticationException('name_empty');

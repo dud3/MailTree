@@ -56,7 +56,7 @@
 
                     @include("layouts.internalNavbar")
 
-                    {{-- System Messaged --}}
+                    {{-- System Messages --}}
                     <toaster-container
                     toaster-options="{'position-class': 'toast-top-right',
                                       'showDuration': '300',
@@ -85,7 +85,7 @@
 
             </div> <!-- /container -->
 
-    </div>
+    </div>  <!-- /container -->
 
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/scripts/main.js"></script>

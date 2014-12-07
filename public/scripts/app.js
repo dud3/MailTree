@@ -40,6 +40,7 @@ angular
     'app.auth',
     'app.keyWordsList',
     'app.emailsList',
+    'app.activeFilters',
     'app.search'
 
   ])
@@ -183,4 +184,5 @@ $interpolateProvider.endSymbol('*>');
 angular.module('app.auth', ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'utilFilters']);
 angular.module('app.keyWordsList', ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'xeditable', 'utilFilters', 'ngAnimate']);
 angular.module('app.emailsList', ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'xeditable', 'utilFilters', 'ngAnimate']);
+angular.module('app.activeFilters', ['ngSanitize']);
 angular.module('app.search',  ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'xeditable', 'utilFilters', 'ngAnimate']);

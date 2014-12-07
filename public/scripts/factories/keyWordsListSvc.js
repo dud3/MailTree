@@ -1,6 +1,6 @@
 angular.module('app.keyWordsList')
 .factory('keyWordsListSvc', ['$http', '$sanitize', function($http, $sanitize) {
-  
+
 var services = {
 
     getAll: function() {

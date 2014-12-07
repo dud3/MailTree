@@ -255,6 +255,11 @@ thead {
     list-style: none;
 }
 
+.sidebar-nav hr {
+  padding: 0px;
+  margin: 0px;
+}
+
 .sidebar-nav li {
     text-indent: 20px;
     line-height: 40px;
@@ -263,7 +268,7 @@ thead {
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #969696;
+    color: #292929;
 }
 
 .sidebar-nav li a:hover {
@@ -278,9 +283,13 @@ thead {
 }
 
 .sidebar-nav > .sidebar-brand {
-    height: 65px;
-    font-size: 18px;
-    line-height: 60px;
+    margin-left: -10px;
+    height: 15px;
+    margin-left: 0px;
+    padding-left: 0px;
+    font-size:13px;
+    line-height: 30px;
+    color:#999999;
 }
 
 .sidebar-nav > .sidebar-brand a {
@@ -292,6 +301,38 @@ thead {
     background: none;
 }
 
+/* Sidebar Filters section Styles */
+
+.cls-filter-container {
+  margin-top: -10px;
+}
+
+.cls-filters-list {
+    list-style: none;
+    padding: 10px 0px 0px 10px;
+}
+
+.cls-filters-list ul {
+  padding: 2px 0px 10px 2px;
+  list-style: none;
+  list-style-type: none;
+}
+
+.cls-filters-list > li {
+  color: #eee;
+  font-size: 12px;
+  line-height: 25px;
+  text-indent: 20px;
+}
+
+.cls-filters-list ul li {
+  line-height: 30px;
+  text-indent: 20px;
+  margin-left: 10px;
+}
+
+
+/* Media queries */
 @media(min-width:768px) {
     #wrapper {
         padding-left: 250px;

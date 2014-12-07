@@ -86,7 +86,7 @@ angular.module('app.emailsList')
 
 							item.keywords = angular.fromJson(item.keywords);
 							item.sent = parseInt(item.sent);
-							
+
 							if(item.sent) {
 								$scope.count_sent_emails++;
 							}
@@ -103,7 +103,7 @@ angular.module('app.emailsList')
 						//
 						// The second one returns error.
 						//
-						
+
 						console.log($rootScope.emails);
 
 				}).error(function(data){
@@ -114,7 +114,7 @@ angular.module('app.emailsList')
 
 		/**
 		 * mailListener basically check constantly if
-		 * new mails appear, if so it pushes it on to of the 
+		 * new mails appear, if so it pushes it on to of the
 		 * mails array.
 		 * @return {[type]} [description]
 		 */
@@ -140,7 +140,7 @@ angular.module('app.emailsList')
 							angular.forEach($rootScope.emails, function(_item) {
 
 								var _email_id = parseInt(_item.id);
-								// if the upcoming email has bigger id than the current 
+								// if the upcoming email has bigger id than the current
 								// emails, then push to the array
 								if(email_id > _email_id) {
 									$rootScope.emails.push(_item);
@@ -161,14 +161,14 @@ angular.module('app.emailsList')
 						//
 						// The second one returns error.
 						//
-						
+
 						console.log($rootScope.emails);
 
 				}).error(function(data){
 					toaster.pop('error', "Message", "Something went wrong, please try again");
 			});
 
-		}; 
+		};
 		// setInterval($scope.mailListener, $scope.__mailCfg.listen_delay);
 
 

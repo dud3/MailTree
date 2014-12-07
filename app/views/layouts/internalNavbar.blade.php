@@ -53,8 +53,8 @@
           <div class="input-group" style="width:100%;">
               <input type="text" class="form-control" ng-model="__G__search" placeholder="Search anything...">
               <div class="input-group-btn">
-                  <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                  <button class="btn btn-default" type="submit" ng-click="__G__search = ''"><i class="fa fa-times-circle-o fa-lg"></i></button>
+                  <button id="id-nav-serach_submit" class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                  <button id="id-nav-serach_clear" class="btn btn-default" ng-class="{ 'btn-danger': __G__search.length > 0 }" type="submit" ng-click="__G__search = ''"><i class="fa fa-times-circle-o fa-lg"></i></button>
               </div>
           </div>
       </form>

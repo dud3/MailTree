@@ -66,6 +66,8 @@ Route::group(array('prefix' => 'api/v1'), function()
         Route::post('create', 				'ListController@create_keywords_list');
         Route::post('remove/{id}',			'ListController@remove_keywords_list');
         Route::post('keepOriginalContent',	'ListController@keepOriginalContent');
+        Route::get('populateKeywords',		'APIActiveFilterList@populateKeywords');
+        Route::get('populateRootKeywords',	'APIActiveFilterList@populateRootKeywords');
     });
 
     Route::group(array('prefix' => 'emails'), function()

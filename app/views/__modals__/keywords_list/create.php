@@ -21,7 +21,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="col-md-12" style="padding:0px 0px;">
             <button ng-click="addKeywordInput()" class="btn btn-default btn-sm">Add more</button>
              <button id="id-remove-keyword" class="btn btn-danger btn-sm" ng-click="removeKeywordInput()" style="display:none;"><span>X</span></button>

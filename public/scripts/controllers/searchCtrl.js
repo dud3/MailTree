@@ -15,24 +15,12 @@ angular.module('app.search')
 		 * Global search variable
 		 * @type {Object}
 		 */
-		$rootScope.__G__search = [];
+		$rootScope.__G__search = "";
 
-		/**
-		 * Search globaly
-		 * @return {[type]} [description]
-		 */
-		$scope.search = function() {
 
+		$rootScope.__G__clean_search = function() {
+			$rootScope.__G__search = "";
 		};
-
-		/**
-		 * Animate searched values
-		 * @return {[type]} [description]
-		 */
-		$scope.animate = function() {
-
-		};
-
 
 		//------------------------------
 		// Scope Watchers
@@ -45,10 +33,8 @@ angular.module('app.search')
 			// if(newVal.length !== 0) {
 				// this is the JS equivalent of "phones | filter: newVal"
 				// $rootScope.keyWordsLists = $filter('filter')($rootScope.keyWordsLists, newVal);
-				$rootScope.keyWordsLists = filterFilter($rootScope.keyWordsLists, $rootScope.keyWordsLists);
+				// $rootScope.keyWordsLists = filterFilter($rootScope.keyWordsLists, $rootScope.keyWordsLists);
 			// }
-
-			console.log($rootScope.keyWordsLists);
 
 		}, true);
 

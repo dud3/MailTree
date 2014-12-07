@@ -54,8 +54,6 @@ angular.module('app.activeFilters')
 
 						});
 
-						$rootScope.activeFilter.allKeywords = data.keywords;
-
 						//
 						// Note the internal keywords should be
 						// -> accessed like: $rootScope.keyWordsList[0].keywords["0"]
@@ -66,6 +64,8 @@ angular.module('app.activeFilters')
 						//
 
 						$rootScope.activeFilter.allKeywords = _.uniq($rootScope.activeFilter.allKeywords);
+
+						console.log($rootScope.activeFilter.allKeywords);
 
 				}).error(function(data){
 					console.log(data);
@@ -148,8 +148,8 @@ angular.module('app.activeFilters')
 		 * Search globaly
 		 * @return {[type]} [description]
 		 */
-		$scope.search = function() {
-
+		$scope.activateFilter = function(param) {
+			$rootScope.__G__search = param;
 		};
 
 		//------------------------------

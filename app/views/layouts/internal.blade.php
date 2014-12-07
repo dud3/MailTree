@@ -42,7 +42,7 @@
 
   <body class="body-background">
 
-    <div id="wrapper" class="toggled">
+    <div id="wrapper" class="toggled" ng-controller="searchCtrl">
 
         @include("layouts.internalSideBar")
 
@@ -118,6 +118,7 @@
     <script src="/bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
     <script src="/bower_components/AngularJS-Toaster/toaster.js"></script>
     <script src="/bower_components/angular-xeditable/dist/js/xeditable.js"></script>
+    <script src="/bower_components/underscore/underscore-min.js"></script>
     <!-- script src="/bower_components/angular-bootstrap-toggle-switch/angular-toggle-switch.min.js"></script -->
 
     <!-- app -->
@@ -138,12 +139,14 @@
     </script>
 
     <script src="/scripts/controllers/authCtrl.js"></script>
+    <script src="/scripts/controllers/searchCtrl.js"></script>
     <script src="/scripts/controllers/keyWordsListCtrl.js"></script>
     <script src="/scripts/controllers/emailsListCtrl.js"></script>
-    <script src="/scripts/controllers/searchCtrl.js"></script>
+    <script src="/scripts/controllers/activeFiltersCtrl.js"></script>
 
     <script src="/scripts/factories/keyWordsListSvc.js"></script>
     <script src="/scripts/factories/emailsListSvc.js"></script>
+    <script src="/scripts/factories/activeFiltersSvc.js"></script>
     <script src="/scripts/factories/authSvc.js"></script>
 
     <script src="/scripts/filters/filters.js"></script>

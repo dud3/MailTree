@@ -26,13 +26,13 @@ angular.module('mainCtrl')
 	* @type {Object}
 	*/
 	$rootScope.notify = {
-		
+
 		fire: {
 
 			mainNav: function(msg, className, autoHide) {
 				$(".navbar-brand").notify(
 				  msg,
-				  { 
+				  {
 				      className: (typeof className !== 'undefined') ? className : 'error',
 				      position: 'right right',
 				      style: 'bootstrapSession',
@@ -47,7 +47,7 @@ angular.module('mainCtrl')
 			specificElem: function(element, msg, className, position, clickToHide, autoHide) {
 				$(element).notify(
 				  msg,
-				  { 
+				  {
 				      className: (typeof className !== 'undefined') ? className : 'error',
 				      position: (typeof position !== 'undefined') ? position : 'right right',
 				      style: 'bootstrapSession',

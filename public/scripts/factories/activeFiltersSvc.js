@@ -4,12 +4,12 @@ angular.module('app.activeFilters')
 var services = {
 
     populateKeywords: function() {
-      var results = $http.get('/api/v1/keywords/populateKeywords');
+      var results = $http.get('/api/v1/keywords/populateKeywords', {cache: true});
       return results;
     },
 
     populateRootKeywords: function() {
-      var results = $http.get('/api/v1/keywords/populateRootKeywords');
+      var results = $http.get('/api/v1/keywords/populateRootKeywords', {cache: true});
       return results;
     },
 

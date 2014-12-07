@@ -8,8 +8,8 @@
  * Controller of the search functions
  */
 angular.module('app.search')
-  .controller('searchCtrl', ['$scope', '$rootScope', '$filter', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore', 'keyWordsListSvc', 'filterFilter',
-	function ($scope, $rootScope, $filter, $http, $q, $compile, $location, $sce, $cookies, $cookieStore, keyWordsListSvc, filterFilter) {
+  .controller('searchCtrl', ['$scope', '$rootScope', '$filter', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore', 'filterFilter',
+	function ($scope, $rootScope, $filter, $http, $q, $compile, $location, $sce, $cookies, $cookieStore, filterFilter) {
 
 		/**
 		 * Global search variable
@@ -28,7 +28,7 @@ angular.module('app.search')
 		//
 		$scope.$watch('__G__search', function(newVal, oldVal){
 
-			console.log("new value in filter box:", newVal);
+			console.log($rootScope.__G__search);
 
 			// if(newVal.length !== 0) {
 				// this is the JS equivalent of "phones | filter: newVal"

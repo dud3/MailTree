@@ -42,9 +42,7 @@
 
   <body class="body-background">
 
-    <div id="wrapper" class="toggled" ng-controller="searchCtrl">
-
-        @include("layouts.internalSideBar")
+    <div id="wrapper" class="toggled">
 
         <div class="container-fluid">
 
@@ -55,6 +53,7 @@
                 <?php } else { ?>
 
                     @include("layouts.internalNavbar")
+                    @include("layouts.internalSideBar")
 
                     {{-- System Messages --}}
                     <toaster-container
@@ -75,7 +74,7 @@
                     </div>
 
                     {{-- App container --}}
-                    <div id="app-internal" class="container-fluid app-background g-internal-container" style="display:none;">
+                    <div id="app-internal" ng-cloak class="container-fluid app-background g-internal-container" style="display:none;">
 
                 <?php } ?>
 
@@ -139,6 +138,7 @@
     </script>
 
     <script src="/scripts/controllers/authCtrl.js"></script>
+
     <script src="/scripts/controllers/searchCtrl.js"></script>
     <script src="/scripts/controllers/keyWordsListCtrl.js"></script>
     <script src="/scripts/controllers/emailsListCtrl.js"></script>
@@ -146,8 +146,8 @@
 
     <script src="/scripts/factories/keyWordsListSvc.js"></script>
     <script src="/scripts/factories/emailsListSvc.js"></script>
-    <script src="/scripts/factories/activeFiltersSvc.js"></script>
     <script src="/scripts/factories/authSvc.js"></script>
+    <script src="/scripts/factories/activeFiltersSvc.js"></script>
 
     <script src="/scripts/filters/filters.js"></script>
 

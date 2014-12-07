@@ -31,7 +31,7 @@ angular.module('app.activeFilters')
 		 * Search model.
 		 * @type {String}
 		 */
-		$scope.search = "";
+		$scope._search = "";
 
 		/**
 		 * Get all the keywords
@@ -65,13 +65,11 @@ angular.module('app.activeFilters')
 
 						$rootScope.activeFilter.allKeywords = _.uniq($rootScope.activeFilter.allKeywords);
 
-						console.log($rootScope.activeFilter.allKeywords);
-
 				}).error(function(data){
 					console.log(data);
 			});
 
-		}();
+		}
 
 		/**
 		 * Get the root keywords.
@@ -94,18 +92,23 @@ angular.module('app.activeFilters')
 					console.log(data);
 			});
 
-		}();
+		}
 
 		/**
 		 * Open the main filters section.
 		 * @return {[type]} [description]
 		 */
 		$scope.openFiltersList = function() {
+
+			$scope.getRootKeywordFilters();
+			$scope.getAllKeywordFilters();
+
 			if(document.getElementById("id-filter-container").style.display == 'none') {
 				$("#id-filter-container").slideDown("slow");
 			} else {
 				$("#id-filter-container").slideUp("fast");
 			}
+
 		};
 
 		/**

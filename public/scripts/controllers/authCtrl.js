@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('app.auth')
-  .controller('AuthCtrl', ['$scope', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore', 'AuthSvc', '_userSessions', '_pwdToken', 
+  .controller('AuthCtrl', ['$scope', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore', 'AuthSvc', '_userSessions', '_pwdToken',
       function ($scope, $http, $q, $compile, $location, $sce, $cookies, $cookieStore, AuthSvc, _userSessions, _pwdToken) {
 
 
@@ -19,8 +19,8 @@ angular.module('app.auth')
   // LOGIN SECTION
   // ==============
   $scope.email = null;
-  $scope.loginCredentials = { 
-    email: $("#email").val(), 
+  $scope.loginCredentials = {
+    email: $("#email").val(),
     password: $("#password").val(),
     remember: authCookies.getRemembner
   };
@@ -34,7 +34,7 @@ angular.module('app.auth')
     // Set the default
     if(typeof authCookies.getUserSession === 'undefined') {
       $cookieStore.put('sessions', true);
-    } 
+    }
     else if(authCookies.getUserSession){
           $cookieStore.put('sessions', true);
     }
@@ -55,14 +55,14 @@ angular.module('app.auth')
           l.setProgress(1);
 
           return $scope.redirect('/app');
-        
+
         }).error(function(msg) {
-        
+
           console.log(msg);
-         
+
           // Clean up message`
           var clean_msg = msg.replace(/"/g, "");
-          
+
           // Increment the aouthCounter
           gCounter++;
           var timesLeft = 6 - gCounter;
@@ -110,11 +110,11 @@ angular.module('app.auth')
                         style: 'bootstrap',
                         autoHideDelay: 20000
                       });
-                    } else { 
+                    } else {
                       showError();
-                  } 
+                  }
               }
-              
+
         });
   };
 
@@ -152,10 +152,10 @@ angular.module('app.auth')
   // =================
   // REGISTER SECTION
   // =================
-  $scope.credentials = { 
-      email: $("#email").val(), 
+  $scope.credentials = {
+      email: $("#email").val(),
       password: $("#password").val(),
-      first_name: $("#first_name").val(), 
+      first_name: $("#first_name").val(),
       last_name: $("#last_name").val(),
       terms: false
   };
@@ -170,7 +170,7 @@ angular.module('app.auth')
 
         l.setProgress(1);
         window.location.href = '/dashboard';
-    
+
     }).error(function(msg) {
 
         // Just in case if the email contains non-english chars
@@ -191,7 +191,7 @@ angular.module('app.auth')
                   hideAnimation: 'slideUp'
                 }
               );
-       
+
             $("#"+key).removeClass('animated bounce').addClass('animated bounce').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
               $(this).removeClass('animated bounce');
             });
@@ -224,10 +224,10 @@ angular.module('app.auth')
   var gFlag = false;
   $scope.resetPasswordSendToken = function() {
     // Check the model value
-    // console.log($scope.credentials.email); 
+    // console.log($scope.credentials.email);
     var l = Ladda.create(document.querySelector('.lading-btn'));
     if($scope.credentials.email.length === 0) {
-      if(gCounter < 1) { 
+      if(gCounter < 1) {
             $("#email").removeClass('animated bounce').addClass('animated bounce').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
             $(this).removeClass('animated bounce');
         });
@@ -247,7 +247,7 @@ angular.module('app.auth')
         gCounter++;
         return;
         } else {
-          // Simple Progress bar while The message is beeing send to the 
+          // Simple Progress bar while The message is beeing send to the
           var progress = 0;
           l.start();
           var interval = setInterval(function() {
@@ -259,7 +259,7 @@ angular.module('app.auth')
             .success(function(msg){
               console.log("We Just sent you the email.");
               console.log(msg);
-                // Can Be customized if the user didn't get the reset password 
+                // Can Be customized if the user didn't get the reset password
                 // -> at the first time.
                 $("#form-reset").notify(
                 "We Just sent you an email with the reset code, please check your email.",
@@ -291,7 +291,7 @@ angular.module('app.auth')
                 }
               );
               clearInterval(interval);
-              l.stop();  
+              l.stop();
               // $scope.analyse.d_EventTrack('Password Token send - Failed', 'Authentication', 'Password Token send - Failed');
           });
         }
@@ -299,7 +299,7 @@ angular.module('app.auth')
 
 
 
- 
+
   // =======================
   // Reset Password Section
   // =======================

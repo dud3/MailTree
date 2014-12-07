@@ -49,16 +49,16 @@
       </ul>
 
     <div class="col-sm-3 col-md-3 pull-left" style="padding:0px;">
-          <form class="navbar-form" role="search" autocomplete="off">
-              <div class="input-group" style="width:100%;">
-                  <input type="text" class="form-control" ng-model="__G__search" placeholder="Search anything..." name="__G__search">
-                  <div class="input-group-btn">
-                      <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                      <button class="btn btn-default" type="submit" ng-click="__G__clean_search()"><i class="fa fa-times-circle-o fa-lg"></i></button>
-                  </div>
+      <form class="navbar-form" role="search" autocomplete="off">
+          <div class="input-group" style="width:100%;">
+              <input type="text" class="form-control" ng-model="__G__search" placeholder="Search anything...">
+              <div class="input-group-btn">
+                  <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                  <button class="btn btn-default" type="submit" ng-click="__G__search = ''"><i class="fa fa-times-circle-o fa-lg"></i></button>
               </div>
-          </form>
-      </div>
+          </div>
+      </form>
+    </div>
 
     </div><!--/.nav-collapse -->
   </div>

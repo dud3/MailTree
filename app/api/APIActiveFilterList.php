@@ -1,6 +1,6 @@
 <?php
 
-use Base;
+use \Base;
 
 class APIActiveFilterList extends \Base\BaseController {
 

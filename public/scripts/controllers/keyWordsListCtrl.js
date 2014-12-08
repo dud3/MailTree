@@ -256,6 +256,11 @@ angular.module('app.keyWordsList')
 
 			$rootScope.keyWordsLists.splice(index, 1);
 
+			// @note: This hide is require since on item filter
+			// even if we splice the item from the array, it doesn't hide it.
+			// It might be because the __G__search isn't initialized ?
+			$("#accordion" + keyWordsLists_id).hide("slow");
+
 			keyWordsListSvc
 				.removeKeywordEntity(keyWordsLists_id)
 					.success(function(data){

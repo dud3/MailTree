@@ -3,13 +3,13 @@ angular.module('app.activeFilters')
 
 var services = {
 
-    populateKeywords: function() {
-      var results = $http.get('/api/v1/keywords/populateKeywords', {cache: true});
+    populateKeywords: function(cache) {
+      var results = $http.get('/api/v1/keywords/populateKeywords', {cache: cache});
       return results;
     },
 
-    populateRootKeywords: function() {
-      var results = $http.get('/api/v1/keywords/populateRootKeywords', {cache: true});
+    populateRootKeywords: function(cache) {
+      var results = $http.get('/api/v1/keywords/populateRootKeywords', {cache: cache});
       return results;
     },
 

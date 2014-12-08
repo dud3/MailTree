@@ -36,12 +36,17 @@ angular.module('app.activeFilters')
 		/**
 		 * Get all the keywords
 		 * @return {[type]} [description]
+		 * @param {bool} [cache] [get cache from cache or not.]
 		 */
-		$scope.getAllKeywordFilters = function() {
+		$rootScope.getAllKeywordFilters = function(cache) {
+
+			if(typeof cache == 'undefined' || isNaN(cache)) {
+				cache = true;
+			}
 
 			activeFiltersSvc
 				.populateKeywords()
-					.success(function(data){
+					.success(function(data, cache){
 
 						// From string to actual javaScript object
 						angular.forEach(data.keywords, function(item) {
@@ -73,13 +78,18 @@ angular.module('app.activeFilters')
 
 		/**
 		 * Get the root keywords.
+		 * @param {bool} [cache] [Get data from cache or not.]
 		 * @return {[type]} [description]
 		 */
-		$scope.getRootKeywordFilters = function() {
+		$rootScope.getRootKeywordFilters = function(cache) {
+
+			if(typeof cache == 'undefined' || isNaN(cache)) {
+				cache = true;
+			}
 
 			activeFiltersSvc
 				.populateRootKeywords()
-					.success(function(data){
+					.success(function(data, cache){
 
 						angular.forEach(data, function(item) {
 							angular.fromJson(item);
@@ -98,7 +108,7 @@ angular.module('app.activeFilters')
 		 * Open the main filters section.
 		 * @return {[type]} [description]
 		 */
-		$scope.openFiltersList = function() {
+		$rootScope.openFiltersList = function() {
 
 			$scope.getRootKeywordFilters();
 			$scope.getAllKeywordFilters();
@@ -115,7 +125,7 @@ angular.module('app.activeFilters')
 		 * Slide down root keyword filters section.
 		 * @return {[type]} [description]
 		 */
-		$scope.openRootKeywords = function() {
+		$rootScope.openRootKeywords = function() {
 
 			var element = $("#id-filters-list").children()[0].childNodes[1].childNodes[0];
 
@@ -133,7 +143,7 @@ angular.module('app.activeFilters')
 		 * Slide down all keyword filters.
 		 * @return {[type]} [description]
 		 */
-		$scope.openAllKeywords = function() {
+		$rootScope.openAllKeywords = function() {
 
 			var element = $("#id-filters-list").children()[2].childNodes[1].childNodes[0];
 
@@ -151,13 +161,13 @@ angular.module('app.activeFilters')
 		 * Search globaly
 		 * @return {[type]} [description]
 		 */
-		$scope.activateFilter = function(param) {
+		$rootScope.activateFilter = function(param) {
 			$rootScope.__G__search = param;
 		};
 
-		//------------------------------
+		//------------------------------------------------------------
 		// Scope Watchers
-		//------------------------------
+		//------------------------------------------------------------
 		//
 
 		// Keywords List
@@ -172,9 +182,30 @@ angular.module('app.activeFilters')
 
 		}, true);
 
-		//------------------------------
+
+		//------------------------------------------------------------
+		// Global Broadcast listeners
+		//------------------------------------------------------------
+		// Event listeners can take arguments as param also.
+		//
+
+		$scope.$on('keyWordsList-create', function(event, args) {
+			$rootScope.getRootKeywordFilters(false);
+			$rootScope.getAllKeywordFilters(false);
+		});
+
+		$scope.$on('keyWordsList-delete', function(event, training) {
+
+		});
+
+		$scope.$on('keyWordsList-single-delete', function(event, training) {
+
+		});
+
+
+		//------------------------------------------------------------
 		// Helper Functions
-		//------------------------------
+		//------------------------------------------------------------
 		//
 
 		/**

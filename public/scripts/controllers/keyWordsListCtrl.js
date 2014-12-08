@@ -228,7 +228,7 @@ angular.module('app.keyWordsList')
 
 						}, 300);
 
-
+						$rootScope.$broadcast('keyWordsList-create', {});
 
 				}).error(function(data){
 					toaster.pop('error', "Message", "Something went wrong, please try again.");

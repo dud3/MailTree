@@ -40,13 +40,21 @@ angular.module('app.activeFilters')
 		 */
 		$rootScope.getAllKeywordFilters = function(cache) {
 
+			console.log(cache);
+			console.log(typeof cache);
+			console.log(isNaN(cache));
+
 			if(typeof cache == 'undefined' || isNaN(cache)) {
 				cache = true;
 			}
 
+			console.log(cache);
+
+
+
 			activeFiltersSvc
-				.populateKeywords()
-					.success(function(data, cache){
+				.populateKeywords(cache)
+					.success(function(data){
 
 						// From string to actual javaScript object
 						angular.forEach(data.keywords, function(item) {
@@ -88,8 +96,8 @@ angular.module('app.activeFilters')
 			}
 
 			activeFiltersSvc
-				.populateRootKeywords()
-					.success(function(data, cache){
+				.populateRootKeywords(cache)
+					.success(function(data){
 
 						angular.forEach(data, function(item) {
 							angular.fromJson(item);

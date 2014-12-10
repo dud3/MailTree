@@ -254,20 +254,25 @@ angular.module('app.keyWordsList')
 		 */
 		$scope.removeKeywordEntity = function(index, keyWordsLists_id) {
 
-			$rootScope.keyWordsLists.splice(index, 1);
+			// Since we might be filtering and deleting at the same time
+			// check if by unique ID.
+			var _index = $scope.findWithAttr($rootScope.keyWordsLists, "id", keyWordsLists_id);
 
-			// @note: This hide is require since on item filter
-			// even if we splice the item from the array, it doesn't hide it.
-			// It might be because the __G__search isn't initialized ?
-			$("#accordion" + keyWordsLists_id).hide("slow");
+			if(_index != -1) {
 
-			keyWordsListSvc
-				.removeKeywordEntity(keyWordsLists_id)
-					.success(function(data){
+				$rootScope.keyWordsLists.splice(_index, 1);
 
-				}).error(function(data){
-					toaster.pop('error', "Message", "Something went wrong, please try again.");
-			});
+				keyWordsListSvc
+					.removeKeywordEntity(keyWordsLists_id)
+						.success(function(data){
+
+					}).error(function(data){
+						toaster.pop('error', "Message", "Something went wrong, please try again.");
+				});
+
+			} else {
+				// Nnothing...
+			}
 
 		};
 
@@ -484,6 +489,7 @@ angular.module('app.keyWordsList')
 				    return i;
 				}
 			}
+			return -1;
 		}
 
 }]);

@@ -4,7 +4,7 @@
 <div ng-controller="emailsListCtrl" style="margin-top:-20px;">
 
 	<div class="row col-md-12" style="margin-bottom:5px; padding-right: 0px; width: 100%;">
-		<button ng-click="composeEmail()" class="btn btn-primary btn-sm pull-left" style="margin:0px;" ng-click="show_create_modal()" disabled>
+		<button ng-click="composeEmail()" class="btn btn-primary btn-sm pull-left" style="margin-left: 10px;" ng-click="show_create_modal()" disabled>
 		COMPOSE <!-- span class="fa fa-plus" style="font-size:13px"></span -->
 		</button>
 		<button ng-click="sendCollective()" style="padding:5px 15px 5px 15px; margin-right: 0px;" class="btn btn-info btn-sm pull-right" disabled>
@@ -12,7 +12,7 @@
 		</button>
 	</div>
 
-	<div class="row col-md-12" style="padding:0px;">
+	<div class="row col-md-12" style="padding-right: 0px; padding-left: 25px; margin-right: 0px;">
 		<table class="table table-hover table-emails" style="font-size:12px;">
 
 			<thead>

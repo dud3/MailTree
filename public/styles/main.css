@@ -359,3 +359,15 @@ thead {
         margin-right: 0;
     }
 }
+
+.headingKeywordEntity {
+  padding:0px; 
+  max-width: 11%;
+}
+
+ @media (min-width: 300px) {
+
+    .headingKeywordEntity {
+     min-width: 41%;   
+    }
+}

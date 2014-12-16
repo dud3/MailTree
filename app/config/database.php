@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'e_fwd',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => '123123',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

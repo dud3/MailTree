@@ -144,6 +144,7 @@
     <script src="/scripts/controllers/emailsListCtrl.js"></script>
     <script src="/scripts/controllers/activeFiltersCtrl.js"></script>
 
+    <script src="/scripts/services/helperSvc.js"></script>
     <script src="/scripts/factories/keyWordsListSvc.js"></script>
     <script src="/scripts/factories/emailsListSvc.js"></script>
     <script src="/scripts/factories/authSvc.js"></script>

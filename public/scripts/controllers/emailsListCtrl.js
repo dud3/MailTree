@@ -8,8 +8,9 @@
  * Controller of the publicApp
  */
 angular.module('app.emailsList')
-  .controller('emailsListCtrl', ['$scope', '$rootScope', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore', 'emailsListSvc', 'toaster', '$tooltip',
-	function ($scope, $rootScope, $http, $q, $compile, $location, $sce, $cookies, $cookieStore, emailsListSvc, toaster, $tooltip) {
+  .controller('emailsListCtrl', ['$scope', '$rootScope', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore', 
+  				'emailsListSvc', 'HelperSvc', 'toaster', '$tooltip',
+	function ($scope, $rootScope, $http, $q, $compile, $location, $sce, $cookies, $cookieStore, emailsListSvc, HelperSvc, toaster, $tooltip) {
 
 		/**
 		 * Mail related config.

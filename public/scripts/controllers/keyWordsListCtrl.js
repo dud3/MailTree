@@ -9,8 +9,8 @@
  */
 angular.module('app.keyWordsList')
   .controller('keyWordsListCtrl', ['$scope', '$rootScope', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore',
-  			'keyWordsListSvc', '$modal', 'toaster',
-	function ($scope, $rootScope, $http, $q, $compile, $location, $sce, $cookies, $cookieStore, keyWordsListSvc, $modal, toaster) {
+  			'keyWordsListSvc', 'HelperSvc', '$modal', 'toaster',
+	function ($scope, $rootScope, $http, $q, $compile, $location, $sce, $cookies, $cookieStore, keyWordsListSvc, HelperSvc, $modal, toaster) {
 
 		/**
 		 * Holds all keyword entities.
@@ -188,15 +188,15 @@ angular.module('app.keyWordsList')
 			// Before trun the associative array into non-associative array
 			// since we can actally insert an associative array into the database
 			// but we can't make it readable to backend, so take of the keys.
-			_keywordEntity.keywords = $scope.associative_to_array($rootScope.keywordEntity.keywords);
+			_keywordEntity.keywords = HelperSvc.associative_to_array($rootScope.keywordEntity.keywords);
 			// turn the non-associative array into the associative array again
 			// but this time make the keys equal to non-associative array keys, like the following:
 			// keywords: {"0": "dolphin", "1": "dog", "2": "fish"}.
-			_keywordEntity.keywords = $scope.array_to_associative(_keywordEntity.keywords);
+			_keywordEntity.keywords = HelperSvc.array_to_associative(_keywordEntity.keywords);
 			// and finally we can store it in this format as a string type into the database.
 			// This is all because we want to make it able to store arrays into the database
 			// and also make it playable/readable for the backend programming.
-			_keywordEntity.keywords = $scope.array_stringify(_keywordEntity.keywords);
+			_keywordEntity.keywords = HelperSvc.array_stringify(_keywordEntity.keywords);
 
 			// push the state of original_content model, since the `original_content` column belongs to `keywods_list` table.
 			_keywordEntity.original_content = $rootScope.keywordEntity.original_content;
@@ -256,7 +256,7 @@ angular.module('app.keyWordsList')
 
 			// Since we might be filtering and deleting at the same time
 			// check if by unique ID.
-			var _index = $scope.findWithAttr($rootScope.keyWordsLists, "id", keyWordsLists_id);
+			var _index = HelperSvc.findWithAttr($rootScope.keyWordsLists, "id", keyWordsLists_id);
 
 			if(_index != -1) {
 
@@ -366,8 +366,6 @@ angular.module('app.keyWordsList')
 		// Keyword Entity
 		$scope.$watch('keywordEntity', function(){
 
-			console.log($rootScope.keywordEntity);
-
 			$("#id-create-keywordList").removeAttr('disabled');
 			$("#id-remove-keyword").hide();
 			$("#id-remove-recipient").hide();
@@ -393,103 +391,11 @@ angular.module('app.keyWordsList')
 				if(recipient.email.length == 0) {
 					$("#id-create-keywordList").attr('disabled', 'disabled');
 				}
-				if(!$scope.validateEmail(recipient.email)) {
+				if(!HelperSvc.validateEmail(recipient.email)) {
 					$("#id-create-keywordList").attr('disabled', 'disabled');
 				}
 			});
 
 		}, true);
-
-
-		$scope.$watch('keywordEntity.keywords', function(){
-
-			setTimeout(function(){
-
-				// console.log($("#id-keywords-container").children());
-				// console.log($("#id-keywords-container").children()[$("#id-keywords-container").children().length - 1].children);
-				// $("#id-keywords-container").children()[$("#id-keywords-container").children().length - 1].children[0].focus();
-
-			}, 300)
-
-		}, true);
-
-		$scope.$watch('keywordEntity.recipients', function(){
-
-			setTimeout(function(){
-				// console.log($("#id-recipients-container").children()[$("#id-recipients-container").children().length - 1].children[0].children[0].focus());
-			}, 300);
-
-		}, true);
-
-		//------------------------------
-		// Helper Functions
-		//------------------------------
-		//
-
-		/**
-		 * Turn associative array to an array.
-		 * @param  {[type]} object [description]
-		 * @return {[type]}        [description]
-		 */
-		$scope.associative_to_array = function(object) {
-			var array = [];
-			for(var item in object){
-				if(object[item].hasOwnProperty('keyword')) {
-					array.push(object[item].keyword);
-				} else {
-					array.push(object[item]);
-				}
-			}
-			return array;
-		};
-
-		/**
-		 * Oposite of associative_to_array.
-		 * @param  {[type]} array [description]
-		 * @return {[type]}       [description]
-		 */
-		$scope.array_to_associative = function(array) {
-			var obj = {};
-			for(var i = 0; i < array.length; i++) {
-			    obj[i] = array[i];   	// Assign the next element as a value of the object,
-			                             // using the current value as key
-			}
-			return obj;
-		};
-
-		/**
-		 * Stringify the object/associative array.
-		 * @param  {[type]} object [description]
-		 * @return {[type]}        [description]
-		 */
-		$scope.array_stringify = function(object) {
-			return JSON.stringify(object);
-		};
-
-		/**
-		 * Validate email.
-		 * @param  {[type]} email [description]
-		 * @return {[type]}       [description]
-		 */
-		$scope.validateEmail = function(email) {
-		    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		    return re.test(email);
-		};
-
-		/**
-		 * Find object by it's attribute value.
-		 * @param  {[type]} array [description]
-		 * @param  {[type]} attr  [description]
-		 * @param  {[type]} value [description]
-		 * @return {[type]}       [description]
-		 */
-		$scope.findWithAttr = function(array, attr, value) {
-			for(var i = 0; i < array.length; i += 1) {
-				if(array[i][attr] == value) {
-				    return i;
-				}
-			}
-			return -1;
-		}
 
 }]);

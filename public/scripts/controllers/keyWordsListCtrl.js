@@ -228,6 +228,7 @@ angular.module('app.keyWordsList')
 
 						}, 300);
 
+						// Boradcast to activeFiltersCtrl
 						$rootScope.$broadcast('keyWordsList-create', {});
 
 				}).error(function(data){
@@ -254,9 +255,12 @@ angular.module('app.keyWordsList')
 		 */
 		$scope.removeKeywordEntity = function(index, keyWordsLists_id) {
 
+			// find item itself.
+			var _item = HelperSvc.findIntemInArr($rootScope.keyWordsLists, "id", keyWordsLists_id);
+
 			// Since we might be filtering and deleting at the same time
 			// check if by unique ID.
-			var _index = HelperSvc.findWithAttr($rootScope.keyWordsLists, "id", keyWordsLists_id);
+			var _index = HelperSvc.findIndexWithAttr($rootScope.keyWordsLists, "id", keyWordsLists_id);
 
 			if(_index != -1) {
 
@@ -265,6 +269,9 @@ angular.module('app.keyWordsList')
 				keyWordsListSvc
 					.removeKeywordEntity(keyWordsLists_id)
 						.success(function(data){
+
+						// Boradcast to activeFiltersCtrl
+						$rootScope.$broadcast('keyWordsList-delete', {_item});
 
 					}).error(function(data){
 						toaster.pop('error', "Message", "Something went wrong, please try again.");

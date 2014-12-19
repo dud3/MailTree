@@ -82,6 +82,8 @@ angular.module('mailTree')
 
         build_up_rules: function(elements, rules) {
 
+            this.destroyAll();
+
             var _pass = true;
 
             for(var i = 0; i < elements.length; i++) {

@@ -54,13 +54,71 @@ angular.module('mailTree')
     },
 
     /**
+     * Find multiple indexes in array
+     * @param  {[type]} array  [description]
+     * @param  {[type]} values [description]
+     * @return {[type]}        [description]
+     */
+    findMulIndexinArr: function(array, values) {
+      var indexs = [];
+
+      if(typeof values == 'object') {
+        values = this.associative_to_array(values);
+      }
+
+      if(typeof values == 'string') {
+        values.push(values);
+      }
+
+      for (var i = array.length - 1; i >= 0; i--) {
+        for (var j = values.length - 1; j >= 0; j--) {
+          if(array[i] == values[j]) {
+            indexs.push(i);
+          };
+        };
+      };
+      
+      return indexs;
+    },
+
+    /**
+     * Find element in array.
+     * @param  {[type]} array [description]
+     * @param  {[type]} value [description]
+     * @return {[type]}       [description]
+     */
+    findInArr: function(array, value) {
+      for (var i = array.length - 1; i >= 0; i--) {
+        if(array[i] == value) {
+          return i;
+        }
+      }
+      return -1;
+    },
+
+    /**
+     * Find the elment by attribute value.
+     * @param  {[type]} array [description]
+     * @param  {[type]} attr  [description]
+     * @param  {[type]} value [description]
+     * @return {[type]}       [description]
+     */
+    findIntemInArr: function(array, attr, value) {
+      for(var i = 0; i < array.length; i++) {
+        if(array[i][attr] == value) {
+          return array[i];
+        }
+      }
+    },
+
+    /**
      * Find object by it's attribute value.
      * @param  {[type]} array [description]
      * @param  {[type]} attr  [description]
      * @param  {[type]} value [description]
      * @return {[type]}       [description]
      */
-    findWithAttr: function(array, attr, value) {
+    findIndexWithAttr: function(array, attr, value) {
       for(var i = 0; i < array.length; i += 1) {
         if(array[i][attr] == value) {
             return i;

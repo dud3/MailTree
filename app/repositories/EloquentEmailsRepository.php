@@ -74,7 +74,7 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
             $email->subject = implode(" ", $subject);
 
             // Conver to easily readable date format
-            $email->utc_time =  date('l, F Y h:i:s A', $email->x_udate);
+            $email->utc_time =  date('l, d. F Y h:i:s A', $email->x_udate);
 
 		}
 

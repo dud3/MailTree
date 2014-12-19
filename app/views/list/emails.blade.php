@@ -3,16 +3,16 @@
 
 <div ng-controller="emailsListCtrl" style="margin-top:-20px;">
 
-	<div class="col-md-12" style="margin-bottom:5px; padding:0px;">
-		<button ng-click="composeEmail()" class="btn btn-primary btn-sm pull-left" style="margin:0px;" ng-click="show_create_modal()" disabled>
+	<div class="row col-md-12" style="margin-bottom:5px; padding-right: 0px; width: 100%;">
+		<button ng-click="composeEmail()" class="btn btn-primary btn-sm pull-left" style="margin-left: 10px;" ng-click="show_create_modal()" disabled>
 		COMPOSE <!-- span class="fa fa-plus" style="font-size:13px"></span -->
 		</button>
-		<button ng-click="sendCollective()" style="padding:5px 15px 5px 15px;" class="btn btn-info btn-sm pull-right" disabled>
+		<button ng-click="sendCollective()" style="padding:5px 15px 5px 15px; margin-right: 0px;" class="btn btn-info btn-sm pull-right" disabled>
 		SEND <span class="fa fa-paper-plane" style="font-size:13px"></span>
 		</button>
 	</div>
 
-	<div class="col-md-12" style="padding:0px;">
+	<div class="row col-md-12" style="padding-right: 0px; padding-left: 25px; margin-right: 0px;">
 		<table class="table table-hover table-emails" style="font-size:12px;">
 
 			<thead>
@@ -24,7 +24,8 @@
 					<th>Subject</th>
 					<th>Date</th>
 					<!-- th>Body</th -->
-					<th style="width:9%; text-align: left;">Emails(<* emails.length *>) </th>
+					<th style="; text-align: left;"></th>
+					<th style="width:1%;">Emails(<* emails.length *>) </th>
 				</tr>
 			</thead>
 
@@ -38,8 +39,10 @@
 					<td ng-bind-html="email.subject"></td>
 					<td><* email.utc_time *></td>
 					<!-- td ng-bind-html="email.body"></td -->
-					<td class="text-left" style="padding:6px 10px">
+					<td class="text-left" style="width:1%; padding-right:0px; margin-right: 0px;">
 						<button  data-animation="am-flip-x" placement="left" bs-tooltip="tooltip" class="btn btn-default btn-sm" style="padding:0px 3px 0px 3px"><span class="fa fa-eye" style="font-size:13px"></span></button>
+					</td>
+					<td style="padding-left:3px; margin-left: 0px;">
 						<span ng-show="email.sent" class="label label-success mail-sent-label" style="padding:2.5px 19px 2.5px 19px;">
 							Sent&nbsp;<span class="fa fa-envelope"></span>
 						</span>

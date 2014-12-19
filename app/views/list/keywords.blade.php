@@ -14,10 +14,10 @@
             <div class="panel-group" id="accordion<* keyWordsList.id *>">
                 <div class="panel panel-default">
 
-                    <div class="panel-heading">
+                    <div class="panel-heading" style="overflow: auto">
                       <h4 class="panel-title">
 
-                        <div class="col-md-2 pull-right" style="padding:0px; width:11%;">
+                        <div class="col-md-2 pull-right" class="headingKeywordEntity">
 
                             <span data-animation="am-flip-x" placement="left" bs-tooltip="tooltip">
                                 <input
@@ -29,13 +29,15 @@
                                 />
                             </span>
 
+                             <a data-toggle="collapse" data-parent="#accordion" href="#collapse<* keyWordsList.id *>" class="pull-right nounderline" style="margin-left: 15px;">
+                                <span><b>+</b></span>
+                            </a>
+
                             <a href="javascript:void(0)" ng-click="removeKeywordEntity($index, '<* keyWordsList.id *>')">
                                 <span class="text-danger" style="float:right; margin-left:15px;"><b>x</b></span>
                             </a>
 
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse<* keyWordsList.id *>" class="pull-right nounderline">
-                                <span class=""><b>+</b></span>
-                            </a>
+                        
 
                         </div>
 
@@ -45,9 +47,9 @@
                     </div>
 
                     <div id="collapse<* keyWordsList.id *>" class="panel-collapse collapse in">
-                      <div class="panel-body">
+                      <div class="panel-body" style="overflow: auto; width:100%;">
 
-                        <table class="table table-bordered" style="margin:4px 0px 4px 0px;">
+                        <table class="table table-bordered table-responsive" style="margin:4px 0px 4px 0px;">
 
                             <tr>
                                 <th>Greetings</th>

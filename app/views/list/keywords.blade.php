@@ -17,29 +17,21 @@
                     <div class="panel-heading" style="overflow: auto">
                       <h4 class="panel-title">
 
-                        <div class="col-md-2 pull-right" class="headingKeywordEntity">
+                            {{-- Right side actions --}}
+                            <a href="javascript:void(0)" ng-click="removeKeywordEntity($index, '<* keyWordsList.id *>')">
+                                <span class="text-danger" style="float:right; margin-left:15px;"><b>x</b></span>
+                            </a>
 
-                            <span data-animation="am-flip-x" placement="left" bs-tooltip="tooltip">
+                            <span class="pull-right" data-animation="am-flip-x" placement="left" bs-tooltip="tooltip">
                                 <input
                                         type="checkbox"
                                         id="check_<* keyWordsList.id *>"
                                         ng-click="keepOriginalContent(<* keyWordsList.id *>)"
                                         ng-checked="keyWordsList.original_content"
-                                        style="padding-right:0px; margin-right:0px;"
+                                        style="padding:2px; margin:2px"
                                 />
                             </span>
 
-                             <a data-toggle="collapse" data-parent="#accordion" href="#collapse<* keyWordsList.id *>" class="pull-right nounderline" style="margin-left: 15px;">
-                                <span><b>+</b></span>
-                            </a>
-
-                            <a href="javascript:void(0)" ng-click="removeKeywordEntity($index, '<* keyWordsList.id *>')">
-                                <span class="text-danger" style="float:right; margin-left:15px;"><b>x</b></span>
-                            </a>
-
-                        
-
-                        </div>
 
                           Keywords: <span style="margin-right:2px;" ng-repeat="(key, value) in keyWordsList.keywords" class="label label-primary"><* value *></span>
 
@@ -47,7 +39,7 @@
                     </div>
 
                     <div id="collapse<* keyWordsList.id *>" class="panel-collapse collapse in">
-                      <div class="panel-body" style="overflow: auto; width:100%;">
+                      <div class="panel-body" style="overflow: auto; width:100%; padding:10px 10px 5px;">
 
                         <table class="table table-bordered table-responsive" style="margin:4px 0px 4px 0px;">
 
@@ -89,10 +81,15 @@
 
                         </table>
 
-                         <button class="btn btn-sm btn-default" ng-click="addRecipent($index);">Add <span class="fa fa-plus" style="font-size:13px"></span></button>
+                         <button class="btn btn-block btn-default" style="background-color:#e7e7e7; marg%" ng-click="addRecipent($index);">Add <span class="fa fa-plus" style="font-size:13px"></span></button>
 
                       </div>
                     </div>
+
+                    <div class="text-center" style="padding:0px; margin:0px; border-top: 1px solid #ddd; color:#ccc; cursor: pointer;" 
+                        ng-click="collapse(keyWordsList.id)">
+                        <span class="fa fa-chevron-up fa-2x"></span>
+                    </div
 
                 </div>
             </div>

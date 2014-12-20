@@ -340,6 +340,23 @@ angular.module('app.keyWordsList')
 		};
 
 		/**
+		 * Collapse keyword list entity.
+		 * @param  {[type]} keyWordsLists_id [description]
+		 * @return {[type]}                  [description]
+		 */
+		$scope.collapse = function(keyWordsLists_id) {
+			var direction = ['fa fa-chevron-up fa-2x', 'fa fa-chevron-down fa-2x'];
+			var elem = $("#collapse" + keyWordsLists_id);
+			elem.collapse('toggle');
+			elem.children();
+			if(elem.siblings()[1].childNodes[1].className == "fa fa-chevron-up fa-2x") {
+				elem.siblings()[1].childNodes[1].className = direction[1];
+			} else {
+				elem.siblings()[1].childNodes[1].className = direction[0];
+			}
+		};
+
+		/**
 		 * Search globaly
 		 * @return {[type]} [description]
 		 */

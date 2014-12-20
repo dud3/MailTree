@@ -8,13 +8,18 @@ var services = {
       return results;
     },
 
+    getEmailByid: function(email_id) {
+      var results = $http.post('/api/v1/emails/get_collection', angular.toJson({ id: email_id }));
+      return results;
+    },
+
     create: function(email) {
-      var results = $http.post('/api/v1/emails/create', angular.toJson(training));
+      var results = $http.post('/api/v1/emails/create', angular.toJson(email));
       return results;
     },
 
     updateKeyword: function(email) {
-      var results = $http.post('/api/v1/emails/update', angular.toJson(training));
+      var results = $http.post('/api/v1/emails/update', angular.toJson(email));
       return results;
     },
 
@@ -23,7 +28,7 @@ var services = {
     },
 
     search: function(email) {
-      return $http.get('/api/v1/emails/search', angular.toJson());
+      return $http.get('/api/v1/emails/search', angular.toJson(email));
     }
 
   };

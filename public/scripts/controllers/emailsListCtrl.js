@@ -27,6 +27,17 @@ angular.module('app.emailsList')
 		$rootScope.emails = [];
 
 		/**
+		 * Single email
+		 * @type {Object}
+		 */
+		$rootScope.email = {
+			full_name: "",
+			email: "",
+			message_subject: "",
+			message_body: ""
+		};
+
+		/**
 		 * Sent emails counter.
 		 * @type {Number}
 		 */
@@ -216,10 +227,26 @@ angular.module('app.emailsList')
 		 * View email.
 		 * @return {[type]} [description]
 		 */
-		$scope.viewEmail = function() {
+		$scope.viewEmail = function(email_id) {
+
+			email_id = parseInt(email_id);
+			emailsListSvc
+				.getEmailByid(email_id)
+					.success(function(data){
+
+						var this_data = data.emails[0];
+						$rootScope.email.full_name = this_data.full_name;
+						$rootScope.email.email = this_data.email;
+						$rootScope.email.message_subject = this_data.message_subject;
+						$rootScope.email.message_body = this_data.message_body;
+
+						$("#id-modal-view_single_email").modal("show");
+
+				}).error(function(data){
+					// Do nothing for now...
+			});
 
 		};
-
 
 		/**
 		 * Search globaly
@@ -230,3 +257,12 @@ angular.module('app.emailsList')
 		};
 
 }]);
+
+
+$('#id-modal-view_single_email').on('hidden.bs.modal', function(){
+       $(this).find('.modal-body').css({
+              width:'auto', //probably not needed
+              height:'auto', //probably not needed 
+              'max-height':'100%'
+       });
+});

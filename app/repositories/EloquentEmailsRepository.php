@@ -93,27 +93,24 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 
     /**
      * Get the email and it's recpipients.
+     * @param  string $input input params.
      * @return [type] [description]
      */
     public function get_collection($input) {
 
         $ret = [];
-        $arg = $user_id;
+        $arg = [];
+        $where = " WHERE 1 = 1 ";
 
-
-        if(isset($input["user_id"]) && !empty($input["user_id"])) {
-
+        if(isset($input["id"]) && !empty($input["id"])) {
+            $where .= " AND m.id = ? ";
+            $arg[] = $input["id"];
         }
 
-        if(isset($input["user_id"]) && !empty($input["user_id"])) {
-            
+        if(isset($input["email_address_id"]) && !empty($input["email_address_id"])) {
+            $where .= " AND m.email_address_id = ? ";
+            $arg[] = $input["email_address_id"];
         }
-
-        if(isset($input["user_id"]) && !empty($input["user_id"])) {
-            
-        }
-
-        $where = "";
 
         $sql_mails = DB::select(
 
@@ -125,7 +122,7 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
              LEFT JOIN email_address_list e_a_l
                 ON m.email_address_id = e_a_l.id
 
-             WHERE m.user_id = ?
+             " .$where. "
 
              ORDER BY e_a_l.email"
 

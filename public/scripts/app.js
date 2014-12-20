@@ -146,7 +146,7 @@ $provide.factory('MyHttpInterceptor', function ($q, $log) {
 
     // On response failture
     responseError: function (rejection) {
-
+      
       var log_txt = "Request: ";
 
       switch(rejection.status) {

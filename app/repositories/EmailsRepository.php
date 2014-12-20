@@ -266,7 +266,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             FROM mails m
 
-             LEFT JOIN email_address_list e_a_l
+             INNER JOIN email_address_list e_a_l
                 ON m.email_address_id = e_a_l.id
 
              WHERE m.sent = 0
@@ -350,7 +350,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
             }
 
             /* Sleep a little */
-            sleep(2);
+            sleep(1);
 
             var_dump("Sending message to: " . $data["email"] . " | full_name: " . $data["full_name"] . " | email_id:" . $mail->id);
             self::dump_output('send_emails', $data);

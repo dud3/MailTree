@@ -70,8 +70,6 @@ angular.module('app.activeFilters')
 
 						$rootScope.activeFilter.allKeywords = _.uniq($rootScope.activeFilter.allKeywords);
 
-						console.log($rootScope.activeFilter.allKeywords);
-
 				}).error(function(data){
 					console.log(data);
 			});

@@ -89,7 +89,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
     }
 
 
- 	/**
+    /**
      * Read all the emails.
      * @return [type] [description]
      */
@@ -235,7 +235,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
         /**
          * This one actualy does the magic for us.
          */
-        $this->getEmailKeywords($arr_emails);
+        $this->compareKeywords($arr_emails);
 
         self::closeDump();
 
@@ -404,7 +404,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
      * Get the keywords fro mthe email.
      * @return [type] [description]
      */
-    public function getEmailKeywords($data) {
+    public function compareKeywords($data) {
 
         foreach ($data as $email) {
 
@@ -421,7 +421,19 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 $k_db = trim($k_db);
                 $k_db = json_decode($k_db, true);
 
+                /* Keep the original content, simply don't remove the HTML tags from it. */
                 $k_db_original_content = (int)$db_keywords["original_content"];
+
+                /**
+                * Before everything, set the keywords from the emails subject
+                * and the keywords from the database to lowercase.
+                */
+                for ($i = 0; $i < count($get_keywords); $i++) {
+                  $get_keywords[$i] = strtolower($get_keywords[$i]);
+                }
+                for ($i = 0; $i < count($k_db); $i++) {
+                  $k_db[$i] = strtolower($k_db[$i]);
+                }
 
                /**
                 * Get the common between the database keywords that belong 
@@ -456,23 +468,23 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 $k_arr_diff = array_diff($k_db, $get_keywords);
 
                 /*
-                echo "\n-------------------- DB --------------------\n";
-                var_dump($k_db);
-                echo "\n-------------------- Get --------------------\n";
-                var_dump($get_keywords);
-                echo "\n-------------------- Intersect --------------------\n";
-                var_dump($k_intersect);
-                echo "\n-------------------- Diff Array --------------------\n";
-                var_dump($k_arr_diff);
+                  echo "\n-------------------- DB --------------------\n";
+                  var_dump($k_db);
+                  echo "\n-------------------- Get --------------------\n";
+                  var_dump($get_keywords);
+                  echo "\n-------------------- Intersect --------------------\n";
+                  var_dump($k_intersect);
+                  echo "\n-------------------- Diff Array --------------------\n";
+                  var_dump($k_arr_diff);
                 */
 
                 if(count($k_arr_diff) == 0) {
 
-                  // echo ">>>>>>>>>>>>>>>>>>>>>>>> BINGO <<<<<<<<<<<<<<<<<<<<<<<<";
+                  // echo ">>>>>>>>>>>>>>>>>>>>>>>> BINGO <<<<<<<<<<<<<<<<<<<<<<<<\n";
 
                    $e_add_list = email_address_list::where("keyword_id", "=", $k_id)->get()->toArray();
 
-                    if($e_add_list !== null) {
+                    if(!empty($e_add_list)) {
                         foreach ($e_add_list as $e_list) {
 
                             $std_store_email = new StdClass;
@@ -482,6 +494,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                             $std_store_email->subject = $email->subject;
                             $std_store_email->body = $email->body;
                             $std_store_email->html = 0;
+
 
                             /**
                              * Since we would want to distingush between the
@@ -497,6 +510,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                                 continue;
                               }
                             }
+
 
                             $std_store_email->__date = $email->header->date;
                             $std_store_email->__message_id = $email->header->message_id;
@@ -598,6 +612,11 @@ class EmailsRepository implements EmailsRepositoryInterface {
     }
 
 
+    /**
+     * Validate JSON.
+     * @todo  move it its own class/interface.
+     * @return [type] [description]
+     */
     public function validateJson() {
 
         switch (json_last_error()) {
@@ -636,6 +655,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
     |
     | Helper functions reside here.
     |
+    | @todo create helpers service provider.
+    | 
     */
 
     /**

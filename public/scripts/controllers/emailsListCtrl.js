@@ -105,8 +105,6 @@ angular.module('app.emailsList')
 						// The second one returns error.
 						//
 
-						console.log($rootScope.emails);
-
 				}).error(function(data){
 					toaster.pop('error', "Message", "Something went wrong, please try again");
 			});
@@ -163,8 +161,6 @@ angular.module('app.emailsList')
 						// The second one returns error.
 						//
 
-						console.log($rootScope.emails);
-
 				}).error(function(data){
 					toaster.pop('error', "Message", "Something went wrong, please try again");
 			});
@@ -213,6 +209,14 @@ angular.module('app.emailsList')
 		 * @return {[type]} [description]
 		 */
 		$scope.fwdCollective = function() {
+
+		};
+
+		/**
+		 * View email.
+		 * @return {[type]} [description]
+		 */
+		$scope.viewEmail = function() {
 
 		};
 

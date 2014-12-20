@@ -92,6 +92,62 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
     }
 
     /**
+     * Get the email and it's recpipients.
+     * @return [type] [description]
+     */
+    public function get_collection($input) {
+
+        $ret = [];
+        $arg = $user_id;
+
+
+        if(isset($input["user_id"]) && !empty($input["user_id"])) {
+
+        }
+
+        if(isset($input["user_id"]) && !empty($input["user_id"])) {
+            
+        }
+
+        if(isset($input["user_id"]) && !empty($input["user_id"])) {
+            
+        }
+
+        $where = "";
+
+        $sql_mails = DB::select(
+
+            "SELECT DISTINCT m.id, m.email_address_id, m.body, m.subject,
+            e_a_l.email, e_a_l.full_name
+
+            FROM mails m
+
+             LEFT JOIN email_address_list e_a_l
+                ON m.email_address_id = e_a_l.id
+
+             WHERE m.user_id = ?
+
+             ORDER BY e_a_l.email"
+
+        ,$arg);
+
+        foreach ($sql_mails as $mail) {
+
+            $std_email = new stdClass();
+            $std_email->email = $mail->email;
+            $std_email->full_name = $mail->full_name;
+            $std_email->message_subject = $mail->subject;
+            $std_email->message_body = $mail->body;
+
+            $ret[] = $std_email;
+
+        }
+
+        return $ret;
+
+    }
+
+    /**
      * Find recipients by keyword.
      * @param  [type] $id [description]
      * @return [type]     [description]

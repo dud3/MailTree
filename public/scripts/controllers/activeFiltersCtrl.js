@@ -195,7 +195,7 @@ angular.module('app.activeFilters')
 		});
 
 		$scope.$on('keyWordsList-delete', function(event, arg) {
-			
+
 			if($rootScope.activeFilter.allKeywords.length > 0) {
 
 				$rootScope.activeFilter.rootKeywords.splice(HelperSvc.findInArr($rootScope.activeFilter.rootKeywords, arg._item.keywords[0]) , 1);
@@ -203,7 +203,6 @@ angular.module('app.activeFilters')
 				var _indexes = HelperSvc.findMulIndexinArr($rootScope.activeFilter.allKeywords, arg._item.keywords);
 
 				for (var i = 0; i < _indexes.length; i++) {
-					console.log(_indexes[i]);
 					$rootScope.activeFilter.allKeywords.splice(_indexes[i], 1);
 				};
 

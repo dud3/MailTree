@@ -183,6 +183,8 @@ angular.module('app.keyWordsList')
 		 */
 		$scope.create = function() {
 
+			$("#id-create-keywordList").button('loading');
+
 			var _keywordEntity = { keywords: [{}], recipients: [{}] };
 
 			// Before trun the associative array into non-associative array
@@ -231,9 +233,12 @@ angular.module('app.keyWordsList')
 						// Boradcast to activeFiltersCtrl
 						$rootScope.$broadcast('keyWordsList-create', {});
 
+						$("#id-create-keywordList").button('reset');
+
 				}).error(function(data){
 					toaster.pop('error', "Message", "Something went wrong, please try again.");
 					$scope.hide_create_modal();
+					$("#id-create-keywordList").button('reset');
 			});
 
 		};
@@ -371,7 +376,7 @@ angular.module('app.keyWordsList')
 		//
 		// var myOtherModal = $modal({scope: $scope, template: '/scripts/templates/create_keywordsList.tpl.html', show: false});
 		// Show when some event occurs (use $promise property to ensure the template has been loaded)
-		// $scope.showModal = function() {
+		// $scope.showModal = function() {fr
 		//  myOtherModal.$promise.then(myOtherModal.show);
 		// };
 

@@ -147,21 +147,83 @@ $provide.factory('MyHttpInterceptor', function ($q, $log) {
     // On response failture
     responseError: function (rejection) {
 
-      // Only apply for internal
-      // -> server errors
-      if(rejection.status === 500) {
+      var log_txt = "Request: ";
 
-          console.warn(rejection); // Contains the data about the error.
-          $log.error("Something went wrong, or either server sessions are over.");
+      switch(rejection.status) {
+        case 203:
+          log_txt += "Non-Authoritative Information.";
+        break;
 
-          // Let's suppose that the error is because of sessions are over...
-          // Untill we make all the methods throw proper exceptions from
-          // -> the server side...
+        case 204:
+          log_txt += "No Content.";
+        break;
 
-        // Return the promise rejection.
-        return $q.reject(rejection);
+        case 205:
+          log_txt += "Reset Content.";
+        break;
 
+        case 206:
+          log_txt += "Partial Content.";
+        break;
+
+        case 299:
+          log_txt += "Redirection.";
+        break;
+
+        case 301:
+          log_txt += "Moved Permanently";
+        break;
+
+        case 305:
+          log_txt += "Use Proxy";
+        break;
+
+        case 400:
+          log_txt += "Bad request.";
+        break;
+
+        case 401:
+          log_txt += "Unauthorized.";
+        break;
+
+        case 402:
+          log_txt += "Payment Required.";
+        break;
+
+        case 404:
+          log_txt += "Not Found.";
+        break;
+
+        case 405:
+          log_txt += "Method Not Allowed.";
+        break;
+
+        case 406:
+          log_txt += "Not Acceptable.";
+        break;
+
+        case 407:
+          log_txt += "Proxy Authentication Required.";
+        break;
+
+        case 408:
+          log_txt += "Request Timeout";
+        break;
+
+        case 500:
+          log_txt += "Internal Server Error";
+        break;
+
+        case 503:
+          log_txt += "Service Unavailable";
+        break;
       }
+
+      $log.error(log_txt + ", code: " + rejection.status);
+      console.warn(rejection); // Contains the data about the error.
+
+      // Return the promise rejection.
+      return $q.reject(rejection);
 
     }
 

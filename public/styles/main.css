@@ -365,7 +365,13 @@ thead {
   max-width: 11%;
 }
 
- @media (min-width: 300px) {
+/* Buttons and inputs */
+.input-danger {
+  border: 1px solid red;
+}
+
+/* Media queries */
+@media (min-width: 300px) {
 
     .headingKeywordEntity {
      min-width: 41%;   

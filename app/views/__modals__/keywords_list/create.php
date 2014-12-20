@@ -17,7 +17,7 @@
           <div class="col-md-12" style="padding:10px 0px;">
             <div id="id-keywords-container">
               <div ng-repeat="keyword in keywordEntity.keywords" style="padding-bottom:5px;">
-                <input id="id-input-keyword" class="form-control" ng-model="keyword.keyword" placeholder="Enter keyword name...">
+                <input ng-focus="cleanKeywordsExists()" id="id-input-keyword" class="form-control" ng-model="keyword.keyword" placeholder="Enter keyword name...">
               </div>
             </div>
           </div>

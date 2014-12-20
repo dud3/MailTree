@@ -234,10 +234,11 @@ angular.module('app.keyWordsList')
 						$rootScope.$broadcast('keyWordsList-create', {});
 
 						$("#id-create-keywordList").button('reset');
+						$scope.cleanKeywordsExists();
 
 				}).error(function(data){
-					toaster.pop('error', "Message", "Something went wrong, please try again.");
-					$scope.hide_create_modal();
+					toaster.pop('error', "Message", data[0]);
+					$scope.indicateKeywordsExists();
 					$("#id-create-keywordList").button('reset');
 			});
 
@@ -359,6 +360,18 @@ angular.module('app.keyWordsList')
 			} else {
 				elem.siblings()[1].childNodes[1].className = direction[0];
 			}
+		};
+
+		$scope.indicateKeywordsExists = function() {
+			angular.forEach($("#id-keywords-container").children(), function(item) { 
+				angular.forEach(item.children, function(child) { child.className = "form-control input-danger"; });
+			});
+		};
+
+		$scope.cleanKeywordsExists = function() {
+			angular.forEach($("#id-keywords-container").children(), function(item) { 
+				angular.forEach(item.children, function(child) { child.className = "form-control"; });
+			});
 		};
 
 		/**

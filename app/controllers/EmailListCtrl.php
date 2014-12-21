@@ -43,6 +43,15 @@ class EmailListCtrl extends internalCtrl {
     }
 
     /**
+     * Save email.
+     * @return [type] [description]
+     */
+    public function saveEmail() {
+        $input = Input::all();
+        return Response::json(["email" => $this->repo_emails->saveEmail($input)], 200);
+    }
+
+    /**
      * Get by ID
      * @param  [type] $id [description]
      * @return [type]     [description]

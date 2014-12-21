@@ -32,6 +32,8 @@
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed|PT+Sans|Titillium+Web' rel='stylesheet' type='text/css'>
 
+    <link rel='stylesheet' href='/bower_components/textAngular/src/textAngular.css'>
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -118,6 +120,8 @@
     <script src="/bower_components/AngularJS-Toaster/toaster.js"></script>
     <script src="/bower_components/angular-xeditable/dist/js/xeditable.js"></script>
     <script src="/bower_components/underscore/underscore-min.js"></script>
+    <script src='/bower_components/textAngular/dist/textAngular-rangy.min.js'></script>
+    <script src='/bower_components/textAngular/dist/textAngular.min.js'></script>
     <!-- script src="/bower_components/angular-bootstrap-toggle-switch/angular-toggle-switch.min.js"></script -->
 
     <!-- app -->

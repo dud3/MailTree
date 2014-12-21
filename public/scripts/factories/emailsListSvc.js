@@ -13,6 +13,11 @@ var services = {
       return results;
     },
 
+    saveEmail: function(email) {
+      var results = $http.post('/api/v1/emails/saveEmail', angular.toJson(email));
+      return results;
+    },
+
     create: function(email) {
       var results = $http.post('/api/v1/emails/create', angular.toJson(email));
       return results;

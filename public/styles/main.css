@@ -366,7 +366,7 @@ thead {
 }
 
 /* Buttons and inputs */
-input .input-danger {
+.input-danger {
   border: 1px solid red;
 }
 

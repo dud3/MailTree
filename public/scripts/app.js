@@ -34,6 +34,7 @@ angular
     'mgcrea.ngStrap',
     'toaster',
     'xeditable',
+    'textAngular',
 
     'utilFilters',
 

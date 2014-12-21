@@ -34,7 +34,8 @@ angular.module('app.emailsList')
 			full_name: "",
 			email: "",
 			message_subject: "",
-			message_body: ""
+			message_body: "",
+			x_uid: null
 		};
 
 		/**
@@ -243,6 +244,64 @@ angular.module('app.emailsList')
 						$("#id-modal-view_single_email").modal("show");
 
 				}).error(function(data){
+					// Do nothing for now...
+			});
+
+		};
+
+		/**
+		 * Edit the email.
+		 * The emails are multiple instances of a single email,
+		 * such as, on the database there are multiple copies of them,
+		 * but only the instance is showed on emails page.
+		 * If the instance of the email is edited all it's copies are edited as well.
+		 * @param  {[type]} email_id [description]
+		 * @return {[type]}          [description]
+		 */
+		$scope.editEmail = function(email_id) {
+
+			email_id = parseInt(email_id);
+			emailsListSvc
+				.getEmailByid(email_id)
+					.success(function(data){
+
+					$rootScope.email.x_uid = data.emails[0].x_uid;
+					$rootScope.email.message_subject = data.emails[0].message_subject;
+					$rootScope.email.message_body = data.emails[0].message_body;
+
+					$("#id-modal-edit_single_email").modal("show");
+
+				}).error(function(data){
+					// Do nothing for now...
+			});
+
+		};
+
+		/**
+		 * Save the email content after changing it.
+		 * @param  {int} x_uid uniquer id of the email.
+		 * @return {[type]}       [description]
+		 */
+		$scope.saveEmail = function() {
+
+			$("#id-save-edit_single_email").button('loading');
+
+			var _email = {
+				x_uid: $rootScope.email.x_uid,
+				message_body: $rootScope.email.message_body
+			};
+
+			emailsListSvc
+				.saveEmail(_email)
+					.success(function(data){
+
+					$("#id-modal-edit_single_email").modal("hide");
+					$("#id-save-edit_single_email").button('reset');
+
+					toaster.pop('success', "Message", "Email Saved Successfully, now you might view it.");
+
+				}).error(function(data){
+					$("#id-save-edit_single_email").button('reset');
 					// Do nothing for now...
 			});
 

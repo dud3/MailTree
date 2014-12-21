@@ -33,17 +33,25 @@
 
                 <tr ng-repeat="email in emails | filter:__G__search" id="id-email<* email.id *>" ng-class="{ 'mail-sent': email.sent }" class="item-email">
                     <td style="padding:7px 6px 6px 10px; background-color:#eee;">
-                        <input  ng-show="!email.sent" type="checkbox" id="check-email<* email.id *>" name="check-email<* email.id *>">
+                        <input ng-show="!email.sent" type="checkbox" id="check-email<* email.id *>" name="check-email<* email.id *>">
                         <span ng-show="email.sent" class="fa fa-check-square-o fa-lg text-success"></span>
                     </td>
                     <td ng-bind-html="email.subject"></td>
                     <td><* email.utc_time *></td>
                     <!-- td ng-bind-html="email.body"></td -->
-                    <td class="text-left" style="width:1%; padding-right:0px; margin-right: 0px;">
-                        <button  data-animation="am-flip-x" placement="left" bs-tooltip="tooltip" 
-                                 class="btn btn-default btn-sm" style="padding:0px 3px 0px 3px"
-                                 ng-click="viewEmail(email.id)"><span class="fa fa-eye" style="font-size:13px"></span>
+                    <td class="text-left" style="width:5%; padding-right:0px; margin-right: 0px;">
+
+                        <button class="btn btn-default btn-sm" style="padding:0px 3px 0px 3px"
+                                ng-click="editEmail(email.id)">
+                            <span class="fa fa-pencil-square-o" style="font-size:13px;"></span>
                         </button>
+
+                        <button data-animation="am-flip-x" placement="left" bs-tooltip="tooltip" 
+                                class="btn btn-default btn-sm" style="padding:0px 3px 0px 3px"
+                                ng-click="viewEmail(email.id)">
+                            <span class="fa fa-eye" style="font-size:13px"></span>
+                        </button>
+
                     </td>
                     <td style="padding-left:3px; margin-left: 0px;">
                         <span ng-show="email.sent" class="label label-success mail-sent-label" style="padding:2.5px 19px 2.5px 19px;">
@@ -62,6 +70,7 @@
 
 {{-- View single email modal --}}
 @include('__modals__.emails_list.modalViewEmail')
+@include('__modals__.emails_list.modalEditEmail')
 
 </div>
 

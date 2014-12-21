@@ -115,7 +115,9 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
         $sql_mails = DB::select(
 
             "SELECT DISTINCT m.id, m.email_address_id, m.body, m.subject,
-            e_a_l.email, e_a_l.full_name
+            e_a_l.email, e_a_l.full_name,
+            m.x_message_id, m.x_date, m.x_size, m.x_uid, m.x_msgno,	m.x_recent, m.x_flagged, m.x_answered, m.x_deleted,
+            m.x_seen, m.x_draft, m.x_udate
 
             FROM mails m
 
@@ -131,6 +133,9 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
         foreach ($sql_mails as $mail) {
 
             $std_email = new stdClass();
+            $std_email->id = $mail->id;
+            $std_email->x_uid = $mail->x_uid;
+            $std_email->x_message_id = $mail->x_message_id;
             $std_email->email = $mail->email;
             $std_email->full_name = $mail->full_name;
             $std_email->message_subject = $mail->subject;
@@ -141,6 +146,35 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
         }
 
         return $ret;
+
+    }
+
+    /**
+     * Save email.
+     * @param  [type] $data [description]
+     * @return [type]       [description]
+     */
+    public function saveEmail($input) {
+
+        $arg = [];
+        $where = "";
+        $update_row = [];
+
+        if(isset($input["x_uid"]) && !empty($input["x_uid"])) {
+            $arg = $input["x_uid"];
+            $where .= "x_uid";
+        }
+
+        if(isset($input["id"]) && !empty($input["id"])) {
+            $arg = $input["id"];
+            $where = "id";
+        }
+
+        $update_row["body"] = $input["message_body"];
+
+        $condition = "=";
+
+        return mails::where($where, $condition, $arg)->update($update_row);
 
     }
 

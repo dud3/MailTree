@@ -277,7 +277,7 @@ angular.module('app.keyWordsList')
 						.success(function(data){
 
 						// Boradcast to activeFiltersCtrl
-						$rootScope.$broadcast('keyWordsList-delete', {_item});
+						$rootScope.$broadcast('keyWordsList-delete', {_item: _item});
 
 					}).error(function(data){
 						toaster.pop('error', "Message", "Something went wrong, please try again.");

@@ -281,9 +281,6 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             self::openDump();
 
-            // Set sent to 1
-            $this->updateEmailStatus($mail->id, ["sent" => 1]);
-
             $email = $mail->email;
             $full_name = $mail->full_name;
             $message_body = $mail->body;
@@ -351,6 +348,9 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             /* Sleep a little */
             sleep(1);
+
+            // Set sent to 1
+            $this->updateEmailStatus($mail->id, ["sent" => 1]);
 
             var_dump("Sending message to: " . $data["email"] . " | full_name: " . $data["full_name"] . " | email_id:" . $mail->id);
             self::dump_output('send_emails', $data);

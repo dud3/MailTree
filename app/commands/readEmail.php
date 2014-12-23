@@ -147,7 +147,14 @@ class readEmail extends Command {
         
         echo "\n";
         
-        $this->emails->readMails($html_enable = $_option_html_enable, $email_search = $_option_email_search);
+        $this->emails->readMails($_option_html_enable, $_option_email_search);
+
+       /**
+        * Store HTML version of the emails as well.
+        * @var boolean
+        * @todo save for later on.
+        */
+        // $this->emails->readHTMLMails(true, $_option_email_search);
         
         echo "\n";
 

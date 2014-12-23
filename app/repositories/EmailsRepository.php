@@ -89,7 +89,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
     }
 
 
-    /**
+      /**
      * Read all the emails.
      * @return [type] [description]
      */
@@ -241,6 +241,79 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
     }
 
+      /**
+     * Read all the emails.
+     * @return [type] [description]
+     */
+    public function readHTMLMails($html_enable = true, $email_search) {
+
+        $this->inbox = $this->server->search($email_search);
+
+        /* Read the inbox */
+        $this->emails = $this->inbox;
+
+        self::$enable_html_email = $html_enable;
+
+        $html_enable = 2;
+
+        $emails = $this->emails;
+        $arr_emails = [];
+
+        foreach ($emails as $message) {
+
+            $std_email = new StdClass;
+
+            $std_email->header = $message->getHeaders();
+            $std_email->overview = $message->getOverview();
+            $std_email->address = $message->getAddresses('from');
+            $std_email->subject = $message->getSubject();
+            $std_email->body = $message->getMessageBody($html_enable);
+            $std_email->date = $message->getDate();
+
+            /* Check the subject fitst */
+            $std_email->subject = explode(" ", $std_email->subject);
+            
+            /* If Fwd is present in the subject */
+            if(in_array('Fwd:', $std_email->subject)) {
+                unset($std_email->subject[0]);
+            }
+
+            $std_email->subject = implode(" ", $std_email->subject);
+
+            /* Explode the email into pieces */
+            $std_email->body = explode("\n", $std_email->body);
+
+            /* Repeat the simmilar as for non-HTML emails */
+            array_walk($std_email->body, array($this, 'trim_value'));
+    
+            /* If the mail is forwarded in case */
+            if(in_array('---------- Forwarded message ----------', $std_email->body)) {
+                $std_email->body = array_slice($std_email->body, 9);
+            }
+
+            /* Search for default values in the mail */
+            $this->search_for = ["Dear Alexander Notifications,<br /><br />"];
+
+            if(in_array($this->search_for[0], $std_email->body)) {
+              $std_email->body = array_slice($std_email->body, 3);
+            }
+
+            /* Put everything all togather */
+            $std_email->body = implode("\n", $std_email->body); 
+
+            $arr_emails[] = $std_email;
+
+        }
+
+        /**
+         * This one actualy does the magic for us.
+         */
+        $this->compareKeywords($arr_emails);
+
+        self::closeDump();
+
+    }
+
 
     /**
      * Send stored mails from the database.
@@ -248,10 +321,18 @@ class EmailsRepository implements EmailsRepositoryInterface {
      */
     public function sendMails($fwd_from = null, $test_user_only = false) {
 
-        $where = "";
+        $where = " WHERE m.sent = 0 ";
+
+        /**
+         * If in html enabled mode, read only emails that contain html.
+         */
+        if(self::$enable_html_email) {
+          $where = " AND m.html = 1 ";
+        }
+
         $arg = [];
         if($test_user_only)  {
-            $where = " AND m.email_address_id IN(?, ?, ?, ?, ?) ";
+            $where .= " AND m.email_address_id IN(?, ?, ?, ?, ?) ";
             $arg[] = 1;
             $arg[] = 12;
             $arg[] = 21;
@@ -268,8 +349,6 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
              INNER JOIN email_address_list e_a_l
                 ON m.email_address_id = e_a_l.id
-
-             WHERE m.sent = 0
 
              " . $where . "
 

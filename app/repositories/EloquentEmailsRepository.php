@@ -42,6 +42,11 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
             INNER JOIN keywords_list k_l
                 ON k_l.id = e_a_l.keyword_id
 
+            JOIN (SELECT x_uid, MAX(id) id FROM mails GROUP BY x_uid) m2
+                 ON m.id = m2.id AND m.x_uid = m2.x_uid
+
+            ORDER BY m.id DESC
+
         ");
 
         foreach ($sql_emails as $email) {

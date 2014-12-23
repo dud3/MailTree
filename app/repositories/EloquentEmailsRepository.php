@@ -49,36 +49,7 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 
         ");
 
-        foreach ($sql_emails as $email) {
-
-            $keywords = [];
-
-            // trim the string
-            $keywords = trim($email->keywords);
-
-            // decode the JSON string
-            $keywords = json_decode($email->keywords, true);
-
-            // Search the keywords from the email subject
-            $subject = explode(" ", $email->subject);
-
-            // Basically label around the keywords
-            // -> found in the email's subject.
-            foreach ($keywords as $keyword) {
-
-                if(false !== $key = array_search($keyword, $subject)) {
-                    $subject[$key] = "<span class='label label-primary'>" . $subject[$key] . "</span>";
-                }
-
-            }
-
-            // Put everything back togather
-            $email->subject = implode(" ", $subject);
-
-            // Conver to easily readable date format
-            $email->utc_time =  date('l, d. F Y h:i:s A', $email->x_udate);
-
-        }
+        self::wrapKeywordLabels($sql_emails);
 
         return $sql_emails;
 
@@ -307,6 +278,54 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
         $validator = Validator::make($data, email_address_list::$rules);
         if($validator->fails()) return $validator->messages();
         return true;
+    }
+    
+
+    // ---------------------------------------------------------------------
+    // Helper Methods
+    // ---------------------------------------------------------------------
+    // @todo Create a helper service and move it there.
+    // 
+    
+    /**
+     * Simply wrap the email sbuject with found keywords.
+     * @return [type] [description]
+     */
+    public static function wrapKeywordLabels($sql_emails) {
+
+        foreach ($sql_emails as $email) {
+
+            $keywords = [];
+
+            // trim the string
+            $keywords = trim($email->keywords);
+
+            // decode the JSON string
+            $keywords = json_decode($email->keywords, true);
+
+            // Search the keywords from the email subject
+            $subject = explode(" ", $email->subject);
+
+            // Basically label around the keywords
+            // -> found in the email's subject.
+            foreach ($keywords as $keyword) {
+
+                if(false !== $key = array_search($keyword, $subject)) {
+                    $subject[$key] = "<span class='label label-primary'>" . $subject[$key] . "</span>";
+                }
+
+            }
+
+            // Put everything back togather
+            $email->subject = implode(" ", $subject);
+
+            // Conver to easily readable date format
+            $email->utc_time =  date('l, d. F Y h:i:s A', $email->x_udate);
+
+        }
+
+        return $sql_emails;
+
     }
 
 }

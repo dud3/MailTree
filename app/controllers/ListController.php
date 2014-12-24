@@ -113,6 +113,11 @@ class ListController extends internalCtrl {
      */
     public function saveRecipient() {
         $input = Input::all();
+
+        if(isset($input['fresh'])) {
+            unset($input['fresh']);
+        }
+        
         return Response::json(["recipent" => $this->emails->saveRecipient($input)], 200);
     }
 

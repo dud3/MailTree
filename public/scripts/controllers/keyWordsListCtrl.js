@@ -53,8 +53,15 @@ angular.module('app.keyWordsList')
 
 						// From string to actual javaScript object
 						angular.forEach(data.keywords, function(item) {
+
 							item.keywords = angular.fromJson(item.keywords);
 							item.original_content = parseInt(item.original_content);
+
+							// Mark emails as existing emails
+							angular.forEach(item.email, function(em) {
+								em.fersh = false;
+							});
+
 						});
 
 						$rootScope.keyWordsLists = data.keywords;
@@ -270,18 +277,22 @@ angular.module('app.keyWordsList')
 
 			if(_index != -1) {
 
-				$rootScope.keyWordsLists.splice(_index, 1);
+				if(confirm("Are you sure you want to remove this item ?")) {
 
-				keyWordsListSvc
-					.removeKeywordEntity(keyWordsLists_id)
-						.success(function(data){
+					$rootScope.keyWordsLists.splice(_index, 1);
 
-						// Boradcast to activeFiltersCtrl
-						$rootScope.$broadcast('keyWordsList-delete', {_item: _item});
+					keyWordsListSvc
+						.removeKeywordEntity(keyWordsLists_id)
+							.success(function(data){
 
-					}).error(function(data){
-						toaster.pop('error', "Message", "Something went wrong, please try again.");
-				});
+							// Boradcast to activeFiltersCtrl
+							$rootScope.$broadcast('keyWordsList-delete', {_item: _item});
+
+						}).error(function(data){
+							toaster.pop('error', "Message", "Something went wrong, please try again.");
+					});
+
+				}
 
 			} else {
 				// Nnothing...
@@ -305,17 +316,21 @@ angular.module('app.keyWordsList')
 
 			var findRecipient = $rootScope.keyWordsLists[parentIndex].email[index].email_list_id;
 
-			if(!isNaN(findRecipient)) {
+			if(confirm("Are you sure you want to remove this item ?")) {
 
-				keyWordsListSvc.removeRecipent(findRecipient).success(function(data){
+				if(!isNaN(findRecipient)) {
+
+					keyWordsListSvc.removeRecipent(findRecipient).success(function(data){
+						$rootScope.keyWordsLists[parentIndex].email.splice(index, 1);
+						toaster.pop('success', "Message", "Recipient Deleted.");
+					}).error(function(data){
+						toaster.pop('error', "Message", "Something went wrong, please try again.");
+					});
+
+				} else {
 					$rootScope.keyWordsLists[parentIndex].email.splice(index, 1);
-					toaster.pop('success', "Message", "Recipient Deleted.");
-				}).error(function(data){
-					toaster.pop('error', "Message", "Something went wrong, please try again.");
-				});
+				}
 
-			} else {
-				$rootScope.keyWordsLists[parentIndex].email.splice(index, 1);
 			}
 
 		};
@@ -331,7 +346,8 @@ angular.module('app.keyWordsList')
 			$scope.inserted = {
 				keyWordsLists_id: keyWordsLists.id,
 				email: '',
-				full_name: ''
+				full_name: '',
+				fresh: true
 			};
 
 			$rootScope.keyWordsLists[index].email.push($scope.inserted);
@@ -344,7 +360,7 @@ angular.module('app.keyWordsList')
 		 * @param  {[type]} id   [description]
 		 * @return {[type]}      [description]
 		 */
-		$scope.checkEmail = function(data, id) {
+		$scope.checkEmail = function(data, id, email_list_id) {
 
 			var _this_keyword = HelperSvc.findIntemInArr($rootScope.keyWordsLists, "id", id);
 			var _this_emails = HelperSvc.findIntemInArr(_this_keyword.email, "email", data.email);
@@ -354,7 +370,7 @@ angular.module('app.keyWordsList')
 				return false;
 			}
 
-			if(typeof _this_emails !== 'undefined') {
+			if(typeof _this_emails !== 'undefined' && typeof email_list_id == 'undefined') {
 				return toaster.pop('error', "Message", "This user already exits, there can only be one email per Keyword Entity.");
 				return false;
 			}
@@ -375,16 +391,24 @@ angular.module('app.keyWordsList')
 			var _index_email = HelperSvc.findIndexWithAttr($rootScope.keyWordsLists[_index].email, "email", data.email);
 			var _get_email = $rootScope.keyWordsLists[_index].email[_index_email];
 			var _last_email_item = $rootScope.keyWordsLists[_index].email[$rootScope.keyWordsLists[_index].email.length - 1];
+			var _email_list_id = _last_email_item.email_list_id;
 
-			if($scope.checkEmail(data, id)) {
+			if($scope.checkEmail(data, id, _email_list_id)) {
 
 				angular.extend(data, {keyword_id: id});
 
 				keyWordsListSvc.
 					saveRecipient(data)
 						.success(function(data){
-							_last_email_item.email_list_id = data.recipent.id;
-							toaster.pop('success', "Message", "Recipient added Successfully.");
+
+							// If the email is added and note edited, 
+							// only then assign the email_list_id.
+							if(_last_email_item.fresh) {
+								_last_email_item.email_list_id = data.recipent.id;
+							}
+
+							toaster.pop('success', "Message", "Recipient Saved Successfully.");
+
 					}).error(function(data){
 						toaster.pop('error', "Message", "Something went wrong, please try again.");
 				});

@@ -375,13 +375,19 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
      * @return [type]       [description]
      */
     public function saveRecipient($input) {
-        $this_recipient = email_address_list::where('email', '=', $input['email'])->where('keyword_id', '=', $input['keyword_id'])->get()->toArray();
+
+        $this_recipient = [];
+
+        if( isset($input['id']) && $input['id'] != null ) {
+            $this_recipient = email_address_list::where('id', '=', $input['id'])->get()->toArray();
+        }
 
         if(!empty($this_recipient)) {
-            return email_address_list::find($this_recipient[0]["id"])->update($input);
+            return email_address_list::find($input['id'])->update([ 'email' => $input['email'], 'full_name' => $input['full_name'] ]);
         } else {
             return email_address_list::create($input);
         }
+
     }
 
     /**

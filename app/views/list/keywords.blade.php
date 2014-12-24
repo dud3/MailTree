@@ -63,7 +63,7 @@
 
                                 <td style="white-space: nowrap">
                                     <!-- form -->
-                                    <form editable-form name="rowform" onbeforesave="saveRecipient($data, keyWordsList.id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == email">
+                                    <form editable-form name="rowform" onbeforesave="saveRecipient($data, keyWordsList.id, $index)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == email">
                                       <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
                                         save
                                       </button>

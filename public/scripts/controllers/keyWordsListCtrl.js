@@ -385,13 +385,26 @@ angular.module('app.keyWordsList')
 		 * @param  {[type]} id   [description]
 		 * @return {[type]}      [description]
 		 */
-		$scope.saveRecipient = function(data, id) {
+		$scope.saveRecipient = function(data, id, $index$email) {
 
 			var _index = HelperSvc.findIndexWithAttr($rootScope.keyWordsLists, "id", id);
 			var _index_email = HelperSvc.findIndexWithAttr($rootScope.keyWordsLists[_index].email, "email", data.email);
 			var _get_email = $rootScope.keyWordsLists[_index].email[_index_email];
-			var _last_email_item = $rootScope.keyWordsLists[_index].email[$rootScope.keyWordsLists[_index].email.length - 1];
-			var _email_list_id = _last_email_item.email_list_id;
+
+			var _current_email_item = $rootScope.keyWordsLists[_index].email[$index$email];
+			var _email_list_id = _current_email_item.email_list_id;
+
+			var data = {
+				id: null,
+				email: data.email,
+				full_name: data.full_name,
+			};
+
+			console.log(data);
+
+			if(typeof _email_list_id != 'undefined') {
+				data.id = _email_list_id;
+			} 
 
 			if($scope.checkEmail(data, id, _email_list_id)) {
 
@@ -403,8 +416,8 @@ angular.module('app.keyWordsList')
 
 							// If the email is added and note edited, 
 							// only then assign the email_list_id.
-							if(_last_email_item.fresh) {
-								_last_email_item.email_list_id = data.recipent.id;
+							if(_current_email_item.fresh) {
+								_current_email_item.email_list_id = data.recipent.id;
 							}
 
 							toaster.pop('success', "Message", "Recipient Saved Successfully.");

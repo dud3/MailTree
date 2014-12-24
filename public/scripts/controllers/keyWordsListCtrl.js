@@ -347,7 +347,12 @@ angular.module('app.keyWordsList')
 		$scope.checkEmail = function(data, id) {
 
 			var _this_keyword = HelperSvc.findIntemInArr($rootScope.keyWordsLists, "id", id);
-			var _this_emails = HelperSvc.findIntemInArr(_this_keyword.email, "email", data);
+			var _this_emails = HelperSvc.findIntemInArr(_this_keyword.email, "email", data.email);
+
+			if(data.email.length == 0 || data.full_name.length == 0) {
+				return toaster.pop('error', "Message", "Empty String not allowed.");
+				return false;
+			}
 
 			if(typeof _this_emails !== 'undefined') {
 				return toaster.pop('error', "Message", "This user already exits, there can only be one email per Keyword Entity.");
@@ -366,15 +371,19 @@ angular.module('app.keyWordsList')
 		 */
 		$scope.saveRecipient = function(data, id) {
 
-			var _index = HelperSvc.findIndexWithAttr($rootScope.keyWordsLists, "id", id);			
+			var _index = HelperSvc.findIndexWithAttr($rootScope.keyWordsLists, "id", id);
+			var _index_email = HelperSvc.findIndexWithAttr($rootScope.keyWordsLists[_index].email, "email", data.email);
+			var _get_email = $rootScope.keyWordsLists[_index].email[_index_email];
+			var _last_email_item = $rootScope.keyWordsLists[_index].email[$rootScope.keyWordsLists[_index].email.length - 1];
 
-			if($scope.checkEmail(data.email, id)) {
+			if($scope.checkEmail(data, id)) {
 
 				angular.extend(data, {keyword_id: id});
 
 				keyWordsListSvc.
 					saveRecipient(data)
 						.success(function(data){
+							_last_email_item.email_list_id = data.recipent.id;
 							toaster.pop('success', "Message", "Recipient added Successfully.");
 					}).error(function(data){
 						toaster.pop('error', "Message", "Something went wrong, please try again.");

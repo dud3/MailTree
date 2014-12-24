@@ -13,11 +13,15 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
     protected $list;
     protected $emails;
 
+    protected static $forward_email_from;
+    protected static $forward_email_full_name;
+
     /**
      * Main Constructor.
      */
     public function __construct() {
-
+        self::$forward_email_from = Config::get("constant.g_fwd_email_address");
+        self::$forward_email_full_name = Config::get("constant.g_fwd_email_address_full_name");
     }
 
     /**
@@ -152,6 +156,110 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
     }
 
     /**
+     * ReSend emails.
+     * Can be used to resend emails as well.
+     * @param  [type] $input [description]
+     * @return [type]        [description]
+     */
+    public function reSendEmail($input) {
+
+        $arg = [];
+        $where = " WHERE 1 = 1 ";
+        $update_row = [];
+
+        if(isset($input["id"]) && !empty($input["id"])) {
+            $arg = $input["id"];
+            $where .= " AND id ";
+        }
+
+        if(isset($input["email_address_id"]) && !empty($input["email_address_id"])) {
+            $arg = $input["email_address_id"];
+            $where .= " AND email_address_id ";
+        }
+
+        if(isset($input["x_uid"]) && !empty($input["x_uid"])) {
+            $arg = $input["x_uid"];
+            $where .= "AND m.x_uid = ? ";
+        }
+
+        $sql_mails = DB::select(
+
+            "SELECT DISTINCT m.id, m.email_address_id, m.body, m.subject,
+            e_a_l.email, e_a_l.full_name
+
+            FROM mails m
+
+             INNER JOIN email_address_list e_a_l
+                ON m.email_address_id = e_a_l.id
+
+             " . $where . "
+
+             ORDER BY e_a_l.email"
+
+        ,[$arg]);
+
+        foreach ($sql_mails as $mail) {
+
+            $email = $mail->email;
+            $full_name = $mail->full_name;
+            $message_body = $mail->body;
+            $message_subject = $mail->subject;
+
+            $data = ["email" => $email,
+                     "full_name" => $full_name,
+                     "message_body" => $message_body,
+                     "message_subject" => $message_subject];
+
+           /**
+            * Basically what we're doing here is that
+            * -> whenever we see a text that says 'Click here'
+            * -> automatically splice "Click here" text and
+            * -> everything else that comes after it.
+            * 
+            * Let's just have this one here right now.
+            * And maybe later on we can actually prevent this data
+            * -> get into the DB at the frst place.
+            *
+            * @todo Move to the helper function.
+            * 
+            */
+            $data["message_body"] = explode("\n", $data["message_body"]);
+
+            array_walk($data["message_body"], array($this, 'trim_value'));
+
+            for($i = 0; $i < count($data["message_body"]); $i++) {
+
+                if($data["message_body"][$i] == "Click here" || $data["message_body"][$i] == "--") {
+                    array_splice($data["message_body"], $i, count($data["message_body"]) - 1);
+                }
+
+            }
+
+            $data["message_body"] = implode("\n", $data["message_body"]);
+
+            $message = [];
+            
+            foreach (Config::get("constant.g_fwd_email_address") as $fwd_from) {
+
+                Mail::send('emails.sentMail', $data, function($message) use ($email, $full_name, $message_body, $message_subject, $fwd_from)
+                {
+                    $message->from($fwd_from, Config::get("constant.g_fwd_email_address_full_name"));
+
+                    $message->subject($message_subject);
+
+                    $message->to($email);
+                
+                });
+
+            }
+
+        }
+
+        return true;
+
+    }
+
+    /**
      * Find recipients by keyword.
      * @param  [type] $id [description]
      * @return [type]     [description]
@@ -279,7 +387,7 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
         if($validator->fails()) return $validator->messages();
         return true;
     }
-    
+
 
     // ---------------------------------------------------------------------
     // Helper Methods
@@ -326,6 +434,15 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 
         return $sql_emails;
 
+    }
+
+    /**
+     * Trim values.
+     * @param  [type] $value [description]
+     * @return [type]        [description]
+     */
+    public function trim_value(&$value) { 
+        $value = trim($value); 
     }
 
 }

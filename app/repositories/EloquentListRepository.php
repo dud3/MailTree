@@ -12,6 +12,9 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
     protected $keywords;
     protected $emails;
 
+    protected static $forward_email_from;
+    protected static $forward_email_full_name;
+
     /**
      * Return data.
      * @var stdClass
@@ -22,9 +25,15 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
      * Main Constructor.
      */
     public function __construct(EloquentKeywordsRepositoryInterface $keywords, EloquentEmailsRepository $emails) {
+
         $this->keywords = $keywords;
         $this->emails = $emails;
+
+        self::$forward_email_from = Config::get("constant.g_fwd_email_address");
+        self::$forward_email_full_name = Config::get("constant.g_fwd_email_address_full_name");
+
         $this->ret = new stdClass();
+
     }
 
     /**

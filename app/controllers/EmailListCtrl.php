@@ -52,6 +52,15 @@ class EmailListCtrl extends internalCtrl {
     }
 
     /**
+     * Resend emails.
+     * @return [type] [description]
+     */
+    public function reSendEmail() {
+        $input = Input::all();
+        return Response::json(["email" => $this->repo_emails->reSendEmail($input)], 200);
+    }
+
+    /**
      * Get by ID
      * @param  [type] $id [description]
      * @return [type]     [description]

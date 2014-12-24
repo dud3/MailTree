@@ -308,6 +308,34 @@ angular.module('app.emailsList')
 		};
 
 		/**
+		 * Send the email manually.
+		 * @param  {[type]} email_x_uid [description]
+		 * @return {[type]}             [description]
+		 */
+		$scope.reSendEmail = function(email_x_uid) {
+
+			var _this_elem = document.getElementById('id-fa-resend-email' + email_x_uid);
+			_this_elem.parentNode.disabled = true;
+			_this_elem.className = "fa fa-refresh fa-spin";
+
+			emailsListSvc
+				.reSendEmail(email_x_uid)
+					.success(function(data){
+
+					toaster.pop('success', "Message", "Email resent Successfully.");
+
+					_this_elem.className = "fa fa-refresh";
+					_this_elem.parentNode.disabled = false;
+
+				}).error(function(data){
+					_this_elem.className = "fa fa-refresh";
+					_this_elem.parentNode.disabled = false;
+					toaster.pop('error', "Message", "Sorry Something went wrong, please try again later on...");
+			});
+			
+		};
+
+		/**
 		 * Search globaly
 		 * @return {[type]} [description]
 		 */

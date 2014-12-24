@@ -18,6 +18,11 @@ var services = {
       return results;
     },
 
+    reSendEmail: function(email_x_uid) {
+      var results = $http.post('/api/v1/emails/reSendEmail', angular.toJson({'x_uid': email_x_uid}));
+      return results;
+    },
+
     create: function(email) {
       var results = $http.post('/api/v1/emails/create', angular.toJson(email));
       return results;

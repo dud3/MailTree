@@ -107,4 +107,22 @@ class ListController extends internalCtrl {
 
     }
 
+    /**
+     * Save recipient.
+     * @return [type] [description]
+     */
+    public function saveRecipient() {
+        $input = Input::all();
+        return Response::json(["recipent" => $this->emails->saveRecipient($input)], 200);
+    }
+
+    /**
+     * Remove recipent from the keywords list.
+     * @param  [type] $id [description]
+     * @return [type]     [description]
+     */
+    public function removeRecipent($id) {
+        return Response::json(["deleted" => $this->emails->removeRecipent($id)], 200);
+    }
+
 }

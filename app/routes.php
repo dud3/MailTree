@@ -66,6 +66,9 @@ Route::group(array('prefix' => 'api/v1'), function()
         Route::post('create', 				'ListController@create_keywords_list');
         Route::post('remove/{id}',			'ListController@remove_keywords_list');
         Route::post('keepOriginalContent',	'ListController@keepOriginalContent');
+        Route::post('saveRecipient',		'ListController@saveRecipient');
+        Route::post('removeRecipent/{id}',	'ListController@removeRecipent');
+
         Route::get('populateKeywords',		'APIActiveFilterList@populateKeywords');
         Route::get('populateRootKeywords',	'APIActiveFilterList@populateRootKeywords');
     });
@@ -81,7 +84,6 @@ Route::group(array('prefix' => 'api/v1'), function()
         Route::post('create',				'EmailListCtrl@create');
         Route::post('update',				'EmailListCtrl@update');
         Route::post('delete/{id}',			'EmailListCtrl@delete');
-        Route::post('removeRecipent/{id}',	'EmailListCtrl@removeRecipent');
         Route::post('search',				'EmailListCtrl@search');
 
     });

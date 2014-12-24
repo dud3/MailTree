@@ -34,8 +34,12 @@ var services = {
       return $http({ method: 'DELETE', url: '/api/v1/deleteKeyword/' + id});
     },
 
+    saveRecipient: function(data) {
+      return $http.post('/api/v1/keywords/saveRecipient', angular.toJson(data));
+    },
+
     removeRecipent: function(id) {
-      return $http.post('/api/v1/emails/removeRecipent/' + id);
+      return $http.post('/api/v1/keywords/removeRecipent/' + id);
     },
 
     search: function(param) {

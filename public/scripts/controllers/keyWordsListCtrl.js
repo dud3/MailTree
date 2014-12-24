@@ -320,28 +320,69 @@ angular.module('app.keyWordsList')
 
 		};
 
-		$scope.saveRecipient = function(data, id) {
-			//$scope.user not updated yet
-			angular.extend(data, {id: id});
-			return $http.post('/saveUser', data);
-		};
-
 		/**
 		 * Add recipent
 		 * @param {[type]} index [description]
 		 */
 		$scope.addRecipent = function(index) {
 
-			var recipientList = $rootScope.keyWordsLists[index];
-			console.log(recipientList);
+			var keyWordsLists = $rootScope.keyWordsLists[index];
 
 			$scope.inserted = {
-				email_list_id: recipientList.length + 1,
+				keyWordsLists_id: keyWordsLists.id,
 				email: '',
 				full_name: ''
 			};
 
 			$rootScope.keyWordsLists[index].email.push($scope.inserted);
+
+		};
+
+		/**
+		 * Check if email already exists.
+		 * @param  {[type]} data [description]
+		 * @param  {[type]} id   [description]
+		 * @return {[type]}      [description]
+		 */
+		$scope.checkEmail = function(data, id) {
+
+			var _this_keyword = HelperSvc.findIntemInArr($rootScope.keyWordsLists, "id", id);
+			var _this_emails = HelperSvc.findIntemInArr(_this_keyword.email, "email", data);
+
+			if(typeof _this_emails !== 'undefined') {
+				return toaster.pop('error', "Message", "This user already exits, there can only be one email per Keyword Entity.");
+				return false;
+			}
+
+			return true;
+
+		}
+
+		/**
+		 * Save/update recipients.
+		 * @param  {[type]} data [description]
+		 * @param  {[type]} id   [description]
+		 * @return {[type]}      [description]
+		 */
+		$scope.saveRecipient = function(data, id) {
+
+			var _index = HelperSvc.findIndexWithAttr($rootScope.keyWordsLists, "id", id);			
+
+			if($scope.checkEmail(data.email, id)) {
+
+				angular.extend(data, {keyword_id: id});
+
+				keyWordsListSvc.
+					saveRecipient(data)
+						.success(function(data){
+							toaster.pop('success', "Message", "Recipient added Successfully.");
+					}).error(function(data){
+						toaster.pop('error', "Message", "Something went wrong, please try again.");
+				});
+
+			} else {
+				$rootScope.keyWordsLists[_index].email.splice($rootScope.keyWordsLists[_index].email.length - 1, 1);
+			}
 
 		};
 

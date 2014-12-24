@@ -105,13 +105,4 @@ class EmailListCtrl extends internalCtrl {
 
     }
 
-    /**
-     * Remove recipent from the keywords list.
-     * @param  [type] $id [description]
-     * @return [type]     [description]
-     */
-    public function removeRecipent($id) {
-        return Response::json(["deleted" => $this->repo_emails->removeRecipent($id)], 200);
-    }
-
 }

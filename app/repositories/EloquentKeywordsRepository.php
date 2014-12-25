@@ -74,13 +74,14 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
      * @param  [bool] $original_content [keep the original content or not]
      * @return [type]       			[array of created keywords]
      */
-    public function store($data = null, $original_content = false) {
+    public function store($data = null, $original_content = false, $send_automatically = true) {
 
         $ret = [];
 
         $check_if_exists = keywords_list::where('keywords', '=', $data['keywords'])->count();
 
         ($original_content) ? $data["original_content"] = true : false;
+        ($send_automatically) ? $data["send_automatically"] = true : false;
 
         try {
 

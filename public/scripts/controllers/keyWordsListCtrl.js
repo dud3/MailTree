@@ -26,7 +26,8 @@ angular.module('app.keyWordsList')
 		$rootScope.keywordEntity = {
 			keywords: [{ keyword:'' }],
 			recipients: [{ full_name:'', email:'' }],
-			original_content: false
+			original_content: false,
+			send_automatically: true
 		};
 
 		/**
@@ -187,7 +188,8 @@ angular.module('app.keyWordsList')
 			$rootScope.keywordEntity = {
 				keywords: [{ keyword:'' }],
 				recipients: [{ full_name:'', email:'' }],
-				original_content: false
+				original_content: false,
+				send_automatically: true
 			};
 
 			$("#id-modal-create_keywordList").modal('show');
@@ -201,7 +203,8 @@ angular.module('app.keyWordsList')
 			$rootScope.keywordEntity = {
 				keywords: [{ keyword:'' }],
 				recipients: [{ full_name:'', email:'' }],
-				original_content: false
+				original_content: false,
+				send_automatically: true
 			};
 
 			$("#id-modal-create_keywordList").modal('hide');
@@ -232,9 +235,14 @@ angular.module('app.keyWordsList')
 
 			// push the state of original_content model, since the `original_content` column belongs to `keywods_list` table.
 			_keywordEntity.original_content = $rootScope.keywordEntity.original_content;
+			// push the state of send_automatically, if the program will send them automatically, or we decide to review nd
+			// send them manually.
+			_keywordEntity.send_automatically = $rootScope.keywordEntity.send_automatically;
 
 			// Recipients
 			_keywordEntity.recipients = $rootScope.keywordEntity.recipients;
+
+			console.log(_keywordEntity);
 
 			keyWordsListSvc
 				.create(_keywordEntity)

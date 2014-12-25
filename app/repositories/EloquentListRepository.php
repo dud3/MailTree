@@ -91,7 +91,8 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
 
                     /*! First of all store the keyword(s) */
                     $keywords = $this->keywords->store(["keywords" => $data["keywords"]],
-                                                        $original_content = (isset($data["original_content"]) ? $data["original_content"] : false) );
+                                                        $original_content = (isset($data["original_content"]) ? $data["original_content"] : false),
+                                                        $send_automatically =  (isset($data["send_automatically"]) ? $data["send_automatically"] : false));
 
                     if(!$keywords->error) {
 
@@ -124,7 +125,9 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
 
                         /* Return proper data, and let the js handled the rest */
                         $ret->error = $recipients->error;
-                        $ret->data = ["id" => $keywords["id"], "keywords" => $keywords["keywords"], "email" => $rec_arr];
+                        $ret->data = [ "id" => $keywords["id"], "keywords" => $keywords["keywords"], "email" => $rec_arr, 
+                                       "original_content" => $keywords["original_content"], "send_automatically" => $keywords["send_automatically"] ];
+                                       
                         return $ret;
 
                     } else {

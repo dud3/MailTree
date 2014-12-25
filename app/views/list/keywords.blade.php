@@ -26,7 +26,7 @@
                               </a>
 
                               <ul class="dropdown-menu" 
-                                  style="font-size:12px;  padding:5px;" 
+                                  style="font-size:12px; padding:5px;" 
                                   role="menu" aria-labelledby="dropdownMenu1" 
                                   ng-click="drodownStayOpen('settings-dropdown<* keyWordsList.id *>')">
                                 

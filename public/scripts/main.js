@@ -68,14 +68,10 @@ $(document).ready(function(){
 // General helper functions
 // =========================
 // Outside default framework.
-function drodownStayOpen(element, id) {
-
-  console.log(element);
-  console.log(id);
-
+function drodownStayOpen(element) {
   // Timeout is nesscecary to overwrite
   // the function call of bootstrap.
   setTimeout(function(){
-    $('#' + element + id).addClass("open");
+    $('#' + element).addClass("open");
   }, 10);
 }

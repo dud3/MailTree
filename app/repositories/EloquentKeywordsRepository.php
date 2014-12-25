@@ -26,7 +26,7 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 
         $sql_keywords = DB::select(
 
-            "SELECT k.id, k.keywords, k.original_content
+            "SELECT k.id, k.keywords, k.original_content, k.send_automatically
 
              FROM keywords_list k"
 
@@ -191,6 +191,20 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
             $this->delete_single($k->id);
         }
         return true;
+    }
+
+    /**
+     * Send the email automatically.
+     * Basically tell the system to not send the emails right away,
+     * but only if the user sends manually.
+     * @param  [type] $data [description]
+     * @return [type]       [description]
+     */
+    public function sendAutomatically($data) {
+        $keywordEntity = keywords_list::find($data["id"]);
+        $keywordEntity->fill(["send_automatically" => $data["send_automatically"]]);
+        $keywordEntity->save();
+        return $keywordEntity;
     }
 
     /**

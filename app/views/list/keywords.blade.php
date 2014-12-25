@@ -12,7 +12,7 @@
             <div class="panel-group" id="accordion<* keyWordsList.id *>">
                 <div class="panel panel-default">
 
-                    <div class="panel-heading" style="overflow: auto">
+                    <div class="panel-heading">
                       <h4 class="panel-title">
 
                             {{-- Right side actions --}}
@@ -20,16 +20,47 @@
                                 <span class="text-danger" style="float:right; margin-left:15px;"><b>x</b></span>
                             </a>
 
-                            <span class="pull-right" data-animation="am-flip-x" placement="left" bs-tooltip="tooltip">
-                                <input
-                                        type="checkbox"
-                                        id="check_<* keyWordsList.id *>"
-                                        ng-click="keepOriginalContent(<* keyWordsList.id *>)"
-                                        ng-checked="keyWordsList.original_content"
-                                        style="padding:2px; margin:2px"
-                                />
-                            </span>
+                            <div class="dropdown pull-right" id="settings-dropdown<* keyWordsList.id *>" style="cursor:pointer; padding:0px; margin:1px">
+                              <a id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                                <span class="fa fa-cog"></span>
+                              </a>
 
+                              <ul class="dropdown-menu" 
+                                  style="font-size:12px;  padding:5px;" 
+                                  role="menu" aria-labelledby="dropdownMenu1" 
+                                  ng-click="drodownStayOpen('settings-dropdown<* keyWordsList.id *>')">
+                                
+                                <li role="presentation">
+                                <span style="cursor:pointer;">
+                                    <label>
+                                        <input
+                                                type="checkbox"
+                                                id="check_automatically_<* keyWordsList.id *>"
+                                                ng-click="sendAutomatically(<* keyWordsList.id *>)"
+                                                ng-checked="keyWordsList.send_automatically">
+                                        </input>
+                                        Send automatically
+                                    </label>
+                                </span>
+                                </li>
+
+                                <li role="presentation">
+                                <span style="cursor:pointer;">
+                                    <label>
+                                        <input
+                                                type="checkbox"
+                                                id="check_original_<* keyWordsList.id *>"
+                                                ng-click="keepOriginalContent(<* keyWordsList.id *>)"
+                                                ng-checked="keyWordsList.original_content">
+                                        </input>
+                                        Keep Original Content
+                                    </label>
+                                </span>
+                                </li>
+
+                              </ul>
+
+                            </div>
 
                           Keywords: <span style="margin-right:2px;" ng-repeat="(key, value) in keyWordsList.keywords" class="label label-primary"><* value *></span>
 

@@ -65,6 +65,7 @@ Route::group(array('prefix' => 'api/v1'), function()
         Route::get('get', 					'ListController@get_all_keywords');
         Route::post('create', 				'ListController@create_keywords_list');
         Route::post('remove/{id}',			'ListController@remove_keywords_list');
+        Route::post('sendAutomatically',	'ListController@sendAutomatically');
         Route::post('keepOriginalContent',	'ListController@keepOriginalContent');
         Route::post('saveRecipient',		'ListController@saveRecipient');
         Route::post('removeRecipent/{id}',	'ListController@removeRecipent');
@@ -75,7 +76,6 @@ Route::group(array('prefix' => 'api/v1'), function()
 
     Route::group(array('prefix' => 'emails'), function()
     {
-
         Route::get('get_all',				'EmailListCtrl@get_all');
         Route::post('get_collection',		'EmailListCtrl@get_collection');
         Route::post('saveEmail',			'EmailListCtrl@saveEmail');
@@ -85,7 +85,6 @@ Route::group(array('prefix' => 'api/v1'), function()
         Route::post('update',				'EmailListCtrl@update');
         Route::post('delete/{id}',			'EmailListCtrl@delete');
         Route::post('search',				'EmailListCtrl@search');
-
     });
 
 });

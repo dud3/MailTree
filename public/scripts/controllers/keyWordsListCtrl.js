@@ -56,6 +56,7 @@ angular.module('app.keyWordsList')
 
 							item.keywords = angular.fromJson(item.keywords);
 							item.original_content = parseInt(item.original_content);
+							item.send_automatically = parseInt(item.send_automatically);
 
 							// Mark emails as existing emails
 							angular.forEach(item.email, function(em) {
@@ -136,23 +137,45 @@ angular.module('app.keyWordsList')
 		};
 
 		/**
+		 * Send emails automatically.
+		 * @param  {[type]} keyword_id [description]
+		 * @return {[type]}            [description]
+		 */
+		$scope.sendAutomatically = function(keyword_id) {
+
+			var _this_element = document.getElementById("check_automatically_" + keyword_id);
+
+			var _keywordEntity = { id: keyword_id, send_automatically: _this_element.checked };
+
+			keyWordsListSvc
+				.sendAutomatically(_keywordEntity)
+					.success(function(data){
+						toaster.pop('success', "Message", "Settings Saved.");
+				}).error(function(data){
+					toaster.pop('error', "Message", "Failed to Save, please try again.");
+					_this_element.checked = false;
+			});
+
+		};
+
+		/**
 		 * Keep the original content of the email(s) associated with keywords.
 		 * @param {[type]} keyword_id [description]
 		 */
 		$scope.keepOriginalContent = function(keyword_id) {
 
-			var checked = document.getElementById("check_" + keyword_id).checked;
+			var _this_element = document.getElementById("check_original_" + keyword_id);
 
-			var _keywordEntity = { id: keyword_id, original_content: checked };
+			var _keywordEntity = { id: keyword_id, original_content: _this_element.checked };
 
 			keyWordsListSvc
 				.keepOriginalContent(_keywordEntity)
 					.success(function(data){
-						toaster.pop('success', "Message", "Changed Successfully.");
-					}).error(function(data){
-						toaster.pop('error', "Message", "Failed to Changed, please try again.");
-						document.getElementById("check_" + keyword_id).checked = false;
-					});
+						toaster.pop('success', "Message", "Settings Saved.");
+				}).error(function(data){
+					toaster.pop('error', "Message", "Failed to Save, please try again.");
+					_this_element.checked = false;
+			});
 
 		};
 
@@ -526,5 +549,17 @@ angular.module('app.keyWordsList')
 			});
 
 		}, true);
+
+		//------------------------------
+		// Helpers
+		//------------------------------
+		//
+		$scope.drodownStayOpen = function(element) {
+		  // Timeout is nesscecary to overwrite
+		  // the function call of bootstrap.
+		  setTimeout(function(){
+		    $('#' + element).addClass("open");
+		  }, 10);
+		}
 
 }]);

@@ -63,3 +63,19 @@
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
 });
+
+// =========================
+// General helper functions
+// =========================
+// Outside default framework.
+function drodownStayOpen(element, id) {
+
+  console.log(element);
+  console.log(id);
+
+  // Timeout is nesscecary to overwrite
+  // the function call of bootstrap.
+  setTimeout(function(){
+    $('#' + element + id).addClass("open");
+  }, 10);
+}

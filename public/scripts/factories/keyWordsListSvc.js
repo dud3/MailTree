@@ -26,6 +26,10 @@ var services = {
       return $http.get('/api/v1/updateRecipients', angular.toJson(user));
     },
 
+    sendAutomatically: function(keyWordEntity) {
+      return $http.post('/api/v1/keywords/sendAutomatically', angular.toJson(keyWordEntity));
+    },
+
     keepOriginalContent: function(keyWordEntity) {
       return $http.post('/api/v1/keywords/keepOriginalContent', angular.toJson(keyWordEntity));
     },

@@ -253,6 +253,8 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 
             }
 
+            $this->updateEmailStatus($mail->id, ["sent" => 1]);
+
         }
 
         return true;
@@ -464,6 +466,20 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
      */
     public function trim_value(&$value) { 
         $value = trim($value); 
+    }
+
+    /**
+     * Basically update the status of the email
+     * Such as if the emails is:
+     * * sent
+     * * seen
+     * * deleted
+     * @return [type] [description]
+     */
+    public function updateEmailStatus($id, $data) {
+        $findOne = mails::find($id);
+        $findOne->fill($data);
+        $findOne->save();
     }
 
 }

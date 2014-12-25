@@ -23,7 +23,6 @@
                     </th>
                     <th>Subject</th>
                     <th>Date</th>
-                    <!-- th>Body</th -->
                     <th style="; text-align: left;"></th>
                     <th style="width:1%;">Emails(<* emails.length *>) </th>
                 </tr>
@@ -32,15 +31,17 @@
             <tbody>
 
                 <tr ng-repeat="email in emails | filter:__G__search" id="id-email<* email.id *>" ng-class="{ 'mail-sent': email.sent }" class="item-email">
+                    
                     <td style="padding:7px 6px 6px 10px; background-color:#eee;">
                         <input ng-show="!email.sent" type="checkbox" id="check-email<* email.id *>" name="check-email<* email.id *>">
                         <span ng-show="email.sent" class="fa fa-check-square-o fa-lg text-success"></span>
                     </td>
+                    
                     <td ng-bind-html="email.subject"></td>
+                    
                     <td><* email.utc_time *></td>
-                    <!-- td ng-bind-html="email.body"></td -->
+                    
                     <td class="text-left" style="width:8%; padding-right:0px; margin-right: 0px;">
-
                         <button class="btn btn-default btn-sm" style="padding:0px 3px 0px 3px"
                                 ng-click="editEmail(email.id)">
                             <span class="fa fa-pencil-square-o" style="font-size:13px;"></span>
@@ -54,22 +55,29 @@
                         </button>
 
                         <button
+                                ng-show="email.sent"
                                 class="btn btn-default btn-sm"
                                 style="padding:0px 3px 0px 3px"
                                 ng-click="reSendEmail(email.x_uid)"
                                 title="Resend Emails.">
                             <span id="id-fa-resend-email<*email.x_uid*>" class="fa fa-refresh" style="font-size:13px"></span>
                         </button>
-
                     </td>
+
                     <td style="padding-left:3px; margin-left: 0px;">
-                        <span ng-show="email.sent" class="label label-success mail-sent-label" style="padding:2.5px 19px 2.5px 19px;">
-                            Sent&nbsp;<span class="fa fa-envelope"></span>
+                        <span ng-show="email.sent" 
+                              class="label label-success mail-sent-label" 
+                              style="padding:2.5px 19px 2.5px 19px;">
+                            sent&nbsp;<span class="fa fa-envelope"></span>
                         </span>
-                        <button ng-show="!email.sent" style="font-size:10px; padding:2px 15px 2px 15px;" class="btn btn-info btn-sm">
-                            Send&nbsp;<span class="fa fa-paper-plane"></span>
+                        <button ng-show="!email.sent"
+                                ng-click="sendEmail(email.id, email.x_uid)"
+                                style="font-size:10px; padding:2px 15px 2px 15px;" 
+                                class="btn btn-info btn-sm">
+                            send&nbsp;<span class="fa fa-paper-plane"></span>
                         </button>
                     </td>
+
                 </tr>
 
             </tbody>

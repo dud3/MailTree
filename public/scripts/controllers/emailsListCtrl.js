@@ -308,6 +308,31 @@ angular.module('app.emailsList')
 		};
 
 		/**
+		 * Send email
+		 * @return {[type]} [description]
+		 */
+		$scope.sendEmail = function(email_id, email_x_uid) {
+
+			var _this_tr = $("#id-email" + email_id),
+			_this_button = _this_tr.children()[_this_tr.children().length - 1].childNodes[3];
+
+			_this_button.className = "btn btn-info btn-sm disabled";
+			_this_button.innerHTML = "sending...";
+
+			emailsListSvc
+				.reSendEmail(email_x_uid)
+					.success(function(data){
+
+						$scope.emails[HelperSvc.findIndexWithAttr($rootScope.emails, "x_uid", email_x_uid)].sent = 1;
+
+					toaster.pop('success', "Message", "Email sent Successfully.");
+				}).error(function(data){
+					toaster.pop('error', "Message", "Sorry Something went wrong, please try again later on...");
+			});
+
+		};
+
+		/**
 		 * Send the email manually.
 		 * @param  {[type]} email_x_uid [description]
 		 * @return {[type]}             [description]

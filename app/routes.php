@@ -77,6 +77,7 @@ Route::group(array('prefix' => 'api/v1'), function()
     Route::group(array('prefix' => 'emails'), function()
     {
         Route::get('get_all',				'EmailListCtrl@get_all');
+        Route::get('get_unsent',			'EmailListCtrl@get_unsent');
         Route::post('get_collection',		'EmailListCtrl@get_collection');
         Route::post('saveEmail',			'EmailListCtrl@saveEmail');
         Route::post('reSendEmail',			'EmailListCtrl@reSendEmail');

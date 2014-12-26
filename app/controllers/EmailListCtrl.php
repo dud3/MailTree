@@ -34,6 +34,14 @@ class EmailListCtrl extends internalCtrl {
     }
 
     /**
+     * Get unseen/unsent emails.
+     * @return [type] [description]
+     */
+    public function get_unsent() {
+        return Response::json(["emails" => $this->repo_emails->get_unsent()], 200);
+    }
+
+    /**
      * Get colleciton of emails including the user informations.
      * @return [type] [description]
      */

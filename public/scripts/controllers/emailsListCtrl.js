@@ -8,15 +8,15 @@
  * Controller of the publicApp
  */
 angular.module('app.emailsList')
-  .controller('emailsListCtrl', ['$scope', '$rootScope', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore', 
+  .controller('emailsListCtrl', ['$scope', '$rootScope', '$interval', '$timeout', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore', 
   				'emailsListSvc', 'HelperSvc', 'toaster', '$tooltip',
-	function ($scope, $rootScope, $http, $q, $compile, $location, $sce, $cookies, $cookieStore, emailsListSvc, HelperSvc, toaster, $tooltip) {
+	function ($scope, $rootScope, $interval, $timeout, $http, $q, $compile, $location, $sce, $cookies, $cookieStore, emailsListSvc, HelperSvc, toaster, $tooltip) {
 
 		/**
 		 * Mail related config.
 		 * @type {Object}
 		 */
-		$scope.__mailCfg = { listen_delay: 200000, cache: false };
+		$scope.__mailCfg = { listen_delay: 10000, cache: false };
 
 		$scope.tooltip = {title: '<small>View email</small>'};
 
@@ -49,7 +49,6 @@ angular.module('app.emailsList')
 		 * @type {Object}
 		 */
 		$rootScope.email = {
-
 			id: null,
 			keywords: [],
 
@@ -68,7 +67,6 @@ angular.module('app.emailsList')
 			x_seen: 0,
 			x_draft: 0,
 			x_udate: 0
-
 		};
 
 		/**
@@ -76,19 +74,17 @@ angular.module('app.emailsList')
 		 * @type {Object}
 		 */
 		$rootScope.filter = {
-
 			subject: "",
 			body: "",
 			date: null,
 			sent: false
-
 		};
 
 		/**
 		 * Get all the keywords
 		 * @return {[type]} [description]
 		 */
-		$scope.getAllKeywords = function() {
+		$scope.getAllEmails = function() {
 
 			emailsListSvc
 				.getAll()
@@ -131,54 +127,56 @@ angular.module('app.emailsList')
 		 */
 		$scope.mailListener = function() {
 
-			// Let's try to get everything at the same time
-			// and compare to the current array
+			// If nothing, get eveyrhting.
+			if($rootScope.emails.length == 0) {
+				emailsListSvc
+					.getAll()
+						.success(function(data){
+							// From string to actual javaScript object
+							angular.forEach(data.emails, function(item) {
+								item.keywords = angular.fromJson(item.keywords);
+								item.sent = parseInt(item.sent);
+								if(item.sent) {
+									$scope.count_sent_emails++;
+								}
+							});
+							$rootScope.emails = data.emails;
+					}).error(function(){});
+				return null;
+			}
+
 			emailsListSvc
-				.getAll()
+				.getUnsent()
 					.success(function(data){
 
-						angular.forEach(data.emails, function(item) {
+						if( parseInt(data.emails[0].id) > parseInt($rootScope.emails[0].id) ) {
 
-							// Get email id
-							/*
-							var email_id = parseInt(item.id);
+							angular.forEach(data.emails, function(item) {
 
-							// From string to actual javaScript object
-							item.keywords = angular.fromJson(item.keywords);
-							item.id = parseInt(item.id);
+								// From string to actual javaScript object
+								item.keywords = angular.fromJson(item.keywords);
+								item.sent = parseInt(item.sent);
 
-							// The current listed emails
-							angular.forEach($rootScope.emails, function(_item) {
+								if(item.sent) {
+									$scope.count_sent_emails++;
+								}
 
-								var _email_id = parseInt(_item.id);
-								// if the upcoming email has bigger id than the current
-								// emails, then push to the array
-								if(email_id > _email_id) {
-									$rootScope.emails.push(_item);
+								item.id = parseInt(item.id);
+								// Simply compare the last item of the current array
+								// to the all items from the unsent emails.
+								if( item.id > parseInt($rootScope.emails[0].id) ) {
+									$rootScope.emails.unshift(item);
 								}
 
 							});
-							*/
 
-						});
-
-						// $rootScope.emails = data.emails;
-
-						//
-						// Note the internal keywords should be
-						// -> accessed like: $rootScope.keyWordsList[0].keywords["0"]
-						//
-						// and not like: $rootScope.keyWordsList[0].keywords.0
-						//
-						// The second one returns error.
-						//
+						}
 
 				}).error(function(data){
 					toaster.pop('error', "Message", "Something went wrong, please try again");
 			});
 
-		};
-		// setInterval($scope.mailListener, $scope.__mailCfg.listen_delay);
+		}; $interval($scope.mailListener, $scope.__mailCfg.listen_delay);
 
 
 		/**

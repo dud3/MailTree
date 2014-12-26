@@ -8,6 +8,11 @@ var services = {
       return results;
     },
 
+    getUnsent: function() {
+      var results = $http.get('/api/v1/emails/get_unsent');
+      return results;
+    },
+
     getEmailByid: function(email_id) {
       var results = $http.post('/api/v1/emails/get_collection', angular.toJson({ id: email_id }));
       return results;

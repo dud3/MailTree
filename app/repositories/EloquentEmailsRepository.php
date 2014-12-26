@@ -22,17 +22,9 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
     public function __construct() {
         self::$forward_email_from = Config::get("constant.g_fwd_email_address");
         self::$forward_email_full_name = Config::get("constant.g_fwd_email_address_full_name");
-    }
 
-    /**
-     * Get all emails.
-     * @return [type] [description]
-     */
-    public function get_all() {
-
-        $sql_emails = DB::select(
-
-        "SELECT m.id, m.email_address_id, m.subject, m.body, m.body_html, m.optional_text, m.sender_email, m.reciver_email,
+        $this->main_sql = "
+        SELECT m.id, m.email_address_id, m.subject, m.body, m.body_html, m.optional_text, m.sender_email, m.reciver_email,
                 m.fwd_accept, m.sent,
                 m.x_message_id, m.x_date,	m.x_size, m.x_uid, m.x_msgno,	m.x_recent, m.x_flagged, m.x_answered, m.x_deleted,
                 m.x_seen, m.x_draft, m.x_udate,
@@ -47,16 +39,15 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
                 ON k_l.id = e_a_l.keyword_id
 
             JOIN (SELECT x_uid, MAX(id) id FROM mails GROUP BY x_uid) m2
-                 ON m.id = m2.id AND m.x_uid = m2.x_uid
+                 ON m.id = m2.id AND m.x_uid = m2.x_uid";
+    }
 
-            ORDER BY m.id DESC
-
-        ");
-
-        self::wrapKeywordLabels($sql_emails);
-
-        return $sql_emails;
-
+    /**
+     * Get all emails.
+     * @return [type] [description]
+     */
+    public function get_all() {
+        return self::wrapKeywordLabels( DB::select($this->main_sql . " ORDER BY m.id DESC ", []) );
     }
 
     /**
@@ -66,6 +57,14 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
      */
     public function get_by_id($id = null) {
 
+    }
+
+    /**
+     * Get unsent emails only.
+     * @return [type] [description]
+     */
+    public function get_unsent() {
+        return self::wrapKeywordLabels( DB::select($this->main_sql . " WHERE m.sent = 0 ORDER BY m.id DESC ", []) );
     }
 
     /**

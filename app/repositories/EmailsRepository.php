@@ -321,7 +321,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
      */
     public function sendMails($fwd_from = null, $test_user_only = false) {
 
-        $where = " WHERE m.sent = 0 ";
+        $where = " WHERE m.sent = 0 AND k_l.send_automatically = 1 ";
 
         /**
          * If in html enabled mode, read only emails that contain html.
@@ -343,12 +343,16 @@ class EmailsRepository implements EmailsRepositoryInterface {
         $sql_mails = DB::select(
 
             "SELECT DISTINCT m.id, m.email_address_id, m.body, m.subject,
-            e_a_l.email, e_a_l.full_name
+            e_a_l.email, e_a_l.full_name,
+            k_l.send_automatically
 
             FROM mails m
 
              INNER JOIN email_address_list e_a_l
                 ON m.email_address_id = e_a_l.id
+
+             JOIN keywords_list k_l
+                ON e_a_l.keyword_id = k_l.id
 
              " . $where . "
 

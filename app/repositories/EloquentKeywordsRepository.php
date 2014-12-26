@@ -80,8 +80,8 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 
         $check_if_exists = keywords_list::where('keywords', '=', $data['keywords'])->count();
 
-        ($original_content) ? $data["original_content"] = true : false;
-        ($send_automatically) ? $data["send_automatically"] = true : false;
+        ($original_content) ? $data["original_content"] = true : $data["original_content"] = false;
+        ($send_automatically) ? $data["send_automatically"] = true : $data["send_automatically"] = false;
 
         try {
 

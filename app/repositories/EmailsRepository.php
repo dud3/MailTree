@@ -49,6 +49,12 @@ class EmailsRepository implements EmailsRepositoryInterface {
      */
     public function __construct() {
 
+        self::$dump_folder = base_path() . "/sys_dump/";
+
+        if(!file_exists(self::$dump_folder)) {
+          mkdir(self::$dump_folder, 777);
+        }
+
         self::$forward_email_from = Config::get("constant.g_fwd_email_address");
         self::$forward_email_full_name = Config::get("constant.g_fwd_email_address_full_name");
 

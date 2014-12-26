@@ -164,7 +164,7 @@ angular.module('app.emailsList')
 								item.id = parseInt(item.id);
 								// Simply compare the last item of the current array
 								// to the all items from the unsent emails.
-								if( item.id > parseInt($rootScope.emails[0].id) ) {
+								if( parseInt($rootScope.emails[0].id) < item.id ) {
 									$rootScope.emails.unshift(item);
 								}
 
@@ -267,7 +267,7 @@ angular.module('app.emailsList')
 					$rootScope.email.message_subject = data.emails[0].message_subject;
 					$rootScope.email.message_body = data.emails[0].message_body;
 
-					$("#id-modal-edit_single_email").modal("show");
+					$("#id-modal-edit_single_email").modal({ backdrop:'static', keyboard:false, show:true });
 
 				}).error(function(data){
 					// Do nothing for now...

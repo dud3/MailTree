@@ -47,7 +47,7 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
      * @return [type] [description]
      */
     public function get_all() {
-        return self::wrapKeywordLabels( DB::select($this->main_sql . " ORDER BY m.id DESC ", []) );
+        return self::wrapKeywordLabels( DB::select($this->main_sql . " ORDER BY m.sent ASC, m.id DESC ", []) );
     }
 
     /**
@@ -64,7 +64,7 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
      * @return [type] [description]
      */
     public function get_unsent() {
-        return self::wrapKeywordLabels( DB::select($this->main_sql . " WHERE m.sent = 0 ORDER BY m.id DESC ", []) );
+        return self::wrapKeywordLabels( DB::select($this->main_sql . " WHERE m.sent = 0 ORDER BY m.id ASC ", []) );
     }
 
     /**

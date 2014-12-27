@@ -1,6 +1,9 @@
 <?php
 
 use \Base;
+use Sentry\Throttling\UserSuspendedException;
+use Sentry\Throttling\UserBannedException;
+use \AuthenticationException;
 
 /**
  * Authentication controller.
@@ -28,10 +31,7 @@ class AuthCtrl extends \Base\BaseController {
             } else {}
 
         }
-        catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
-        {
-
-        }
+        catch (Cartalyst\Sentry\Users\UserNotFoundException $e){}
     }
 
     /**
@@ -39,8 +39,10 @@ class AuthCtrl extends \Base\BaseController {
      * @param  [type] $data [description]
      * @return [type]       [description]
      */
-    public function logIn($data)
+    public function logIn($data = null)
     {
+        $data = Input::all();
+
         try
         {
 
@@ -60,12 +62,10 @@ class AuthCtrl extends \Base\BaseController {
 
                 // Remember me if true
                 // This will simply remembere us as cookies
-                // -> even if we close the browser
-                if(isset($data['remember'])){
-                    if($data['remember']) {
+                if(isset($data['remember']) && $data['remember']){
                         $user = Sentry::authenticateAndRemember($credentials);
-                    }
                 } else {
+                    var_dump($credentials);
                     // Try to authenticate the user per default session duration
                     $user = Sentry::authenticate($credentials, false);
                 }
@@ -76,39 +76,53 @@ class AuthCtrl extends \Base\BaseController {
                 // Set session data
                 Session::put('user', $currentUser);
 
-                return ['user' => $user->group_id];
+                return ["msg" => "cool, come in..."];
 
             }
         }
         catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
         {
-            throw new AuthenticationException('Login field is required.');
+            return Response::json(['msg' => 'Login field is required.', 'code' => 0.1], 406);
         }
         catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
         {
-            throw new AuthenticationException('Password field is required.');
+            return Response::json([ 'msg' => 'Password field is required.', 'code' => 0.2], 406);
         }
         catch (Cartalyst\Sentry\Users\UserNotActivatedException $e)
         {
-            throw new AuthenticationException('User is not activated.');
+            return Response::json([ 'msg' => 'User is not activated.', 'code' => 0.3], 406);
         }
         catch (Cartalyst\Sentry\Users\WrongPasswordException $e)
         {
-            throw new AuthenticationException('Wrong password, try again.');
+            return Response::json([ 'msg' => 'Wrong password, try again.', 'code' => 0.4], 406);
         }
         catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
         {
-            throw new AuthenticationException('code.0');
+            return Response::json([ 'msg' => 'User Not found.', 'code' => 0.5], 406);
         }
         // The following is only required if throttle is enabled
         catch (Cartalyst\Sentry\Throttling\UserSuspendedException $e)
         {
-            $time = $throttle->getSuspensionTime();
-            throw new AuthenticationException('User is suspended for '. $time .' minutes.');
+            return Response::json([ 'msg' => 'User is suspended for '. $throttle->getSuspensionTime() .' minutes.', 'code' => 0.6], 406);
         }
         catch (Cartalyst\Sentry\Throttling\UserBannedException $e)
         {
-            throw new AuthenticationException('User is banned.');
+            return Response::json([ 'msg' => 'User is banned.', 'code' => 0.7], 406);
+        }
+    }
+
+    /**
+     * Logout.
+     * @return [type] [description]
+     */
+    public function logout() {
+        Sentry::logout();
+        Session::flush();
+
+        if (Request::ajax()) {
+            return true;
+        } else {
+            return Redirect::to('/');
         }
     }
 
@@ -146,17 +160,24 @@ class AuthCtrl extends \Base\BaseController {
 
         catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
         {
-            throw new AuthenticationException('name_empty');
+            return Response::json([ 'msg' => 'name_empty', 'code' => 0.1], 406);
         }
         catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
         {
-            throw new AuthenticationException('password_empty');
+            return Response::json([ 'msg' => 'password_empty', 'code' => 0.2], 406);
         }
         catch (Cartalyst\Sentry\Users\UserExistsException $e)
         {
-
-            throw new AuthenticationException('exists_already');
+            return Response::json([ 'msg' => 'exists_already', 'code' => 0.3], 406);
         }
+    }
+
+    /**
+     * Just a simple JSON request to keep the sessions alive.
+     * @return [type] [description]
+     */
+    public function keepAlive() {
+        return true;
     }
 
 }

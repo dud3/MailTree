@@ -42,24 +42,23 @@
                     <td><* email.utc_time *></td>
                     
                     <td class="text-left" style="width:8%; padding-right:0px; margin-right: 0px;">
-                        <button class="btn btn-default btn-sm" style="padding:0px 3px 0px 3px"
+                        <button data-animation="am-flip-x" placement="top" bs-tooltip="tooltip.edit"
+                                class="btn btn-default btn-sm" style="padding:0px 3px 0px 3px"
                                 ng-click="editEmail(email.id)">
                             <span class="fa fa-pencil-square-o" style="font-size:13px;"></span>
                         </button>
 
-                        <button data-animation="am-flip-x" placement="left" bs-tooltip="tooltip" 
+                        <button data-animation="am-flip-x" placement="top" bs-tooltip="tooltip.view" 
                                 class="btn btn-default btn-sm" style="padding:0px 3px 0px 3px"
-                                title="Edit Emails."
                                 ng-click="viewEmail(email.id)">
                             <span class="fa fa-eye" style="font-size:13px"></span>
                         </button>
 
-                        <button
+                        <button data-animation="am-flip-x" placement="top" bs-tooltip="tooltip.resent"
                                 ng-show="email.sent"
                                 class="btn btn-default btn-sm"
                                 style="padding:0px 3px 0px 3px"
-                                ng-click="reSendEmail(email.x_uid)"
-                                title="Resend Emails.">
+                                ng-click="reSendEmail(email.x_uid)">
                             <span id="id-fa-resend-email<*email.x_uid*>" class="fa fa-refresh" style="font-size:13px"></span>
                         </button>
                     </td>

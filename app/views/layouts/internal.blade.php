@@ -48,6 +48,19 @@
 
         <div class="container-fluid">
 
+            {{-- System Messages --}}
+            <toaster-container
+            toaster-options="{'position-class': 'toast-top-right',
+                              'showDuration': '300',
+                              'hideDuration': '1000',
+                              'timeOut': '1000',
+                              'extendedTimeOut': '1000',
+                              'showEasing': 'swing',
+                              'hideEasing': 'linear',
+                              'showMethod': 'fadeIn',
+                              'hideMethod': 'fadeOut'}">
+            </toaster-container>
+
             <?php if(Config::get('constant.g_currentPage') == '/' || Config::get('constant.g_currentPage') == 'login') { ?>
 
             <div class="container-fluid">
@@ -56,19 +69,6 @@
 
                     @include("layouts.internalNavbar")
                     @include("layouts.internalSideBar")
-
-                    {{-- System Messages --}}
-                    <toaster-container
-                    toaster-options="{'position-class': 'toast-top-right',
-                                      'showDuration': '300',
-                                      'hideDuration': '1000',
-                                      'timeOut': '1000',
-                                      'extendedTimeOut': '1000',
-                                      'showEasing': 'swing',
-                                      'hideEasing': 'linear',
-                                      'showMethod': 'fadeIn',
-                                      'hideMethod': 'fadeOut'}">
-                    </toaster-container>
 
                     {{-- System loading anim --}}
                     <div id="g-content-loader">
@@ -142,6 +142,8 @@
     </script>
 
     <script src="/scripts/controllers/authCtrl.js"></script>
+    <script src="/scripts/controllers/userCtrl.js"></script>
+    <script src="/scripts/controllers/navBarCtrl.js"></script>
 
     <script src="/scripts/controllers/searchCtrl.js"></script>
     <script src="/scripts/controllers/keyWordsListCtrl.js"></script>

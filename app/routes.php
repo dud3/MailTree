@@ -21,20 +21,9 @@
  */
 Route::group(array('before' => 'guest'), function()
 {
-
     Route::resource('/', 			'AuthCtrl');
     Route::resource('/login',		'AuthCtrl');
-
-    Route::group(array('prefix' => 'auth'), function()
-    {
-        Route::post('/login',		'AuthCtrl@login');
-    });
-
 });
-
-
-Route::get('/app',				'ListController@view_k_list');
-Route::get('/app/emails',		'EmailListCtrl@index');
 
 /**------------------------------------
  * :: After log-in ::
@@ -46,9 +35,11 @@ Route::get('/app/emails',		'EmailListCtrl@index');
  */
 Route::group(array('before' => 'auth'), function()
 {
-    // Route::get('/app',			'EmailListCtrl@view_emails');
-
+    Route::get('/app',				'ListController@view_k_list');
+    Route::get('/app/emails',		'EmailListCtrl@index');
+    Route::get('/logout',			'AuthCtrl@logout');
 });
+
 
 /**------------------------------------
  * :: API ::
@@ -59,6 +50,17 @@ Route::group(array('before' => 'auth'), function()
  */
 Route::group(array('prefix' => 'api/v1'), function()
 {
+    Route::group(array('prefix' => 'auth'), function() 
+    {
+        Route::post('/login',			'AuthCtrl@login');
+        Route::post('/createUser',		'AuthCtrl@logout');
+        Route::post('/changePassword', 	'AuthCtrl@changePassword');
+    });
+
+    Route::group(array('prefix' => 'user'), function()
+    {
+        Route::post('/create',		'UserController@create');
+    });
 
     Route::group(array('prefix' => 'keywords'), function()
     {
@@ -87,7 +89,6 @@ Route::group(array('prefix' => 'api/v1'), function()
         Route::post('delete/{id}',			'EmailListCtrl@delete');
         Route::post('search',				'EmailListCtrl@search');
     });
-
 });
 
 /**------------------------------------

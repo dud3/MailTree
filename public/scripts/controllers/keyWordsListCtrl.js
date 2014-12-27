@@ -242,8 +242,6 @@ angular.module('app.keyWordsList')
 			// Recipients
 			_keywordEntity.recipients = $rootScope.keywordEntity.recipients;
 
-			console.log(_keywordEntity);
-
 			keyWordsListSvc
 				.create(_keywordEntity)
 					.success(function(data){

@@ -1,5 +1,5 @@
 <!-- Fixed navbar -->
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="NavBarCtrl">
   <div class="container-fluid">
     <div id="id-navbar-header" class="navbar-header" style="cursor:pointer;">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -34,16 +34,15 @@
         <li class="dropdown">
           <a href="#"
              class="dropdown-toggle" data-toggle="dropdown">
-            <span style="" class="user">Someone@xmail.com</span>
+            <span style="" class="user">{{ Sentry::getUser()->email }}</span>
             <span class="caret"></span>
           </a>
            <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Settings</a></li>
             <li><a href="#">Create User</a></li>
             <li class="divider"></li>
             <li class="dropdown-header">Other</li>
             <li><a href="#"><span class="fa fa-at"></span> Contact(developer)</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-arrow-left"></span> Log out</a></li>
+            <li><a href="/logout"><span class="glyphicon glyphicon-arrow-left"></span> Log out</a></li>
           </ul>
         </li>
       </ul>

@@ -125,6 +125,15 @@ angular.module('mailTree')
         }
       }
       return -1;
+    },
+
+    /**
+     * Redirect to the given url.
+     * @param  {[type]} url [description]
+     * @return {[type]}     [description]
+     */
+    redirect: function(url) {
+      window.location.href = url;
     }
 
   };

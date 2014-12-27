@@ -18,7 +18,7 @@ angular.module('app.emailsList')
 		 */
 		$scope.__mailCfg = { listen_delay: 10000, cache: false };
 
-		$scope.tooltip = {title: '<small>View email</small>'};
+		$scope.tooltip = { view: {title: '<small>View email</small>'}, edit: {title: '<small>Edit email</small>'}, resent: { title: '<small>Resent email</small>'} };
 
 	    /**
 	    * Emails holder

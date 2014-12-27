@@ -4,7 +4,7 @@
     <div class="modal-content" id="id-modal-content-view_single_email">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" ng-click="close()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title text-muted" id="myModalLabel">View Email</h4>
+        <h4 class="modal-title text-muted" id="myModalLabel">Edit Email</h4>
       </div>
 
       <div class="modal-body" style="background: #f6f6f6; padding:30px;">

@@ -39,6 +39,8 @@ angular
     'utilFilters',
 
     'app.auth',
+    'app.user',
+    'app.navbar',
     'app.keyWordsList',
     'app.emailsList',
     'app.activeFilters',
@@ -245,6 +247,8 @@ $interpolateProvider.endSymbol('*>');
 // Other moodules
 // ---------------------
 angular.module('app.auth', ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'utilFilters']);
+angular.module('app.user', ['ngSanitize', 'toaster']);
+angular.module('app.navbar', []);
 angular.module('app.keyWordsList', ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'xeditable', 'utilFilters', 'ngAnimate']);
 angular.module('app.emailsList', ['ngSanitize', 'mgcrea.ngStrap', 'toaster', 'xeditable', 'utilFilters', 'ngAnimate']);
 angular.module('app.activeFilters', ['ngSanitize']);

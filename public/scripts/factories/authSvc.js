@@ -2,15 +2,6 @@ angular.module('app.auth')
 .factory('AuthSvc', [ '$http', '$rootScope', '$sanitize', 'CSRF_TOKEN', '_pwdToken',
   function($http, $rootScope, $sanitize, CSRF_TOKEN, _pwdToken) {
 
-  var cacheSession   = function(data, status, headers, config) {
-    SessionSvc.set('authenticated', true);
-  };
-
-  var uncacheSession = function() {
-    SessionSvc.unset('authenticated');
-    $rootScope.$broadcast('userLoggedOutEvent');
-  };
-
   var sanitizeCredentials = function(credentials) {
     return {
       email: $sanitize(credentials.email),
@@ -49,64 +40,30 @@ angular.module('app.auth')
     };
   };
 
-  var emitUserLoggedInEvent = function(data, status, headers, config) {
-    $rootScope.$emit('userLoggedInEvent', data);
-    return true;
-  };
-
-  var emitUserLoggedOutEvent = function(data, status, headers, config) {
-    $rootScope.$emit('userLoggedOutEvent', data);
-  };
-
   return {
 
     login: function(credentials) {
-      var login = $http.post('/api/v1/auth/login', sanitizeCredentials(credentials));
-      login.success(cacheSession);
-      login.success(FlashSvc.clear);
-      login.error(loginError);
-      return login;
+      return $http.post('/api/v1/auth/login', sanitizeCredentials(credentials));
     },
 
     logout: function() {
-      var logout = $http.get('/api/v1/auth/logout');
-      logout.success(uncacheSession);
-      logout.success(emitUserLoggedOutEvent);
-      return logout;
+      return $http.get('/api/v1/auth/logout');
     },
 
     register: function(credentials) {
-      var register = $http.post('/api/v1/auth/register', sanitizeCredentials(credentials));
-      register.success(cacheSession);
-      register.success(FlashSvc.clear);
-      register.success(emitUserLoggedInEvent);
-      register.error(signupError);
-      
-      return register;
+      return $http.post('/api/v1/auth/register', sanitizeCredentials(credentials));
     },
 
     resetPasswordSendToken: function(email) {
-      var resetPasswordToken = $http.post('/api/v1/auth/resetPasswordToken', {'email':email});
-      return resetPasswordToken;
+      return $http.post('/api/v1/auth/resetPasswordToken', {'email':email});
     },
 
     resetPassword: function(credentials) {
-      var resetPassword = $http.post('/api/v1/auth/resetPassword', sanitizeResetCredentials(credentials));
-      return resetPassword;
+      return $http.post('/api/v1/auth/resetPassword', sanitizeResetCredentials(credentials));
     },
 
-    checkUserGroup: function() {
-      return $http.get('/api/v1/auth/checkUserGroup');
-    },
-
-    updateEmail: function(udateEmailcredentials) {
-      var update = $http.put('/api/v1/auth/changeEmail', sanitizeEmail(udateEmailcredentials));
-      return update;
-    },
-
-    ChangePassword: function(passwords){
-      var update = $http.put('/api/v1/auth/changePassword', sanitizePasswords(passwords));
-      return update;
+    changePassword: function(passwords){
+      return $http.put('/api/v1/auth/changePassword', sanitizePasswords(passwords));
     }
   
   };

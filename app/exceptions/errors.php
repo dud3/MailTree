@@ -1,5 +1,14 @@
 <?php
 
+class AuthenticationException extends Exception {
+ 
+  public function __construct($message = null, $code = 400)
+  {
+    parent::__construct($message ?: 'Authentication error', $code);
+  }
+ 
+}
+
 class PermissionException extends Exception {
  
   public function __construct($message = null, $code = 403)

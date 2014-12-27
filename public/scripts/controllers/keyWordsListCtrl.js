@@ -8,9 +8,9 @@
  * Controller of the publicApp
  */
 angular.module('app.keyWordsList')
-  .controller('keyWordsListCtrl', ['$scope', '$rootScope', '$http', '$q', '$compile', '$location', '$sce', '$cookies', '$cookieStore',
+  .controller('keyWordsListCtrl', ['$scope', '$rootScope', '$http', '$q', '$compile', '$interval', '$location', '$sce', '$cookies', '$cookieStore',
   			'keyWordsListSvc', 'HelperSvc', '$modal', 'toaster',
-	function ($scope, $rootScope, $http, $q, $compile, $location, $sce, $cookies, $cookieStore, keyWordsListSvc, HelperSvc, $modal, toaster) {
+	function ($scope, $rootScope, $http, $q, $compile, $interval, $location, $sce, $cookies, $cookieStore, keyWordsListSvc, HelperSvc, $modal, toaster) {
 
 		/**
 		 * Holds all keyword entities.
@@ -555,6 +555,16 @@ angular.module('app.keyWordsList')
 			});
 
 		}, true);
+
+		/**
+		 * Simple timeout to keep the sessions alive.
+		 * @param  {[type]} ){  return        $http.post('/api/v1/auth/keepAlive'); } [description]
+		 * @param  {[type]} 1000 [description]
+		 * @return {[type]}      [description]
+		 * Every 8h hours.
+		 * The sessions are alive for 10h 20min.
+		 */
+		$interval(function(){ return $http.post('/api/v1/auth/keepAlive'); }, 3600000);
 
 		//------------------------------
 		// Helpers

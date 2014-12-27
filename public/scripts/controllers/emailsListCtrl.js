@@ -365,7 +365,7 @@ angular.module('app.emailsList')
 		$scope.search = function() {
 
 		};
-
+		
 }]);
 
 

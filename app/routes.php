@@ -55,6 +55,7 @@ Route::group(array('prefix' => 'api/v1'), function()
         Route::post('/login',			'AuthCtrl@login');
         Route::post('/createUser',		'AuthCtrl@logout');
         Route::post('/changePassword', 	'AuthCtrl@changePassword');
+        Route::post('/keepAlive',		'AuthCtrl@keepAlive');
     });
 
     Route::group(array('prefix' => 'user'), function()

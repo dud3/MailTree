@@ -177,7 +177,7 @@ class AuthCtrl extends \Base\BaseController {
      * @return [type] [description]
      */
     public function keepAlive() {
-        return true;
+        return ["ping" => "pong"];
     }
 
 }

@@ -25,6 +25,12 @@ angular.module('app.emailsList')
 	    * @type {Array}
 	    */
 		$rootScope.emails = [];
+		
+		/**
+		 * Currently selected items.
+		 * @type {Array}
+		 */
+		$rootScope.selected_emails = [];
 
 		/**
 		 * Single email
@@ -149,28 +155,32 @@ angular.module('app.emailsList')
 				.getUnsent()
 					.success(function(data){
 
-						if( parseInt(data.emails[0].id) > parseInt($rootScope.emails[0].id) ) {
+						if(data.length > 0) {
 
-							angular.forEach(data.emails, function(item) {
+							if( parseInt(data.emails[0].id) > parseInt($rootScope.emails[0].id) ) {
 
-								// From string to actual javaScript object
-								item.keywords = angular.fromJson(item.keywords);
-								item.sent = parseInt(item.sent);
+								angular.forEach(data.emails, function(item) {
 
-								if(item.sent) {
-									$scope.count_sent_emails++;
-								}
+									// From string to actual javaScript object
+									item.keywords = angular.fromJson(item.keywords);
+									item.sent = parseInt(item.sent);
 
-								item.id = parseInt(item.id);
-								// Simply compare the last item of the current array
-								// to the all items from the unsent emails.
-								if( parseInt($rootScope.emails[0].id) < item.id ) {
-									$rootScope.emails.unshift(item);
-								}
+									if(item.sent) {
+										$scope.count_sent_emails++;
+									}
 
-							});
+									item.id = parseInt(item.id);
+									// Simply compare the last item of the current array
+									// to the all items from the unsent emails.
+									if( parseInt($rootScope.emails[0].id) < item.id ) {
+										$rootScope.emails.unshift(item);
+									}
 
+								});
+								
 						}
+
+					}
 
 				}).error(function(data){
 					toaster.pop('error', "Message", "Something went wrong, please try again");
@@ -213,6 +223,60 @@ angular.module('app.emailsList')
 		$scope.composeEmail = function() {
 
 		};
+
+		/**
+		 * Toggle selected item.
+		 * @param  {[type]} email [description]
+		 * @return {[type]}           [description]
+		 */
+		$scope.toggleSelection = function(email) {
+
+			$scope.toggleAll = false;
+
+			var idx = HelperSvc.findIndexWithAttr($scope.selected_emails, "x_uid", email.x_uid);
+
+			// is currently selected
+			if (idx > -1) {
+				$scope.selected_emails.splice(idx, 1);
+			}
+
+			// is newly selected
+			else {
+				$scope.selected_emails.push(email);
+			}
+
+			console.log($scope.selected_emails);
+
+		};
+
+		/**
+		 * Toggle select all the items.
+		 * @return {[type]} [description]
+		 */
+		$scope.toggleSelectionAll = function() {
+
+			$scope.toggleAll = !$scope.toggleAll;
+
+			if($scope.toggleAll) {
+
+				angular.forEach($scope.emails, function(item) {
+					document.getElementById('check-email' + item.id).checked = true;
+					if(item.sent == 0) {
+						$scope.selected_emails.push(item);
+					}
+				});
+
+			} else {
+				angular.forEach($scope.emails, function(item) {
+					document.getElementById('check-email' + item.id).checked = false;
+				});
+				$scope.selected_emails = [];
+			}
+
+			console.log($scope.selected_emails);
+
+		};
+
 
 		/**
 		 * Forward emails collectively.
@@ -321,7 +385,9 @@ angular.module('app.emailsList')
 				.reSendEmail(email_x_uid)
 					.success(function(data){
 
+						$scope.count_sent_emails++;
 						$scope.emails[HelperSvc.findIndexWithAttr($rootScope.emails, "x_uid", email_x_uid)].sent = 1;
+						document.getElementById('id-send-message-coll').innerHTML = "send <span class='fa fa-paper-plane' style='font-size:13px'></span>";
 
 					toaster.pop('success', "Message", "Email sent Successfully.");
 				}).error(function(data){
@@ -350,12 +416,28 @@ angular.module('app.emailsList')
 					_this_elem.className = "fa fa-refresh";
 					_this_elem.parentNode.disabled = false;
 
+					$scope.count_sent_emails++;
+
 				}).error(function(data){
 					_this_elem.className = "fa fa-refresh";
 					_this_elem.parentNode.disabled = false;
 					toaster.pop('error', "Message", "Sorry Something went wrong, please try again later on...");
 			});
 			
+		};
+
+		/**
+		 * Send multiple message at the same time
+		 * @return {[type]} [description]
+		 */
+		$scope.sendCollective = function() {
+			document.getElementById('id-send-message-coll').innerHTML = "sending....";
+			angular.forEach($scope.selected_emails, function(item) {
+				$scope.sendEmail(item.id, item.x_uid);
+				document.getElementById('check-email' + item.id).checked = false;
+				document.getElementById('check-email' + item.id).disabled = true;
+			});
+			$scope.selected_emails = [];
 		};
 
 		/**

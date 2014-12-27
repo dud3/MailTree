@@ -21,7 +21,7 @@
     <div class="form-group" id="id-form-gr-reset_pwd">            
         <div class="controls">
             <input type="password" ng-model="loginCredentials.password" name="password" id="id-password" class="form-control" placeholder="Password" ng-required="" autocomplete="on">
-            <a href="#" id="forgot" class="text-info pull-right" style="margin-top:-10px;" ng-click="renderResetPasswordForm(1)">Forgot your password</a> 
+            <!-- a href="#" id="forgot" class="text-info pull-right" style="margin-top:-10px;" ng-click="renderResetPasswordForm(1)">Forgot your password</a --> 
         </div>
     </div>   
 

@@ -5,14 +5,15 @@
     </a>
 
     <ul class="dropdown-menu" 
-        style="font-size:12px; padding:5px;" 
+        style="font-size:12px; padding:5px;  width:180px;" 
         role="menu" aria-labelledby="dropdownMenu1" 
         onclick="drodownStayOpen('m_settings-dropdown')">
 
-      <li role="presentation">
+      <li role="presentation" placement="top" bs-tooltip="tooltip.settings.auto">
+      <span class="fa fa-info-circle pull-right text-info"></span>
       <span style="cursor:pointer;">
         <label>
-          <input  ng-model="keywordEntity.send_automatically"
+          <input ng-model="keywordEntity.send_automatically"
               ng-checked="keywordEntity.send_automatically"
               style="margin-top:0px;"
               type="checkbox"
@@ -23,7 +24,8 @@
       </span>
       </li>
 
-      <li role="presentation">
+      <li role="presentation" placement="top" bs-tooltip="tooltip.settings.origin">
+      <span class="fa fa-info-circle pull-right text-info"></span>
       <span style="cursor:pointer;">
         <label>
           <input  ng-model="keywordEntity.original_content"

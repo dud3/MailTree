@@ -177,7 +177,7 @@ angular.module('app.emailsList')
 									}
 
 								});
-								
+
 						}
 
 					}
@@ -274,15 +274,6 @@ angular.module('app.emailsList')
 			}
 
 			console.log($scope.selected_emails);
-
-		};
-
-
-		/**
-		 * Forward emails collectively.
-		 * @return {[type]} [description]
-		 */
-		$scope.fwdCollective = function() {
 
 		};
 

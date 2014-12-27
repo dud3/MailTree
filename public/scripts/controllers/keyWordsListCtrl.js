@@ -34,7 +34,12 @@ angular.module('app.keyWordsList')
 		 * Simple tooltip.
 		 * @type {Object}
 		 */
-		$scope.tooltip = {title: 'Keep the origianl format of the email.'};
+		$scope.tooltip = { 
+			settings: { 
+				auto: { title: 'Once the keywordEnotity is craeted, if this option is selected, emails will be sent automatically by the system.' },
+				origin: { title: 'If this option slected, the system won\'t atempt to make any changes to the email whatsoever, but instead it keeps the exact same email.' }
+			}
+		};
 
 		/**
 		 * Search model.
@@ -524,9 +529,13 @@ angular.module('app.keyWordsList')
 		// Keyword Entity
 		$scope.$watch('keywordEntity', function(){
 
+			var flag = true;
+			$(".settings-warn").html('');
+
 			$("#id-create-keywordList").removeAttr('disabled');
 			$("#id-remove-keyword").hide();
 			$("#id-remove-recipient").hide();
+			$("#m_settings-dropdown").removeClass('open');
 
 			if($rootScope.keywordEntity.keywords.length > 1) {
 				$("#id-remove-keyword").show();
@@ -545,14 +554,22 @@ angular.module('app.keyWordsList')
 			angular.forEach($rootScope.keywordEntity.recipients, function(recipient){
 				if(recipient.full_name.length == 0) {
 					$("#id-create-keywordList").attr('disabled', 'disabled');
+					flag = false;
 				}
 				if(recipient.email.length == 0) {
 					$("#id-create-keywordList").attr('disabled', 'disabled');
+					flag = false;
 				}
 				if(!HelperSvc.validateEmail(recipient.email)) {
 					$("#id-create-keywordList").attr('disabled', 'disabled');
+					flag = false;
 				}
 			});
+
+			if(flag) {
+				$("#id-modal-settings").append('<span class="pull-left text-warning settings-warn" ng-show="verify" style="font-size:12px; margin-top:3px"> ( Please verify settings ! )</span>')
+				$("#m_settings-dropdown").addClass('open');
+			}
 
 		}, true);
 

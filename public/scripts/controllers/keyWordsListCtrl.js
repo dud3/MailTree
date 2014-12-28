@@ -54,7 +54,7 @@ angular.module('app.keyWordsList')
 		$scope.getAllKeywords = function() {
 
 			keyWordsListSvc
-				.getAll()
+				.getUserKeywords()
 					.success(function(data){
 
 						// From string to actual javaScript object

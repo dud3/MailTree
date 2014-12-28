@@ -14,6 +14,10 @@ class APIActiveFilterList extends \Base\BaseController {
         return Response::json(["keywords" => $this->repo_activeFilters->populateKeywords()->toArray()], 200);
     }
 
+    public function populateUserKeywords() {
+        return Response::json(["keywords" => $this->repo_activeFilters->populateUserKeywords(Sentry::getUser()->id)->toArray()], 200);
+    }
+
     /**
      * Populates root keywords.
      * Basically the first keyword in the array, since the keywords
@@ -22,6 +26,10 @@ class APIActiveFilterList extends \Base\BaseController {
      */
     public function populateRootKeywords() {
         return $this->repo_activeFilters->populateRootKeywords();
+    }
+
+    public function populateUserRootKeywords() {
+        return $this->repo_activeFilters->populateUserRootKeywords(Sentry::getUser()->id);
     }
 
 }

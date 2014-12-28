@@ -66,6 +66,7 @@ Route::group(array('prefix' => 'api/v1'), function()
     Route::group(array('prefix' => 'keywords'), function()
     {
         Route::get('get', 					'ListController@get_all_keywords');
+        Route::get('getUserKeywords',		'ListController@get_user_keywords');
         Route::post('create', 				'ListController@create_keywords_list');
         Route::post('remove/{id}',			'ListController@remove_keywords_list');
         Route::post('sendAutomatically',	'ListController@sendAutomatically');
@@ -73,18 +74,22 @@ Route::group(array('prefix' => 'api/v1'), function()
         Route::post('saveRecipient',		'ListController@saveRecipient');
         Route::post('removeRecipent/{id}',	'ListController@removeRecipent');
 
-        Route::get('populateKeywords',		'APIActiveFilterList@populateKeywords');
-        Route::get('populateRootKeywords',	'APIActiveFilterList@populateRootKeywords');
+        Route::get('populateKeywords',			'APIActiveFilterList@populateKeywords');
+        Route::get('populateRootKeywords',		'APIActiveFilterList@populateRootKeywords');
+        Route::get('populateUserKeywords',		'APIActiveFilterList@populateUserKeywords');
+        Route::get('populateUserRootKeywords',	'APIActiveFilterList@populateUserRootKeywords');
     });
 
     Route::group(array('prefix' => 'emails'), function()
     {
         Route::get('get_all',				'EmailListCtrl@get_all');
+        Route::get('get_by_id/{id}',		'EmailListCtrl@get_by_id');
+        Route::get('get_by_user',			'EmailListCtrl@get_by_user');
         Route::get('get_unsent',			'EmailListCtrl@get_unsent');
+        Route::get('get_by_user_unsent',	'EmailListCtrl@get_by_user_unsent');
         Route::post('get_collection',		'EmailListCtrl@get_collection');
         Route::post('saveEmail',			'EmailListCtrl@saveEmail');
         Route::post('reSendEmail',			'EmailListCtrl@reSendEmail');
-        Route::get('get/{id}',				'EmailListCtrl@get');
         Route::post('create',				'EmailListCtrl@create');
         Route::post('update',				'EmailListCtrl@update');
         Route::post('delete/{id}',			'EmailListCtrl@delete');

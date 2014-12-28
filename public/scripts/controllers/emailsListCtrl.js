@@ -155,7 +155,7 @@ angular.module('app.emailsList')
 				.getUnsent()
 					.success(function(data){
 
-						if(data.length.emails > 0) {
+						if(data.emails.length > 0) {
 
 							angular.forEach(data.emails, function(item) {
 

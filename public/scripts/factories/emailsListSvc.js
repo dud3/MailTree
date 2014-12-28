@@ -8,9 +8,17 @@ var services = {
       return results;
     },
 
+    getByUser: function() {
+      return  $http.get('/api/v1/emails/get_by_user');
+    },
+
     getUnsent: function() {
       var results = $http.get('/api/v1/emails/get_unsent');
       return results;
+    },
+
+    get_by_user_unsent: function() {
+      return $http.get('/api/v1/emails/get_by_user_unsent');
     },
 
     getEmailByid: function(email_id) {

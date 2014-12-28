@@ -8,6 +8,10 @@ var services = {
       return results;
     },
 
+    getUserKeywords: function() {
+      return $http.get('/api/v1/keywords/getUserKeywords');
+    },
+
     create: function(keyWordsListEntity) {
       var results = $http.post('/api/v1/keywords/create', angular.toJson(keyWordsListEntity));
       return results;

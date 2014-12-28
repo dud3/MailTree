@@ -34,11 +34,35 @@ class EmailListCtrl extends internalCtrl {
     }
 
     /**
+     * Get by id.
+     * @return [type] [description]
+     */
+    public function get_by_id($id) {
+        return Response::json(["emails" => $this->repo_emails->get_by_id($id)], 200);
+    }
+
+    /**
+     * Get by current user.
+     * @return [type] [description]
+     */
+    public function get_by_user() {
+        return Response::json(["emails" => $this->repo_emails->get_by_user(Sentry::getUser()->id)], 200);
+    }
+
+    /**
      * Get unseen/unsent emails.
      * @return [type] [description]
      */
     public function get_unsent() {
         return Response::json(["emails" => $this->repo_emails->get_unsent()], 200);
+    }
+
+    /**
+     * Get unsent by current user.
+     * @return [type] [description]
+     */
+    public function get_by_user_unsent() {
+        return Response::json(["emails" => $this->repo_emails->get_by_user_unsent(Sentry::getUser()->id)], 200);
     }
 
     /**
@@ -66,15 +90,6 @@ class EmailListCtrl extends internalCtrl {
     public function reSendEmail() {
         $input = Input::all();
         return Response::json(["email" => $this->repo_emails->reSendEmail($input)], 200);
-    }
-
-    /**
-     * Get by ID
-     * @param  [type] $id [description]
-     * @return [type]     [description]
-     */
-    public function get($id) {
-
     }
 
     /**
@@ -109,8 +124,6 @@ class EmailListCtrl extends internalCtrl {
      * @param  [type] $id [description]
      * @return [type]     [description]
      */
-    public function delete($id) {
-
-    }
+    public function delete($id) {}
 
 }

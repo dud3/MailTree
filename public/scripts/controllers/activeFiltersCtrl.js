@@ -45,7 +45,7 @@ angular.module('app.activeFilters')
 			}
 
 			activeFiltersSvc
-				.populateKeywords(cache)
+				.populateUserKeywords(cache)
 					.success(function(data){
 
 						// From string to actual javaScript object
@@ -88,7 +88,7 @@ angular.module('app.activeFilters')
 			}
 
 			activeFiltersSvc
-				.populateRootKeywords(cache)
+				.populateUserRootKeywords(cache)
 					.success(function(data){
 
 						angular.forEach(data, function(item) {

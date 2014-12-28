@@ -8,6 +8,7 @@ use Symfony\Component\Console\Input\InputArgument;
 class EloquentEmailsRepository extends EloquentListRepository implements EloquentEmailsRepositoryInterface {
 
     protected $main_sql = null;
+    protected $default_order = null;
 
     protected $user;
     protected $list;
@@ -40,6 +41,8 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 
             JOIN (SELECT x_uid, MAX(id) id FROM mails GROUP BY x_uid) m2
                  ON m.id = m2.id AND m.x_uid = m2.x_uid";
+
+        $this->default_order = " ORDER BY m.sent ASC, m.id DESC ";
     }
 
     /**
@@ -47,7 +50,7 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
      * @return [type] [description]
      */
     public function get_all() {
-        return self::wrapKeywordLabels( DB::select($this->main_sql . " ORDER BY m.sent ASC, m.id DESC ", []) );
+        return self::wrapKeywordLabels( DB::select($this->main_sql . $this->default_order, []) );
     }
 
     /**
@@ -56,7 +59,16 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
      * @return [type]     [description]
      */
     public function get_by_id($id = null) {
+        return self::wrapKeywordLabels( DB::select($this->main_sql . " WHERE m.id = ? " . $this->default_order, [$id]) );
+    }
 
+    /**
+     * Get by current user.
+     * @param  [type] $user_id [description]
+     * @return [type]          [description]
+     */
+    public function get_by_user($user_id) {
+        return self::wrapKeywordLabels( DB::select($this->main_sql . " WHERE k_l.user_id = ? " . $this->default_order, [$user_id]) );
     }
 
     /**
@@ -65,6 +77,14 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
      */
     public function get_unsent() {
         return self::wrapKeywordLabels( DB::select($this->main_sql . " WHERE m.sent = 0 ORDER BY m.id ASC ", []) );
+    }
+
+    /**
+     * Get by user unsent.
+     * @return [type] [description]
+     */
+    public function get_by_user_unsent($user_id) {
+        return self::wrapKeywordLabels( DB::select($this->main_sql . " WHERE m.sent = 0 AND k_l.user_id = ? ORDER BY m.id ASC ", [$user_id]) );
     }
 
     /**

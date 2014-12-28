@@ -72,7 +72,7 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
      * @return [type] [description]
      */
     public function get_keyword_list() {
-
+        return $this->emails->get_all();
     }
 
     /**
@@ -91,6 +91,7 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
 
                     /*! First of all store the keyword(s) */
                     $keywords = $this->keywords->store(["keywords" => $data["keywords"]],
+                                                        $user_id = (isset($data["user_id"]) ? $data["user_id"] : null),
                                                         $original_content = (isset($data["original_content"]) ? $data["original_content"] : false),
                                                         $send_automatically =  (isset($data["send_automatically"]) ? $data["send_automatically"] : false));
 
@@ -182,7 +183,7 @@ class EloquentListRepository implements EloquentListRepositoryInterface {
                     if($recipients_with_keywords) {
 
                         /* Return proper data, and let the js handled the rest */
-                        $keywords = $this->keywords->find($id);
+                        $keywords = $this->keywords->get_by_id($id);
 
                         /* If we're all good delete keywords as well */
                         if($keywords->delete()) {

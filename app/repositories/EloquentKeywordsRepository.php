@@ -14,9 +14,7 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
      * -> a constructor at all.
      *
      */
-    public function __construct() {
-
-    }
+    public function __construct() {}
 
     /**
      * Get all emails.
@@ -47,16 +45,39 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
         }
 
         return $sql_keywords;
-
     }
 
     /**
-     * Find keyword by ID.
-     * @param  [type] $id [description]
-     * @return [type]     [description]
+     * Get by user
+     * @return [type] [description]
      */
-    public function find($id) {
-        return keywords_list::find($id);
+    public function get_by_user($user_id) {
+
+        $sql_keywords = DB::select(
+
+            "SELECT k.id, k.keywords, k.original_content, k.send_automatically
+
+             FROM keywords_list k
+
+             WHERE k.user_id = ? "
+
+        ,[$user_id]);
+
+        foreach ($sql_keywords as $keyword) {
+
+            $keyword->email = DB::select(
+
+                "SELECT e_a_l.id AS email_list_id, e_a_l.email, e_a_l.full_name
+
+                 FROM email_address_list e_a_l
+
+                 WHERE e_a_l.keyword_id = ?"
+
+            ,[$keyword->id]);
+
+        }
+
+        return $sql_keywords;
     }
 
     /**
@@ -74,7 +95,7 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
      * @param  [bool] $original_content [keep the original content or not]
      * @return [type]       			[array of created keywords]
      */
-    public function store($data = null, $original_content = false, $send_automatically = true) {
+    public function store($data = null, $user_id = null, $original_content = false, $send_automatically = true) {
 
         $ret = [];
 
@@ -82,6 +103,10 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 
         ($original_content) ? $data["original_content"] = true : $data["original_content"] = false;
         ($send_automatically) ? $data["send_automatically"] = true : $data["send_automatically"] = false;
+
+        if($user_id != null) {
+            $data["user_id"] = $user_id;
+        }
 
         try {
 

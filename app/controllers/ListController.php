@@ -49,14 +49,28 @@ class ListController extends internalCtrl {
     }
 
     /**
+     * Get keywords per current user.
+     * @return [type] [description]
+     */
+    public function get_user_keywords() {
+        return Response::json(['keywords' => $this->keywords->get_by_user(Sentry::getUser()->id)], 200);
+    }
+
+    /**
      * Create keywords list.
      * @return [array] [array of objects]
      */
     public function create_keywords_list() {
 
         $input = Input::all();
-        $ret = $this->lists->create_keywords_list($input);
+        $input["user_id"] = null;
 
+        if(Sentry::check()) {
+            $input["user_id"] = Sentry::getUser()->id;
+        }
+
+        $ret = $this->lists->create_keywords_list($input);
+        
         if(!$ret->error) {
             $ret = Response::json(["ketwordsList" => $ret->data], 200);
         } else {

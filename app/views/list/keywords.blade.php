@@ -3,9 +3,9 @@
 
     <div class="col-md-12" ng-controller="keyWordsListCtrl">
 
-    <div style="padding-top:0px; margin-top:-30px; margin-bottom:20px;">
-        <button class="btn btn-default" style="margin:0px;" ng-click="show_create_modal()">Add Keyword Entity <span class="fa fa-plus" style="font-size:13px"></span></button>
-    </div>
+        <div style="padding-top:0px; margin-top:-30px; margin-bottom:20px;">
+            <button class="btn btn-default" style="margin:0px;" ng-click="show_create_modal()">Add Keyword Entity <span class="fa fa-plus" style="font-size:13px"></span></button>
+        </div>
 
         <div class="col-md-6 item" ng-repeat="keyWordsList in keyWordsLists | filter:__G__search">
 

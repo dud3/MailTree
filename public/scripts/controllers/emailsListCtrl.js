@@ -155,30 +155,27 @@ angular.module('app.emailsList')
 				.getUnsent()
 					.success(function(data){
 
-						if(data.length > 0) {
+						if(data.length.emails > 0) {
 
-							if( parseInt(data.emails[0].id) > parseInt($rootScope.emails[0].id) ) {
+							angular.forEach(data.emails, function(item) {
 
-								angular.forEach(data.emails, function(item) {
+								// From string to actual javaScript object
+								item.keywords = angular.fromJson(item.keywords);
+								item.sent = parseInt(item.sent);
 
-									// From string to actual javaScript object
-									item.keywords = angular.fromJson(item.keywords);
-									item.sent = parseInt(item.sent);
+								if(item.sent) {
+									$scope.count_sent_emails++;
+								}
 
-									if(item.sent) {
-										$scope.count_sent_emails++;
-									}
+								item.id = parseInt(item.id);
+								// Simply compare the last item of the current array
+								// to the all items from the unsent emails.
+								if( parseInt($rootScope.emails[0].id) < item.id ) {
+									$rootScope.emails.unshift(item);
+								}
 
-									item.id = parseInt(item.id);
-									// Simply compare the last item of the current array
-									// to the all items from the unsent emails.
-									if( parseInt($rootScope.emails[0].id) < item.id ) {
-										$rootScope.emails.unshift(item);
-									}
+							});
 
-								});
-
-						}
 
 					}
 

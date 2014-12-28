@@ -433,9 +433,7 @@ angular.module('app.keyWordsList')
 				email: data.email,
 				full_name: data.full_name,
 			};
-
-			console.log(data);
-
+			
 			if(typeof _email_list_id != 'undefined') {
 				data.id = _email_list_id;
 			} 

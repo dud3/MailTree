@@ -1,5 +1,5 @@
 <!-- Fixed navbar -->
-<div class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="NavBarCtrl">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <div id="id-navbar-header" class="navbar-header" style="cursor:pointer;">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -30,7 +30,7 @@
 
       </ul>
 
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" ng-controller="NavBarCtrl">
         <li class="dropdown">
           <a href="#"
              class="dropdown-toggle" data-toggle="dropdown">

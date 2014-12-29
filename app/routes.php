@@ -60,7 +60,7 @@ Route::group(array('prefix' => 'api/v1'), function()
 
     Route::group(array('prefix' => 'user'), function()
     {
-        Route::post('/create',		'UserController@create');
+        Route::post('/create',		'UserCtrl@createUser');
     });
 
     Route::group(array('prefix' => 'keywords'), function()

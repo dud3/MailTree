@@ -40,7 +40,7 @@
            <ul class="dropdown-menu" role="menu">
 
             @if(Sentry::getUser()->hasAccess('sys.create_user'))
-              <li><a href="#" onclick="alert('Comming soon...')">Create User</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#id-modal-create_users">Create User</a></li>
               <li class="divider"></li>
               <li class="dropdown-header">Other</li>
             @endif

@@ -150,11 +150,22 @@
     <script src="/scripts/controllers/emailsListCtrl.js"></script>
     <script src="/scripts/controllers/activeFiltersCtrl.js"></script>
 
+    <script src="/scripts/factories/authSvc.js"></script>
+    <script src="/scripts/factories/userSvc.js"></script>
     <script src="/scripts/services/helperSvc.js"></script>
     <script src="/scripts/factories/keyWordsListSvc.js"></script>
     <script src="/scripts/factories/emailsListSvc.js"></script>
-    <script src="/scripts/factories/authSvc.js"></script>
     <script src="/scripts/factories/activeFiltersSvc.js"></script>
+
+    {{-- Only for priviledged users
+        @note There must be a better way of doing this.
+    --}}
+    @if(Sentry::check())
+    @if(Sentry::getUser()->hasAccess('sys.create_user'))
+
+    @include('__modals__.users.create')
+    @endif
+    @endif
 
     <script src="/scripts/filters/filters.js"></script>
 

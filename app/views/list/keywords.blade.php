@@ -120,7 +120,7 @@
                     <div class="text-center" style="padding:0px; margin:0px; border-top: 1px solid #ddd; color:#ccc; cursor: pointer;" 
                         ng-click="collapse(keyWordsList.id)">
                         <span class="fa fa-chevron-up fa-2x"></span>
-                    </div
+                    </div>
 
                 </div>
             </div>

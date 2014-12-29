@@ -127,52 +127,6 @@ class AuthCtrl extends \Base\BaseController {
     }
 
     /**
-     * Create users.
-     * @param  [type] $data [description]
-     * @return [type]       [description]
-     */
-    public function createUser($data)
-    {
-        try
-        {
-            // Decode Esaped characters
-            $email = html_entity_decode($data['email']);
-            $first_name = html_entity_decode($data['first_name']);
-            $last_name = html_entity_decode($data['last_name']);
-
-            $this->validate($data);
-
-            // Create the user
-            $user = Sentry::register(
-                [
-                    'first_name' => $first_name,
-                    'last_name' => $last_name,
-                    'email' => $email,
-                    'password' => $data['password'],
-                    'group_id' => 3,
-                    'first_login' => 0,
-                    'company_id' => $data['company_id']
-                ], true);
-
-                return User::find($user->id);
-
-        }
-
-        catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
-        {
-            return Response::json([ 'msg' => 'name_empty', 'code' => 0.1], 406);
-        }
-        catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
-        {
-            return Response::json([ 'msg' => 'password_empty', 'code' => 0.2], 406);
-        }
-        catch (Cartalyst\Sentry\Users\UserExistsException $e)
-        {
-            return Response::json([ 'msg' => 'exists_already', 'code' => 0.3], 406);
-        }
-    }
-
-    /**
      * Just a simple JSON request to keep the sessions alive.
      * @return [type] [description]
      */

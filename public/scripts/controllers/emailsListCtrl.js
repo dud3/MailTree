@@ -93,7 +93,7 @@ angular.module('app.emailsList')
 		$scope.getAllEmails = function() {
 
 			emailsListSvc
-				.getAll()
+				.getByUser()
 					.success(function(data){
 
 						// From string to actual javaScript object

@@ -126,9 +126,8 @@
             </div>
 
         </div>
-
-    @include('__modals__.keywords_list.create')
     </div>
 
+    @include('__modals__.keywords_list.create')
 
 @stop

@@ -55,7 +55,7 @@
       </div>
 
       <div class="modal-footer">
-        <div id="id-modal-settings" class="checkbox pull-left" style="vertical-align:middle;" data-toggle="tooltip" data-placement="left" title="This option will save the email's original content, no matter keyword conditions.">
+        <div id="id-modal-settings" class="checkbox pull-left">
           <!-- label>
             <input type="checkbox" ng-model="keywordEntity.original_content"><span class="text-info">Keep Original Content</span>
           </label -->

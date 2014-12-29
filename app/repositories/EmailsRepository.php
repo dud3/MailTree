@@ -4,6 +4,8 @@ use Carbon\Carbon;
 use Illuminate\Console\Command as cmd;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
+use lib\Helpers\Helper as Helper;
+use lib\Loggers\Logger as Logger;
 
 class EmailsRepository implements EmailsRepositoryInterface {
 
@@ -30,30 +32,10 @@ class EmailsRepository implements EmailsRepositoryInterface {
     protected static $enable_html_email = false;
     protected static $fresh_email = false;
 
-    protected static $dump_folder;
-    protected static $dump_file_fullpath;
-
-    protected static $dump_files = ['email_dump.txt', 
-                          'email_header_dump.txt',
-                          'email_get_address_dump.txt',
-                          'email_body_dump.txt', 
-                          'email_overview_dump.txt',
-                          'email_subject_dump.txt',
-                          'internal_stored_emails.txt',
-                          'internal_sent_emails.txt',
-                          'internal_track_keywords.txt'];
-
-
     /**
      * [__construct description]
      */
     public function __construct() {
-
-        self::$dump_folder = base_path() . "/sys_dump/";
-
-        if(!file_exists(self::$dump_folder)) {
-          mkdir(self::$dump_folder, 777);
-        }
 
         self::$forward_email_from = Config::get("constant.g_fwd_email_address");
         self::$forward_email_full_name = Config::get("constant.g_fwd_email_address_full_name");
@@ -131,8 +113,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
         echo("Count Emails: " . count($emails) . "\n");
         echo("-------------------------------------------------------------------------------------\n");
 
-        self::openDump();
-        self::dump_output('all', $emails);
+        Logger::openDump();
+        Logger::dump_output('all', $emails);
 
         foreach ($emails as $message) {
 
@@ -160,7 +142,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 /* Explode the email into pieces */
                 $std_email->body = explode("\n", $std_email->body);
 
-               /**
+             /**
                 * Trim the value otherwise at the end of the each mail
                 * -> we will strat seeing the value of ^M after exploding
                 * -> the string, and this makes imposibble to compare the 
@@ -169,7 +151,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 */ 
                 array_walk($std_email->body, array($this, 'trim_value'));
 
-               /**
+             /**
                 * Two of this following conditions are for:
                 * * if the mail is forwarded by a person/automatic email forwarder
                 * * if the mail contains the keyword of "Dear"
@@ -185,7 +167,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                     $std_email->body = array_slice($std_email->body, 9);
                 }
 
-               /** 
+             /** 
                 * if strpos($mystring, $findme)
                 * We might want to search the string if it contains the keyword of "Dear" or simmilar.
                 */
@@ -230,11 +212,11 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             $arr_emails[] = $std_email;
 
-            self::dump_output('headers', $std_email->header);
-            self::dump_output('address', $std_email->address);
-            self::dump_output('body',   $std_email->body);
-            self::dump_output('overview', $std_email->overview);
-            self::dump_output('subject', $std_email->subject);
+            Logger::dump_output('headers', $std_email->header);
+            Logger::dump_output('address', $std_email->address);
+            Logger::dump_output('body',   $std_email->body);
+            Logger::dump_output('overview', $std_email->overview);
+            Logger::dump_output('subject', $std_email->subject);
 
         }
 
@@ -243,11 +225,11 @@ class EmailsRepository implements EmailsRepositoryInterface {
          */
         $this->compareKeywords($arr_emails);
 
-        self::closeDump();
+        Logger::closeDump();
 
     }
 
-      /**
+    /**
      * Read all the emails.
      * @return [type] [description]
      */
@@ -316,7 +298,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
          */
         $this->compareKeywords($arr_emails);
 
-        self::closeDump();
+        Logger::closeDump();
 
     }
 
@@ -368,7 +350,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
         foreach ($sql_mails as $mail) {
 
-            self::openDump();
+            Logger::openDump();
 
             $email = $mail->email;
             $full_name = $mail->full_name;
@@ -376,9 +358,9 @@ class EmailsRepository implements EmailsRepositoryInterface {
             $message_subject = $mail->subject;
 
             $data = ["email" => $email,
-                     "full_name" => $full_name,
-                     "message_body" => $message_body,
-                     "message_subject" => $message_subject];
+                         "full_name" => $full_name,
+                         "message_body" => $message_body,
+                         "message_subject" => $message_subject];
 
             // Some Error handling
             foreach ($data as $inputs) {
@@ -389,7 +371,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 }
             }
 
-           /**
+         /**
             * Basically what we're doing here is that
             * -> whenever we see a text that says 'Click here'
             * -> automatically splice "Click here" text and
@@ -442,8 +424,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
             $this->updateEmailStatus($mail->id, ["sent" => 1]);
 
             var_dump("Sending message to: " . $data["email"] . " | full_name: " . $data["full_name"] . " | email_id:" . $mail->id);
-            self::dump_output('send_emails', $data);
-            self::closeDump();
+            Logger::dump_output('send_emails', $data);
+            Logger::closeDump();
 
         }
     }
@@ -462,17 +444,13 @@ class EmailsRepository implements EmailsRepositoryInterface {
      * Get the subject of the email.
      * @return [type] [description]
      */
-    public function getEmailSubject() {
-
-    }
+    public function getEmailSubject() {}
 
     /**
      * Get the body of the email.
      * @return [type] [description]
      */
-    public function getEmailBody() {
-
-    }
+    public function getEmailBody() {}
 
     /**
      * Basically update the status of the email
@@ -513,7 +491,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 /* Keep the original content, simply don't remove the HTML tags from it. */
                 $k_db_original_content = (int)$db_keywords["original_content"];
 
-                /**
+             /**
                 * Before everything, set the keywords from the emails subject
                 * and the keywords from the database to lowercase.
                 */
@@ -524,7 +502,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                   $k_db[$i] = strtolower($k_db[$i]);
                 }
 
-               /**
+             /**
                 * Get the common between the database keywords that belong 
                 * -> to each user and the keywords from the emails subject.
                 * 
@@ -538,7 +516,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 $k_intersect = array_intersect($k_db, $get_keywords);
 
 
-               /**
+             /**
                 * After we union the smmilarities check if there's a difference
                 * -> between the DB array and the filtered array from the "email subject"
                 * -> this way we can figure it out if they are identical.
@@ -577,11 +555,16 @@ class EmailsRepository implements EmailsRepositoryInterface {
                         foreach ($e_add_list as $e_list) {
 
                             $std_store_email = new StdClass;
+
+              /* Data from the DB */
                             $std_store_email->email_address_id = (int)$e_list["id"];
                             $std_store_email->email = $e_list["email"];
                             $std_store_email->full_name = $e_list["full_name"];
+
+              /* Data from the actual email */
                             $std_store_email->subject = $email->subject;
                             $std_store_email->body = $email->body;
+
                             $std_store_email->html = 0;
 
 
@@ -614,7 +597,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                             $std_store_email->__draft = $email->overview->draft;
                             $std_store_email->__udate = $email->overview->udate;
 
-                           /**
+                         /**
                             * Let's insert the name of the user that 
                             * -> will get the eamil.
                             * 
@@ -674,7 +657,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
         
         $dump_sent_emails = ("Email stored for: " . " \t| ID: " . $data->email_address_id . " \t| Email: " . $data->email . " \t| Name: " . $data->full_name . "\n");
         
-        self::dump_output('store_emails', $dump_sent_emails);
+        Logger::dump_output('store_emails', $dump_sent_emails);
         
         echo($dump_sent_emails);
 
@@ -686,9 +669,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
      * @param  [type] $data [description]
      * @return [type]       [description]
      */
-    public function storeKeywords($data) {
-        var_dump($data);
-    }
+    public function storeKeywords($data) {}
 
 
     /**
@@ -700,171 +681,6 @@ class EmailsRepository implements EmailsRepositoryInterface {
         return mails::find($id);
     }
 
-
-    /**
-     * Validate JSON.
-     * @todo  move it its own class/interface.
-     * @return [type] [description]
-     */
-    public function validateJson() {
-
-        switch (json_last_error()) {
-
-            case JSON_ERROR_NONE:
-                echo ' - No errors';
-            break;
-            case JSON_ERROR_DEPTH:
-                echo ' - Maximum stack depth exceeded';
-            break;
-            case JSON_ERROR_STATE_MISMATCH:
-                echo ' - Underflow or the modes mismatch';
-            break;
-            case JSON_ERROR_CTRL_CHAR:
-                echo ' - Unexpected control character found';
-            break;
-            case JSON_ERROR_SYNTAX:
-                echo ' - Syntax error, malformed JSON';
-            break;
-            case JSON_ERROR_UTF8:
-                echo ' - Malformed UTF-8 characters, possibly incorrectly encoded';
-            break;
-            default:
-                echo ' - Unknown error';
-            break;
-
-        }
-
-        echo PHP_EOL;
-    }
-
-    /*
-    |-------------------------------------------------------------- 
-    | Helper Functions
-    |--------------------------------------------------------------
-    |
-    | Helper functions reside here.
-    |
-    | @todo create helpers service provider.
-    | 
-    */
-
-    /**
-     * Dump sent messages.
-     * @param  [type] $item_type          [description]
-     * @param  [type] $item_id            [description]
-     * @param  [type] $user_email         [description]
-     * @param  [type] $user_full_name     [description]
-     * @param  [type] $message_style_type [description]
-     * @return [type]                     [description]
-     */
-    public static function dump_output($type, $var_dump) {
-
-        self::$dump_folder = base_path() . "/sys_dump/";
-        self::$dump_file_fullpath = self::$dump_folder;
-
-        if(!file_exists(self::$dump_folder)) {
-            File::makeDirectory(self::$dump_folder, $mode = 0777, true, true);
-        }
-
-        if(!file_exists(self::$dump_file_fullpath)) {
-            foreach (self::$dump_files as $dump_file) {
-                fopen(self::$dump_file_fullpath . $dump_file, "w");
-            }
-        }
-        
-        // Dump output
-        switch ($type) {
-
-            case 'all':
-                self::$dump_file_fullpath .= self::$dump_files[0];
-                break;
-
-            case 'headers':
-                self::$dump_file_fullpath .= self::$dump_files[1];
-                break;
-
-            case 'address':
-                self::$dump_file_fullpath .= self::$dump_files[2];
-                break;
-
-            case 'body':
-                self::$dump_file_fullpath .= self::$dump_files[3];
-                break;
-
-            case 'overview':
-                self::$dump_file_fullpath .= self::$dump_files[4];
-                break;
-            
-            case 'subject':
-                self::$dump_file_fullpath .= self::$dump_files[5];
-                break;
-
-            case 'store_emails':
-                self::$dump_file_fullpath .= self::$dump_files[6];
-                break;
-
-            case 'send_emails':
-                self::$dump_file_fullpath .= self::$dump_files[7];
-                break;
-
-            case 'track_keywords':
-                self::$dump_file_fullpath .= self::$dump_files[8];
-                break;
-
-        }
-
-        if(is_array($var_dump) || is_object($var_dump)) {
-            $var_dump = self::indent(json_encode($var_dump));
-        }
-
-        file_put_contents(self::$dump_file_fullpath, $var_dump . "\n", FILE_APPEND | LOCK_EX);
-
-    }
-
-
-    /**
-     * Start dump file.
-     * @return [type] [description]
-     */
-    public static function openDump() {
-
-        self::$dump_folder = base_path() . "/sys_dump/";
-        self::$dump_file_fullpath = self::$dump_folder;
-
-        foreach (self::$dump_files  as $dump_file) {
-             file_put_contents(self::$dump_file_fullpath . $dump_file,  "\n" . date("F j, Y, g:i a"), FILE_APPEND | LOCK_EX);
-             file_put_contents(self::$dump_file_fullpath . $dump_file,  "\n----------------------------------------------------------------------------------------------------\n", FILE_APPEND | LOCK_EX);
-        }
-
-    }
-
-
-    /**
-     * Close the dump files.
-     * @return [type] [description]
-     */
-    public static function closeDump() {
-
-        self::$dump_folder = base_path() . "/sys_dump/";
-        self::$dump_file_fullpath = self::$dump_folder;
-
-        foreach (self::$dump_files  as $dump_file) {
-             file_put_contents(self::$dump_file_fullpath . $dump_file, "----------------------------------------------------------------------------------------------------\n", FILE_APPEND | LOCK_EX);
-        }
-
-    }
-
-
-    /**
-     * Get arguments from the cmd.
-     * @param  [type] $arguments [description]
-     * @return [type]            [description]
-     */
-    public static function arguments($arguments = null) {
-        return self::$arguments;
-    }
-
-
     /**
      * Trim values.
      * @param  [type] $value [description]
@@ -872,72 +688,6 @@ class EmailsRepository implements EmailsRepositoryInterface {
      */
     public function trim_value(&$value) { 
         $value = trim($value); 
-    }
-    
-
-    /**
-     * Replace value
-     * @param  [type] $value [description]
-     * @return [type]        [description]
-     */
-    public function replace_value(&$value, $needle = null) {
-        $value = preg_replace('/(\r\n|\r|\n)/s',"\n",$contents);
-    }
-
-
-    /**
-    * Indents a flat JSON string to make it more human-readable.
-    *
-    * @param string $json The original JSON string to process.
-    * @return string Indented version of the original JSON string.
-    */
-    public static function indent($json) {
-
-        $result = '';
-        $pos = 0;
-        $strLen = strlen($json);
-        $indentStr = "\t";
-        $newLine = "\n";
-
-        for ($i = 0; $i < $strLen; $i++) {
-            // Grab the next character in the string.
-            $char = $json[$i];
-
-            // Are we inside a quoted string?
-            if ($char == '"') {
-                // search for the end of the string (keeping in mind of the escape sequences)
-                if (!preg_match('`"(\\\\\\\\|\\\\"|.)*?"`s', $json, $m, null, $i)) return $json;
-
-                    // add extracted string to the result and move ahead
-                    $result .= $m[0];
-                    $i += strLen($m[0]) - 1;
-                    continue;
-            }
-
-            else if ($char == '}' || $char == ']') {
-                $result .= $newLine;
-                $pos --;
-                $result .= str_repeat($indentStr, $pos);
-            }
-
-            // Add the character to the result string.
-            $result .= $char;
-
-            // If the last character was the beginning of an element,
-            // output a new line and indent the next line.
-            if ($char == ',' || $char == '{' || $char == '[') {
-
-                $result .= $newLine;
-                if ($char == '{' || $char == '[') {
-                    $pos ++;
-                }
-
-                $result .= str_repeat($indentStr, $pos);
-
-            }
-        }
-
-        return $result;
     }
 
 }

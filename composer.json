@@ -19,7 +19,8 @@
 			"app/database/seeds",
 			"app/tests/TestCase.php",
 			"app/repositories",
-			"app/api"
+			"app/api",
+			"app/lib"
 		]
 	},
 	"scripts": {

@@ -38,9 +38,13 @@
             <span class="caret"></span>
           </a>
            <ul class="dropdown-menu" role="menu">
-            <li><a href="#" onclick="alert('Comming soon...')">Create User</a></li>
-            <li class="divider"></li>
-            <li class="dropdown-header">Other</li>
+
+            @if(Sentry::getUser()->hasAccess('sys.create_user'))
+              <li><a href="#" onclick="alert('Comming soon...')">Create User</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Other</li>
+            @endif
+            
             <li><a href="#" onclick="alert('Comming soon...')"><span class="fa fa-at"></span> Contact(developer)</a></li>
             <li><a href="/logout"><span class="glyphicon glyphicon-arrow-left"></span> Log out</a></li>
           </ul>

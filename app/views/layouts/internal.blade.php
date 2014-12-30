@@ -157,6 +157,8 @@
     <script src="/scripts/factories/emailsListSvc.js"></script>
     <script src="/scripts/factories/activeFiltersSvc.js"></script>
 
+    <script src="/scripts/filters/filters.js"></script>
+
     {{-- Only for priviledged users
         @note There must be a better way of doing this.
     --}}
@@ -164,10 +166,9 @@
     @if(Sentry::getUser()->hasAccess('sys.create_user'))
 
     @include('__modals__.users.create')
+    
     @endif
     @endif
-
-    <script src="/scripts/filters/filters.js"></script>
 
   </body>
 </html>

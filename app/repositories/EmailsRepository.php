@@ -177,16 +177,16 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 /* Explode the email into pieces */
                 $std_email->body = explode("\n", $std_email->body);
 
-             /**
+       /**
         * Trim the value otherwise at the end of the each mail
         * -> we will strat seeing the value of ^M after exploding
         * -> the string, and this makes imposibble to compare the 
         * -> keywords from the database even if we include the 
         * -> ^M symbol at the end of each array element.
         */ 
-                array_walk($std_email->body, array($this, 'trim_value'));
-        
-             /**
+        array_walk($std_email->body, array($this, 'trim_value'));
+
+       /**
         * Two of this following conditions are for:
         * * if the mail is forwarded by a person/automatic email forwarder
         * * if the mail contains the keyword of "Dear"
@@ -198,15 +198,15 @@ class EmailsRepository implements EmailsRepositoryInterface {
         * -> forwarded to an X person since we will forward the same email to multiple
         * -> users that match the keyword(s), and replace their name on the emal.
         */
-                if(in_array('---------- Forwarded message ----------', $std_email->body)) {
-                    $std_email->body = array_slice($std_email->body, 9);
-                }
+        if(in_array('---------- Forwarded message ----------', $std_email->body)) {
+            $std_email->body = array_slice($std_email->body, 9);
+        }
 
-             /** 
+       /** 
         * if strpos($mystring, $findme)
         * We might want to search the string if it contains the keyword of "Dear" or simmilar.
         */
-                $this->search_for = ["Dear Alexander Notifications,<br /><br />"];
+        $this->search_for = ["Dear Alexander Notifications,<br /><br />"];
 
                 if(in_array($this->search_for[0], $std_email->body)) {
                   $std_email->body = array_slice($std_email->body, 3);
@@ -510,36 +510,36 @@ class EmailsRepository implements EmailsRepositoryInterface {
                   $k_db[$i] = strtolower($k_db[$i]);
                 }
 
-             /**
-                * Get the common between the database keywords that belong 
-                * -> to each user and the keywords from the emails subject.
-                * 
-                * Sample: 
-                *          * Email Keyword: 'dog', 'fish', 'rocket', 'etc'
-                *          * DB Keywords: 'dog', 'rocket'
-                * 
-                * Union and the output will be 'dog' and 'fish'   
-                *
-                */ 
+       /**
+        * Get the common between the database keywords that belong 
+        * -> to each user and the keywords from the emails subject.
+        * 
+        * Sample: 
+        *          * Email Keyword: 'dog', 'fish', 'rocket', 'etc'
+        *          * DB Keywords: 'dog', 'rocket'
+        * 
+        * Union and the output will be 'dog' and 'fish'   
+        *
+        */ 
                 $k_intersect = array_intersect($k_db, $get_keywords);
 
 
-             /**
-                * After we union the smmilarities check if there's a difference
-                * -> between the DB array and the filtered array from the "email subject"
-                * -> this way we can figure it out if they are identical.
-                * 
-                *  Since the `array_intersect()` get's the common between both of arrays
-                *  -> we might have a situation like the following:
-                *  
-                *  * Email Keywords: 'dog', 'fish', 'rocket', '-', 'something'
-                *  * DB Keywords: 'dog', 'fish', 'dolphin'
-                *  
-                *  array_intersect($e_kwd, $db_kwd) => 'dog', 'fish'
-                *  
-                *  -> so e_kwd != $db_kwd => because the 'dolphin' should match also.
-                *  
-                */
+       /**
+        * After we union the smmilarities check if there's a difference
+        * -> between the DB array and the filtered array from the "email subject"
+        * -> this way we can figure it out if they are identical.
+        * 
+        *  Since the `array_intersect()` get's the common between both of arrays
+        *  -> we might have a situation like the following:
+        *  
+        *  * Email Keywords: 'dog', 'fish', 'rocket', '-', 'something'
+        *  * DB Keywords: 'dog', 'fish', 'dolphin'
+        *  
+        *  array_intersect($e_kwd, $db_kwd) => 'dog', 'fish'
+        *  
+        *  -> so e_kwd != $db_kwd => because the 'dolphin' should match also.
+        *  
+        */
                 $k_arr_diff = array_diff($k_db, $get_keywords);
 
                 /*

@@ -14,19 +14,17 @@
         <div class="col-md-12">
 
           <div id="id-recipients-container">
-            <div ng-repeat="recipient in keywordEntity.recipients">
-              <div class="col-md-12" style="padding:0px 0px 5px 0px;">
-                <input type="text" ng-model="user.first_name" placeholder="First Name" class="form-control">
-              </div>
-              <div class="col-md-12" style="padding:0px 0px 5px 0px;">
-                <input type="text" ng-model="user.last_name" placeholder="Last Name" class="form-control">
-              </div>
-              <div class="col-md-12" style="padding:0px 0px 5px 0px;">
-                <input type="text" id="id-email" name="n-email" ng-model="user.email" placeholder="Email" class="form-control">
-              </div>
-              <div class="col-md-12" style="padding:0px 0px 5px 0px;">
-                <input type="password" ng-model="user.password" placeholder="Password" class="form-control">
-              </div>
+            <div class="col-md-12" style="padding:0px 0px 5px 0px;">
+              <input type="text" ng-model="user.first_name" placeholder="First Name" class="form-control">
+            </div>
+            <div class="col-md-12" style="padding:0px 0px 5px 0px;">
+              <input type="text" ng-model="user.last_name" placeholder="Last Name" class="form-control">
+            </div>
+            <div class="col-md-12" style="padding:0px 0px 5px 0px;">
+              <input type="text" id="id-email" name="n-email" ng-model="user.email" placeholder="Email" class="form-control">
+            </div>
+            <div class="col-md-12" style="padding:0px 0px 5px 0px;">
+              <input type="password" ng-model="user.password" placeholder="Password" class="form-control">
             </div>
           </div>
 

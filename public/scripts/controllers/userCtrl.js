@@ -13,16 +13,20 @@ angular.module('app.user')
     $("#id-create-users").button('loading');
     UserSvc.createUser($scope.user)
       .success(function() {
+        
         toaster.pop('success', 'message', 'Cool, you just created the user');
         document.getElementById('id-email').className = "form-control";
         $("#id-create-users").button('reset');
+
         $scope.hide_create_modal();
       }).error(function(data) {
+
         toaster.pop('error', 'message', data.msg);
-        console.log(document.getElementsByName('n-email'));
         document.getElementById('id-email').className = "form-control input-danger";
         $("#id-create-users").button('reset');
+        
     });
+
   };
 
   $scope.hide_create_modal = function() {

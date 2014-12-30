@@ -477,7 +477,19 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             /* Get the keywords from the  */
             $get_keywords =  explode(" ", $email->subject);
-            $k_db = keywords_list::all()->toArray();
+
+      /** 
+       * Check if html is enabled, if so select only the keywords that
+       * are marked for it, else the onest that don't contain html in it 
+       **/
+      if(!self::$enable_html_email) {
+            $k_db = keywords_list::where('original_content', '=', 0);
+      } else {
+        $k_db = keywords_list::where('original_content', '=', 1);
+      }
+
+      $k_db = $k_db->get()->toArray();
+
             $k_intersect = [];
       
             foreach ($k_db as $db_keywords) {

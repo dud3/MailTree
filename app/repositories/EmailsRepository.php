@@ -135,42 +135,27 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 unset($std_email->subject[0]);
             }
 
-            $std_email->subject = implode(" ", $std_email->subject);
+      $std_email->subject = implode(" ", $std_email->subject);
 
-            if(!self::$enable_html_email) {
 
-                /* Explode the email into pieces */
+        if(!self::$enable_html_email) {
+
+      /**
+       * [$std_email->subject description]
+       * Disable this part for now, The reason for that
+       * is that, once the request is made to the email server,
+       * and mails are found, the email server marks them as "seen",
+       * which makes the `./artians --html_enabled=true` usless, since it
+       * can't actually find anything to read.
+       * 
                 $std_email->body = explode("\n", $std_email->body);
 
-             /**
-                * Trim the value otherwise at the end of the each mail
-                * -> we will strat seeing the value of ^M after exploding
-                * -> the string, and this makes imposibble to compare the 
-                * -> keywords from the database even if we include the 
-                * -> ^M symbol at the end of each array element.
-                */ 
                 array_walk($std_email->body, array($this, 'trim_value'));
 
-             /**
-                * Two of this following conditions are for:
-                * * if the mail is forwarded by a person/automatic email forwarder
-                * * if the mail contains the keyword of "Dear"
-                * 
-                * The reason for the first one is that, we don't want to store mails into the 
-                * -> DB with the forwarded information.
-                * 
-                * The second one is that we won't eventually want to erase the mail that has been
-                * -> forwarded to an X person since we will forward the same email to multiple
-                * -> users that match the keyword(s), and replace their name on the emal.
-                */
                 if(in_array('---------- Forwarded message ----------', $std_email->body)) {
                     $std_email->body = array_slice($std_email->body, 9);
                 }
 
-             /** 
-                * if strpos($mystring, $findme)
-                * We might want to search the string if it contains the keyword of "Dear" or simmilar.
-                */
                 $this->search_for = ["Dear", "Dear Alexander", "Dear Alexander Notifications,"];
               
                 if(in_array($this->search_for[0], $std_email->body) 
@@ -179,6 +164,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
                     $std_email->body = array_slice($std_email->body, 3);
                 }
+       *
+       */
 
             /**
              * -----------------
@@ -190,15 +177,35 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 /* Explode the email into pieces */
                 $std_email->body = explode("\n", $std_email->body);
 
-                /* Repeat the simmilar as for non-HTML emails */
+             /**
+        * Trim the value otherwise at the end of the each mail
+        * -> we will strat seeing the value of ^M after exploding
+        * -> the string, and this makes imposibble to compare the 
+        * -> keywords from the database even if we include the 
+        * -> ^M symbol at the end of each array element.
+        */ 
                 array_walk($std_email->body, array($this, 'trim_value'));
         
-                /* If the mail is forwarded in case */
+             /**
+        * Two of this following conditions are for:
+        * * if the mail is forwarded by a person/automatic email forwarder
+        * * if the mail contains the keyword of "Dear"
+        * 
+        * The reason for the first one is that, we don't want to store mails into the 
+        * -> DB with the forwarded information.
+        * 
+        * The second one is that we won't eventually want to erase the mail that has been
+        * -> forwarded to an X person since we will forward the same email to multiple
+        * -> users that match the keyword(s), and replace their name on the emal.
+        */
                 if(in_array('---------- Forwarded message ----------', $std_email->body)) {
                     $std_email->body = array_slice($std_email->body, 9);
                 }
 
-                /* Search for default values in the mail */
+             /** 
+        * if strpos($mystring, $findme)
+        * We might want to search the string if it contains the keyword of "Dear" or simmilar.
+        */
                 $this->search_for = ["Dear Alexander Notifications,<br /><br />"];
 
                 if(in_array($this->search_for[0], $std_email->body)) {
@@ -477,18 +484,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             /* Get the keywords from the  */
             $get_keywords =  explode(" ", $email->subject);
-
-      /** 
-       * Check if html is enabled, if so select only the keywords that
-       * are marked for it, else the onest that don't contain html in it 
-       **/
-      if(!self::$enable_html_email) {
-            $k_db = keywords_list::where('original_content', '=', 0);
-      } else {
-        $k_db = keywords_list::where('original_content', '=', 1);
-      }
-
-      $k_db = $k_db->get()->toArray();
+        $k_db = keywords_list::all()->toArray();
 
             $k_intersect = [];
       

@@ -140,32 +140,32 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
         if(!self::$enable_html_email) {
 
-      /**
-       * [$std_email->subject description]
-       * Disable this part for now, The reason for that
-       * is that, once the request is made to the email server,
-       * and mails are found, the email server marks them as "seen",
-       * which makes the `./artians --html_enabled=true` usless, since it
-       * can't actually find anything to read.
-       * 
-                $std_email->body = explode("\n", $std_email->body);
+           /**
+            * [$std_email->subject description]
+            * Disable this part for now, The reason for that
+            * is that, once the request is made to the email server,
+            * and mails are found, the email server marks them as "seen",
+            * which makes the `./artians --html_enabled=true` usless, since it
+            * can't actually find anything to read.
+            * 
+            $std_email->body = explode("\n", $std_email->body);
 
-                array_walk($std_email->body, array($this, 'trim_value'));
+            array_walk($std_email->body, array($this, 'trim_value'));
 
-                if(in_array('---------- Forwarded message ----------', $std_email->body)) {
-                    $std_email->body = array_slice($std_email->body, 9);
-                }
+            if(in_array('---------- Forwarded message ----------', $std_email->body)) {
+            $std_email->body = array_slice($std_email->body, 9);
+            }
 
-                $this->search_for = ["Dear", "Dear Alexander", "Dear Alexander Notifications,"];
-              
-                if(in_array($this->search_for[0], $std_email->body) 
-                || in_array($this->search_for[1], $std_email->body) 
-                || in_array($this->search_for[2], $std_email->body)) {
+            $this->search_for = ["Dear", "Dear Alexander", "Dear Alexander Notifications,"];
 
-                    $std_email->body = array_slice($std_email->body, 3);
-                }
-       *
-       */
+            if(in_array($this->search_for[0], $std_email->body) 
+            || in_array($this->search_for[1], $std_email->body) 
+            || in_array($this->search_for[2], $std_email->body)) {
+
+            $std_email->body = array_slice($std_email->body, 3);
+            }
+            *
+            */
 
             /**
              * -----------------
@@ -378,7 +378,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 }
             }
 
-         /**
+           /**
             * Basically what we're doing here is that
             * -> whenever we see a text that says 'Click here'
             * -> automatically splice "Click here" text and
@@ -484,7 +484,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             /* Get the keywords from the  */
             $get_keywords =  explode(" ", $email->subject);
-        $k_db = keywords_list::all()->toArray();
+            $k_db = keywords_list::all()->toArray();
 
             $k_intersect = [];
       
@@ -499,7 +499,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 /* Keep the original content, simply don't remove the HTML tags from it. */
                 $k_db_original_content = (int)$db_keywords["original_content"];
 
-             /**
+               /**
                 * Before everything, set the keywords from the emails subject
                 * and the keywords from the database to lowercase.
                 */
@@ -510,36 +510,36 @@ class EmailsRepository implements EmailsRepositoryInterface {
                   $k_db[$i] = strtolower($k_db[$i]);
                 }
 
-       /**
-        * Get the common between the database keywords that belong 
-        * -> to each user and the keywords from the emails subject.
-        * 
-        * Sample: 
-        *          * Email Keyword: 'dog', 'fish', 'rocket', 'etc'
-        *          * DB Keywords: 'dog', 'rocket'
-        * 
-        * Union and the output will be 'dog' and 'fish'   
-        *
-        */ 
+               /**
+                * Get the common between the database keywords that belong 
+                * -> to each user and the keywords from the emails subject.
+                * 
+                * Sample: 
+                *          * Email Keyword: 'dog', 'fish', 'rocket', 'etc'
+                *          * DB Keywords: 'dog', 'rocket'
+                * 
+                * Union and the output will be 'dog' and 'fish'   
+                *
+                */ 
                 $k_intersect = array_intersect($k_db, $get_keywords);
 
 
-       /**
-        * After we union the smmilarities check if there's a difference
-        * -> between the DB array and the filtered array from the "email subject"
-        * -> this way we can figure it out if they are identical.
-        * 
-        *  Since the `array_intersect()` get's the common between both of arrays
-        *  -> we might have a situation like the following:
-        *  
-        *  * Email Keywords: 'dog', 'fish', 'rocket', '-', 'something'
-        *  * DB Keywords: 'dog', 'fish', 'dolphin'
-        *  
-        *  array_intersect($e_kwd, $db_kwd) => 'dog', 'fish'
-        *  
-        *  -> so e_kwd != $db_kwd => because the 'dolphin' should match also.
-        *  
-        */
+               /**
+                * After we union the smmilarities check if there's a difference
+                * -> between the DB array and the filtered array from the "email subject"
+                * -> this way we can figure it out if they are identical.
+                * 
+                *  Since the `array_intersect()` get's the common between both of arrays
+                *  -> we might have a situation like the following:
+                *  
+                *  * Email Keywords: 'dog', 'fish', 'rocket', '-', 'something'
+                *  * DB Keywords: 'dog', 'fish', 'dolphin'
+                *  
+                *  array_intersect($e_kwd, $db_kwd) => 'dog', 'fish'
+                *  
+                *  -> so e_kwd != $db_kwd => because the 'dolphin' should match also.
+                *  
+                */
                 $k_arr_diff = array_diff($k_db, $get_keywords);
 
                 /*
@@ -564,12 +564,12 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
                             $std_store_email = new StdClass;
 
-              /* Data from the DB */
+                            /* Data from the DB */
                             $std_store_email->email_address_id = (int)$e_list["id"];
                             $std_store_email->email = $e_list["email"];
                             $std_store_email->full_name = $e_list["full_name"];
 
-              /* Data from the actual email */
+                            /* Data from the actual email */
                             $std_store_email->subject = $email->subject;
                             $std_store_email->body = $email->body;
 
@@ -605,7 +605,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                             $std_store_email->__draft = $email->overview->draft;
                             $std_store_email->__udate = $email->overview->udate;
 
-                         /**
+                           /**
                             * Let's insert the name of the user that 
                             * -> will get the eamil.
                             * 
@@ -618,7 +618,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                             * Put everything togather
                             * $std_store_email->body = implode("\n", $std_store_email->body);
                             */
-                           
+
                             $this->storeMail($std_store_email);
                             
                         }

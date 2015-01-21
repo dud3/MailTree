@@ -483,6 +483,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
         foreach ($data as $email) {
 
             /* Get the keywords from the  */
+            $email->subject = str_replace(array('.', ','), '', $email->subject);
             $get_keywords =  explode(" ", $email->subject);
             $k_db = keywords_list::all()->toArray();
 

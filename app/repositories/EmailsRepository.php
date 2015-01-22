@@ -483,7 +483,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
         foreach ($data as $email) {
 
             /* Get the keywords from the  */
-            $email->subject = str_replace(array('.', ','), '', $email->subject);
+            $email->subject = str_replace(array('.', ',', ':', '-', '*', '&'), '', $email->subject);
             $get_keywords =  explode(" ", $email->subject);
             $k_db = keywords_list::all()->toArray();
 
@@ -510,6 +510,11 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 for ($i = 0; $i < count($k_db); $i++) {
                   $k_db[$i] = strtolower($k_db[$i]);
                 }
+
+                // var_dump($get_keywords);
+                // echo "\n--------------------\n";
+                // var_dump($k_db);
+
 
                /**
                 * Get the common between the database keywords that belong 
@@ -556,7 +561,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
                 if(count($k_arr_diff) == 0) {
 
-                  // echo ">>>>>>>>>>>>>>>>>>>>>>>> BINGO <<<<<<<<<<<<<<<<<<<<<<<<\n";
+                  echo ">>>>>>>>>>>>>>>>>>>>>>>> BINGO <<<<<<<<<<<<<<<<<<<<<<<<\n";
 
                    $e_add_list = email_address_list::where("keyword_id", "=", $k_id)->get()->toArray();
 
@@ -588,7 +593,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                               if($k_db_original_content == 1) {
                                 $std_store_email->html = 1;
                               } else {
-                                continue;
+                                // continue;
                               }
                             }
 

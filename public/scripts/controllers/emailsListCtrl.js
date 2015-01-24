@@ -242,8 +242,6 @@ angular.module('app.emailsList')
 				$scope.selected_emails.push(email);
 			}
 
-			console.log($scope.selected_emails);
-
 		};
 
 		/**
@@ -269,9 +267,7 @@ angular.module('app.emailsList')
 				});
 				$scope.selected_emails = [];
 			}
-
-			console.log($scope.selected_emails);
-
+			
 		};
 
 		/**
@@ -319,6 +315,8 @@ angular.module('app.emailsList')
 					$rootScope.email.message_subject = data.emails[0].message_subject;
 					$rootScope.email.message_body = data.emails[0].message_body;
 
+					$rootScope.email_tr = $('#id-email' + email_id);
+
 					$("#id-modal-edit_single_email").modal({ backdrop:'static', keyboard:false, show:true });
 
 				}).error(function(data){
@@ -338,8 +336,13 @@ angular.module('app.emailsList')
 
 			var _email = {
 				x_uid: $rootScope.email.x_uid,
-				message_body: $rootScope.email.message_body
+				message_body: $rootScope.email.message_body,
+				message_subject: $rootScope.email.message_subject
 			};
+
+			if($rootScope.email_tr.children()[1].innerHTML.replace(/(<([^>]+)>)/ig, "") != $rootScope.email.message_subject) {
+				$rootScope.email_tr.children()[1].innerHTML = $rootScope.email.message_subject;
+			}
 
 			emailsListSvc
 				.saveEmail(_email)

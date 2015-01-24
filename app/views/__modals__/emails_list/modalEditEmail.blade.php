@@ -7,7 +7,14 @@
         <h4 class="modal-title text-muted" id="myModalLabel">Edit Email</h4>
       </div>
 
-      <div class="modal-body" style="background: #f6f6f6; padding:30px;">
+      <div style="padding:10px 0px 10px 15px" class="form-inline">
+        <div style="width:100%" class="form-group">
+          <label for="exampleInputName2">Subject: </label>
+          <input type="text" class="form-control" id="id-email-subject" ng-model="email.message_subject" placeholder="Type Subject here..." style="width:90%">
+        </div>
+      </div>
+
+      <div class="modal-body" style="background: #f6f6f6; padding:10px 30px 10px 30px;">
 
           <div text-angular ng-model="email.message_body" class="row">
                 

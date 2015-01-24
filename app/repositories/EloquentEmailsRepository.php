@@ -156,6 +156,10 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
         $where = "";
         $update_row = [];
 
+        /*! 
+         * Note that x_uid is magical, multiple items have the same x_uid, per different user,
+         * updating items this way is much faster than usual.
+         */
         if(isset($input["x_uid"]) && !empty($input["x_uid"])) {
             $arg = $input["x_uid"];
             $where .= "x_uid";
@@ -167,6 +171,7 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
         }
 
         $update_row["body"] = $input["message_body"];
+        $update_row["subject"] = $input["message_subject"];
 
         $condition = "=";
 

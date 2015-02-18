@@ -191,6 +191,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
                  * later on give the user the ability to chose the word phrase
                  */
                 $std_email->body = str_ireplace('Sebis Direct, Inc.', '', $std_email->body);
+                $std_email->body = str_ireplace('Sebis Direct', '', $std_email->body);
+                $std_email->body = str_ireplace('Sebis', '', $std_email->body);
 
                 /* Let's check if the body containts any link or, if so erase it */
                 for($i = 0; $i < count($std_email->body); $i++) {

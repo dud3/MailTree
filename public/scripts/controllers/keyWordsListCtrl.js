@@ -34,8 +34,8 @@ angular.module('app.keyWordsList')
 		 * Simple tooltip.
 		 * @type {Object}
 		 */
-		$scope.tooltip = { 
-			settings: { 
+		$scope.tooltip = {
+			settings: {
 				auto: { title: 'Once the keywordEnotity is craeted, if this option is selected, emails will be sent automatically by the system.' },
 				origin: { title: 'If this option slected, the system won\'t atempt to make any changes to the email whatsoever, but instead it keeps the exact same email.' }
 			}
@@ -433,10 +433,10 @@ angular.module('app.keyWordsList')
 				email: data.email,
 				full_name: data.full_name,
 			};
-			
+
 			if(typeof _email_list_id != 'undefined') {
 				data.id = _email_list_id;
-			} 
+			}
 
 			if($scope.checkEmail(data, id, _email_list_id)) {
 
@@ -446,7 +446,7 @@ angular.module('app.keyWordsList')
 					saveRecipient(data)
 						.success(function(data){
 
-							// If the email is added and note edited, 
+							// If the email is added and note edited,
 							// only then assign the email_list_id.
 							if(_current_email_item.fresh) {
 								_current_email_item.email_list_id = data.recipent.id;
@@ -482,13 +482,13 @@ angular.module('app.keyWordsList')
 		};
 
 		$scope.indicateKeywordsExists = function() {
-			angular.forEach($("#id-keywords-container").children(), function(item) { 
+			angular.forEach($("#id-keywords-container").children(), function(item) {
 				angular.forEach(item.children, function(child) { child.className = "form-control input-danger"; });
 			});
 		};
 
 		$scope.cleanKeywordsExists = function() {
-			angular.forEach($("#id-keywords-container").children(), function(item) { 
+			angular.forEach($("#id-keywords-container").children(), function(item) {
 				angular.forEach(item.children, function(child) { child.className = "form-control"; });
 			});
 		};

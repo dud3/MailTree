@@ -21,6 +21,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
     public $inbox;
     public $emails;
 
+    public $email_counter = 0;
+
     public $user;
 
     protected static $forward_email_from;
@@ -135,37 +137,36 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 unset($std_email->subject[0]);
             }
 
-      $std_email->subject = implode(" ", $std_email->subject);
+            $std_email->subject = implode(" ", $std_email->subject);
 
+            if(!self::$enable_html_email) {
 
-        if(!self::$enable_html_email) {
+               /**
+                * [$std_email->subject description]
+                * Disable this part for now, The reason for that
+                * is that, once the request is made to the email server,
+                * and mails are found, the email server marks them as "seen",
+                * which makes the `./artians --html_enabled=true` usless, since it
+                * can't actually find anything to read.
+                * 
+                $std_email->body = explode("\n", $std_email->body);
 
-           /**
-            * [$std_email->subject description]
-            * Disable this part for now, The reason for that
-            * is that, once the request is made to the email server,
-            * and mails are found, the email server marks them as "seen",
-            * which makes the `./artians --html_enabled=true` usless, since it
-            * can't actually find anything to read.
-            * 
-            $std_email->body = explode("\n", $std_email->body);
+                array_walk($std_email->body, array($this, 'trim_value'));
 
-            array_walk($std_email->body, array($this, 'trim_value'));
+                if(in_array('---------- Forwarded message ----------', $std_email->body)) {
+                $std_email->body = array_slice($std_email->body, 9);
+                }
 
-            if(in_array('---------- Forwarded message ----------', $std_email->body)) {
-            $std_email->body = array_slice($std_email->body, 9);
-            }
+                $this->search_for = ["Dear", "Dear Alexander", "Dear Alexander Notifications,"];
 
-            $this->search_for = ["Dear", "Dear Alexander", "Dear Alexander Notifications,"];
+                if(in_array($this->search_for[0], $std_email->body) 
+                || in_array($this->search_for[1], $std_email->body) 
+                || in_array($this->search_for[2], $std_email->body)) {
 
-            if(in_array($this->search_for[0], $std_email->body) 
-            || in_array($this->search_for[1], $std_email->body) 
-            || in_array($this->search_for[2], $std_email->body)) {
-
-            $std_email->body = array_slice($std_email->body, 3);
-            }
-            *
-            */
+                $std_email->body = array_slice($std_email->body, 3);
+                }
+                *
+                */
 
             /**
              * -----------------
@@ -177,36 +178,50 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 /* Explode the email into pieces */
                 $std_email->body = explode("\n", $std_email->body);
 
-       /**
-        * Trim the value otherwise at the end of the each mail
-        * -> we will strat seeing the value of ^M after exploding
-        * -> the string, and this makes imposibble to compare the 
-        * -> keywords from the database even if we include the 
-        * -> ^M symbol at the end of each array element.
-        */ 
-        array_walk($std_email->body, array($this, 'trim_value'));
+               /**
+                * Trim the value otherwise at the end of the each mail
+                * -> we will strat seeing the value of ^M after exploding
+                * -> the string, and this makes imposibble to compare the 
+                * -> keywords from the database even if we include the 
+                * -> ^M symbol at the end of each array element.
+                */ 
+                array_walk($std_email->body, array($this, 'trim_value'));
 
-       /**
-        * Two of this following conditions are for:
-        * * if the mail is forwarded by a person/automatic email forwarder
-        * * if the mail contains the keyword of "Dear"
-        * 
-        * The reason for the first one is that, we don't want to store mails into the 
-        * -> DB with the forwarded information.
-        * 
-        * The second one is that we won't eventually want to erase the mail that has been
-        * -> forwarded to an X person since we will forward the same email to multiple
-        * -> users that match the keyword(s), and replace their name on the emal.
-        */
-        if(in_array('---------- Forwarded message ----------', $std_email->body)) {
-            $std_email->body = array_slice($std_email->body, 9);
-        }
+                /*! For now I'm just going to hard code the conditon here, 
+                 * later on give the user the ability to chose the word phrase
+                 */
+                $std_email->body = str_ireplace('Sebis Direct, Inc.', '', $std_email->body);
 
-       /** 
-        * if strpos($mystring, $findme)
-        * We might want to search the string if it contains the keyword of "Dear" or simmilar.
-        */
-        $this->search_for = ["Dear Alexander Notifications,<br /><br />"];
+                /* Let's check if the body containts any link or, if so erase it */
+                for($i = 0; $i < count($std_email->body); $i++) {
+                  $std_email->body[$i] = trim($std_email->body[$i]);
+                  if( stristr($std_email->body[$i], 'Click') !== false OR stristr($std_email->body[$i], 'click') !== false ) {
+                    unset($std_email->body[$i]);
+                  }
+                }
+
+
+               /**
+                * Two of this following conditions are for:
+                * * if the mail is forwarded by a person/automatic email forwarder
+                * * if the mail contains the keyword of "Dear"
+                * 
+                * The reason for the first one is that, we don't want to store mails into the 
+                * -> DB with the forwarded information.
+                * 
+                * The second one is that we won't eventually want to erase the mail that has been
+                * -> forwarded to an X person since we will forward the same email to multiple
+                * -> users that match the keyword(s), and replace their name on the emal.
+                */
+                if(in_array('---------- Forwarded message ----------', $std_email->body)) {
+                    $std_email->body = array_slice($std_email->body, 9);
+                }
+
+               /** 
+                * if strpos($mystring, $findme)
+                * We might want to search the string if it contains the keyword of "Dear" or simmilar.
+                */
+                $this->search_for = ["Dear Alexander Notifications,<br /><br />"];
 
                 if(in_array($this->search_for[0], $std_email->body)) {
                   $std_email->body = array_slice($std_email->body, 3);

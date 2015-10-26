@@ -3,7 +3,7 @@
 
 Simple mail forwarder.
 
-Based on the specified keywords in the email it will forward the mails to the list of predefined users.
+Based on the specific email body/subject keywords forward mails to the list of predefined users.
 
 Install
 --------

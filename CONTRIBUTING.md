@@ -1,3 +1,4 @@
 # Contribution Guidelines
 
-Please submit all issues and pull requests to the [laravel/framework](http://github.com/laravel/framework) repository!
+* http://www.php-fig.org/psr/psr-2/
+* https://github.com/airbnb/javascript

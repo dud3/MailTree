@@ -15,8 +15,8 @@ return array(
 	*/
 
 	'mailgun' => array(
-		'domain' => '',
-		'secret' => '',
+		'domain' => 'mg.acsbill.com',
+		'secret' => 'key-fc34a563f15ff887918a2257fa83841c',
 	),
 
 	'mandrill' => array(

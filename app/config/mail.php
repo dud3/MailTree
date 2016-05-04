@@ -15,7 +15,7 @@ return array(
 	|
 	*/
 
-	'driver' => 'mandrill',
+	'driver' => 'mailgun',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.mandrillapp.com',
+  'host' => 'smtp.mailgun.org',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'dk18184@gmail.com',
+  'username' => 'postmaster@mg.acsbill.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'ju0PuVXQBHuZdZz2_5-elw',
+  'password' => 'be80fc2dffbde368b0e8184f7099af6b',
 
 	/*
 	|--------------------------------------------------------------------------

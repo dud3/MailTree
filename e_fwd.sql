@@ -121,8 +121,32 @@ CREATE TABLE `keywords_list` (
 
 LOCK TABLES `keywords_list` WRITE;
 /*!40000 ALTER TABLE `keywords_list` DISABLE KEYS */;
-INSERT INTO `keywords_list` VALUES (31,2,'{\"0\":\"Atascadero\",\"1\":\"processed\"}',1,0,'2015-01-13 00:50:06','2015-01-22 07:14:38'),(32,2,'{\"0\":\"california\",\"1\":\"uploaded\"}',1,1,'2015-01-13 00:53:48','2015-01-13 00:53:48'),(33,2,'{\"0\":\"california\",\"1\":\"processed\"}',1,1,'2015-01-13 00:55:49','2015-01-22 07:12:08'),(34,2,'{\"0\":\"california\",\"1\":\"approved\"}',1,1,'2015-01-13 00:58:35','2015-01-13 00:58:35'),(35,2,'{\"0\":\"california\",\"1\":\"laser\"}',1,1,'2015-01-13 00:59:49','2015-01-13 00:59:49'),(36,2,'{\"0\":\"california\",\"1\":\"rejected\"}',1,1,'2015-01-13 01:01:05','2015-01-13 01:01:05'),(38,2,'{\"0\":\"atascadero\",\"1\":\"uploaded\"}',1,0,'2015-01-24 00:26:33','2015-01-24 00:26:33'),(40,2,'{\"0\":\"atascadero\",\"1\":\"rejected\"}',1,0,'2015-01-24 00:51:11','2015-01-24 00:51:11'),(42,2,'{\"0\":\"atascadero\",\"1\":\"assembly\",\"2\":\"mailing\"}',1,0,'2015-01-28 23:22:29','2015-01-29 01:07:07'),(43,2,'{\"0\":\"davis\",\"1\":\"uploaded\"}',1,0,'2015-01-29 08:37:54','2015-01-29 08:37:54'),(44,2,'{\"0\":\"davis\",\"1\":\"processed\"}',1,1,'2015-01-29 08:39:02','2015-01-29 09:27:13'),(45,2,'{\"0\":\"davis\",\"1\":\"approved\"}',1,0,'2015-01-29 09:27:03','2015-01-29 09:27:03'),(46,2,'{\"0\":\"davis\",\"1\":\"laser\"}',1,0,'2015-01-29 09:28:23','2015-01-29 09:28:23'),(47,2,'{\"0\":\"davis\",\"1\":\"rejected\"}',1,0,'2015-01-29 09:29:05','2015-01-29 09:29:05'),(48,2,'{\"0\":\"davis\",\"1\":\"assembly\",\"2\":\"mailing\"}',1,0,'2015-01-29 09:29:41','2015-01-29 09:29:41');
+INSERT INTO `keywords_list` VALUES (31,2,'{\"0\":\"Atascadero\",\"1\":\"processed\"}',1,0,'2015-01-13 00:50:06','2016-06-20 10:29:15'),(32,2,'{\"0\":\"california\",\"1\":\"uploaded\"}',1,1,'2015-01-13 00:53:48','2015-01-13 00:53:48'),(33,2,'{\"0\":\"california\",\"1\":\"processed\"}',1,1,'2015-01-13 00:55:49','2015-01-22 07:12:08'),(34,2,'{\"0\":\"california\",\"1\":\"approved\"}',1,1,'2015-01-13 00:58:35','2015-01-13 00:58:35'),(35,2,'{\"0\":\"california\",\"1\":\"laser\"}',1,1,'2015-01-13 00:59:49','2015-01-13 00:59:49'),(36,2,'{\"0\":\"california\",\"1\":\"rejected\"}',1,1,'2015-01-13 01:01:05','2015-01-13 01:01:05'),(38,2,'{\"0\":\"atascadero\",\"1\":\"uploaded\"}',1,0,'2015-01-24 00:26:33','2015-01-24 00:26:33'),(40,2,'{\"0\":\"atascadero\",\"1\":\"rejected\"}',1,0,'2015-01-24 00:51:11','2015-01-24 00:51:11'),(42,2,'{\"0\":\"atascadero\",\"1\":\"assembly\",\"2\":\"mailing\"}',1,0,'2015-01-28 23:22:29','2015-01-29 01:07:07'),(43,2,'{\"0\":\"davis\",\"1\":\"uploaded\"}',1,0,'2015-01-29 08:37:54','2015-01-29 08:37:54'),(44,2,'{\"0\":\"davis\",\"1\":\"processed\"}',1,1,'2015-01-29 08:39:02','2015-01-29 09:27:13'),(45,2,'{\"0\":\"davis\",\"1\":\"approved\"}',1,0,'2015-01-29 09:27:03','2015-01-29 09:27:03'),(46,2,'{\"0\":\"davis\",\"1\":\"laser\"}',1,0,'2015-01-29 09:28:23','2015-01-29 09:28:23'),(47,2,'{\"0\":\"davis\",\"1\":\"rejected\"}',1,0,'2015-01-29 09:29:05','2015-01-29 09:29:05'),(48,2,'{\"0\":\"davis\",\"1\":\"assembly\",\"2\":\"mailing\"}',1,0,'2015-01-29 09:29:41','2015-01-29 09:29:41');
 /*!40000 ALTER TABLE `keywords_list` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `keywords_list_links`
+--
+
+DROP TABLE IF EXISTS `keywords_list_links`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `keywords_list_links` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `keywords_list_id` int(11) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `keywords_list_links`
+--
+
+LOCK TABLES `keywords_list_links` WRITE;
+/*!40000 ALTER TABLE `keywords_list_links` DISABLE KEYS */;
+/*!40000 ALTER TABLE `keywords_list_links` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -302,4 +326,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-06-20 14:28:11
+-- Dump completed on 2016-06-20 15:02:45

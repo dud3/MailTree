@@ -285,15 +285,11 @@ angular.module('app.keyWordsList')
 
 		};
 
-		/**
-		 * Update The whole keywordEntity
-		 * Update only recipent
-		 * Update only keyword
-		 * @return {[type]} [description]
-		 */
-		$scope.submit = function() {
+		$scope.show_add_link_modal = function(id) {
 
+			$("#id-modal-addLink_keywordList").modal('show');
 		};
+
 
 		/**
 		 * Remove keyword entity

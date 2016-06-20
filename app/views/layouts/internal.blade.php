@@ -28,7 +28,6 @@
     <link href="/bower_components/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
     <link href="/bower_components/angular-xeditable/dist/css/xeditable.css">
     <link href="/bower_components/AngularJS-Toaster/toaster.css" rel="stylesheet">
-    <!-- lnik href="/bower_components/angular-bootstrap-toggle-switch/style/bootstrap3/angular-toggle-switch-bootstrap-3.css" rel="stylesheet" -->
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed|PT+Sans|Titillium+Web' rel='stylesheet' type='text/css'>
 
@@ -159,14 +158,15 @@
 
     <script src="/scripts/filters/filters.js"></script>
 
-    {{-- Only for priviledged users
+    {{--
+        Only for priviledged users
         @note There must be a better way of doing this.
     --}}
     @if(Sentry::check())
     @if(Sentry::getUser()->hasAccess('sys.create_user'))
 
     @include('__modals__.users.create')
-    
+
     @endif
     @endif
 

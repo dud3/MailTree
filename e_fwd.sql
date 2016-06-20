@@ -136,6 +136,7 @@ CREATE TABLE `keywords_list_links` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `keywords_list_id` int(11) NOT NULL,
   `link` varchar(255) NOT NULL,
+  `text_align` varchar(25) NOT NULL DEFAULT 'left',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -326,4 +327,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-06-20 15:02:45
+-- Dump completed on 2016-06-20 15:05:53

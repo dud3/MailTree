@@ -70,7 +70,7 @@ class ListController extends internalCtrl {
         }
 
         $ret = $this->lists->create_keywords_list($input);
-        
+
         if(!$ret->error) {
             $ret = Response::json(["ketwordsList" => $ret->data], 200);
         } else {
@@ -107,7 +107,7 @@ class ListController extends internalCtrl {
      * @return [type]       [description]
      */
     public function sendAutomatically($data = null) {
-        
+
         if($data == null) {
             $data = Input::all();
         }
@@ -155,7 +155,7 @@ class ListController extends internalCtrl {
         if(isset($input['fresh'])) {
             unset($input['fresh']);
         }
-        
+
         return Response::json(["recipent" => $this->emails->saveRecipient($input)], 200);
     }
 
@@ -166,6 +166,29 @@ class ListController extends internalCtrl {
      */
     public function removeRecipent($id) {
         return Response::json(["deleted" => $this->emails->removeRecipent($id)], 200);
+    }
+
+    /* todo: refactor */
+    public function getLink($id) {
+        return Response::json(["result" => keywords_list_links::where('keywords_list_id', '=', $id)->first()], 200);
+    }
+
+    /* todo: refactor */
+    public function createLink() {
+        $input = Input::all();
+
+        return Response::json(["result" => keywords_list_links::create($input)], 200);
+    }
+
+    /* todo: refactor */
+    public function updateLink() {
+        $input = Input::all();
+
+        $find = keywords_list_links::where('keywords_list_id', '=', $input['keywords_list_id']);
+        $find->update($input);
+        // $find->save();
+
+        return Response::json(["result" => $find], 200);
     }
 
 }

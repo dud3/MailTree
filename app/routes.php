@@ -50,7 +50,7 @@ Route::group(array('before' => 'auth'), function()
  */
 Route::group(array('prefix' => 'api/v1'), function()
 {
-    Route::group(array('prefix' => 'auth'), function() 
+    Route::group(array('prefix' => 'auth'), function()
     {
         Route::post('/login',			'AuthCtrl@login');
         Route::post('/createUser',		'AuthCtrl@logout');
@@ -73,6 +73,10 @@ Route::group(array('prefix' => 'api/v1'), function()
         Route::post('keepOriginalContent',	'ListController@keepOriginalContent');
         Route::post('saveRecipient',		'ListController@saveRecipient');
         Route::post('removeRecipent/{id}',	'ListController@removeRecipent');
+
+        Route::get('getLink/{id}',  'ListController@getLink');
+        Route::post('createLink',  'ListController@createLink');
+        Route::post('updateLink',  'ListController@updateLink');
 
         Route::get('populateKeywords',			'APIActiveFilterList@populateKeywords');
         Route::get('populateRootKeywords',		'APIActiveFilterList@populateRootKeywords');

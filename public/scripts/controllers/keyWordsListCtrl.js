@@ -285,11 +285,54 @@ angular.module('app.keyWordsList')
 
 		};
 
+		// ugly stuff, no time for this...
+		$scope.add_link_edit_flag = false;
+		$scope.add_link_k_id = null;
+		$scope.addlink = {};
 		$scope.show_add_link_modal = function(id) {
+			keyWordsListSvc.getLink(id).success(function(data) {
 
-			$("#id-modal-addLink_keywordList").modal('show');
+				$scope.add_link_k_id = id;
+
+				console.log(data);
+
+				$scope.add_link_edit_flag = false;
+
+				if(data.result != null) {
+					$scope.add_link_edit_flag = true;
+
+					$scope.addlink.message_body = data.result.link;
+					$("#addlink-position").val(data.result.position);
+				}
+
+				$("#id-modal-addLink_keywordList").modal({backdrop: 'static' ,keyboard: false, show: true});
+			});
 		};
 
+		$scope.submit_add_link = function() {
+			var input = {};
+
+			input.keywords_list_id = $scope.add_link_k_id;
+			input.link = $scope.addlink.message_body;
+			input.position = $("#addlink-position option:selected").text();
+
+			console.log(input);
+
+			if($scope.add_link_edit_flag) {
+
+				keyWordsListSvc.updateLink(input).success(function(data) {
+
+				});
+
+			} else {
+
+				keyWordsListSvc.createLink(input).success(function(data) {
+
+				});
+			}
+
+			$("#id-modal-addLink_keywordList").modal('hide');
+		};
 
 		/**
 		 * Remove keyword entity

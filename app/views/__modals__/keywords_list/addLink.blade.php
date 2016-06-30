@@ -1,70 +1,48 @@
+<style>
+.ta-editor.form-control.myform1-height, .ta-scroll-window.form-control.myform1-height  {
+    min-height: 150px;
+    height: auto;
+    overflow: auto;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+.form-control.myform1-height > .ta-bind {
+    height: auto;
+    min-height: 150px;
+    padding: 6px 12px;
+}
+</style>
+
 <!-- Modal -->
 <div class="modal fade" id="id-modal-addLink_keywordList" tabindex="-1" role="dialog" aria-labelledby="addLink_keywordList" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
+  <div class="modal-dialog" style="min-width:800px;">
+    <div class="modal-content" id="id-modal-content-view_single_email">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" ng-click="close()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title text-muted" id="myModalLabel">Create Keyworkds List</h4>
+        <h4 class="modal-title text-muted" id="myModalLabel">Add link</h4>
       </div>
 
-      <div class="modal-body">
-
-      <div class="row">
-
-        <div class="col-md-4" style="border-right:1px solid #ccc;">
-          <h4 style="padding-top:0px; padding-bottom:0px; margin-top:0px;">Keywords</h4><hr style="padding:0px; margin:0px;">
-
-          <div class="col-md-12" style="padding:10px 0px;">
-            <div id="id-keywords-container">
-              <div ng-repeat="keyword in keywordEntity.keywords" style="padding-bottom:5px;">
-                <input ng-focus="cleanKeywordsExists()" id="id-input-keyword" class="form-control" ng-model="keyword.keyword" placeholder="Enter keyword name...">
-              </div>
-            </div>
+      <div class="modal-body" style="background: #f6f6f6; padding:10px 30px 10px 30px;">
+          <div text-angular id="addlink-message_body" ng-model="addlink.message_body" class="row"
+            ta-text-editor-class="form-control myform1-height"
+            ta-html-editor-class="form-control myform1-height">
           </div>
-
-          <div class="col-md-12" style="padding:0px 0px;">
-            <button ng-click="addKeywordInput()" class="btn btn-default btn-sm">Add more</button>
-             <button id="id-remove-keyword" class="btn btn-danger btn-sm" ng-click="removeKeywordInput()" style="display:none;"><span>X</span></button>
-          </div>
-
-        </div>
-
-        <div class="col-md-8">
-          <h4 style="padding-top:0px; padding-bottom:0px; margin-top:0px;">Recipents</h4><hr style="padding:0px; margin:0px 0px 10px 0px;">
-
-          <div id="id-recipients-container">
-            <div ng-repeat="recipient in keywordEntity.recipients">
-              <div class="col-md-6" style="padding:0px 5px 5px 0px;">
-                <input type="text" ng-model="recipient.full_name" placeholder="Greetings..." class="form-control">
-              </div>
-              <div class="col-md-6" style="padding:0px 0px 5px 0px;">
-                <input ng-model="recipient.email" placeholder="Email..." class="form-control">
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-12" style="padding:10px 0px;">
-            <button ng-click="addRecipentInput()" class="btn btn-default btn-sm">Add more</button>
-            <button id="id-remove-recipient" class="btn btn-danger btn-sm" ng-click="removeRecipentInput()" style="display:none;"><span>X</span></button>
-          </div>
-
-        </div>
-
       </div>
 
+      <div style="padding:10px 0px 10px 15px" class="form-inline">
+      <label for="exampleInputName2">Position: </label>
+        <select class="form-control" id="addlink-position">
+          <option value="Top">Top</option>
+          <option value="Bottom">Bottom</option>
+        </select>
       </div>
 
       <div class="modal-footer">
-        <div id="id-modal-settings" class="checkbox pull-left">
-          <!-- label>
-            <input type="checkbox" ng-model="keywordEntity.original_content"><span class="text-info">Keep Original Content</span>
-          </label -->
-
-          @include('__partials__.settings_dropdown')
-
+        <div class="checkbox pull-left" style="vertical-align:middle;" data-toggle="tooltip" data-placement="left" title="This option will save the email's original content, no matter keyword conditions.">
         </div>
-        <button type="button" id="id-close-keywordList" class="btn btn-default" data-dismiss="modal" ng-click="hide_create_modal()">Close</button>
-        <button type="button" id="id-create-keywordList" class="btn btn-primary" ng-click="create()" disabled="true">Save changes</button>
+        <button type="button" id="id-close-edit_single_email" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" id="id-save-edit_single_email" class="btn btn-primary" ng-click="submit_add_link()">Save changes</button>
       </div>
     </div>
   </div>

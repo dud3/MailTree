@@ -52,7 +52,19 @@ var services = {
 
     search: function(param) {
       return $http.get('/api/v1/search', angular.toJson(param));
-    }
+    },
+
+    getLink: function(id) {
+      return $http.get('/api/v1/keywords/getLink/' + id);
+    },
+
+    createLink: function(input) {
+      return $http.post('/api/v1/keywords/createLink', angular.toJson(input));
+    },
+
+    updateLink: function(input) {
+      return $http.post('/api/v1/keywords/updateLink', angular.toJson(input));
+    },
 
   };
 

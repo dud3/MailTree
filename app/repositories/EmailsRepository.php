@@ -48,7 +48,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
      /**
       * ---------------------------------------------------------------------------------------------------------
       *  State of emails (http://php.net/manual/en/function.imap-search.php)
-      * ---------------------------------------------------------------------------------------------------------       
+      * ---------------------------------------------------------------------------------------------------------
       *  ALL - return all messages matching the rest of the criteria
       *  ANSWERED - match messages with the \\ANSWERED flag set
       *  BCC "string" - match messages with "string" in the Bcc: field
@@ -87,7 +87,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
         /**
          * @note: read only unssen emails
-         * First of all make the artisan command accespt some 
+         * First of all make the artisan command accespt some
          * -> argouments so we can easily switch between "read all emails"
          * -> and "unseen emails"
          * $this->server->search('UNSEEN')
@@ -131,7 +131,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             /* Check the subject fitst */
             $std_email->subject = explode(" ", $std_email->subject);
-            
+
             /* If Fwd is present in the subject */
             if(in_array('Fwd:', $std_email->subject)) {
                 unset($std_email->subject[0]);
@@ -148,7 +148,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 * and mails are found, the email server marks them as "seen",
                 * which makes the `./artians --html_enabled=true` usless, since it
                 * can't actually find anything to read.
-                * 
+                *
                 $std_email->body = explode("\n", $std_email->body);
 
                 array_walk($std_email->body, array($this, 'trim_value'));
@@ -159,8 +159,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
                 $this->search_for = ["Dear", "Dear Alexander", "Dear Alexander Notifications,"];
 
-                if(in_array($this->search_for[0], $std_email->body) 
-                || in_array($this->search_for[1], $std_email->body) 
+                if(in_array($this->search_for[0], $std_email->body)
+                || in_array($this->search_for[1], $std_email->body)
                 || in_array($this->search_for[2], $std_email->body)) {
 
                 $std_email->body = array_slice($std_email->body, 3);
@@ -181,13 +181,13 @@ class EmailsRepository implements EmailsRepositoryInterface {
                /**
                 * Trim the value otherwise at the end of the each mail
                 * -> we will strat seeing the value of ^M after exploding
-                * -> the string, and this makes imposibble to compare the 
-                * -> keywords from the database even if we include the 
+                * -> the string, and this makes imposibble to compare the
+                * -> keywords from the database even if we include the
                 * -> ^M symbol at the end of each array element.
-                */ 
+                */
                 array_walk($std_email->body, array($this, 'trim_value'));
 
-                /*! For now I'm just going to hard code the conditon here, 
+                /*! For now I'm just going to hard code the conditon here,
                  * later on give the user the ability to chose the word phrase
                  */
                 $std_email->body = str_ireplace('Sebis Direct, Inc.', '', $std_email->body);
@@ -207,10 +207,10 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 * Two of this following conditions are for:
                 * * if the mail is forwarded by a person/automatic email forwarder
                 * * if the mail contains the keyword of "Dear"
-                * 
-                * The reason for the first one is that, we don't want to store mails into the 
+                *
+                * The reason for the first one is that, we don't want to store mails into the
                 * -> DB with the forwarded information.
-                * 
+                *
                 * The second one is that we won't eventually want to erase the mail that has been
                 * -> forwarded to an X person since we will forward the same email to multiple
                 * -> users that match the keyword(s), and replace their name on the emal.
@@ -219,7 +219,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
                     $std_email->body = array_slice($std_email->body, 9);
                 }
 
-               /** 
+               /**
                 * if strpos($mystring, $findme)
                 * We might want to search the string if it contains the keyword of "Dear" or simmilar.
                 */
@@ -232,7 +232,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
             }
 
             /* Put everything all togather */
-            $std_email->body = implode("\n", $std_email->body); 
+            $std_email->body = implode("\n", $std_email->body);
 
             $arr_emails[] = $std_email;
 
@@ -284,7 +284,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             /* Check the subject fitst */
             $std_email->subject = explode(" ", $std_email->subject);
-            
+
             /* If Fwd is present in the subject */
             if(in_array('Fwd:', $std_email->subject)) {
                 unset($std_email->subject[0]);
@@ -297,7 +297,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             /* Repeat the simmilar as for non-HTML emails */
             array_walk($std_email->body, array($this, 'trim_value'));
-    
+
             /* If the mail is forwarded in case */
             if(in_array('---------- Forwarded message ----------', $std_email->body)) {
                 $std_email->body = array_slice($std_email->body, 9);
@@ -311,7 +311,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
             }
 
             /* Put everything all togather */
-            $std_email->body = implode("\n", $std_email->body); 
+            $std_email->body = implode("\n", $std_email->body);
 
             $arr_emails[] = $std_email;
 
@@ -354,8 +354,9 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
         $sql_mails = DB::select(
 
-            "SELECT DISTINCT m.id, m.email_address_id, m.body, m.subject,
-            e_a_l.email, e_a_l.full_name,
+            "SELECT DISTINCT
+            m.id, m.email_address_id, m.body, m.subject,
+            e_a_l.email, e_a_l.full_name, e_a_l.include_receivers,
             k_l.send_automatically
 
             FROM mails m
@@ -371,6 +372,12 @@ class EmailsRepository implements EmailsRepositoryInterface {
              ORDER BY e_a_l.email"
 
         ,$arg);
+
+        $forward_receivers = array();
+        foreach ($sql_mails as $mail) {
+           $forward_receivers[] = $mail->email;
+        }
+        $forward_receivers = array_unique($forward_receivers);
 
         foreach ($sql_mails as $mail) {
 
@@ -395,12 +402,29 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 }
             }
 
+            $implode_forward_receivers = "";
+            if ($mail->include_receivers) {
+              $implode_forward_receivers = implode($forward_receivers, ', ');
+
+              if(count($forward_receivers) > 0) {
+                // $data["message_body"] = "Recievers: " . $implode_forward_receivers . "\n\n" . $data["message_body"];
+              }
+            }
+
+            $data = [
+              "email" => $email,
+              "full_name" => $full_name,
+              "message_body" => $message_body,
+              "message_subject" => $message_subject,
+              "implode_forward_receivers" => $implode_forward_receivers
+            ];
+
            /**
             * Basically what we're doing here is that
             * -> whenever we see a text that says 'Click here'
             * -> automatically splice "Click here" text and
             * -> everything else that comes after it.
-            * 
+            *
             * Let's just have this one here right now.
             * And maybe later on we can actually prevent this data
             * -> get into the DB at the frst place.
@@ -420,10 +444,10 @@ class EmailsRepository implements EmailsRepositoryInterface {
             $data["message_body"] = implode("\n", $data["message_body"]);
 
             $message = [];
-            
+
             foreach (self::$forward_email_from as $fwd_from) {
 
-                Mail::send('emails.sentMail', $data, function($message) use ($email, $full_name, $message_body, $message_subject, $fwd_from)
+                Mail::send('emails.sentMail', $data, function($message) use ($email, $full_name, $implode_forward_receivers, $message_body, $message_subject, $fwd_from)
                 {
                     $message->from($fwd_from, self::$forward_email_full_name);
 
@@ -431,12 +455,12 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
                     $message->to($email);
 
-                    // 
+                    //
                     // Save for later on if needed
-                    // 
+                    //
                     // $message->attach($pathToFile);
-                    // 
-                
+                    //
+
                 });
 
             }
@@ -505,9 +529,9 @@ class EmailsRepository implements EmailsRepositoryInterface {
             $k_db = keywords_list::all()->toArray();
 
             $k_intersect = [];
-      
+
             foreach ($k_db as $db_keywords) {
-       
+
                 $k_db = (string)$db_keywords["keywords"];
                 $k_id = $db_keywords["id"];
 
@@ -534,16 +558,16 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
 
                /**
-                * Get the common between the database keywords that belong 
+                * Get the common between the database keywords that belong
                 * -> to each user and the keywords from the emails subject.
-                * 
-                * Sample: 
+                *
+                * Sample:
                 *          * Email Keyword: 'dog', 'fish', 'rocket', 'etc'
                 *          * DB Keywords: 'dog', 'rocket'
-                * 
-                * Union and the output will be 'dog' and 'fish'   
                 *
-                */ 
+                * Union and the output will be 'dog' and 'fish'
+                *
+                */
                 $k_intersect = array_intersect($k_db, $get_keywords);
 
 
@@ -551,17 +575,17 @@ class EmailsRepository implements EmailsRepositoryInterface {
                 * After we union the smmilarities check if there's a difference
                 * -> between the DB array and the filtered array from the "email subject"
                 * -> this way we can figure it out if they are identical.
-                * 
+                *
                 *  Since the `array_intersect()` get's the common between both of arrays
                 *  -> we might have a situation like the following:
-                *  
+                *
                 *  * Email Keywords: 'dog', 'fish', 'rocket', '-', 'something'
                 *  * DB Keywords: 'dog', 'fish', 'dolphin'
-                *  
+                *
                 *  array_intersect($e_kwd, $db_kwd) => 'dog', 'fish'
-                *  
+                *
                 *  -> so e_kwd != $db_kwd => because the 'dolphin' should match also.
-                *  
+                *
                 */
                 $k_arr_diff = array_diff($k_db, $get_keywords);
 
@@ -629,21 +653,21 @@ class EmailsRepository implements EmailsRepositoryInterface {
                             $std_store_email->__udate = $email->overview->udate;
 
                            /**
-                            * Let's insert the name of the user that 
+                            * Let's insert the name of the user that
                             * -> will get the eamil.
-                            * 
+                            *
                             * Explode into pieces
                             * $std_store_email->body = explode("\n", $std_store_email->body);
                             *
                             * Reorder the array and push this one on top of the queue
                             * array_unshift($std_store_email->body, "Dear " . $e_list["full_name"] . ",\n");
-                            * 
+                            *
                             * Put everything togather
                             * $std_store_email->body = implode("\n", $std_store_email->body);
                             */
 
                             $this->storeMail($std_store_email);
-                            
+
                         }
                     }
 
@@ -664,8 +688,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
         $insert_data = [
 
-                 "email_address_id" => $data->email_address_id, 
-                 "subject" => $data->subject, 
+                 "email_address_id" => $data->email_address_id,
+                 "subject" => $data->subject,
                  "body" => $data->body,
                  "html" => $data->html,
 
@@ -685,11 +709,11 @@ class EmailsRepository implements EmailsRepositoryInterface {
         ];
 
         mails::create($insert_data);
-        
+
         $dump_sent_emails = ("Email stored for: " . " \t| ID: " . $data->email_address_id . " \t| Email: " . $data->email . " \t| Name: " . $data->full_name . "\n");
-        
+
         Logger::dump_output('store_emails', $dump_sent_emails);
-        
+
         echo($dump_sent_emails);
 
     }
@@ -717,8 +741,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
      * @param  [type] $value [description]
      * @return [type]        [description]
      */
-    public function trim_value(&$value) { 
-        $value = trim($value); 
+    public function trim_value(&$value) {
+        $value = trim($value);
     }
 
 }

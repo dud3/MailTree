@@ -156,7 +156,7 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
         $where = "";
         $update_row = [];
 
-        /*! 
+        /*!
          * Note that x_uid is magical, multiple items have the same x_uid, per different user,
          * updating items this way is much faster than usual.
          */
@@ -208,8 +208,9 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 
         $sql_mails = DB::select(
 
-            "SELECT DISTINCT m.id, m.email_address_id, m.body, m.subject,
-            e_a_l.email, e_a_l.full_name
+            "SELECT DISTINCT
+            m.id, m.email_address_id, m.body, m.subject,
+            e_a_l.email, e_a_l.full_name, e_a_l.include_receivers
 
             FROM mails m
 
@@ -222,6 +223,12 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 
         ,[$arg]);
 
+        $forward_receivers = array();
+        foreach ($sql_mails as $mail) {
+           $forward_receivers[] = $mail->email;
+        }
+        $forward_receivers = array_unique($forward_receivers);
+
         foreach ($sql_mails as $mail) {
 
             $email = $mail->email;
@@ -229,23 +236,36 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
             $message_body = $mail->body;
             $message_subject = $mail->subject;
 
-            $data = ["email" => $email,
-                     "full_name" => $full_name,
-                     "message_body" => $message_body,
-                     "message_subject" => $message_subject];
+
+            $implode_forward_receivers = "";
+            if ($mail->include_receivers) {
+              $implode_forward_receivers = implode($forward_receivers, ', ');
+
+              if(count($forward_receivers) > 0) {
+                // $data["message_body"] = "Recievers: " . $implode_forward_receivers . "\n\n" . $data["message_body"];
+              }
+            }
+
+            $data = [
+                "email" => $email,
+                 "full_name" => $full_name,
+                 "message_body" => $message_body,
+                 "message_subject" => $message_subject,
+                 "implode_forward_receivers" => $implode_forward_receivers
+            ];
 
            /**
             * Basically what we're doing here is that
             * -> whenever we see a text that says 'Click here'
             * -> automatically splice "Click here" text and
             * -> everything else that comes after it.
-            * 
+            *
             * Let's just have this one here right now.
             * And maybe later on we can actually prevent this data
             * -> get into the DB at the frst place.
             *
             * @todo Move to the helper function.
-            * 
+            *
             */
             $data["message_body"] = explode("\n", $data["message_body"]);
 
@@ -262,17 +282,17 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
             $data["message_body"] = implode("\n", $data["message_body"]);
 
             $message = [];
-            
+
             foreach (Config::get("constant.g_fwd_email_address") as $fwd_from) {
 
-                Mail::send('emails.sentMail', $data, function($message) use ($email, $full_name, $message_body, $message_subject, $fwd_from)
+                Mail::send('emails.sentMail', $data, function($message) use ($email, $full_name, $implode_forward_receivers, $message_body, $message_subject, $fwd_from)
                 {
                     $message->from($fwd_from, Config::get("constant.g_fwd_email_address_full_name"));
 
                     $message->subject($message_subject);
 
                     $message->to($email);
-                
+
                 });
 
             }
@@ -416,6 +436,10 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 
     }
 
+    public function includeReceivers($input) {
+        return email_address_list::find($input['id'])->update($input);
+    }
+
     /**
      * Remove recipent from the keywords list.
      * @param  [type] $id [description]
@@ -440,8 +464,8 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
     // Helper Methods
     // ---------------------------------------------------------------------
     // @todo Create a helper service and move it there.
-    // 
-    
+    //
+
     /**
      * Simply wrap the email sbuject with found keywords.
      * @return [type] [description]
@@ -488,8 +512,8 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
      * @param  [type] $value [description]
      * @return [type]        [description]
      */
-    public function trim_value(&$value) { 
-        $value = trim($value); 
+    public function trim_value(&$value) {
+        $value = trim($value);
     }
 
     /**

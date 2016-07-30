@@ -38,6 +38,10 @@ var services = {
       return $http.post('/api/v1/keywords/keepOriginalContent', angular.toJson(keyWordEntity));
     },
 
+    includeReceivers: function(receiver) {
+      return $http.post('/api/v1/keywords/includeReceivers', angular.toJson(receiver));
+    },
+
     delete: function(id) {
       return $http({ method: 'DELETE', url: '/api/v1/deleteKeyword/' + id});
     },

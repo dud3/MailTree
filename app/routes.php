@@ -72,6 +72,7 @@ Route::group(array('prefix' => 'api/v1'), function()
         Route::post('sendAutomatically',	'ListController@sendAutomatically');
         Route::post('keepOriginalContent',	'ListController@keepOriginalContent');
         Route::post('saveRecipient',		'ListController@saveRecipient');
+        Route::post('includeReceivers',     'ListController@includeReceivers');
         Route::post('removeRecipent/{id}',	'ListController@removeRecipent');
 
         Route::get('getLink/{id}',  'ListController@getLink');

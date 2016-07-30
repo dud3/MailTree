@@ -55,7 +55,7 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 
         $sql_keywords = DB::select(
 
-            "SELECT k.id, k.keywords, k.original_content, k.send_automatically
+            "SELECT k.*
 
              FROM keywords_list k
 
@@ -67,7 +67,7 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
 
             $keyword->email = DB::select(
 
-                "SELECT e_a_l.id AS email_list_id, e_a_l.email, e_a_l.full_name
+                "SELECT e_a_l.id AS email_list_id, e_a_l.email, e_a_l.full_name, e_a_l.*
 
                  FROM email_address_list e_a_l
 
@@ -125,7 +125,7 @@ class EloquentKeywordsRepository extends EloquentListRepository implements Eloqu
                         } else {
                             /**
                              *  @note we get the array as string, then it gets converted to std Object by json_decode
-                             *  anad since the count() wont count the object elements, simply cast the data to array 
+                             *  anad since the count() wont count the object elements, simply cast the data to array
                              *  and then count.
                              */
                             (count((array)json_decode($data["keywords"])) > 1) ? $plural = "keywords " : $plural = "keyword ";

@@ -160,6 +160,21 @@ class ListController extends internalCtrl {
     }
 
     /**
+     * Include receivers.
+     *
+     */
+    public function includeReceivers($data = null) {
+        if($data == null) {
+            $data = Input::all();
+        }
+
+        $this->ret = $this->emails->includeReceivers($data);
+        $this->ret = Response::json(["result" => $this->ret], 200);
+
+        return $this->ret;
+    }
+
+    /**
      * Remove recipent from the keywords list.
      * @param  [type] $id [description]
      * @return [type]     [description]

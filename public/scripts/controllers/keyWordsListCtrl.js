@@ -25,7 +25,7 @@ angular.module('app.keyWordsList')
 		 */
 		$rootScope.keywordEntity = {
 			keywords: [{ keyword:'' }],
-			recipients: [{ full_name:'', email:'' }],
+			recipients: [{ full_name:'', email:'', include_receivers: false }],
 			original_content: false,
 			send_automatically: true
 		};
@@ -502,6 +502,23 @@ angular.module('app.keyWordsList')
 			}
 
 		};
+
+		$scope.includeReceivers = function(email) {
+
+			console.log(email);
+
+			var receiver = { id: email.id, include_receivers: email.include_receivers };
+
+			keyWordsListSvc
+				.includeReceivers(receiver)
+					.success(function(data){
+						toaster.pop('success', "Message", "Settings Saved.");
+				}).error(function(data){
+					toaster.pop('error', "Message", "Failed to Save, please try again.");
+			});
+
+		};
+
 
 		/**
 		 * Collapse keyword list entity.

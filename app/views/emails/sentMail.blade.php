@@ -67,7 +67,7 @@ background-color: #f6f6f6;
                     <tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 10px;">
 
                         <td class="alert alert-error" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 16px; vertical-align: bottom; color: #fff; font-weight: bold; text-align: left; border-radius: 3px 3px 0 0; background: #3a87ad; margin: 0; padding: 15px;" align="left" valign="bottom">
-                            <img src="<?php echo $message->embed($logoIcon); ?>" style="width:100px; height:55px; float:left; margin-right:10px;   
+                            <img src="<?php echo $message->embed($logoIcon); ?>" style="width:100px; height:55px; float:left; margin-right:10px;
                                 overflow: hidden; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 10px;" />
                             <div style="padding-top:5px !important;"> {{ $message_subject }} </div>
                         </td>
@@ -76,6 +76,13 @@ background-color: #f6f6f6;
                     <tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;">
                         <td class="content-wrap" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 20px;" valign="top">
                             <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;">
+                                @if ($implode_forward_receivers)
+                                <tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;">
+                                    <td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
+                                        Receivers: {{ $implode_forward_receivers }},
+                                    </td>
+                                </tr>
+                                @endif
                                 <tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;">
                                     <td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
                                         Dear {{ $full_name }},
@@ -95,7 +102,7 @@ background-color: #f6f6f6;
                                     <td valign="top" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 0 0 0px; text-align:center;" class="content-block">
                                         Please do not reply to this mail.
                                     </td>
-                                </tr> 
+                                </tr>
                             </table>
                         </td>
                     </tr>

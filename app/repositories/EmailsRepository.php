@@ -357,12 +357,16 @@ class EmailsRepository implements EmailsRepositoryInterface {
             "SELECT DISTINCT
             m.id, m.email_address_id, m.body, m.subject,
             e_a_l.email, e_a_l.full_name, e_a_l.include_receivers,
+            k_l_l.link, k_l_l.position,
             k_l.send_automatically
 
             FROM mails m
 
              INNER JOIN email_address_list e_a_l
                 ON m.email_address_id = e_a_l.id
+
+             INNER JOIN keywords_list_links k_l_l
+                ON k_l_l.keywords_list_id = e_a_l.keyword_id
 
              JOIN keywords_list k_l
                 ON e_a_l.keyword_id = k_l.id
@@ -387,20 +391,8 @@ class EmailsRepository implements EmailsRepositoryInterface {
             $full_name = $mail->full_name;
             $message_body = $mail->body;
             $message_subject = $mail->subject;
-
-            $data = ["email" => $email,
-                         "full_name" => $full_name,
-                         "message_body" => $message_body,
-                         "message_subject" => $message_subject];
-
-            // Some Error handling
-            foreach ($data as $inputs) {
-                if($inputs == null || empty($inputs)) {
-                    var_dump($data);
-                    throw new Exception("Some data is missing", 1);
-                    exit;
-                }
-            }
+            $link = $mail->link;
+            $link_position = $mail->position;
 
             $implode_forward_receivers = "";
             if ($mail->include_receivers) {
@@ -416,8 +408,16 @@ class EmailsRepository implements EmailsRepositoryInterface {
               "full_name" => $full_name,
               "message_body" => $message_body,
               "message_subject" => $message_subject,
+              "link" => $link,
+              "link_position" => $link_position,
               "implode_forward_receivers" => $implode_forward_receivers
             ];
+
+            // Some Error handling
+            if($data['email'] == null || empty($data['email'])) {
+              throw new Exception("Some data is missing", 1);
+              exit;
+            }
 
            /**
             * Basically what we're doing here is that

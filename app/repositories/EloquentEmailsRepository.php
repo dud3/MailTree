@@ -210,12 +210,16 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
 
             "SELECT DISTINCT
             m.id, m.email_address_id, m.body, m.subject,
-            e_a_l.email, e_a_l.full_name, e_a_l.include_receivers
+            e_a_l.email, e_a_l.full_name, e_a_l.include_receivers,
+            k_l_l.link, k_l_l.position
 
             FROM mails m
 
              INNER JOIN email_address_list e_a_l
                 ON m.email_address_id = e_a_l.id
+
+             INNER JOIN keywords_list_links k_l_l
+                ON k_l_l.keywords_list_id = e_a_l.keyword_id
 
              " . $where . "
 
@@ -235,6 +239,8 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
             $full_name = $mail->full_name;
             $message_body = $mail->body;
             $message_subject = $mail->subject;
+            $link = $mail->link;
+            $link_position = $mail->position;
 
 
             $implode_forward_receivers = "";
@@ -251,6 +257,8 @@ class EloquentEmailsRepository extends EloquentListRepository implements Eloquen
                  "full_name" => $full_name,
                  "message_body" => $message_body,
                  "message_subject" => $message_subject,
+                 "link" => $link,
+                 "link_position" => $link_position,
                  "implode_forward_receivers" => $implode_forward_receivers
             ];
 

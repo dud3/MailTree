@@ -505,8 +505,6 @@ angular.module('app.keyWordsList')
 
 		$scope.includeReceivers = function(email) {
 
-			console.log(email);
-
 			var receiver = { id: email.id, include_receivers: email.include_receivers };
 
 			keyWordsListSvc

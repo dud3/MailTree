@@ -94,7 +94,6 @@
 
                         <tr ng-repeat="email in keyWordsList.email" id="id-tr-email-<* email.email_list_id *>">
 
-
                             <td>
                                 <span editable-text="email.full_name" e-name="full_name" e-form="rowform" e-required>
                                     <* email.full_name || 'empty' *>
@@ -107,7 +106,15 @@
                                 </span>
                             </td>
                             <td style="text-align:center">
-                                <input ng-model="email.include_receivers" ng-checked="email.include_receivers" ng-change="includeReceivers(email)" type="checkbox" id="check_include_receivers_">
+
+                                <span ng-if="email.include_receivers == 0">
+                                <input ng-model="email.include_receivers" ng-checked="false" ng-change="includeReceivers(email)" type="checkbox" id="check_include_receivers_">
+                                </span>
+
+                                <span ng-if="email.include_receivers == 1">
+                                <input ng-model="email.include_receivers" ng-checked="true" ng-change="includeReceivers(email)" type="checkbox" id="check_include_receivers_">
+                                </span>
+
                             </td>
 
                             <td style="white-space: nowrap">

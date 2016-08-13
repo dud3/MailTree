@@ -365,7 +365,7 @@ class EmailsRepository implements EmailsRepositoryInterface {
              INNER JOIN email_address_list e_a_l
                 ON m.email_address_id = e_a_l.id
 
-             INNER JOIN keywords_list_links k_l_l
+             LEFT JOIN keywords_list_links k_l_l
                 ON k_l_l.keywords_list_id = e_a_l.keyword_id
 
              LEFT OUTER JOIN keywords_list k_l

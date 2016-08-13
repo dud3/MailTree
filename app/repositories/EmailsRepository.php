@@ -362,13 +362,13 @@ class EmailsRepository implements EmailsRepositoryInterface {
 
             FROM mails m
 
-             JOIN JOIN email_address_list e_a_l
+             INNER JOIN email_address_list e_a_l
                 ON m.email_address_id = e_a_l.id
 
-             LEFT JOIN keywords_list_links k_l_l
+             INNER JOIN keywords_list_links k_l_l
                 ON k_l_l.keywords_list_id = e_a_l.keyword_id
 
-             LEFT JOIN keywords_list k_l
+             LEFT OUTER JOIN keywords_list k_l
                 ON e_a_l.keyword_id = k_l.id
 
              " . $where . "
